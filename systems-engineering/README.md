@@ -1,14 +1,12 @@
-## Core Systems Engineering Classes
+# [Systems_engineering](https://en.wikipedia.org/wiki/Category:Systems_engineering)
 
+- [Arizona Center for Integrative Modeling and Simulation (ACIMS)](https://acims.asu.edu/)
 - [Lifecycle Modeling Organization](https://www.lifecyclemodeling.org/)
-- [INCOSE](https://sdincose.org/)
 - [INCOSE Systems Engineering Handbook](https://sebokwiki.org/wiki/INCOSE_Systems_Engineering_Handbook)
 - [IEEE Systems Council](https://ieeesystemscouncil.org/)
 - [Enterprise Architecture - Svyatoslav Kotusev](https://kotusev.com/)
 - [Guide to the Systems Engineering Body of Knowledge (SEBoK)](https://sebokwiki.org/wiki/Guide_to_the_Systems_Engineering_Body_of_Knowledge_(SEBoK))
 - [Systems Engineering Theory and Practice](https://www.youtube.com/playlist?list=PL_bA20lRoKDHuNg1lJkJ75ZEsynNdY_ww)
-- [ESMD Course Material : Fundamentals of Lunar and Systems Engineering for Senior Project Teams, with Application to a Lunar Excavator](https://www.eng.auburn.edu/~dbeale/ESMDCourse/index.htm)
-- [International Institute for Applied Systems Analysis](https://iiasa.ac.at/)
 
 ## Core Concepts
 
@@ -46,3 +44,18 @@
     * [System Validation](https://sebokwiki.org/wiki/System_Validation)
 10. [Trade Study](https://en.wikipedia.org/wiki/Trade_study)
 11. [Reliability Engineering](https://en.wikipedia.org/wiki/Category:Reliability_engineering)
+12. [Unified Modeling Language](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
+13. [Irreversible Process](https://en.wikipedia.org/wiki/Irreversible_process)
+14. [Industrial Engineering](https://en.wikipedia.org/wiki/Category:Industrial_engineering)
+15. [Control_theory](https://en.wikipedia.org/wiki/Category:Control_theory)
+16. [Control_engineering](https://en.wikipedia.org/wiki/Category:Control_engineering)
+	* [Optimal Control](https://en.wikipedia.org/wiki/Optimal_control)
+	* [Adaptive Control](https://en.wikipedia.org/wiki/Adaptive_control)
+17. [Enterprise_modeling](https://en.wikipedia.org/wiki/Category:Enterprise_modelling)
+	* [Enterprise Architecture](https://en.wikipedia.org/wiki/Category:Enterprise_architecture)
+	* [Enterprise_architecture_frameworks](https://en.wikipedia.org/wiki/Category:Enterprise_architecture_frameworks)
+	* [Business Process Modeling](https://en.wikipedia.org/wiki/Category:Business_process_modelling)
+	* [Business Process Model Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation)
+	* [Modeling Languages](https://en.wikipedia.org/wiki/Category:Modeling_languages)
+	* [Life-Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
+	* [Life Cycle Models](https://sebokwiki.org/wiki/Life_Cycle_Models)

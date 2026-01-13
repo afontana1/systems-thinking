@@ -63,11 +63,18 @@
 	* [CS 224W](https://snap-stanford.github.io/cs224w-notes/)
 	* [Network Science Course](https://www.youtube.com/playlist?list=PLriUvS7IljvkGesFRuYjqRz4lKgodJgh2)
 	* [Complex Network: Theory and Application](https://www.youtube.com/playlist?list=PL6awLjcQvnYB8YSTKCFe1VDQlgKPFujW1)
-18. [CAS-503-Collectives](https://github.com/bcdaniels/CAS-503-Collectives)
-19. [CAS-570-Fundamentals-of-CAS](https://github.com/bcdaniels/CAS-570-Fundamentals-of-CAS)
-20. [CAS-523-Stats-and-Dim-Red](https://github.com/bcdaniels/CAS-523-Stats-and-Dim-Red)
-21. [AttAttach](https://github.com/Collective-Logic-Lab/AttAttach)
-22. [honey-bee-behavior](https://github.com/Collective-Logic-Lab/honey-bee-behavior)
+18. [Phase Space](https://en.wikipedia.org/wiki/Phase_space)
+19. [Dynamical Systems](https://en.wikipedia.org/wiki/Category:Dynamical_systems)
+	- [Time Reversibility](https://en.wikipedia.org/wiki/Time_reversibility)
+	- [Perturbation_theory](https://en.wikipedia.org/wiki/Perturbation_theory)
+	- [Attractor](https://en.wikipedia.org/wiki/Attractor)
+	- [Feedback](https://en.wikipedia.org/wiki/Feedback)
+	- [Chaos_theory](https://en.wikipedia.org/wiki/Chaos_theory)
+	- [Numerical Differential Equations](https://en.wikipedia.org/wiki/Category:Numerical_differential_equations)
+	- [Partial Differential Equations](https://en.wikipedia.org/wiki/Category:Partial_differential_equations)
+	- [Non Linear Systems](https://en.wikipedia.org/wiki/Category:Nonlinear_systems)
+20. [Phase Transition](https://en.wikipedia.org/wiki/Phase_transition)
+21. [Turbulence](https://en.wikipedia.org/wiki/Turbulence)
 
 </details>
 
@@ -117,6 +124,11 @@
 14. [A Completely Agent-Based Modeling Approach to the Study of Economic Systems](https://faculty.sites.iastate.edu/tesfatsi/archive/tesfatsi/ace.htm)
 15. [awesome-computational-social-science](https://github.com/gesiscss/awesome-computational-social-science)
 16. [awesome-network-analysis](https://github.com/briatte/awesome-network-analysis)
+17. [CAS-503-Collectives](https://github.com/bcdaniels/CAS-503-Collectives)
+18. [CAS-570-Fundamentals-of-CAS](https://github.com/bcdaniels/CAS-570-Fundamentals-of-CAS)
+19. [CAS-523-Stats-and-Dim-Red](https://github.com/bcdaniels/CAS-523-Stats-and-Dim-Red)
+20. [AttAttach](https://github.com/Collective-Logic-Lab/AttAttach)
+21. [honey-bee-behavior](https://github.com/Collective-Logic-Lab/honey-bee-behavior)
 
 ### Videos
 

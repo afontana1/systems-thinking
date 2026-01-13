@@ -1,6 +1,4 @@
-# Computational Science related material
-
-- [Arizona Center for Integrative Modeling and Simulation (ACIMS)](https://acims.asu.edu/)
+# Resources for "Systems" Disciplines
 
 ## General Resources
 
@@ -27,6 +25,22 @@
 15. [numerical-linear-algebra](https://github.com/fastai/numerical-linear-algebra)
 16. [Computational Science And Engineering I](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/)
 17. [Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm)
+18. [Signal_processing](https://en.wikipedia.org/wiki/Category:Signal_processing)
+	* [Introduction To Electrical Engineering And Computer Science I](https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/)
+	* [Signals and Systems 6-007](https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/)
+	* [Signals and Systems 6-003](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/)
+	* [Signals Systems and Inference](https://ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/)
+
+## Core Math
+
+1. [Intro to Numerical Methods](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)
+2. [Differential Equations](https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/)
+3. [Numerical Analysis](https://ocw.mit.edu/courses/mathematics/18-335j-introduction-to-numerical-methods-spring-2019/)
+4. [Signals and Systems](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-003-signals-and-systems-fall-2011/)
+5. [Essential Numerical Methods](https://ocw.mit.edu/courses/22-15-essential-numerical-methods-fall-2014/)
+6. [Engineering Math: Differential Equations and Dynamical Systems](https://www.youtube.com/playlist?list=PLMrJAkhIeNNTYaOnVI3QpH7jgULnAmvPA)
+7. [Differential Equations](https://youtube.com/playlist?list=PLC4YBo93SnyglJxoACLRbpKdrupQOQG22&si=j995AFDSp_fn-Hjc)
+
 
 <details><summary><h2> Essential Computational Concepts </h2></summary>
 
@@ -72,74 +86,5 @@
 15. [Undergrad Complexity Theory at CMU](https://youtube.com/playlist?list=PLm3J0oaFux3YL5vLXpzOyJiLtqLp6dCW2&si=WqkP7mDDCfUMY9Hs)
 16. [Complexity Theory I - Easy Theory](https://youtube.com/playlist?list=PLylTVsqZiRXOpSWvkeuFoj-qzuF3xDiAs&si=GMk94l0uYeOXQ2D8)
 17. [Computational Complexity Lectures](https://youtube.com/playlist?list=PLdUzuimxVcC0DENcdT8mfhI3iRRJLVjqH&si=QzuWmMEfe8na4lm3)
-
-</details>
-
-<details><summary><h2> Libraries </h2></summary>
-
-1. [ndlib](https://github.com/GiulioRossetti/ndlib)
-2. [networkx](https://github.com/networkx/networkx)
-3. [netpy](https://github.com/lovre/netpy)
-4. [numerical linear algebra](https://github.com/oseledets/nla2020)
-5. [netomaton: discrete systems](https://github.com/lantunes/netomaton)
-6. [Linear Algebra with Python](https://github.com/MacroAnalyst/Linear_Algebra_With_Python)
-7. [Path-Planning-Simulator](https://github.com/sahibdhanjal/Path-Planning-Simulator)
-8. [awesome-robotics](https://github.com/ahundt/awesome-robotics)
-9. [multi_agent_path_planning](https://github.com/atb033/multi_agent_path_planning)
-10. [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)
-11. [PathPlanning](https://github.com/zhm-real/PathPlanning)
-12. [pysteps](https://github.com/pySTEPS/pysteps)
-13. [synthetic](https://github.com/telmomenezes/synthetic)
-14. [PatternOmatic](https://github.com/revuel/PatternOmatic)
-15. [RobustArchitectureSearch](https://github.com/shashankkotyan/RobustArchitectureSearch)
-16. [EvoOpt](https://github.com/tsyet12/EvoOpt)
-17. [evolutionary-algorithms](https://github.com/EliorBenYosef/evolutionary-algorithms)
-18. [LEAP](https://github.com/AureumChaos/LEAP)
-19. [geatpy](https://github.com/geatpy-dev/geatpy)
-20. [Solid](https://github.com/100/Solid)
-21. [GeneticAlgorithmPython](https://github.com/ahmedfgad/GeneticAlgorithmPython)
-22. [Grokking-Artificial-Intelligence-Algorithms](https://github.com/rishal-hurbans/Grokking-Artificial-Intelligence-Algorithms)
-23. [BluePyOpt](https://github.com/BlueBrain/BluePyOpt)
-24. [zoofs](https://github.com/jaswinder9051998/zoofs)
-25. [Sklearn-genetic-opt](https://github.com/rodrigo-arenas/Sklearn-genetic-opt)
-26. [Evolutionary-Algorithm](https://github.com/MorvanZhou/Evolutionary-Algorithm)
-27. [python-algorithms-and-simulations](https://github.com/fraserlove/python-algorithms-and-simulations)
-28. [netomaton](https://github.com/lantunes/netomaton)
-29. [rule-30-and-game-of-life](https://github.com/elliotwaite/rule-30-and-game-of-life)
-30. [seagull](https://github.com/ljvmiranda921/seagull)
-31. [Growing-Neural-Cellular-Automata](https://github.com/chenmingxiang110/Growing-Neural-Cellular-Automata)
-32. [Lenia](https://github.com/Chakazul/Lenia)
-33. [cellpylib](https://github.com/lantunes/cellpylib)
-34. [life-101](https://github.com/Lleyton-Ariton/life-101)
-35. [numba](https://github.com/numba/numba)
-36. [gca](https://github.com/96lives/gca)
-37. [Discrete Optimization](https://github.com/kouei/discrete-optimization)
-38. [pyswarms](https://github.com/ljvmiranda921/pyswarms)
-39. [Solid (optimization)](https://github.com/100/Solid)
-40. [Intro to Numerical Methods](https://github.com/mandli/intro-numerical-methods)
-41. [simupy](https://github.com/simupy/simupy)
-42. [Numerical Analysis Python](https://github.com/john-s-butler-dit/Numerical-Analysis-Python)
-43. [Simulation and Modeling of Natural Processes](https://github.com/soumyasen1809/Simulation-and-modeling-of-natural-processes)
-44. [Computers Waves and Simulations](https://github.com/soumyasen1809/Coursera_Computers_Waves_Simulations)
-45. [agentpy](https://github.com/JoelForamitti/agentpy)
-46. [Mesa](https://github.com/projectmesa/mesa)
-47. [Particle Life Simulation](https://github.com/hunar4321/particle-life)
-48. [Swarm Algorithms](https://github.com/AlexanderKlanovets/swarm_algorithms)
-49. [swarmlib](https://github.com/HaaLeo/swarmlib)
-50. [Deepswarm](https://github.com/Pattio/DeepSwarm)
-51. [NiaPy](https://github.com/NiaOrg/NiaPy)
-52. [FireFlyAlgorithm](https://github.com/firefly-cpp/FireflyAlgorithm)
-53. [Ant Colony Traveling Salesman](https://github.com/rochakgupta/aco-tsp)
-54. [Self Organizing Bots](https://github.com/perseus784/Self-organizing-bots)
-55. [MTSP_ACO](https://github.com/ganyariya/MTSP_ACO)
-56. [Python Boids](https://github.com/Nikorasu/PyNBoids)
-57. [Glowworm Swarm Optimisation](https://github.com/arijeetsat/Glowworm-Swarm-Optimisation)
-58. [Gradient Free Optmizers](https://github.com/SimonBlanke/Gradient-Free-Optimizers)
-59. [MealPY](https://github.com/thieu1995/mealpy)
-60. [Particle Swarm Optimization](https://github.com/nathanrooy/particle-swarm-optimization)
-61. [MetaheuristicOptimization](https://github.com/kkg1999/MetaheuristicOptimization)
-62. [Evolutionary Optimization](https://github.com/strongio/evolutionary-optimization)
-53. [Swarm Package](https://github.com/SISDevelop/SwarmPackagePy)
-54. [Paths and Temporal Networks](https://github.com/IngoScholtes/pathpy)
 
 </details>
