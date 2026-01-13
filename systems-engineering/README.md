@@ -7,6 +7,7 @@
 - [Enterprise Architecture - Svyatoslav Kotusev](https://kotusev.com/)
 - [Guide to the Systems Engineering Body of Knowledge (SEBoK)](https://sebokwiki.org/wiki/Guide_to_the_Systems_Engineering_Body_of_Knowledge_(SEBoK))
 - [Systems Engineering Theory and Practice](https://www.youtube.com/playlist?list=PL_bA20lRoKDHuNg1lJkJ75ZEsynNdY_ww)
+- [INCOSE Social Systems](https://www.incose.org/communities/working-groups-initiatives/social-systems)
 
 ## Core Concepts
 
@@ -59,3 +60,9 @@
 	* [Modeling Languages](https://en.wikipedia.org/wiki/Category:Modeling_languages)
 	* [Life-Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
 	* [Life Cycle Models](https://sebokwiki.org/wiki/Life_Cycle_Models)
+18. [Industrial Engineering](https://en.wikipedia.org/wiki/Category:Industrial_engineering)
+19. [Reliability Engineering](https://en.wikipedia.org/wiki/Category:Reliability_engineering)
+    * [Risk analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
+    * [Fault Tree Analysis](https://en.wikipedia.org/wiki/Fault_tree_analysis)
+20. [Process Engineering](https://en.wikipedia.org/wiki/Category:Process_engineering)
+21. [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
