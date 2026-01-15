@@ -2,6 +2,7 @@
 
 - [International Institute for Applied Systems Analysis](https://iiasa.ac.at/)
 - [Decision and Infrastructure Sciences: Argonne National Laboratory](https://www.anl.gov/dis)
+- [International Society for the Systems Sciences](https://en.wikipedia.org/wiki/International_Society_for_the_Systems_Sciences)
 
 ## Resources
 

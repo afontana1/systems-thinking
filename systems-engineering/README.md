@@ -8,6 +8,9 @@
 - [Guide to the Systems Engineering Body of Knowledge (SEBoK)](https://sebokwiki.org/wiki/Guide_to_the_Systems_Engineering_Body_of_Knowledge_(SEBoK))
 - [Systems Engineering Theory and Practice](https://www.youtube.com/playlist?list=PL_bA20lRoKDHuNg1lJkJ75ZEsynNdY_ww)
 - [INCOSE Social Systems](https://www.incose.org/communities/working-groups-initiatives/social-systems)
+- [MIT Engineering Systems Lab](https://systems.mit.edu/)
+- [MIT Fundamentals of Systems Engineering](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/)
+- [Best Systems Engineering Books](https://www.joshuasutherland.com/best-systems-books/)
 
 ## Core Concepts
 
@@ -21,7 +24,9 @@
     * [Software Quality](https://en.wikipedia.org/wiki/Category:Software_quality)
     * [List of System Quality Attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes)
 5. [Systems Modeling](https://en.wikipedia.org/wiki/Systems_modeling)
-6. [Systems Analysis](https://en.wikipedia.org/wiki/Category:Systems_analysis)
+    * [Systems Modeling Language](https://en.wikipedia.org/wiki/Category:Systems_Modeling_Language)
+6. [Decision Analysis](https://en.wikipedia.org/wiki/Category:Decision_analysis)
+    * [Decision Matrix Method (Pugh Method)](https://en.wikipedia.org/wiki/Decision-matrix_method)
 7. [Systems Development Life Cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
 8. [Function Model](https://en.wikipedia.org/wiki/Function_model)
 9. [System Testing](https://en.wikipedia.org/wiki/System_testing) & [Test Engineer](https://en.wikipedia.org/wiki/Test_engineer)
@@ -43,15 +48,16 @@
     * [Verification and Validation](https://en.wikipedia.org/wiki/Verification_and_validation)
     * [System Verification](https://sebokwiki.org/wiki/System_Verification)
     * [System Validation](https://sebokwiki.org/wiki/System_Validation)
+    * [Acceptance Test Driven Development](https://en.wikipedia.org/wiki/Acceptance_test-driven_development)
+    * [Operational Acceptance Testing](https://en.wikipedia.org/wiki/Operational_acceptance_testing)
 10. [Trade Study](https://en.wikipedia.org/wiki/Trade_study)
-11. [Reliability Engineering](https://en.wikipedia.org/wiki/Category:Reliability_engineering)
+11. 
 12. [Unified Modeling Language](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
 13. [Irreversible Process](https://en.wikipedia.org/wiki/Irreversible_process)
-14. [Industrial Engineering](https://en.wikipedia.org/wiki/Category:Industrial_engineering)
-15. [Control_theory](https://en.wikipedia.org/wiki/Category:Control_theory)
-16. [Control_engineering](https://en.wikipedia.org/wiki/Category:Control_engineering)
-	* [Optimal Control](https://en.wikipedia.org/wiki/Optimal_control)
-	* [Adaptive Control](https://en.wikipedia.org/wiki/Adaptive_control)
+14. 
+15. [Operational View](https://en.wikipedia.org/wiki/Operational_View)
+    * [System Context Diagram](https://en.wikipedia.org/wiki/System_context_diagram)
+    * [Concept of Operations](https://en.wikipedia.org/wiki/Concept_of_operations)
 17. [Enterprise_modeling](https://en.wikipedia.org/wiki/Category:Enterprise_modelling)
 	* [Enterprise Architecture](https://en.wikipedia.org/wiki/Category:Enterprise_architecture)
 	* [Enterprise_architecture_frameworks](https://en.wikipedia.org/wiki/Category:Enterprise_architecture_frameworks)
