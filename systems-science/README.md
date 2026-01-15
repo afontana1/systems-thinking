@@ -3,6 +3,7 @@
 - [International Institute for Applied Systems Analysis](https://iiasa.ac.at/)
 - [Decision and Infrastructure Sciences: Argonne National Laboratory](https://www.anl.gov/dis)
 - [International Society for the Systems Sciences](https://en.wikipedia.org/wiki/International_Society_for_the_Systems_Sciences)
+- [PhD Program in Social & Engineering Systems](https://idss.mit.edu/academics/ses/)
 
 ## Resources
 
@@ -53,3 +54,8 @@
 18. [System Dynamics and Modeling](https://www.youtube.com/playlist?list=PLwBW_NrP7cJXAmG3tg32Q3Q-QL3xvmJvC)
 19. [Earth Systems Science](https://www.youtube.com/playlist?list=PLqOZ6FD_RQ7n_eydBs7yLrA5hG4Vd1FES)
 20. [Systems Dynamics](https://www.youtube.com/user/UKSystemDynamics/featured)
+
+## People
+
+1. [Dr. Kathleen M. Carley](https://s3d.cmu.edu/people/core-faculty/carley-kathleen.html)
+2. [Professor Ali Jadbabaie](https://jadbabaie.mit.edu/)

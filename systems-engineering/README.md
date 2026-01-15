@@ -54,7 +54,7 @@
 11. 
 12. [Unified Modeling Language](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
 13. [Irreversible Process](https://en.wikipedia.org/wiki/Irreversible_process)
-14. 
+14. [The DoDAF Architecture Framework](https://dodcio.defense.gov/DODAF/)
 15. [Operational View](https://en.wikipedia.org/wiki/Operational_View)
     * [System Context Diagram](https://en.wikipedia.org/wiki/System_context_diagram)
     * [Concept of Operations](https://en.wikipedia.org/wiki/Concept_of_operations)
