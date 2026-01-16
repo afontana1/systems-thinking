@@ -75,3 +75,10 @@
 22. [Unified modeling Language Diagrams](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
     * [Use Case Diagram](https://en.wikipedia.org/wiki/Use_case)
     * [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram)
+22. [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
+
+
+## [Systems Engineering Standards](https://www.incose.org/about-systems-engineering/se-standards)
+
+1. [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
+2. [ISO/IEC 15288](https://en.wikipedia.org/wiki/ISO/IEC_15288)
