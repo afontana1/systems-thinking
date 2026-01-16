@@ -51,7 +51,7 @@
     * [Acceptance Test Driven Development](https://en.wikipedia.org/wiki/Acceptance_test-driven_development)
     * [Operational Acceptance Testing](https://en.wikipedia.org/wiki/Operational_acceptance_testing)
 10. [Trade Study](https://en.wikipedia.org/wiki/Trade_study)
-11. 
+11. [Interoperability](https://en.wikipedia.org/wiki/Interoperability)
 12. [Unified Modeling Language](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
 13. [Irreversible Process](https://en.wikipedia.org/wiki/Irreversible_process)
 14. [The DoDAF Architecture Framework](https://dodcio.defense.gov/DODAF/)
@@ -72,3 +72,6 @@
     * [Fault Tree Analysis](https://en.wikipedia.org/wiki/Fault_tree_analysis)
 20. [Process Engineering](https://en.wikipedia.org/wiki/Category:Process_engineering)
 21. [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
+22. [Unified modeling Language Diagrams](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
+    * [Use Case Diagram](https://en.wikipedia.org/wiki/Use_case)
+    * [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram)
