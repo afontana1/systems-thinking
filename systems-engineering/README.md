@@ -10,6 +10,7 @@
 - [INCOSE Social Systems](https://www.incose.org/communities/working-groups-initiatives/social-systems)
 - [MIT Engineering Systems Lab](https://systems.mit.edu/)
 - [MIT Fundamentals of Systems Engineering](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/)
+- [Frameworks and Models in Engineering Systems / Engineering System Design](https://ocw.mit.edu/courses/esd-04j-frameworks-and-models-in-engineering-systems-engineering-system-design-spring-2007/)
 - [Best Systems Engineering Books](https://www.joshuasutherland.com/best-systems-books/)
 
 ## Core Concepts
