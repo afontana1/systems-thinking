@@ -67,6 +67,11 @@
 	* [Modeling Languages](https://en.wikipedia.org/wiki/Category:Modeling_languages)
 	* [Life-Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
 	* [Life Cycle Models](https://sebokwiki.org/wiki/Life_Cycle_Models)
+    * [Process Architecture](https://en.wikipedia.org/wiki/Process_architecture)
+        * [Petri Net](https://en.wikipedia.org/wiki/Petri_net)
+        * [Process Theory](https://en.wikipedia.org/wiki/Process_theory)
+        * [Process Modeling](https://en.wikipedia.org/wiki/Process_modeling)
+        * [Flowchart](https://en.wikipedia.org/wiki/Flowchart)
 18. [Industrial Engineering](https://en.wikipedia.org/wiki/Category:Industrial_engineering)
 19. [Reliability Engineering](https://en.wikipedia.org/wiki/Category:Reliability_engineering)
     * [Risk analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
@@ -77,6 +82,7 @@
     * [Use Case Diagram](https://en.wikipedia.org/wiki/Use_case)
     * [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram)
 22. [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
+23. [System of Systems](https://en.wikipedia.org/wiki/System_of_systems)
 
 
 ## [Systems Engineering Standards](https://www.incose.org/about-systems-engineering/se-standards)

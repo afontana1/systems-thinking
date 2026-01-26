@@ -47,7 +47,7 @@
 - [Mathematical Modeling](https://en.wikipedia.org/wiki/Category:Mathematical_modeling)
 - [Engineering Portal](https://en.m.wikipedia.org/wiki/Portal:Engineering)
 
-1. [Applied mathematics](https://en.wikipedia.org/wiki/Category:Applied_mathematics)
+1. [Theoretical Computer Science](https://en.wikipedia.org/wiki/Theoretical_computer_science)
 2. [Computational Complexity Theory](https://en.wikipedia.org/wiki/Category:Computational_complexity_theory)
 3. [Computability Theory](https://en.wikipedia.org/wiki/Category:Computability_theory)
 4. [Theory of Computation](https://en.wikipedia.org/wiki/Category:Theory_of_computation)
@@ -57,12 +57,12 @@
 8. [Approximation Theory](https://en.wikipedia.org/wiki/Category:Approximation_theory)
 9. [Approximation Algorithms](https://en.wikipedia.org/wiki/Category:Approximation_algorithms)
 10. [Numerical Analysis](https://en.wikipedia.org/wiki/Category:Numerical_analysis)
-11. [Artificial Neural Networks](https://en.wikipedia.org/wiki/Category:Artificial_neural_networks)
-12. [Neural Network Architectures](https://en.wikipedia.org/wiki/Category:Neural_network_architectures)
-13. [Types of Neural Networks](https://en.wikipedia.org/wiki/Types_of_artificial_neural_networks)
-14. [Combinatorial algorithms](https://en.wikipedia.org/wiki/Category:Combinatorial_algorithms)
-15. [Data structures](https://en.wikipedia.org/wiki/Category:Data_structures)
-16. [Theoretical Computer Science](https://en.wikipedia.org/wiki/Theoretical_computer_science)
+11. [Finite State Machines](https://en.wikipedia.org/wiki/Category:Finite-state_machines)
+12. [Combinatorial algorithms](https://en.wikipedia.org/wiki/Category:Combinatorial_algorithms)
+13. [Data structures](https://en.wikipedia.org/wiki/Category:Data_structures)
+14. [Models of Computation](https://en.wikipedia.org/wiki/Category:Models_of_computation)
+    * [Automata](https://en.wikipedia.org/wiki/Category:Automata_(computation))
+
 
 ### Relevant CS Classes
 

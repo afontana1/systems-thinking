@@ -4,6 +4,7 @@
 - [Decision and Infrastructure Sciences: Argonne National Laboratory](https://www.anl.gov/dis)
 - [International Society for the Systems Sciences](https://en.wikipedia.org/wiki/International_Society_for_the_Systems_Sciences)
 - [PhD Program in Social & Engineering Systems](https://idss.mit.edu/academics/ses/)
+- [Systems Thinking, Systems Practice](https://sebokwiki.org/wiki/Systems_Thinking%2C_Systems_Practice)
 
 ## Resources
 
