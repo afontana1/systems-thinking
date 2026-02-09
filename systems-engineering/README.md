@@ -1,91 +1,136 @@
-# [Systems_engineering](https://en.wikipedia.org/wiki/Category:Systems_engineering)
+# Systems Engineering
 
+## Foundational Overviews
+- [Systems engineering (Wikipedia category)](https://en.wikipedia.org/wiki/Category:Systems_engineering)
+- [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
+- [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
+- [System of Systems](https://en.wikipedia.org/wiki/System_of_systems)
+- [Irreversible Process](https://en.wikipedia.org/wiki/Irreversible_process)
+
+---
+
+## Handbooks, Bodies of Knowledge, and Standards
+### Core references
+- [Guide to the Systems Engineering Body of Knowledge (SEBoK)](https://sebokwiki.org/wiki/Guide_to_the_Systems_Engineering_Body_of_Knowledge_(SEBoK))
+- [INCOSE Systems Engineering Handbook](https://sebokwiki.org/wiki/INCOSE_Systems_Engineering_Handbook)
+- [NASA Systems Engineering Handbook](https://www.nasa.gov/reference/systems-engineering-handbook/)
+
+### Standards
+- [Systems Engineering Standards (INCOSE)](https://www.incose.org/about-systems-engineering/se-standards)
+- [ISO/IEC 15288](https://en.wikipedia.org/wiki/ISO/IEC_15288)
+- [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
+
+---
+
+## Communities, Councils, and Research Organizations
+- [INCOSE Social Systems](https://www.incose.org/communities/working-groups-initiatives/social-systems)
+- [IEEE Systems Council](https://ieeesystemscouncil.org/)
 - [Arizona Center for Integrative Modeling and Simulation (ACIMS)](https://acims.asu.edu/)
 - [Lifecycle Modeling Organization](https://www.lifecyclemodeling.org/)
-- [INCOSE Systems Engineering Handbook](https://sebokwiki.org/wiki/INCOSE_Systems_Engineering_Handbook)
-- [IEEE Systems Council](https://ieeesystemscouncil.org/)
-- [Enterprise Architecture - Svyatoslav Kotusev](https://kotusev.com/)
-- [Guide to the Systems Engineering Body of Knowledge (SEBoK)](https://sebokwiki.org/wiki/Guide_to_the_Systems_Engineering_Body_of_Knowledge_(SEBoK))
-- [Systems Engineering Theory and Practice](https://www.youtube.com/playlist?list=PL_bA20lRoKDHuNg1lJkJ75ZEsynNdY_ww)
-- [INCOSE Social Systems](https://www.incose.org/communities/working-groups-initiatives/social-systems)
 - [MIT Engineering Systems Lab](https://systems.mit.edu/)
+
+---
+
+## Courses, Lectures, and Reading Lists
 - [MIT Fundamentals of Systems Engineering](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/)
 - [Frameworks and Models in Engineering Systems / Engineering System Design](https://ocw.mit.edu/courses/esd-04j-frameworks-and-models-in-engineering-systems-engineering-system-design-spring-2007/)
+- [Systems Engineering Theory and Practice (YouTube playlist)](https://www.youtube.com/playlist?list=PL_bA20lRoKDHuNg1lJkJ75ZEsynNdY_ww)
 - [Best Systems Engineering Books](https://www.joshuasutherland.com/best-systems-books/)
 
-## Core Concepts
+---
 
-1. [Systems Development Life cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
-2. [Configuration Management](https://en.wikipedia.org/wiki/Configuration_management)
-3. [SEMP](https://www.nasa.gov/reference/appendix-j-semp-content-outline/)
-4. [Requirements Analysis](https://en.wikipedia.org/wiki/Requirements_analysis)
-    * [Requirements Engineering](https://en.wikipedia.org/wiki/Requirements_engineering)
-    * [Non-Functional Requirements](https://en.wikipedia.org/wiki/Non-functional_requirement)
-    * [Software Requirements](https://en.wikipedia.org/wiki/Category:Software_requirements)
-    * [Software Quality](https://en.wikipedia.org/wiki/Category:Software_quality)
-    * [List of System Quality Attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes)
-5. [Systems Modeling](https://en.wikipedia.org/wiki/Systems_modeling)
-    * [Systems Modeling Language](https://en.wikipedia.org/wiki/Category:Systems_Modeling_Language)
-6. [Decision Analysis](https://en.wikipedia.org/wiki/Category:Decision_analysis)
-    * [Decision Matrix Method (Pugh Method)](https://en.wikipedia.org/wiki/Decision-matrix_method)
-7. [Systems Development Life Cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
-8. [Function Model](https://en.wikipedia.org/wiki/Function_model)
-9. [System Testing](https://en.wikipedia.org/wiki/System_testing) & [Test Engineer](https://en.wikipedia.org/wiki/Test_engineer)
-    * [Product Testing](https://en.wikipedia.org/wiki/Category:Product_testing)
-    * [Hardware Testing](https://en.wikipedia.org/wiki/Category:Hardware_testing)
-    * [Software Testing](https://en.wikipedia.org/wiki/Category:Software_testing)
-    * [Acceptance Testing](https://en.wikipedia.org/wiki/Acceptance_testing)
-    * [Highly Accelerating Life Test](https://en.wikipedia.org/wiki/Highly_accelerated_life_test)
-    * [Environmental Stress Screening](https://en.wikipedia.org/wiki/Environmental_stress_screening)
-    * [System Integration Testing](https://en.wikipedia.org/wiki/System_integration_testing)
-    * [Environmental Testing](https://en.wikipedia.org/wiki/Category:Environmental_testing)
-    * [Development Testing](https://en.wikipedia.org/wiki/Development_testing)
-    * [Software Reliability Testing](https://en.wikipedia.org/wiki/Software_reliability_testing)
-    * [Reliability Engineering](https://en.wikipedia.org/wiki/Reliability_engineering)
-    * [Regression Testing](https://en.wikipedia.org/wiki/Regression_testing)
-    * [Functional Testing](https://en.wikipedia.org/wiki/Functional_testing)
-    * [Chaos Engineering](https://en.wikipedia.org/wiki/Chaos_engineering)
-    * [System Reliability, Availability, and Maintainability](https://sebokwiki.org/wiki/System_Reliability,_Availability,_and_Maintainability)
-    * [Verification and Validation](https://en.wikipedia.org/wiki/Verification_and_validation)
-    * [System Verification](https://sebokwiki.org/wiki/System_Verification)
-    * [System Validation](https://sebokwiki.org/wiki/System_Validation)
-    * [Acceptance Test Driven Development](https://en.wikipedia.org/wiki/Acceptance_test-driven_development)
-    * [Operational Acceptance Testing](https://en.wikipedia.org/wiki/Operational_acceptance_testing)
-10. [Trade Study](https://en.wikipedia.org/wiki/Trade_study)
-11. [Interoperability](https://en.wikipedia.org/wiki/Interoperability)
-12. [Unified Modeling Language](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
-13. [Irreversible Process](https://en.wikipedia.org/wiki/Irreversible_process)
-14. [The DoDAF Architecture Framework](https://dodcio.defense.gov/DODAF/)
-15. [Operational View](https://en.wikipedia.org/wiki/Operational_View)
-    * [System Context Diagram](https://en.wikipedia.org/wiki/System_context_diagram)
-    * [Concept of Operations](https://en.wikipedia.org/wiki/Concept_of_operations)
-17. [Enterprise_modeling](https://en.wikipedia.org/wiki/Category:Enterprise_modelling)
-	* [Enterprise Architecture](https://en.wikipedia.org/wiki/Category:Enterprise_architecture)
-	* [Enterprise_architecture_frameworks](https://en.wikipedia.org/wiki/Category:Enterprise_architecture_frameworks)
-	* [Business Process Modeling](https://en.wikipedia.org/wiki/Category:Business_process_modelling)
-	* [Business Process Model Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation)
-	* [Modeling Languages](https://en.wikipedia.org/wiki/Category:Modeling_languages)
-	* [Life-Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
-	* [Life Cycle Models](https://sebokwiki.org/wiki/Life_Cycle_Models)
-    * [Process Architecture](https://en.wikipedia.org/wiki/Process_architecture)
-        * [Petri Net](https://en.wikipedia.org/wiki/Petri_net)
-        * [Process Theory](https://en.wikipedia.org/wiki/Process_theory)
-        * [Process Modeling](https://en.wikipedia.org/wiki/Process_modeling)
-        * [Flowchart](https://en.wikipedia.org/wiki/Flowchart)
-18. [Industrial Engineering](https://en.wikipedia.org/wiki/Category:Industrial_engineering)
-19. [Reliability Engineering](https://en.wikipedia.org/wiki/Category:Reliability_engineering)
-    * [Risk analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
-    * [Fault Tree Analysis](https://en.wikipedia.org/wiki/Fault_tree_analysis)
-20. [Process Engineering](https://en.wikipedia.org/wiki/Category:Process_engineering)
-21. [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
-22. [Unified modeling Language Diagrams](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
-    * [Use Case Diagram](https://en.wikipedia.org/wiki/Use_case)
-    * [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram)
-22. [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
-23. [System of Systems](https://en.wikipedia.org/wiki/System_of_systems)
+## Lifecycle, Planning, and Governance
+- [Systems Development Life cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
+- [Systems Development Life Cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
+- [SEMP](https://www.nasa.gov/reference/appendix-j-semp-content-outline/)
+- [Configuration Management](https://en.wikipedia.org/wiki/Configuration_management)
+- [Life Cycle Models](https://sebokwiki.org/wiki/Life_Cycle_Models)
+- [Life-Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
 
+---
 
-## [Systems Engineering Standards](https://www.incose.org/about-systems-engineering/se-standards)
+## Requirements and Quality Engineering
+- [Requirements Analysis](https://en.wikipedia.org/wiki/Requirements_analysis)
+  - [Requirements Engineering](https://en.wikipedia.org/wiki/Requirements_engineering)
+  - [Non-Functional Requirements](https://en.wikipedia.org/wiki/Non-functional_requirement)
+  - [Software Requirements](https://en.wikipedia.org/wiki/Category:Software_requirements)
+  - [Software Quality](https://en.wikipedia.org/wiki/Category:Software_quality)
+  - [List of System Quality Attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes)
+  - [Quality Function Deployment](https://en.wikipedia.org/wiki/Quality_function_deployment)
 
-1. [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
-2. [ISO/IEC 15288](https://en.wikipedia.org/wiki/ISO/IEC_15288)
+---
+
+## Modeling, Architecture, and Views
+### Systems modeling & languages
+- [Systems Modeling](https://en.wikipedia.org/wiki/Systems_modeling)
+  - [Systems Modeling Language](https://en.wikipedia.org/wiki/Category:Systems_Modeling_Language)
+- [Unified Modeling Language](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
+- [Unified modeling Language Diagrams](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
+  - [Use Case Diagram](https://en.wikipedia.org/wiki/Use_case)
+  - [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram)
+- [Function Model](https://en.wikipedia.org/wiki/Function_model)
+- [Operational View](https://en.wikipedia.org/wiki/Operational_View)
+  - [System Context Diagram](https://en.wikipedia.org/wiki/System_context_diagram)
+  - [Concept of Operations](https://en.wikipedia.org/wiki/Concept_of_operations)
+
+### Enterprise & process architecture
+- [Enterprise_modeling](https://en.wikipedia.org/wiki/Category:Enterprise_modelling)
+  - [Enterprise Architecture](https://en.wikipedia.org/wiki/Category:Enterprise_architecture)
+  - [Enterprise_architecture_frameworks](https://en.wikipedia.org/wiki/Category:Enterprise_architecture_frameworks)
+  - [Business Process Modeling](https://en.wikipedia.org/wiki/Category:Business_process_modelling)
+  - [Business Process Model Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation)
+  - [Modeling Languages](https://en.wikipedia.org/wiki/Category:Modeling_languages)
+  - [Process Architecture](https://en.wikipedia.org/wiki/Process_architecture)
+    - [Petri Net](https://en.wikipedia.org/wiki/Petri_net)
+    - [Process Theory](https://en.wikipedia.org/wiki/Process_theory)
+    - [Process Modeling](https://en.wikipedia.org/wiki/Process_modeling)
+    - [Flowchart](https://en.wikipedia.org/wiki/Flowchart)
+
+### Architecture frameworks
+- [The DoDAF Architecture Framework](https://dodcio.defense.gov/DODAF/)
+- [Enterprise Architecture - Svyatoslav Kotusev](https://kotusev.com/)
+
+---
+
+## Decisions, Trade Studies, and Interoperability
+- [Decision Analysis](https://en.wikipedia.org/wiki/Category:Decision_analysis)
+  - [Decision Matrix Method (Pugh Method)](https://en.wikipedia.org/wiki/Decision-matrix_method)
+- [Trade Study](https://en.wikipedia.org/wiki/Trade_study)
+- [Interoperability](https://en.wikipedia.org/wiki/Interoperability)
+
+---
+
+## Verification, Validation, Test, and Reliability
+### Test engineering & methods
+- [System Testing](https://en.wikipedia.org/wiki/System_testing) & [Test Engineer](https://en.wikipedia.org/wiki/Test_engineer)
+  - [Product Testing](https://en.wikipedia.org/wiki/Category:Product_testing)
+  - [Hardware Testing](https://en.wikipedia.org/wiki/Category:Hardware_testing)
+  - [Software Testing](https://en.wikipedia.org/wiki/Category:Software_testing)
+  - [Acceptance Testing](https://en.wikipedia.org/wiki/Acceptance_testing)
+  - [Highly Accelerating Life Test](https://en.wikipedia.org/wiki/Highly_accelerated_life_test)
+  - [Environmental Stress Screening](https://en.wikipedia.org/wiki/Environmental_stress_screening)
+  - [System Integration Testing](https://en.wikipedia.org/wiki/System_integration_testing)
+  - [Environmental Testing](https://en.wikipedia.org/wiki/Category:Environmental_testing)
+  - [Development Testing](https://en.wikipedia.org/wiki/Development_testing)
+  - [Software Reliability Testing](https://en.wikipedia.org/wiki/Software_reliability_testing)
+  - [Regression Testing](https://en.wikipedia.org/wiki/Regression_testing)
+  - [Functional Testing](https://en.wikipedia.org/wiki/Functional_testing)
+  - [Chaos Engineering](https://en.wikipedia.org/wiki/Chaos_engineering)
+  - [Verification and Validation](https://en.wikipedia.org/wiki/Verification_and_validation)
+  - [System Verification](https://sebokwiki.org/wiki/System_Verification)
+  - [System Validation](https://sebokwiki.org/wiki/System_Validation)
+  - [Acceptance Test Driven Development](https://en.wikipedia.org/wiki/Acceptance_test-driven_development)
+  - [Operational Acceptance Testing](https://en.wikipedia.org/wiki/Operational_acceptance_testing)
+
+### Reliability & risk
+- [Reliability Engineering](https://en.wikipedia.org/wiki/Reliability_engineering)
+- [Reliability Engineering](https://en.wikipedia.org/wiki/Category:Reliability_engineering)
+  - [Risk analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
+  - [Fault Tree Analysis](https://en.wikipedia.org/wiki/Fault_tree_analysis)
+- [System Reliability, Availability, and Maintainability](https://sebokwiki.org/wiki/System_Reliability,_Availability,_and_Maintainability)
+
+---
+
+## Adjacent Disciplines
+- [Industrial Engineering](https://en.wikipedia.org/wiki/Category:Industrial_engineering)
+- [Process Engineering](https://en.wikipedia.org/wiki/Category:Process_engineering)

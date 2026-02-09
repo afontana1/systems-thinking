@@ -1,10 +1,12 @@
-# Resources
+# Complex Systems
 
+## Core texts and primers
 - [Introduction to the Modeling and Analysis of Complex Systems (Sayama)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Introduction_to_the_Modeling_and_Analysis_of_Complex_Systems_(Sayama))
 - [Introduction to Social Network Methods (Hanneman)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Book%3A_Introduction_to_Social_Network_Methods_(Hanneman))
 
-<details><summary><h2>Organizations and Labs</h2></summary>
+---
 
+## Organizations, labs, communities, and course hubs
 - [Network Science Institute](https://www.networkscienceinstitute.org/)
 - [New England Complex Systems Institute](https://necsi.edu/)
 - [UC Davis Complexity Science Center](https://csc.ucdavis.edu/Welcome.html)
@@ -26,19 +28,19 @@
 - [International Society for Computational Biology](https://www.iscb.org/index.php)
 - [awesome-computational-biology](https://github.com/inoue0426/awesome-computational-biology)
 
-</details>
+---
 
-<details><summary><h2>General Resources</h2></summary>
-
+## General theory and key phenomena
+### Big umbrellas and entry points
 1. [Complex_systems_theory](https://en.wikipedia.org/wiki/Category:Complex_systems_theory)
 	- [Book: Introduction to the Modeling and Analysis of Complex Systems (Sayama)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Book%3A_Introduction_to_the_Modeling_and_Analysis_of_Complex_Systems_(Sayama))
 2. [Complex Systems](https://complexsystemstheory.net/complexity-explorer/)
 3. [Complex_adaptive_system](https://en.wikipedia.org/wiki/Complex_adaptive_system)
 4. [Emergence](https://en.wikipedia.org/wiki/Emergence)
+
+### Diffusion, cascades, and criticality
 5. [Diffusion](https://en.wikipedia.org/wiki/Category:Diffusion)
 6. [Percolation Theory](https://en.wikipedia.org/wiki/Percolation_theory)
-7. [Cellular Automata](https://en.wikipedia.org/wiki/Category:Cellular_automata)
-8. [Self Organization](https://en.wikipedia.org/wiki/Category:Self-organization)
 9. [Thresholds and Tipping Points](http://www.complexity.soton.ac.uk/theory/_Thresholds_and_Tipping_Points.php)
 10. [Scale_invariance](https://en.wikipedia.org/wiki/Scale_invariance)
 11. [Self Organized Criticality](https://en.wikipedia.org/wiki/Self-organized_criticality)
@@ -48,6 +50,28 @@
 15. [Scale Invariance](https://en.wikipedia.org/wiki/Scale_invariance)
 16. [Cascading Failure](https://en.wikipedia.org/wiki/Cascading_failure)
 	* [Information Cascade](https://en.wikipedia.org/wiki/Information_cascade)
+
+### Self-organization & computation-inspired models
+7. [Cellular Automata](https://en.wikipedia.org/wiki/Category:Cellular_automata)
+8. [Self Organization](https://en.wikipedia.org/wiki/Category:Self-organization)
+
+### Dynamical systems & phases
+18. [Phase Space](https://en.wikipedia.org/wiki/Phase_space)
+19. [Dynamical Systems](https://en.wikipedia.org/wiki/Category:Dynamical_systems)
+	- [Time Reversibility](https://en.wikipedia.org/wiki/Time_reversibility)
+	- [Perturbation_theory](https://en.wikipedia.org/wiki/Perturbation_theory)
+	- [Attractor](https://en.wikipedia.org/wiki/Attractor)
+	- [Feedback](https://en.wikipedia.org/wiki/Feedback)
+	- [Chaos_theory](https://en.wikipedia.org/wiki/Chaos_theory)
+	- [Numerical Differential Equations](https://en.wikipedia.org/wiki/Category:Numerical_differential_equations)
+	- [Partial Differential Equations](https://en.wikipedia.org/wiki/Category:Partial_differential_equations)
+	- [Non Linear Systems](https://en.wikipedia.org/wiki/Category:Nonlinear_systems)
+20. [Phase Transition](https://en.wikipedia.org/wiki/Phase_transition)
+21. [Turbulence](https://en.wikipedia.org/wiki/Turbulence)
+
+---
+
+## Network science and graph-based complexity
 17. [Network Science](https://en.wikipedia.org/wiki/Category:Network_science)
 	* [Network_effect](https://en.wikipedia.org/wiki/Network_effect)
 	* [Networks](https://www.cs.cornell.edu/home/kleinber/networks-book/)
@@ -63,25 +87,12 @@
 	* [CS 224W](https://snap-stanford.github.io/cs224w-notes/)
 	* [Network Science Course](https://www.youtube.com/playlist?list=PLriUvS7IljvkGesFRuYjqRz4lKgodJgh2)
 	* [Complex Network: Theory and Application](https://www.youtube.com/playlist?list=PL6awLjcQvnYB8YSTKCFe1VDQlgKPFujW1)
-18. [Phase Space](https://en.wikipedia.org/wiki/Phase_space)
-19. [Dynamical Systems](https://en.wikipedia.org/wiki/Category:Dynamical_systems)
-	- [Time Reversibility](https://en.wikipedia.org/wiki/Time_reversibility)
-	- [Perturbation_theory](https://en.wikipedia.org/wiki/Perturbation_theory)
-	- [Attractor](https://en.wikipedia.org/wiki/Attractor)
-	- [Feedback](https://en.wikipedia.org/wiki/Feedback)
-	- [Chaos_theory](https://en.wikipedia.org/wiki/Chaos_theory)
-	- [Numerical Differential Equations](https://en.wikipedia.org/wiki/Category:Numerical_differential_equations)
-	- [Partial Differential Equations](https://en.wikipedia.org/wiki/Category:Partial_differential_equations)
-	- [Non Linear Systems](https://en.wikipedia.org/wiki/Category:Nonlinear_systems)
-20. [Phase Transition](https://en.wikipedia.org/wiki/Phase_transition)
-21. [Turbulence](https://en.wikipedia.org/wiki/Turbulence)
 
-</details>
+---
 
-<details><summary><h2>Agent Based Modeling Resources</h2></summary>
+## Agent-based modeling and multi-agent systems
 
 ### Concepts
-
 1. [Evolutionary Game Theory](https://github.com/rmcelreath/VLEGT)
 2. [ABM in Economics](https://en.wikipedia.org/wiki/Agent-based_model#In_economics_and_social_sciences)
 3. [Economic Emergence](https://www.sciencedirect.com/science/article/abs/pii/S0167268111002368)
@@ -107,7 +118,6 @@
 16. [Agent Oriented Programming](https://en.wikipedia.org/wiki/Agent-oriented_programming)
 
 ### Resources
-
 1. [Computational Economics](http://www2.econ.iastate.edu/tesfatsi/ace.htm)
 2. [Introduction to Computational Economics](https://www2.cs.duke.edu/courses/fall07/cps196.2/)
 3. [Quantitative Economics](https://quantecon.org/lectures/)
@@ -131,7 +141,6 @@
 21. [honey-bee-behavior](https://github.com/Collective-Logic-Lab/honey-bee-behavior)
 
 ### Videos
-
 1. [Agent Based Modeling - All you Wanted to Know](https://www.youtube.com/playlist?list=PLsv8cj_Tu8Ks_JKH9ZshfA6C6DO3MAG_q)
 2. [Agent Based Models and Multi Agent Systems using NetLogo](https://www.youtube.com/playlist?list=PLSx7bGPy9gbHivKzRg2enzdABgKUd3u-E)
 3. [Agent Based Modeling with Python](https://www.youtube.com/playlist?list=PLD4TWcPfbZO9HmaSutF_R2Y2RmiNDxvaP)
@@ -163,9 +172,9 @@
 29. [Generative Agents - Deep Dive and GPT-4 Recreation](https://www.youtube.com/watch?v=44TH6uKlNC4)
 30. [Agent-Based Modeling](https://youtube.com/playlist?list=PLF0b3ThojznRKYcrw8moYMUUJK2Ra8Hwl&si=UhqaQCPZHR0A7DvU)
 
-</details>
+---
 
-<details><summary><h2>Computational Biology</h2></summary>
+## Computational biology and bio-inspired complexity
 
 1. [Swarm Intelligence](https://en.wikipedia.org/wiki/Swarm_intelligence) and [Swarm_behaviour](https://en.wikipedia.org/wiki/Swarm_behaviour)
 	- [Bees Algorithm](https://en.wikipedia.org/wiki/Bees_algorithm)
@@ -179,6 +188,7 @@
 	- [Collective Intelligence](https://en.wikipedia.org/wiki/Category:Collective_intelligence)
 	- [Polya Urn Model](https://en.wikipedia.org/wiki/P%C3%B3lya_urn_model)
 	- [Synthetic Intelligence](https://en.wikipedia.org/wiki/Synthetic_intelligence)
+
 2. [Graph Families](https://en.wikipedia.org/wiki/Category:Graph_families)
 	- [Graph Theory](https://en.wikipedia.org/wiki/Category:Graph_theory)
 	- [Directed Graphs](https://en.wikipedia.org/wiki/Category:Directed_graphs)
@@ -187,6 +197,7 @@
 	- [Direct Acyclic Graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
 	- [Process Mining](https://en.wikipedia.org/wiki/Process_mining)
 	- [Process Calculus](https://en.wikipedia.org/wiki/Process_calculus)
+
 3. [Extended Evolutionary Synthesis](https://extendedevolutionarysynthesis.com/)
 	- [Concepts](https://en.wikipedia.org/wiki/Category:Extended_evolutionary_synthesis)
 	- [Group Selection](https://en.wikipedia.org/wiki/Group_selection)
@@ -195,6 +206,7 @@
 	- [Biological Interactions](https://en.wikipedia.org/wiki/Category:Biological_interactions)
 	- [Evolutionarily significant biological phenomena](https://en.wikipedia.org/wiki/Category:Evolutionarily_significant_biological_phenomena)
 	- [Symbiosis](https://en.wikipedia.org/wiki/Category:Symbiosis)
+
 4. [Introduction to Neural Computation](https://ocw.mit.edu/courses/9-40-introduction-to-neural-computation-spring-2018/)
 5. [Bioinspiration](https://en.wikipedia.org/wiki/Category:Bioinspiration)
 6. [Evolutionary_biology](https://en.wikipedia.org/wiki/Category:Evolutionary_biology)
@@ -206,11 +218,9 @@
 7. [Computational Biology](https://en.wikipedia.org/wiki/Category:Computational_biology)
 8. [Systems Biology](https://en.wikipedia.org/wiki/Category:Systems_biology)
 
-</details>
+---
 
-
-<details><summary><h2>Open Source Tools</h2></summary>
-
+## Open source tools and simulation frameworks
 1. [Proton-T](https://github.com/LABSS/PROTON-T)
 2. [Simulator-Core](https://github.com/SocialSim/SimulatorCore)
 3. [SocialGym2](https://github.com/ut-amrl/SocialGym2)
@@ -238,5 +248,3 @@
 25. [rust agent based models](https://github.com/facorread/rust-agent-based-models)
 26. [Warteschlangensimulator](https://github.com/A-Herzog/Warteschlangensimulator)
 27. [generative-agents](https://github.com/mkturkcan/generative-agents)
-
-</details>
