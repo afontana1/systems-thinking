@@ -61,17 +61,35 @@
 ---
 
 ## Modeling, Architecture, and Views
+
+- [SysML](https://sysml.org/)
+- [SysML Forum](https://sysmlforum.com/)
+
 ### Systems modeling & languages
+- [Systems Architecture](https://en.wikipedia.org/wiki/Category:Systems_architecture)
+  - [Systems Architecture Design Definition](https://sebokwiki.org/wiki/System_Architecture_Design_Definition)
+- [Modeling Languages](https://en.wikipedia.org/wiki/Category:Modeling_languages)
+  - [C4 model](https://c4model.com/)
 - [Systems Modeling](https://en.wikipedia.org/wiki/Systems_modeling)
   - [Systems Modeling Language](https://en.wikipedia.org/wiki/Category:Systems_Modeling_Language)
+  - [Block Definition Diagram](https://en.wikipedia.org/wiki/Block_definition_diagram)
+  - [Internal Block Diagram](https://en.wikipedia.org/wiki/Internal_block_diagram)
+  - [State Diagram](https://en.wikipedia.org/wiki/State_diagram)
 - [Unified Modeling Language](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
 - [Unified modeling Language Diagrams](https://en.wikipedia.org/wiki/Category:Unified_Modeling_Language_diagrams)
   - [Use Case Diagram](https://en.wikipedia.org/wiki/Use_case)
   - [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram)
-- [Function Model](https://en.wikipedia.org/wiki/Function_model)
+  - [Activity Diagram](https://en.wikipedia.org/wiki/Activity_diagram)
+- [View Model](https://en.wikipedia.org/wiki/View_model)
 - [Operational View](https://en.wikipedia.org/wiki/Operational_View)
   - [System Context Diagram](https://en.wikipedia.org/wiki/System_context_diagram)
   - [Concept of Operations](https://en.wikipedia.org/wiki/Concept_of_operations)
+  - [Package Diagram](https://en.wikipedia.org/wiki/Package_diagram)
+- [Functional Architecture](https://sebokwiki.org/wiki/Functional_Architecture)
+  - [Function Model](https://en.wikipedia.org/wiki/Function_model)
+  - [Functional Decomposition](https://en.wikipedia.org/wiki/Functional_decomposition)
+  - [Functional Flow Block Diagram](https://en.wikipedia.org/wiki/Functional_flow_block_diagram)
+  - [N2 Chart](https://en.wikipedia.org/wiki/N2_chart)
 
 ### Enterprise & process architecture
 - [Enterprise_modeling](https://en.wikipedia.org/wiki/Category:Enterprise_modelling)
