@@ -1,11 +1,10 @@
-# Systems Engineering
+# [Systems engineering](https://en.wikipedia.org/wiki/Category:Systems_engineering)
 
 ## Foundational Overviews
-- [Systems engineering (Wikipedia category)](https://en.wikipedia.org/wiki/Category:Systems_engineering)
 - [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
 - [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
 - [System of Systems](https://en.wikipedia.org/wiki/System_of_systems)
-- [Irreversible Process](https://en.wikipedia.org/wiki/Irreversible_process)
+  - [Systems_of_Systems_(SoS)](https://sebokwiki.org/wiki/Systems_of_Systems_(SoS))
 
 ---
 
@@ -14,11 +13,13 @@
 - [Guide to the Systems Engineering Body of Knowledge (SEBoK)](https://sebokwiki.org/wiki/Guide_to_the_Systems_Engineering_Body_of_Knowledge_(SEBoK))
 - [INCOSE Systems Engineering Handbook](https://sebokwiki.org/wiki/INCOSE_Systems_Engineering_Handbook)
 - [NASA Systems Engineering Handbook](https://www.nasa.gov/reference/systems-engineering-handbook/)
+- [Handbook on Enterprise Architecture](https://sebokwiki.org/wiki/Handbook_on_Enterprise_Architecture)
 
 ### Standards
 - [Systems Engineering Standards (INCOSE)](https://www.incose.org/about-systems-engineering/se-standards)
 - [ISO/IEC 15288](https://en.wikipedia.org/wiki/ISO/IEC_15288)
 - [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
+- [ISO/IEC 9126](https://en.wikipedia.org/wiki/ISO/IEC_9126)
 
 ---
 
@@ -28,6 +29,9 @@
 - [Arizona Center for Integrative Modeling and Simulation (ACIMS)](https://acims.asu.edu/)
 - [Lifecycle Modeling Organization](https://www.lifecyclemodeling.org/)
 - [MIT Engineering Systems Lab](https://systems.mit.edu/)
+- [Systems Engineering Research Center](https://sercuarc.org/)
+- [Enterprise Integration Laboratory – EIL](https://eil.mie.utoronto.ca/)
+- [Center for Systems Reliability - Sandia National Laboratory](https://www.sandia.gov/csr/)
 
 ---
 
@@ -50,6 +54,7 @@
 ---
 
 ## Requirements and Quality Engineering
+- [Types of Requirements](https://en.wikipedia.org/wiki/Requirement#Types_of_requirements)
 - [Requirements Analysis](https://en.wikipedia.org/wiki/Requirements_analysis)
   - [Requirements Engineering](https://en.wikipedia.org/wiki/Requirements_engineering)
   - [Non-Functional Requirements](https://en.wikipedia.org/wiki/Non-functional_requirement)
@@ -94,6 +99,8 @@
 ### Enterprise & process architecture
 - [Enterprise_modeling](https://en.wikipedia.org/wiki/Category:Enterprise_modelling)
   - [Enterprise Architecture](https://en.wikipedia.org/wiki/Category:Enterprise_architecture)
+    - [The DoDAF Architecture Framework](https://dodcio.defense.gov/DODAF/)
+    - [Enterprise Architecture - Svyatoslav Kotusev](https://kotusev.com/)
   - [Enterprise_architecture_frameworks](https://en.wikipedia.org/wiki/Category:Enterprise_architecture_frameworks)
   - [Business Process Modeling](https://en.wikipedia.org/wiki/Category:Business_process_modelling)
   - [Business Process Model Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation)
@@ -104,9 +111,6 @@
     - [Process Modeling](https://en.wikipedia.org/wiki/Process_modeling)
     - [Flowchart](https://en.wikipedia.org/wiki/Flowchart)
 
-### Architecture frameworks
-- [The DoDAF Architecture Framework](https://dodcio.defense.gov/DODAF/)
-- [Enterprise Architecture - Svyatoslav Kotusev](https://kotusev.com/)
 
 ---
 
@@ -145,6 +149,7 @@
 - [Reliability Engineering](https://en.wikipedia.org/wiki/Category:Reliability_engineering)
   - [Risk analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
   - [Fault Tree Analysis](https://en.wikipedia.org/wiki/Fault_tree_analysis)
+  - [Failure mode and effects analysis](https://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis)
 - [System Reliability, Availability, and Maintainability](https://sebokwiki.org/wiki/System_Reliability,_Availability,_and_Maintainability)
 
 ---
