@@ -1,5 +1,81 @@
 # Complex Systems
 
+## Complexity
+
+### Topics
+
+- [Complexity Economics Course](https://sites.google.com/site/matteorichiardi/teaching/complexity-economics)
+
+1. [Complexity Economics](https://www.oxfordmartin.ox.ac.uk/programmes/economics)
+2. [Complexity Studies](https://complexsystemsupenn.com/)
+3. [Network Science](https://www.networkscienceinstitute.org/)
+4. [Computational Social Science](https://science.gmu.edu/academics/departments-units/computational-data-sciences/computational-social-science-phd)
+5. [Econophysics](https://en.wikipedia.org/wiki/Econophysics)
+6. [Ergodicity Economics](https://ergodicityeconomics.com/)
+
+### People 
+
+1. [J. Doyne Farmer](http://www.doynefarmer.com/)
+2. [W. Brian Arthur](https://en.wikipedia.org/wiki/W._Brian_Arthur)
+3. [Robert Axtell](https://css1.gmu.edu/~axtell/Rob/Home.html)
+4. [Duncan J. Watts](https://duncanjwatts.com/)
+5. [Joshua M. Epstein](https://publichealth.nyu.edu/faculty/joshua-epstein)
+6. [Scott E Page](https://sites.lsa.umich.edu/scottepage/)
+7. [John Miller CMU](https://www.cmu.edu/dietrich/sds/people/faculty/john-miller.html)
+8. [Neil Theise](https://www.neiltheiseofficial.com/)
+9. [Aaron Clauset](https://aaronclauset.github.io/)
+10. [Omar A. Guerrero (Alan Turing Institute)](https://oguerr.com/)
+11. [Professor Henrik Jeldtoft Jensen](https://www.ma.imperial.ac.uk/~hjjens/)
+12. [David Krakauer](https://www.santafe.edu/people/profile/david-krakauer)
+13. [Stuart Kauffman](https://scholar.google.com/citations?user=yoPM0F8AAAAJ&hl=en)
+14. [Geoffrey West](https://www.santafe.edu/people/profile/geoffrey-west)
+15. [Raissa D'Souza](https://scholar.google.com/citations?user=jM23vRsKxuIC&hl=en)
+16. [Herbert Simon](https://en.wikipedia.org/wiki/Herbert_A._Simon)
+17. [Alicia Juarrero](https://aliciajuarrerodotcom1.wordpress.com/)
+18. [Harry Crane](https://www.harrycrane.com/)
+19. [Cole Mathis](https://colemathis.github.io/)
+20. [Robert Hanneman](https://faculty.ucr.edu/~hanneman/)
+21. [John H Holland](https://en.wikipedia.org/wiki/John_Henry_Holland)
+22. [Paul Smaldoni](https://smaldino.com/wp/)
+23. [Carlos Gershenson](https://scholar.google.com/citations?user=fBRKCewAAAAJ&hl=en)
+24. [Daniel Hoyer](https://csh.ac.at/daniel-hoyer/)
+25. [Luis H. Favela](https://scholar.google.com/citations?user=-MnTuJUAAAAJ&hl=en)
+26. [Deborah M. Gordon](https://web.stanford.edu/~dmgordon/)
+27. [Tina Eliassi-Rad](https://eliassi.org/)
+28. [Petter Tornberg](https://www.pettertornberg.com/)
+29. [César A. Hidalgo](https://cesarhidalgo.com/)
+30. [Omar A. Guerrero](https://oguerr.com/)
+
+### Journals, Institutes, Research Labs
+
+1. [Journal of Artificial Societies and Social Simulation](https://www.jasss.org/JASSS.html)
+2. [Santa Fe Institute Resources](https://www.complexityexplorer.org/explore/resources)
+3. [Imperial College Centre for Complexity Science](https://www.imperial.ac.uk/complexity-science/)
+4. [Center for Social Complexity](https://complexsystemstheory.net/centre-for-social-complexity-gmu/)
+5. [UC DavisComplexity Sciences Center](https://csc.ucdavis.edu/Welcome.html)
+6. [New England Complex Systems Institute](https://necsi.edu/)
+7. [Computational Social Dynamics](https://picsolab.github.io/)
+8. [Computational Social Science Lab](https://dgarcia.eu/)
+9. [Complexity Hub](https://csh.ac.at/)
+10. [Cascade Institute](https://cascadeinstitute.org/)
+11. [The Computational Social Sciences Society of the Americas](https://computationalsocialscience.org/)
+12. [ASU - School of Complex Adaptive Systems](https://scas.asu.edu/research/)
+
+### [Complexity Economics](https://en.wikipedia.org/wiki/Category:Complexity_economics)
+
+1. [The Atlas of Economic Complexity](https://atlas.hks.harvard.edu/)
+2. [Complex Society Lab](https://complexsocietylab.cl/)
+3. [Center For Collective Learning](https://centerforcollectivelearning.org/)
+4. [Center for Complex Systems & Enterprises](https://www.stevens.edu/center-for-complex-systems-and-enterprises)
+5. [The Complexity Lab in Economics (CLE)](https://centridiricerca.unicatt.it/m/complexity-home)
+6. [ASU Complexity Economics Lab](https://globalfutures.asu.edu/cel/)
+7. [Columbia University - Economic Complexity Research Lab](https://kachanilab.ieor.columbia.edu/)
+8. [World Economics Association - Complexity Economics](https://www.worldeconomicsassociation.org/newsletterarticles/complexity-economics/)
+9. [Social Economics Lab](https://socialeconomicslab.org/)
+10. [Experimental Economics Center - Georgia State University](https://excenopen.gsu.edu/center/)
+
+---
+
 ## Core texts and primers
 - [Introduction to the Modeling and Analysis of Complex Systems (Sayama)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Introduction_to_the_Modeling_and_Analysis_of_Complex_Systems_(Sayama))
 - [Introduction to Social Network Methods (Hanneman)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Book%3A_Introduction_to_Social_Network_Methods_(Hanneman))

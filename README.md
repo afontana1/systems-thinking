@@ -13,23 +13,12 @@
 9. [Math cheatsheets](https://stanford.edu/~shervine/)
 10. [awesome-scientific-computing](https://github.com/nschloe/awesome-scientific-computing)
 11. [Planning Algorithms](http://lavalle.pl/planning/)
-    * [Path Planning](https://github.com/zhm-real/PathPlanning)
-    * [Motion Planning](https://github.com/zhm-real/MotionPlanning)
-    * [rrt-algorithms](https://github.com/motion-planning/rrt-algorithms)
-    * [More Motion Planning](https://github.com/RuslanAgishev/motion_planning)
-    * [Multi Agent Path Planning](https://github.com/atb033/multi_agent_path_planning)
-    * [Python Robotics](https://github.com/AtsushiSakai/PythonRobotics)
 12. [Data Driven Dynamics and Control](https://www.eigensteve.com/)
 13. [Dynamic Optimization](https://apmonitor.com/do/index.php)
 14. [Handbook of Engineering Statistics](https://www.itl.nist.gov/div898/handbook/index.htm)
 15. [numerical-linear-algebra](https://github.com/fastai/numerical-linear-algebra)
 16. [Computational Science And Engineering I](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/)
 17. [Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm)
-18. [Signal_processing](https://en.wikipedia.org/wiki/Category:Signal_processing)
-	* [Introduction To Electrical Engineering And Computer Science I](https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/)
-	* [Signals and Systems 6-007](https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/)
-	* [Signals and Systems 6-003](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/)
-	* [Signals Systems and Inference](https://ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/)
 
 ## Core Math
 
