@@ -188,6 +188,26 @@
 	- [Multi-Agent System: An Introduction to Distributed Artificial Intelligence](https://www.jasss.org/4/2/reviews/rouchier.html)
 16. [Agent Oriented Programming](https://en.wikipedia.org/wiki/Agent-oriented_programming)
 
+### [Swarm Engineering](https://hauertlab.com/)
+
+1. [Radhika Nagpal](https://www.radhikanagpal.org/) at [SSR Princeton](https://ssr.princeton.edu/)
+2. [Sabine Hauert](https://hauertlab.com/sabine-hauert/)
+3. [MIT Center for Bits and Atoms](http://cba.mit.edu/)
+4. [Simon Garnier](https://people.njit.edu/profile/garnier) and [Swarm Lab](https://www.theswarmlab.com/)
+5. [Swarm Intelligence](https://en.wikipedia.org/wiki/Swarm_intelligence)
+6. [Evolutionary algorithms](https://en.wikipedia.org/wiki/Category:Evolutionary_algorithms)
+7. [Collective Intelligence](https://en.wikipedia.org/wiki/Collective_intelligence)
+8. [Bio Inspired Computing](https://en.wikipedia.org/wiki/Bio-inspired_computing)
+
+### [Multi Agent Systems](https://en.wikipedia.org/wiki/Category:Multi-agent_systems)
+
+1. [Game Theoretic Concepts](https://en.wikipedia.org/wiki/Category:Game_theory)
+2. [Prof. Dr. Felix Brandt](https://www.cs.cit.tum.de/en/dss/brandt/)
+3. [Computational Social Choice](https://youtube.com/playlist?list=PLOfTMPqb4h4YpejIw7acMsdUnBm51a-FD&si=XztGrBLGOVUHST7q)
+4. [Tim Roughgarden](https://timroughgarden.org/)
+5. [Algorithmic Game Theory](https://timroughgarden.org/f13/f13.html)
+6. [Leigh S Tesfatsion](https://faculty.sites.iastate.edu/tesfatsi/)
+
 ### Resources
 1. [Computational Economics](http://www2.econ.iastate.edu/tesfatsi/ace.htm)
 2. [Introduction to Computational Economics](https://www2.cs.duke.edu/courses/fall07/cps196.2/)
