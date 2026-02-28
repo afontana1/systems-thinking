@@ -45,12 +45,15 @@
 28. [Petter Tornberg](https://www.pettertornberg.com/)
 29. [César A. Hidalgo](https://cesarhidalgo.com/)
 30. [Omar A. Guerrero](https://oguerr.com/)
+31. [Matteo Guido Richiardi](https://scholar.google.com/citations?user=ug0IdhYAAAAJ&hl=en)
+32. [Mason Porter](https://scholar.google.com/citations?user=hSyfNekAAAAJ&hl=en)
 
 ---
 
 ## Core texts and primers
 - [Introduction to the Modeling and Analysis of Complex Systems (Sayama)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Introduction_to_the_Modeling_and_Analysis_of_Complex_Systems_(Sayama))
 - [Introduction to Social Network Methods (Hanneman)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Book%3A_Introduction_to_Social_Network_Methods_(Hanneman))
+- [Journal of Artificial Societies and Social Simulation](https://www.jasss.org/JASSS.html)
 
 ---
 
@@ -110,25 +113,25 @@
 4. [Emergence](https://en.wikipedia.org/wiki/Emergence)
 
 ### Diffusion, cascades, and criticality
-5. [Diffusion](https://en.wikipedia.org/wiki/Category:Diffusion)
-6. [Percolation Theory](https://en.wikipedia.org/wiki/Percolation_theory)
-9. [Thresholds and Tipping Points](http://www.complexity.soton.ac.uk/theory/_Thresholds_and_Tipping_Points.php)
-10. [Scale_invariance](https://en.wikipedia.org/wiki/Scale_invariance)
-11. [Self Organized Criticality](https://en.wikipedia.org/wiki/Self-organized_criticality)
-12. [Path Dependence](https://en.wikipedia.org/wiki/Path_dependence)
-13. [Critical Point](https://en.wikipedia.org/wiki/Critical_point_(network_science))
-14. [Power Law](https://en.wikipedia.org/wiki/Power_law)
-15. [Scale Invariance](https://en.wikipedia.org/wiki/Scale_invariance)
-16. [Cascading Failure](https://en.wikipedia.org/wiki/Cascading_failure)
+1. [Diffusion](https://en.wikipedia.org/wiki/Category:Diffusion)
+2. [Percolation Theory](https://en.wikipedia.org/wiki/Percolation_theory)
+3. [Thresholds and Tipping Points](http://www.complexity.soton.ac.uk/theory/_Thresholds_and_Tipping_Points.php)
+4. [Scale_invariance](https://en.wikipedia.org/wiki/Scale_invariance)
+5. [Self Organized Criticality](https://en.wikipedia.org/wiki/Self-organized_criticality)
+6. [Path Dependence](https://en.wikipedia.org/wiki/Path_dependence)
+7. [Critical Point](https://en.wikipedia.org/wiki/Critical_point_(network_science))
+8. [Power Law](https://en.wikipedia.org/wiki/Power_law)
+9. [Scale Invariance](https://en.wikipedia.org/wiki/Scale_invariance)
+10. [Cascading Failure](https://en.wikipedia.org/wiki/Cascading_failure)
 	* [Information Cascade](https://en.wikipedia.org/wiki/Information_cascade)
 
 ### Self-organization & computation-inspired models
-7. [Cellular Automata](https://en.wikipedia.org/wiki/Category:Cellular_automata)
-8. [Self Organization](https://en.wikipedia.org/wiki/Category:Self-organization)
+1. [Cellular Automata](https://en.wikipedia.org/wiki/Category:Cellular_automata)
+2. [Self Organization](https://en.wikipedia.org/wiki/Category:Self-organization)
 
 ### Dynamical systems & phases
-18. [Phase Space](https://en.wikipedia.org/wiki/Phase_space)
-19. [Dynamical Systems](https://en.wikipedia.org/wiki/Category:Dynamical_systems)
+1. [Phase Space](https://en.wikipedia.org/wiki/Phase_space)
+2. [Dynamical Systems](https://en.wikipedia.org/wiki/Category:Dynamical_systems)
 	- [Time Reversibility](https://en.wikipedia.org/wiki/Time_reversibility)
 	- [Perturbation_theory](https://en.wikipedia.org/wiki/Perturbation_theory)
 	- [Attractor](https://en.wikipedia.org/wiki/Attractor)
@@ -137,13 +140,16 @@
 	- [Numerical Differential Equations](https://en.wikipedia.org/wiki/Category:Numerical_differential_equations)
 	- [Partial Differential Equations](https://en.wikipedia.org/wiki/Category:Partial_differential_equations)
 	- [Non Linear Systems](https://en.wikipedia.org/wiki/Category:Nonlinear_systems)
-20. [Phase Transition](https://en.wikipedia.org/wiki/Phase_transition)
-21. [Turbulence](https://en.wikipedia.org/wiki/Turbulence)
+3. [Phase Transition](https://en.wikipedia.org/wiki/Phase_transition)
+4. [Turbulence](https://en.wikipedia.org/wiki/Turbulence)
 
 ---
 
 ## Network science and graph-based complexity
-17. [Network Science](https://en.wikipedia.org/wiki/Category:Network_science)
+
+- [PHYS 7332 (Network Science Data)](https://asmithh.github.io/network-science-data-book/intro.html)
+
+1. [Network Science](https://en.wikipedia.org/wiki/Category:Network_science)
 	* [Network_effect](https://en.wikipedia.org/wiki/Network_effect)
 	* [Networks](https://www.cs.cornell.edu/home/kleinber/networks-book/)
 	* [Network Science](http://www.network-science.org/)
@@ -158,10 +164,15 @@
 	* [CS 224W](https://snap-stanford.github.io/cs224w-notes/)
 	* [Network Science Course](https://www.youtube.com/playlist?list=PLriUvS7IljvkGesFRuYjqRz4lKgodJgh2)
 	* [Complex Network: Theory and Application](https://www.youtube.com/playlist?list=PL6awLjcQvnYB8YSTKCFe1VDQlgKPFujW1)
+2. [Community Structure](https://en.wikipedia.org/wiki/Community_structure)
+	* [Hierarchical Navigable Small World](https://en.wikipedia.org/wiki/Hierarchical_navigable_small_world)
 
 ---
 
 ## Agent-based modeling and multi-agent systems
+
+- [Agent Based Models](https://en.wikipedia.org/wiki/Category:Agent-based_model)
+- [Microsimulation](https://en.wikipedia.org/wiki/Category:Microsimulation)
 
 ### Concepts
 1. [Evolutionary Game Theory](https://github.com/rmcelreath/VLEGT)

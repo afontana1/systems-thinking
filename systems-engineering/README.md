@@ -14,6 +14,7 @@
 - [INCOSE Systems Engineering Handbook](https://sebokwiki.org/wiki/INCOSE_Systems_Engineering_Handbook)
 - [NASA Systems Engineering Handbook](https://www.nasa.gov/reference/systems-engineering-handbook/)
 - [Handbook on Enterprise Architecture](https://sebokwiki.org/wiki/Handbook_on_Enterprise_Architecture)
+- [ESMD Course Material : Fundamentals of Lunar and Systems Engineering for Senior Project Teams, with Application to a Lunar Excavator](https://www.eng.auburn.edu/~dbeale/ESMDCourse/index.htm)
 
 ### Standards
 - [Systems Engineering Standards (INCOSE)](https://www.incose.org/about-systems-engineering/se-standards)
@@ -55,6 +56,8 @@
 
 ## Requirements and Quality Engineering
 - [Types of Requirements](https://en.wikipedia.org/wiki/Requirement#Types_of_requirements)
+- [Requirements Management](https://en.wikipedia.org/wiki/Requirements_management)
+- [Requirements Traceability](https://en.wikipedia.org/wiki/Requirements_traceability)
 - [Requirements Analysis](https://en.wikipedia.org/wiki/Requirements_analysis)
   - [Requirements Engineering](https://en.wikipedia.org/wiki/Requirements_engineering)
   - [Non-Functional Requirements](https://en.wikipedia.org/wiki/Non-functional_requirement)
@@ -85,6 +88,7 @@
   - [Use Case Diagram](https://en.wikipedia.org/wiki/Use_case)
   - [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram)
   - [Activity Diagram](https://en.wikipedia.org/wiki/Activity_diagram)
+  - [Message Sequence Chart](https://en.wikipedia.org/wiki/Message_sequence_chart)
 - [View Model](https://en.wikipedia.org/wiki/View_model)
 - [Operational View](https://en.wikipedia.org/wiki/Operational_View)
   - [System Context Diagram](https://en.wikipedia.org/wiki/System_context_diagram)
@@ -151,6 +155,7 @@
   - [Fault Tree Analysis](https://en.wikipedia.org/wiki/Fault_tree_analysis)
   - [Failure mode and effects analysis](https://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis)
 - [System Reliability, Availability, and Maintainability](https://sebokwiki.org/wiki/System_Reliability,_Availability,_and_Maintainability)
+- [Risk Register](https://en.wikipedia.org/wiki/Risk_register)
 
 ---
 
