@@ -2,6 +2,7 @@
 
 ## Foundational Overviews
 - [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
+- [Systems Thinking, Systems Practice](https://sebokwiki.org/wiki/Systems_Thinking,_Systems_Practice)
 - [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
 - [System of Systems](https://en.wikipedia.org/wiki/System_of_systems)
   - [Systems_of_Systems_(SoS)](https://sebokwiki.org/wiki/Systems_of_Systems_(SoS))
