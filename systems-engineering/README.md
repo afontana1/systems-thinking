@@ -162,4 +162,5 @@
 
 ## Adjacent Disciplines
 - [Industrial Engineering](https://en.wikipedia.org/wiki/Category:Industrial_engineering)
+  - [Industrial Safety Engineering](https://youtube.com/playlist?list=PLbRMhDVUMngdXebaRB59KdKwstzuAovua&si=hxUJiE0HnOjhyTUD)
 - [Process Engineering](https://en.wikipedia.org/wiki/Category:Process_engineering)
