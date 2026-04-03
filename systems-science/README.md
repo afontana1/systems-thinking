@@ -124,6 +124,19 @@
 31. [Earth Systems Science](https://www.youtube.com/playlist?list=PLqOZ6FD_RQ7n_eydBs7yLrA5hG4Vd1FES)
 32. [Systems Dynamics](https://www.youtube.com/user/UKSystemDynamics/featured)
 
+### General Systems Playlists and Videos
+
+1. [Lecture Collection | Human Behavioral Biology](https://www.youtube.com/playlist?list=PL848F2368C90DDC3D)
+2. [Behavioural Finance Lectures](https://youtube.com/playlist?list=PL0A21A329D01D0CFE&si=JUbAqCu4EvtBlsav)
+3. [MIT 14.13 Psychology and Economics, Spring 2020](https://youtube.com/playlist?list=PLUl4u3cNGP63Z979ri_UXXk_1zrvrF77Q&si=SzfITgTSjNZtn9i3)
+4. [SFI Community Lecture Series](https://youtube.com/playlist?list=PL7D69D1FFE63DA81A&si=YDnFg4lYgOg0UPfb)
+5. [SFI Ulam Memorial Lecture Series](https://youtube.com/playlist?list=PLZlVBTf7N6GqsN1u1eu_yTD7VxFVCrFzZ&si=tV00lCdc8vnGNEeW)
+6. [Collective Computation (C4) Public Lecture Videos](https://youtube.com/playlist?list=PLZlVBTf7N6Gojp0vRGmTom0rwqFuoaT_d&si=YHSZvHSEeJB3FhsR)
+7. [SFI Seminars](https://youtube.com/playlist?list=PLZlVBTf7N6Gpc690KyysAO5J8iuc-ffyP&si=CriRa_bj_c_GuhJt)
+8. [Complexity Podcast](https://youtube.com/playlist?list=PLZlVBTf7N6GqWUtLVQ-pWehJElcMTGiea&si=B1itTI_hhlqEeMYu)
+9. [Science as Process and Perspective – A Crash Course in the Philosophy of Science for Researchers](https://youtube.com/playlist?list=PL8vh-kVsYPqPVrV0m4HjZexgO6oDkgkK0&si=Tt5_PgYP5KyIXwq2)
+10. [Beyond Networks: The Evolution of Living Systems](https://youtube.com/playlist?list=PL8vh-kVsYPqOKJOboONJIQBd8ds0ueM_W&si=HpU6LKYycWB6pAmc)
+
 ### General Systems Concepts
 
 1. [Thinking in Systems](https://youtube.com/playlist?list=PLL6RiAl2WHXEU04zFYyWrUGV_fqGG4TuR&si=MMPt13WPm2s0YgTp)
