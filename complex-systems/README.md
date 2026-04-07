@@ -54,6 +54,8 @@
 - [Introduction to the Modeling and Analysis of Complex Systems (Sayama)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Introduction_to_the_Modeling_and_Analysis_of_Complex_Systems_(Sayama))
 - [Introduction to Social Network Methods (Hanneman)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Book%3A_Introduction_to_Social_Network_Methods_(Hanneman))
 - [Journal of Artificial Societies and Social Simulation](https://www.jasss.org/JASSS.html)
+- [International Journal of Microsimulation](https://www.microsimulation.org/journal/)
+	- [Traffic Analysis Toolbox Volume III: Guidelines for Applying Traffic Microsimulation Modeling Software](https://ops.fhwa.dot.gov/publications/fhwahop18036/index.htm)
 
 ---
 
@@ -88,6 +90,7 @@
 - [Cascade Institute](https://cascadeinstitute.org/)
 - [The Computational Social Sciences Society of the Americas](https://computationalsocialscience.org/)
 - [ASU - School of Complex Adaptive Systems](https://scas.asu.edu/research/)
+- [Argonne National Laboratory - Social, Behavioral, and Decision Science](https://www.anl.gov/dis/social-behavioral-and-decision-science)
 
 ### [Complexity Economics](https://en.wikipedia.org/wiki/Category:Complexity_economics)
 
