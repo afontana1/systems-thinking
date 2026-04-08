@@ -4,8 +4,9 @@
 - [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
 - [Systems Thinking, Systems Practice](https://sebokwiki.org/wiki/Systems_Thinking,_Systems_Practice)
 - [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
-- [System of Systems](https://en.wikipedia.org/wiki/System_of_systems)
-  - [Systems_of_Systems_(SoS)](https://sebokwiki.org/wiki/Systems_of_Systems_(SoS))
+- [Systems of Systems (SoS)](https://sebokwiki.org/wiki/Systems_of_Systems_(SoS))
+  - [Systems of Systems and Complexity](https://sebokwiki.org/wiki/System_of_Systems_and_Complexity)
+  - [Complex Adaptive Systems](https://sebokwiki.org/wiki/Complex_Adaptive_System_%28CAS%29_%28glossary%29)
 
 ---
 
@@ -46,7 +47,6 @@
 ---
 
 ## Lifecycle, Planning, and Governance
-- [Systems Development Life cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
 - [Systems Development Life Cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
 - [SEMP](https://www.nasa.gov/reference/appendix-j-semp-content-outline/)
 - [Configuration Management](https://en.wikipedia.org/wiki/Configuration_management)
