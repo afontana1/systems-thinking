@@ -150,13 +150,16 @@
   - [Operational Acceptance Testing](https://en.wikipedia.org/wiki/Operational_acceptance_testing)
 
 ### Reliability & risk
-- [Reliability Engineering](https://en.wikipedia.org/wiki/Reliability_engineering)
 - [Reliability Engineering](https://en.wikipedia.org/wiki/Category:Reliability_engineering)
   - [Risk analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
   - [Fault Tree Analysis](https://en.wikipedia.org/wiki/Fault_tree_analysis)
   - [Failure mode and effects analysis](https://en.wikipedia.org/wiki/Failure_mode_and_effects_analysis)
+  - [Failure mode, effects, and criticality analysis](https://en.wikipedia.org/wiki/Failure_mode,_effects,_and_criticality_analysis)
+  - [Failure modes, effects, and diagnostic analysis](https://en.wikipedia.org/wiki/Failure_modes,_effects,_and_diagnostic_analysis)
 - [System Reliability, Availability, and Maintainability](https://sebokwiki.org/wiki/System_Reliability,_Availability,_and_Maintainability)
-- [Risk Register](https://en.wikipedia.org/wiki/Risk_register)
+- [Risk Analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
+  - [Risk Register](https://en.wikipedia.org/wiki/Risk_register)
+- [Hazard Analysis](https://en.wikipedia.org/wiki/Category:Hazard_analysis)
 
 ---
 
