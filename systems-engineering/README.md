@@ -100,6 +100,7 @@
   - [Functional Decomposition](https://en.wikipedia.org/wiki/Functional_decomposition)
   - [Functional Flow Block Diagram](https://en.wikipedia.org/wiki/Functional_flow_block_diagram)
   - [N2 Chart](https://en.wikipedia.org/wiki/N2_chart)
+  - [IDEF0](https://en.wikipedia.org/wiki/IDEF0)
 
 ### Enterprise & process architecture
 - [Enterprise_modeling](https://en.wikipedia.org/wiki/Category:Enterprise_modelling)

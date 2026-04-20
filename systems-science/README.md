@@ -53,8 +53,8 @@
 ---
 
 ## Theory and analytic families
-- [Systems_theory](https://en.wikipedia.org/wiki/Category:Systems_theory)
-- [Systems_analysis](https://en.wikipedia.org/wiki/Category:Systems_analysis)
+- [Systems Theory](https://en.wikipedia.org/wiki/Category:Systems_theory)
+- [Systems Analysis](https://en.wikipedia.org/wiki/Category:Systems_analysis)
 
 ## Cross-cutting concepts
 - [Irreversible Process](https://en.wikipedia.org/wiki/Irreversible_process)
