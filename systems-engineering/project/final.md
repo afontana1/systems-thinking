@@ -12,9 +12,10 @@
     1. [Current Systems and Operations](#21-current-systems-and-operations)
         1. [Human Actors](#211-human-actors)
         2. [Technologies and Tools Currently Used](#212-technologies-and-tools-currently-used)
-        3. [Typical Characteristics of the Current system](#213-typical-characteristics-of-the-current-system)
+        3. [Typical Characteristics of the Current System](#213-typical-characteristics-of-the-current-system)
         4. [Typical Current Operational Flow](#214-typical-current-operational-flow)
-    2. [Deficiencies / Opportunities](#22-deficiencies--opportunities)
+    2. [Deficiencies and Opportunities](#22-deficiencies-and-opportunities)
+        1. [Opportunities for Improvement](#221-opportunities-for-improvement)
 
 3. [Stakeholder Analysis](#3-stakeholder-analysis)
     1. [Stakeholder Identification and Analysis](#31-stakeholder-identification-and-analysis)
@@ -23,40 +24,41 @@
     2. [Stakeholder Requirements](#32-stakeholder-requirements)
         1. [Capabilities](#321-capabilities)
         2. [Characteristics](#322-characteristics)
+    3. [Stakeholder Needs Mapping](#33-stakeholder-needs-mapping)
+        1. [Capability and Characteristic Key](#331-capability-and-characteristic-key)
+        2. [Stakeholder Needs Mapping Table](#332-stakeholder-needs-mapping-table)
+        3. [Interpretation](#333-interpretation)
 
 4. [Acceptance Criteria](#4-acceptance-criteria)
     1. [Defined Acceptance Criteria](#41-defined-acceptance-criteria)
+    2. [Explanation of Acceptance Criteria](#42-explanation-of-acceptance-criteria)
 
 5. [Concept for the Proposed System](#5-concept-for-the-proposed-system)
     1. [Concept Generation](#51-concept-generation)
-        1. [CONOPS](#511-conops)
-    2. [Concept Selection](#52-concept-selection)
-        1. [Pugh Matrix](#521-pugh-matrix)
-    3. [System Context](#53-system-context)
-    4. ["To Be" Operational Scenarios](#54-to-be-operational-scenarios)
-    5. [Use Case Model](#55-use-case-model)
-    6. [Use Case Specifications](#56-use-case-specifications)
-        1. [Sequence Diagram](#561-sequence-diagram)
-    7. [QFD Analysis](#57-qfd-analysis)
-    8. [System Requirements](#58-system-requirements)
-    9. [Functional and Physical Architecture](#59-functional-and-physical-architecture)
-        1. [Input/Output Matrices](#591-inputoutput-matrices)
-        2. [First Level Decomposition](#592-first-level-decomposition)
-        3. [IDEF0 Model](#593-idef0-model)
-    10. [Risk Assessment](#510-risk-assessment)
-        1. [Technical Performance Measures](#5101-technical-performance-measures)
+    2. [CONOPS](#52-conops)
+    3. [Concept Selection](#53-concept-selection)
+        1. [Pugh Matrix](#531-pugh-matrix)
+    4. [System Context](#54-system-context)
+    5. ["To Be" Operational Scenarios](#55-to-be-operational-scenarios)
+    6. [Use Case Model](#56-use-case-model)
+    7. [Use Case Specifications](#57-use-case-specifications)
+        1. [Sequence Diagram](#571-sequence-diagram)
+    8. [QFD Analysis](#58-qfd-analysis)
+        1. [QFD Matrix](#581-qfd-matrix)
+    9. [System Requirements](#59-system-requirements)
 
-6. [Reflection](#6-reflection)
+6. [Functional and Physical Architecture](#6-functional-and-physical-architecture)
+    1. [Input/Output Matrices](#61-inputoutput-matrices)
+    2. [First Level Decomposition](#62-first-level-decomposition)
+    3. [IDEF0 Model](#63-idef0-model)
 
-7. [Conclusion](#7-conclusion)
+7. [Risk Assessment](#7-risk-assessment)
+    1. [Technical Performance Measures](#71-technical-performance-measures)
+    2. [Risk Management Plan](#72-risk-management-plan)
 
-8. [References](#8-references)
+8. [Reflection](#8-reflection)
 
-9. [Appendices](#9-appendices)
-    1. [Supporting Diagrams](#91-supporting-diagrams)
-    2. [QFD Matrix](#92-qfd-matrix)
-    3. [Use Case Details](#93-use-case-details)
-    4. [Risk Management Plan](#94-risk-management-plan)
+9. [Conclusion](#9-conclusion)
 
 ---
 
@@ -138,9 +140,9 @@ The technologies and tools currently used in many irrigation operations are ofte
 
 ### 2.1.3 Typical Characteristics of the Current System
 
-Taken together, the current system is typically characterized by fragmentation, human dependence, and limited analytical integration. Information relevant to irrigation decisions is often spread across multiple sources, including field observations, controller settings, weather forecasts, sensor dashboards, utility records, and verbal communication, with no single system bringing those inputs together in a unified way. 
+Taken together, the current system is typically characterized by fragmentation, human dependence, and limited analytical integration. Information relevant to irrigation decisions is often spread across multiple sources, including field observations, controller settings, weather forecasts, sensor dashboards, utility records, and verbal communication, with no single system bringing those inputs together in a unified way.
 
-As a result, decision quality depends heavily on the experience and judgment of individual growers or irrigation managers, whose intuition may be strong but difficult to scale, transfer, or standardize across time and personnel. Real-time optimization is usually limited, meaning that even when useful data exists, it may not be processed quickly or systematically enough to support dynamic adjustments. Decisions are often made at the field level and sometimes at the block level, but not always at the finer irrigation-zone level where more precise control could improve outcomes. 
+As a result, decision quality depends heavily on the experience and judgment of individual growers or irrigation managers, whose intuition may be strong but difficult to scale, transfer, or standardize across time and personnel. Real-time optimization is usually limited, meaning that even when useful data exists, it may not be processed quickly or systematically enough to support dynamic adjustments. Decisions are often made at the field level and sometimes at the block level, but not always at the finer irrigation-zone level where more precise control could improve outcomes.
 
 The system is also frequently reactive, with adjustments made after crop stress, runoff, overwatering, or delivery problems are observed rather than prevented in advance. Most importantly, there is often weak integration between agronomic considerations, operational realities, and economic constraints, making it difficult to consistently choose irrigation actions that are simultaneously good for crop health, resource efficiency, and overall farm performance.
 
@@ -155,7 +157,6 @@ The system is also frequently reactive, with adjustments made after crop stress,
 | 5. Execute irrigation | Workers run pumps, valves, pivots, drip systems, or set controller programs. |
 | 6. Monitor results | The team checks whether irrigation occurred as intended and watches for signs of plant stress, runoff, or overwatering. |
 | 7. Adjust | The next schedule is adjusted based on observed conditions, supply changes, or weather shifts. |
-
 
 ## 2.2 Deficiencies and Opportunities
 
@@ -192,7 +193,6 @@ Current irrigation planning is often manual, fragmented, and heavily dependent o
 8. Difficulty prioritizing across multiple fields or zones
 
    When water, pumping capacity, or labor is limited, managers need to decide which fields or irrigation zones should receive water first. Current methods may not support systematic prioritization. Resources may be allocated inefficiently, especially during shortage conditions.
-
 
 ### 2.2.1 Opportunities for Improvement
 
@@ -238,69 +238,407 @@ The proposed precision irrigation scheduling system has both active and passive 
 
 Passive stakeholders are affected by the system’s outcomes but do not directly operate it. These include water districts, regulators, utility providers, local communities, consumers, environmental interests, and business stakeholders. Their interests relate to efficient water use, sustainability, cost control, agricultural reliability, and reduced environmental impact.
 
-
 ### 3.1.1 Active Stakeholders
 
-
-| Stakeholder                                    | Why they are active                                                                         | Main interest in the system                                                     |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| **Grower / Farm Owner**                        | May use the system to review schedules, approve actions, and monitor performance            | Lower water use, protect yield, reduce cost, improve farm profitability         |
-| **Irrigation Manager**                         | Primary day-to-day user who creates, adjusts, or executes irrigation plans using the system | Accurate recommendations, easy scheduling, better prioritization under scarcity |
-| **Farm Operations Manager**                    | Uses the system to coordinate labor, equipment, and field activities                        | Operational efficiency, resource coordination, fewer disruptions                |
-| **Field Supervisor / Irrigation Crew Lead**    | Uses schedule outputs to carry out watering tasks in the field                              | Clear instructions, realistic schedules, fewer manual errors                    |
-| **Agronomist / Crop Advisor**                  | May review recommendations and provide crop-specific input                                  | Maintain crop health, align irrigation with agronomic best practice             |
-| **System Administrator / IT Support**          | Configures users, integrations, permissions, and system availability                        | Reliability, maintainability, secure access                                     |
-| **Data Analyst / Farm Management Staff**       | May review historical reports, water-use trends, and performance data                       | Better reporting, trend analysis, management insight                            |
-| **Maintenance Technician / Equipment Manager** | Uses system outputs or alerts related to pumps, valves, or sensors                          | Early warning of issues, reduced downtime, easier troubleshooting               |
-
+| Stakeholder | Why they are active | Main interest in the system |
+|---|---|---|
+| **Grower / Farm Owner** | May use the system to review schedules, approve actions, and monitor performance | Lower water use, protect yield, reduce cost, improve farm profitability |
+| **Irrigation Manager** | Primary day-to-day user who creates, adjusts, or executes irrigation plans using the system | Accurate recommendations, easy scheduling, better prioritization under scarcity |
+| **Farm Operations Manager** | Uses the system to coordinate labor, equipment, and field activities | Operational efficiency, resource coordination, fewer disruptions |
+| **Field Supervisor / Irrigation Crew Lead** | Uses schedule outputs to carry out watering tasks in the field | Clear instructions, realistic schedules, fewer manual errors |
+| **Agronomist / Crop Advisor** | May review recommendations and provide crop-specific input | Maintain crop health, align irrigation with agronomic best practice |
+| **System Administrator / IT Support** | Configures users, integrations, permissions, and system availability | Reliability, maintainability, secure access |
+| **Data Analyst / Farm Management Staff** | May review historical reports, water-use trends, and performance data | Better reporting, trend analysis, management insight |
+| **Maintenance Technician / Equipment Manager** | Uses system outputs or alerts related to pumps, valves, or sensors | Early warning of issues, reduced downtime, easier troubleshooting |
 
 ### 3.1.2 Passive Stakeholders
 
-| Stakeholder                                          | Why they are passive                                                                         | Main interest in the system                                             |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| **Farm Workers**                                     | Affected by scheduling decisions and work allocation, but may not directly use the system    | Predictable workload, clear operations, safe working conditions         |
-| **Water District / Irrigation District**             | Affected by how efficiently water is used and how demand is managed                          | Efficient allocation, reduced waste, better demand predictability       |
-| **Groundwater Sustainability Agencies / Regulators** | Concerned with water use, conservation, and compliance outcomes rather than direct operation | Better water stewardship, reduced overuse, possible compliance support  |
-| **Utility Providers / Energy Suppliers**             | Indirectly affected by pumping demand and time-of-use consumption                            | More predictable demand, off-peak usage patterns                        |
-| **Local Communities**                                | Impacted by regional water sustainability and agricultural stability                         | Sustainable water use, economic stability, environmental responsibility |
-| **Consumers / Produce Buyers**                       | Do not use the system, but may be affected by crop quality, yield stability, and price       | Reliable agricultural output, crop quality                              |
-| **Environmental Interests / Ecosystems**             | Affected by groundwater withdrawal, runoff, and water-use efficiency                         | Reduced waste, less environmental stress                                |
-| **Investors / Business Partners**                    | Interested in profitability and operational resilience, not daily system use                 | Lower risk, better efficiency, better business performance              |
-
+| Stakeholder | Why they are passive | Main interest in the system |
+|---|---|---|
+| **Farm Workers** | Affected by scheduling decisions and work allocation, but may not directly use the system | Predictable workload, clear operations, safe working conditions |
+| **Water District / Irrigation District** | Affected by how efficiently water is used and how demand is managed | Efficient allocation, reduced waste, better demand predictability |
+| **Groundwater Sustainability Agencies / Regulators** | Concerned with water use, conservation, and compliance outcomes rather than direct operation | Better water stewardship, reduced overuse, possible compliance support |
+| **Utility Providers / Energy Suppliers** | Indirectly affected by pumping demand and time-of-use consumption | More predictable demand, off-peak usage patterns |
+| **Local Communities** | Impacted by regional water sustainability and agricultural stability | Sustainable water use, economic stability, environmental responsibility |
+| **Consumers / Produce Buyers** | Do not use the system, but may be affected by crop quality, yield stability, and price | Reliable agricultural output, crop quality |
+| **Environmental Interests / Ecosystems** | Affected by groundwater withdrawal, runoff, and water-use efficiency | Reduced waste, less environmental stress |
+| **Investors / Business Partners** | Interested in profitability and operational resilience, not daily system use | Lower risk, better efficiency, better business performance |
 
 ## 3.2 Stakeholder Requirements
 
 ### 3.2.1 Capabilities
 
+Capabilities: The proposed system should be capable of integrating environmental, agronomic, and operational data; estimating crop water demand; generating adaptive irrigation schedules; accounting for water, energy, and infrastructure constraints; prioritizing irrigation under scarcity; explaining recommendations; and tracking irrigation decisions and outcomes over time.
+
+1. **Collect and integrate data**  
+   The system should gather data from weather forecasts, historical weather, soil moisture sensors, crop profiles, field maps, irrigation history, pump data, and water availability records.
+
+2. **Estimate irrigation demand**  
+   It should estimate crop water needs for each field or irrigation zone based on crop type, growth stage, soil conditions, and forecasted weather.
+
+3. **Generate irrigation schedules**  
+   The system should recommend when irrigation should occur, where it should occur, and how much water should be applied.
+
+4. **Adjust recommendations dynamically**  
+   It should update recommendations when rainfall changes, temperatures shift, sensors detect unusual moisture conditions, or water supply constraints change.
+
+5. **Support prioritization under scarcity**  
+   When water, pumping capacity, labor, or time is limited, the system should help rank fields or zones by urgency and expected impact.
+
+6. **Incorporate operational constraints**  
+   The system should account for pump capacity, irrigation infrastructure limitations, labor availability, delivery windows, and energy pricing.
+
+7. **Provide decision justification**  
+   Users should be able to see why a recommendation was made, including the major inputs and tradeoffs that influenced it.
+
+8. **Track irrigation actions and outcomes**  
+   The system should record planned schedules, executed schedules, deviations, and outcomes for later review.
+
+9. **Alert users to important conditions**  
+   It should notify users about potential overwatering, underwatering, forecasted rain, equipment issues, or supply shortfalls.
+
+10. **Support reporting and review**  
+    The system should summarize water use, scheduling efficiency, missed recommendations, and seasonal patterns for managers. It should maintain historical records for analysis and accountability.
+
 ### 3.2.2 Characteristics
+
+Characteristics: The system should be usable, reliable, scalable, flexible, explainable, and interoperable with relevant external data and control systems. It should support field- or zone-level decision-making, provide traceable recommendations, and remain effective under uncertain and changing conditions.
+
+### Functional characteristics
+
+* **Field-level or zone-level precision** rather than only whole-farm recommendations
+* **Near real-time responsiveness** to changing conditions
+* **Explainable outputs** rather than black-box recommendations only
+* **Scenario-based planning**, such as normal supply vs restricted supply
+* **Human-in-the-loop control**, especially for early versions
+
+### Nonfunctional characteristics
+
+* **Usable** The interface should be understandable for growers and irrigation managers, not just technical staff.
+* **Reliable** It should provide recommendations consistently and continue operating even if some sensor data is temporarily unavailable.
+* **Accurate enough to support trust** Recommendations do not need to be perfect, but they must be credible and consistently useful.
+* **Scalable** It should work for multiple fields, zones, and crop types without becoming too hard to manage.
+* **Flexible** The system should adapt to different farm sizes, irrigation methods, and available data sources.
+* **Interoperable** It should be able to interact with external systems such as sensor platforms, weather APIs, irrigation controllers, and farm management software.
+* **Traceable** Recommendations and actions should be logged so users can review what happened and why.
+* **Maintainable** The system should be structured so models, thresholds, and integrations can be updated over time.
+* **Secure** Farm data, operational records, and system access should be protected appropriately.
+
+## 3.3 Stakeholder Needs Mapping
+
+The following tables map stakeholder needs to the capabilities and characteristics required of the proposed system. The first table defines the capability and characteristic IDs used for traceability. The second table maps those IDs to each stakeholder.
+
+### 3.3.1 Capability and Characteristic Key
+
+| ID | Capability / Characteristic | Explanation |
+|---|---|---|
+| CAP-1 | Collect and integrate data | The system gathers and combines relevant weather, soil, crop, water, and operational data into a unified decision-support view. |
+| CAP-2 | Estimate irrigation demand | The system estimates how much water is needed for each field or zone based on agronomic and environmental conditions. |
+| CAP-3 | Generate irrigation schedules | The system recommends when, where, and how much irrigation should occur. |
+| CAP-4 | Adjust recommendations dynamically | The system updates recommendations when weather, rainfall, soil moisture, or water-supply conditions change. |
+| CAP-5 | Support prioritization under scarcity | The system helps users rank fields or zones when water, pumping capacity, labor, or time is limited. |
+| CAP-6 | Incorporate operational constraints | The system accounts for pump limits, labor, energy cost, water delivery windows, and infrastructure constraints. |
+| CAP-7 | Provide decision justification | The system explains why a recommendation was made and identifies the main drivers and tradeoffs. |
+| CAP-8 | Track irrigation actions and outcomes | The system records recommendations, executed actions, deviations, and outcomes for later review. |
+| CAP-9 | Alert users to important conditions | The system notifies users about significant conditions such as rainfall, stress risk, supply shortfalls, or equipment issues. |
+| CAP-10 | Support reporting and review | The system summarizes historical performance, water use, schedule quality, and trends for management review. |
+| CHR-1 | Usable | The system is understandable and practical for growers, irrigation managers, and operational users. |
+| CHR-2 | Reliable | The system operates consistently and continues to provide useful support even when some inputs are delayed or incomplete. |
+| CHR-3 | Accurate / Trustworthy | The system provides recommendations that are credible and consistently useful for decision-making. |
+| CHR-4 | Scalable | The system can support multiple fields, zones, crops, and larger farm operations without major redesign. |
+| CHR-5 | Flexible | The system can adapt to different farm sizes, irrigation methods, crops, and operating conditions. |
+| CHR-6 | Interoperable | The system can exchange data with external sensors, APIs, controllers, and farm information systems. |
+| CHR-7 | Traceable | The system preserves a record of recommendations, decisions, and outcomes so users can review what happened and why. |
+| CHR-8 | Maintainable | The system can be updated over time as models, rules, integrations, and operating conditions evolve. |
+| CHR-9 | Secure | The system protects farm data, user access, and operational records appropriately. |
+
+### 3.3.2 Stakeholder Needs Mapping Table
+
+| Stakeholder | Stakeholder Type | Capability | Characteristic |
+|---|---|---|---|
+| Grower / Farm Owner | Active | CAP-2, CAP-3, CAP-5, CAP-6, CAP-7, CAP-8, CAP-10 | CHR-1, CHR-2, CHR-3, CHR-5, CHR-7, CHR-9 |
+| Irrigation Manager | Active | CAP-1, CAP-2, CAP-3, CAP-4, CAP-5, CAP-6, CAP-7, CAP-8, CAP-9, CAP-10 | CHR-1, CHR-2, CHR-3, CHR-5, CHR-6, CHR-7 |
+| Farm Operations Manager | Active | CAP-3, CAP-4, CAP-5, CAP-6, CAP-8, CAP-9, CAP-10 | CHR-1, CHR-2, CHR-4, CHR-5, CHR-7 |
+| Field Supervisor / Irrigation Crew Lead | Active | CAP-3, CAP-6, CAP-8, CAP-9 | CHR-1, CHR-2, CHR-6, CHR-7 |
+| Agronomist / Crop Advisor | Active | CAP-1, CAP-2, CAP-3, CAP-4, CAP-7, CAP-10 | CHR-2, CHR-3, CHR-5, CHR-7 |
+| System Administrator / IT Support | Active | CAP-1, CAP-8, CAP-9, CAP-10 | CHR-2, CHR-4, CHR-6, CHR-8, CHR-9 |
+| Data Analyst / Farm Management Staff | Active | CAP-1, CAP-3, CAP-4, CAP-5, CAP-6, CAP-7, CAP-8, CAP-10 | CHR-2, CHR-3, CHR-4, CHR-6, CHR-7, CHR-8 |
+| Maintenance Technician / Equipment Manager | Active | CAP-1, CAP-4, CAP-6, CAP-8, CAP-9 | CHR-2, CHR-3, CHR-6, CHR-7, CHR-8 |
+| Farm Workers | Passive | CAP-3, CAP-8, CAP-9 | CHR-1, CHR-2 |
+| Water District / Irrigation District | Passive | CAP-5, CAP-6, CAP-8, CAP-10 | CHR-2, CHR-4, CHR-7 |
+| Groundwater Sustainability Agencies / Regulators | Passive | CAP-5, CAP-6, CAP-8, CAP-10 | CHR-2, CHR-7, CHR-9 |
+| Utility Providers / Energy Suppliers | Passive | CAP-6, CAP-10 | CHR-2, CHR-4, CHR-7 |
+| Local Communities | Passive | CAP-5, CAP-8, CAP-10 | CHR-2, CHR-7 |
+| Consumers / Produce Buyers | Passive | CAP-2, CAP-3, CAP-10 | CHR-2, CHR-3, CHR-4 |
+| Environmental Interests / Ecosystems | Passive | CAP-5, CAP-6, CAP-8, CAP-10 | CHR-2, CHR-7 |
+| Investors / Business Partners | Passive | CAP-3, CAP-5, CAP-6, CAP-8, CAP-10 | CHR-2, CHR-4, CHR-7, CHR-9 |
+
+### 3.3.3 Interpretation
+
+This mapping shows that the grower and irrigation manager are the primary operational stakeholders and therefore require the broadest set of system capabilities. Their needs are closely tied to irrigation demand estimation, schedule generation, dynamic adjustment, prioritization under scarcity, decision justification, and recordkeeping. These stakeholders also depend strongly on usability, reliability, accuracy, flexibility, and traceability because they are responsible for making and defending irrigation decisions under real operational constraints.
+
+Other active stakeholders, such as farm operations managers, field supervisors, agronomists, analysts, and maintenance personnel, depend on narrower but still important subsets of system capability. Their needs are more specialized, focusing on schedule execution, operational coordination, agronomic interpretation, historical review, equipment awareness, and communication of important conditions. As a result, their required system characteristics tend to emphasize reliability, interoperability, maintainability, and traceability.
+
+Passive stakeholders generally do not interact directly with the system, but they are still affected by the quality of its outputs and the accountability of its decisions. Water districts, regulators, utility providers, communities, environmental interests, and business stakeholders depend less on direct usability and more on the system’s ability to support efficient resource use, constraint-aware scheduling, reporting, and documented decision history. This makes the mapping useful for later requirements development because it highlights which needs are operationally central and which are primarily concerned with oversight, performance, and long-term impact.
 
 # 4. Acceptance Criteria
 
 ## 4.1 Defined Acceptance Criteria
 
+| ID | Criterion | Testing Method |
+|---|---|---|
+| AC-1 | The system shall generate a field- or zone-level irrigation schedule within 5 minutes of user request under nominal operating conditions with all required inputs available. | Test |
+| AC-2 | The system shall update affected irrigation recommendations within 10 minutes of receiving a significant change in weather, soil moisture, or water availability data. | Test |
+| AC-3 | The system shall produce a prioritized irrigation schedule within defined water, pumping, and irrigation-time constraints when demand exceeds available resources. | Test, Analysis |
+| AC-4 | The system shall display the field or zone, irrigation amount, irrigation timing, and three contributing factors for each recommendation under normal schedule generation. | Inspection |
+| AC-5 | The system shall allow an authorized user to retrieve the complete 30-day decision history for any field or zone within 30 seconds. | Test |
+
+## 4.2 Explanation of Acceptance Criteria
+
+### 4.2.1 AC-1
+
+**Focus:** schedule generation timeliness  
+**Purpose:** verifies that the system produces a usable irrigation schedule quickly enough for operational planning.  
+**Acceptance context:** nominal conditions, required inputs available, user-initiated schedule request.  
+**Why it matters:** if schedule generation is too slow, the system is not operationally useful.
+
+### 4.2.2 AC-2
+
+**Focus:** adaptive update response  
+**Purpose:** verifies that the system remains useful when important inputs change after an initial recommendation is generated.  
+**Acceptance context:** changed forecast, soil moisture, or water availability input received by the system.  
+**Why it matters:** irrigation planning must adapt to changing conditions, not remain static.
+
+### 4.2.3 AC-3
+
+**Focus:** constraint-aware prioritization  
+**Purpose:** verifies that the system can support shortage conditions and produce feasible schedules rather than idealized ones.  
+**Acceptance context:** total irrigation demand exceeds available resources for the planning period.  
+**Why it matters:** this is one of the most important operational needs in the problem domain.
+
+### 4.2.4 AC-4
+
+**Focus:** recommendation explainability  
+**Purpose:** verifies that users can understand the basis of each recommendation.  
+**Acceptance context:** normal recommendation review by a grower or irrigation manager.  
+**Why it matters:** the system will not be trusted or adopted if recommendations cannot be explained.
+
+### 4.2.5 AC-5
+
+**Focus:** decision traceability  
+**Purpose:** verifies that the system preserves and retrieves a usable history of recommendations and actions.  
+**Acceptance context:** authorized historical review of a selected field or zone over a defined time window.  
+**Why it matters:** stakeholders need accountability, reviewability, and historical evidence for decisions.
+
 # 5. Concept for the Proposed System
 
 ## 5.1 Concept Generation
 
-### 5.1.1 CONOPS
+To explore the design space, four candidate system concepts were identified. These concepts differ in scope, degree of automation, analytical sophistication, and integration with existing farm operations.
 
-## 5.2 Concept Selection
+#### Concept 1: Baseline Digital Scheduling Workbook
 
-### 5.2.1 Pugh Matrix
+The baseline concept is a minimal digital scheduling aid that consolidates irrigation-relevant inputs into a structured interface but does not perform advanced optimization or automation. It would allow an irrigation manager to manually enter or import weather observations, soil moisture readings, irrigation history, and operational notes into a single scheduling workbook or lightweight dashboard. The system would then organize these inputs into a simple field-by-field planning view and support basic schedule documentation.
 
-## 5.3 System Context
+This concept provides value primarily through improved organization, visibility, and traceability relative to paper logs or disconnected spreadsheets. However, it depends heavily on user judgment and offers limited analytical support beyond data consolidation.
 
-## 5.4 "To Be" Operational Scenarios
+#### Concept 2: Advisory Irrigation Recommendation Dashboard
 
-## 5.5 Use Case Model
+This concept expands beyond simple data consolidation by providing recommendation support to a human decision-maker. The system would integrate weather forecasts, soil moisture data, crop information, irrigation history, and operational constraints to generate recommended irrigation timing and application amounts for each field or zone. The irrigation manager would remain in the loop, reviewing recommendations, making adjustments, and approving the final plan before execution.
 
-## 5.6 Use Case Specifications
+This concept is distinct because it emphasizes explainable decision support rather than automation. Its primary strength is improving consistency, reducing mental workload, and helping users make defensible irrigation decisions without removing operator control.
 
-### 5.6.1 Sequence Diagram
+#### Concept 3: Scenario-Based Optimization and Planning System
 
-## 5.7 QFD Analysis
+This concept focuses on comparative planning under uncertainty. Rather than generating only a single recommended schedule, the system would allow users to evaluate multiple irrigation strategies under different assumptions, such as restricted water supply, changing rainfall forecasts, varying energy prices, or different crop-priority rules. The system could compare alternatives and show tradeoffs in water use, pumping cost, field priority, and risk exposure.
 
-## 5.8 System Requirements
+This concept is distinct because it is designed not just for daily scheduling, but for decision analysis and contingency planning. It would be especially useful in periods of scarcity or uncertainty when managers need to understand the consequences of different allocation strategies before committing to one.
+
+#### Concept 4: Semi-Autonomous Irrigation Coordination System
+
+This concept includes decision support plus partial execution support. The system would generate irrigation schedules, allow human review and approval, and then transmit approved schedules to connected irrigation controllers, pump-control systems, or field execution tools. It could also monitor execution status and detect deviations such as missed runs, interrupted pump activity, or unexpected field conditions.
+
+This concept is distinct because it extends beyond recommendation into operational coordination and partial automation. It offers the greatest potential for reducing manual workload and improving execution consistency, but it also introduces greater integration complexity, higher implementation cost, and stronger dependence on reliable external interfaces.
+
+## 5.2 CONOPS
+
+## 5.3 Concept Selection
+
+### 5.3.1 Pugh Matrix
+
+To compare the candidate system concepts, a weighted Pugh matrix was used. Each concept was evaluated against six criteria derived from stakeholder needs, operational priorities, and practical implementation concerns. Scores use a 1–5 scale, where **1 = poor**, **3 = moderate**, and **5 = strong**. Cost was weighted most heavily because affordability and implementation burden are major factors in whether a farming operation would adopt the system.
+
+#### Evaluation Criteria and Weights
+
+| Criterion | Description | Weight |
+|---|---|---:|
+| Cost | Expected development, deployment, integration, and operating cost | 5 |
+| Decision Support Quality | Ability to improve irrigation timing, quantity, and prioritization decisions | 4 |
+| Adaptability | Ability to respond to changing weather, soil, water, and operational conditions | 4 |
+| Ease of Implementation | Relative difficulty of deployment, training, integration, and adoption | 3 |
+| Explainability / User Trust | Ability to provide understandable, defensible recommendations | 3 |
+| Extensibility | Ability to support future features, integrations, and operational growth | 2 |
+
+#### Weighted Pugh Matrix
+
+| Concept | Cost (5) | Decision Support Quality (4) | Adaptability (4) | Ease of Implementation (3) | Explainability / User Trust (3) | Extensibility (2) | Total |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Concept 1: Baseline Digital Scheduling Workbook** | 5 | 2 | 2 | 5 | 5 | 2 | 56 |
+| **Concept 2: Advisory Irrigation Recommendation Dashboard** | 4 | 4 | 4 | 4 | 5 | 4 | 72 |
+| **Concept 3: Scenario-Based Optimization and Planning System** | 3 | 5 | 5 | 3 | 4 | 5 | 73 |
+| **Concept 4: Semi-Autonomous Irrigation Coordination System** | 2 | 4 | 4 | 2 | 3 | 5 | 58 |
+
+#### Scoring Basis
+
+- **Concept 1** scores best on cost and ease of implementation because it is essentially a structured digital replacement for spreadsheets and paper-based coordination. However, it provides limited analytical value, adaptability, and long-term extensibility.
+- **Concept 2** performs well across most categories because it offers strong recommendation support without requiring deep automation or difficult integration into control infrastructure.
+- **Concept 3** scores highest overall because it provides the strongest decision support and adaptability while still remaining more feasible and explainable than a semi-autonomous execution system. Although it is not the least expensive option, its added planning value and future growth potential justify the tradeoff.
+- **Concept 4** offers strong extensibility, but its cost, integration burden, and reduced explainability make it less attractive as the preferred initial system concept.
+
+#### Selected Concept
+
+Based on the weighted Pugh matrix, **Concept 3: Scenario-Based Optimization and Planning System** is the preferred concept. It achieves the highest total weighted score and best balances affordability with analytical value. This concept is especially well aligned with the problem context because irrigation managers must make decisions under uncertainty, compare competing resource-allocation strategies, and justify tradeoffs during water-scarcity conditions. It therefore provides stronger support for stakeholder needs than the baseline or simple advisory concepts, while avoiding the implementation burden of semi-autonomous control.
+
+## 5.4 System Context
+
+```plantuml
+@startuml
+top to bottom direction
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam defaultTextAlignment center
+
+skinparam rectangle {
+  RoundCorner 10
+  BorderColor #4A5568
+  FontColor #1A202C
+  BackgroundColor #FFFFFF
+}
+
+skinparam package {
+  RoundCorner 16
+  BorderColor #4A5568
+  FontColor #1A202C
+}
+
+skinparam ArrowColor #4A5568
+skinparam ArrowThickness 1.1
+
+package "Passive Stakeholders" as PASSIVE #EAF4EA {
+
+  ' top row
+  rectangle "Farm Workers" as Workers
+  rectangle "Water District /\nIrrigation District" as District
+  rectangle "Groundwater Agencies /\nRegulators" as Regulators
+
+  ' middle row
+  rectangle "Utility Providers /\nEnergy Suppliers" as Utility
+
+  package "Active Stakeholders" as ACTIVE #E8F1FB {
+    rectangle "Grower /\nFarm Owner" as Grower
+    rectangle "Irrigation\nManager" as IrrMgr
+    rectangle "Farm Operations\nManager" as OpsMgr
+
+    rectangle "Field Supervisor /\nCrew Lead" as CrewLead
+    rectangle "Precision Irrigation\nScheduling System" as System #FFF4D6
+    rectangle "Agronomist /\nCrop Advisor" as Agronomist
+
+    rectangle "System Admin /\nIT Support" as IT
+    rectangle "Data Analyst /\nFarm Mgmt Staff" as Analyst
+    rectangle "Maintenance Tech /\nEquipment Manager" as Maint
+  }
+
+  rectangle "Local\nCommunities" as Community
+
+  ' bottom row
+  rectangle "Consumers /\nProduce Buyers" as Buyers
+  rectangle "Environmental Interests /\nEcosystems" as Enviro
+  rectangle "Investors /\nBusiness Partners" as Investors
+}
+
+' -----------------------------
+' Active stakeholder layout
+' -----------------------------
+Grower -[hidden]right- IrrMgr
+IrrMgr -[hidden]right- OpsMgr
+
+CrewLead -[hidden]right- System
+System -[hidden]right- Agronomist
+
+IT -[hidden]right- Analyst
+Analyst -[hidden]right- Maint
+
+Grower -[hidden]down- CrewLead
+CrewLead -[hidden]down- IT
+
+IrrMgr -[hidden]down- System
+System -[hidden]down- Analyst
+
+OpsMgr -[hidden]down- Agronomist
+Agronomist -[hidden]down- Maint
+
+' -----------------------------
+' Passive stakeholder layout
+' evenly distributed around active area
+' -----------------------------
+Workers -[hidden]right- District
+District -[hidden]right- Regulators
+
+Workers -[hidden]down- Utility
+District -[hidden]down- ACTIVE
+Regulators -[hidden]down- Community
+
+Utility -[hidden]right- ACTIVE
+ACTIVE -[hidden]right- Community
+
+Utility -[hidden]down- Buyers
+ACTIVE -[hidden]down- Enviro
+Community -[hidden]down- Investors
+
+Buyers -[hidden]right- Enviro
+Enviro -[hidden]right- Investors
+
+' -----------------------------
+' Active stakeholders -> system
+' -----------------------------
+Grower --> System
+IrrMgr --> System
+OpsMgr --> System
+CrewLead --> System
+Agronomist --> System
+IT --> System
+Analyst --> System
+Maint --> System
+
+' -----------------------------
+' System -> passive stakeholders
+' -----------------------------
+System --> Workers
+System --> District
+System --> Regulators
+System --> Utility
+System --> Community
+System --> Buyers
+System --> Enviro
+System --> Investors
+
+@enduml
+```
+
+## 5.5 "To Be" Operational Scenarios
+
+## 5.6 Use Case Model
+
+## 5.7 Use Case Specifications
+
+### 5.7.1 Sequence Diagram
+
+## 5.8 QFD Analysis
+
+### 5.8.1 QFD Matrix
+
+## 5.9 System Requirements
 
 | Requirement Number | System Requirement | Traceability | Verification |
 |---|---|---|---|
@@ -315,30 +653,20 @@ Passive stakeholders are affected by the system’s outcomes but do not directly
 | SR-009 | The system shall... |  |  |
 | SR-010 | The system shall... |  |  |
 
-## 5.9 Functional and Physical Architecture
+# 6. Functional and Physical Architecture
 
-### 5.9.1 Input/Output Matrices
+## 6.1 Input/Output Matrices
 
-### 5.9.2 First Level Decomposition
+## 6.2 First Level Decomposition
 
-### 5.9.3 IDEF0 Model
+## 6.3 IDEF0 Model
 
-## 5.10 Risk Assessment
+# 7. Risk Assessment
 
-### 5.10.1 Technical Performance Measures
+## 7.1 Technical Performance Measures
 
-# 6. Reflection
+## 7.2 Risk Management Plan
 
-# 7. Conclusion
+# 8. Reflection
 
-# 8. References
-
-# 9. Appendices
-
-## 9.1 Supporting Diagrams
-
-## 9.2 QFD Matrix
-
-## 9.3 Use Case Details
-
-## 9.4 Risk Management Plan
+# 9. Conclusion
