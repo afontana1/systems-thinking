@@ -4,11 +4,8 @@
 
 1. [Introduction](#1-introduction)
     1. [Background](#11-background)
-    2. [Problem](#12-problem)
-    3. [Need](#13-need)
-        1. [Formal Needs Statement](#131-formal-needs-statement)
-    4. [Job to Be Done](#14-job-to-be-done)
-    5. [Future Success](#15-future-success)
+    2. [Job to Be Done](#12-job-to-be-done)
+    3. [Need Statement](#13-need-statement)
 
 2. [Current Situation](#2-current-situation)
     1. [Current Systems and Operations](#21-current-systems-and-operations)
@@ -18,6 +15,7 @@
         4. [Typical Current Operational Flow](#214-typical-current-operational-flow)
     2. [Deficiencies and Opportunities](#22-deficiencies-and-opportunities)
         1. [Opportunities for Improvement](#221-opportunities-for-improvement)
+        2. [Desired Future State](#222-desired-future-state)
 
 3. [Stakeholder Analysis](#3-stakeholder-analysis)
     1. [Stakeholder Identification and Analysis](#31-stakeholder-identification-and-analysis)
@@ -75,57 +73,19 @@ Agricultural producers in California’s Central Valley operate in an environmen
 
 Irrigation decisions are therefore no longer simple timing decisions. They require balancing agronomic, economic, environmental, and operational factors across multiple fields over time. In many farming operations, these decisions are still made using a combination of grower experience, static schedules, spreadsheets, disconnected sensor tools, controller interfaces, and manual field observation. While these methods can work, they are difficult to scale and often do not provide integrated support for timely, optimized decision-making under uncertainty.
 
-## 1.2 Problem
-
-Current irrigation planning and execution methods do not adequately support growers and irrigation managers in determining when, where, and how much to irrigate under changing and uncertain conditions. Relevant information is often fragmented across weather data, soil moisture readings, pump records, field observations, water delivery constraints, and cost considerations. As a result, irrigation scheduling is frequently reactive, inconsistent, and dependent on individual judgment rather than supported by structured system-level analysis.
-
-This creates several risks. Water may be over-applied, increasing waste and pumping cost. Water may also be under-applied, stressing crops and reducing yield or quality. Limited water resources may not be allocated to the highest-priority fields at the right time. Managers may also struggle to justify or document decisions in the face of operational, financial, or regulatory pressure.
-
-The challenge is sufficiently complex that it cannot be addressed well through a single calculation or isolated manual process. It involves multiple data sources, multiple stakeholders, competing objectives, and repeated decisions over time.
-
-## 1.3 Need
-
-Central Valley growers and irrigation managers need a better way to make field-level irrigation decisions under uncertain and changing conditions. They need support that helps them integrate agronomic, environmental, operational, and economic information so they can decide when irrigation should occur, how much water should be applied, and how to prioritize irrigation actions when water, energy, or pumping capacity is constrained.
-
-That need suggests the value of a software-intensive decision-support and planning system that can gather inputs, analyze constraints, generate feasible irrigation schedules, compare alternative scenarios, and support human decision-making across changing conditions. In addition to producing a recommended plan, the system should help users understand the tradeoffs among water use, pumping cost, crop stress risk, and operational feasibility under different assumptions.
-
-The system should help users:
-
-- determine when irrigation should occur
-- determine how much water should be applied
-- compare feasible irrigation alternatives under normal, restricted, or uncertain conditions
-- prioritize irrigation actions when water or pumping capacity is constrained
-- adapt recommendations when weather, water supply, or field conditions change
-- document decisions and outcomes for operational review and accountability
-
-There is a well-defined paying customer for such a system. The most likely sponsor or customer would be a farm owner, agricultural enterprise, vineyard operator, orchard operator, irrigation management company, or large grower organization that bears the cost of water use inefficiency, pumping energy, and crop-performance loss. In some cases, irrigation districts, water agencies, or agricultural service providers could also serve as sponsors if the system were positioned as a regional efficiency or advisory platform.
-
-Likely users include growers, irrigation managers, farm operations managers, field supervisors, and possibly agronomists or crop advisors. The envisioned system would interact with weather data services, soil moisture sensors, irrigation controllers, pump or flow monitoring systems, farm records, and possibly utility pricing data or water allocation records.
-
-### 1.3.1 Formal Needs Statement
-
-California Central Valley growers and irrigation managers operate under increasing pressure from water scarcity, variable rainfall, rising pumping and energy costs, and uncertainty in water supply and regulation. Current irrigation planning methods rely on fragmented data, manual coordination, and experience-based judgment, which can lead to inefficient water use, inconsistent scheduling, and difficulty adapting to changing conditions. These challenges are sufficiently complex to require a software-intensive system that integrates environmental, agronomic, operational, and cost information to support field-level irrigation decisions and compare alternative irrigation strategies under uncertainty. The need is supported by a clear customer base, including farms and agricultural operations that directly bear the financial and operational consequences of poor irrigation decisions. A successful solution would enable users to create adaptive, explainable, and efficient irrigation schedules, evaluate tradeoffs across plausible operating scenarios, reduce waste, manage cost, and improve resilience under uncertainty. Multiple conceptual solutions are possible, including decision-support dashboards, optimization tools, and semi-automated irrigation control systems.
-
-## 1.4 Job to Be Done
+## 1.2 Job to Be Done
 
 The primary job to be done is to enable growers and irrigation managers to decide when, where, and how much to irrigate each field or zone under changing agronomic, operational, and water-supply conditions. They must make these decisions in a way that protects crop performance while minimizing waste, pumping cost, and exposure to uncertainty.
 
 This job exists independently of any specific software solution because farms must continuously decide when, where, and how much to irrigate in order to sustain crop performance and manage limited water resources. The decision must happen whether or not a software product is available, and poor decisions have direct cost, water-use, and yield consequences. The problem is therefore recurring, operational, and high-stakes.
 
-## 1.5 Future Success
+## 1.3 Need Statement
 
-A successful future state would be one in which irrigation decisions are no longer based primarily on disconnected tools and informal judgment, but instead are supported by a unified system that provides timely, explainable, and operationally feasible recommendations and enables users to compare alternative irrigation plans before choosing one.
+Central Valley growers and irrigation managers need a better way to make field-level irrigation decisions under changing agronomic, operational, and water-supply conditions. Current methods often require users to combine fragmented data, manual coordination, and experience-based judgment in order to decide when irrigation should occur, how much water should be applied, and how limited water or pumping capacity should be prioritized across fields. Because these decisions are recurring, high-stakes, and affected by uncertainty in weather, supply, and cost, they are difficult to support effectively through isolated tools or manual routines alone.
 
-Success would look like:
+This creates a clear need for a software-intensive irrigation planning and decision-support system. Such a system should integrate relevant environmental, agronomic, and operational information, generate feasible irrigation scenarios, help users compare tradeoffs under different conditions, and preserve decisions and outcomes for later review and accountability. The need is supported by a clear customer base, including farms and agricultural operations that directly bear the financial and operational consequences of poor irrigation decisions.
 
-- irrigation schedules are generated at the field or zone level using current and forecasted conditions
-- users can compare alternative irrigation scenarios under normal, restricted, or uncertain supply conditions
-- users can quickly understand why the system is recommending a specific irrigation action or scenario
-- water use becomes more efficient without harming crop health or yield
-- pumping is reduced or shifted more intelligently when cost is high
-- scarce water is allocated more deliberately during shortage conditions
-- managers can track decisions, changes, and outcomes over time
-- the farm operation becomes more resilient to uncertainty in rainfall, supply, and regulation
+---
 
 # 2. Current Situation
 
@@ -137,11 +97,11 @@ In many operations, irrigation planning and execution do not occur through a sin
 
 The typical process involves assessing field conditions, estimating water demand, checking operational and resource constraints, scheduling irrigation by field or block, executing the plan through pumps and valves or automated controllers, and monitoring outcomes through field inspection and later adjustments.
 
-#### 2.1.1 Human Actors
+### 2.1.1 Human Actors
 
 The current irrigation decision environment involves several human actors, each with a distinct role in planning, approving, executing, or responding to irrigation activity. The grower or farm owner is often the primary decision-maker or the person ultimately accountable for crop performance, water use, and operating cost. In some operations, that person makes irrigation decisions directly; in others, authority is shared with or delegated to an irrigation manager. The irrigation manager typically plays the central operational role by interpreting conditions across fields, balancing resource constraints, and translating priorities into an irrigation schedule. Field supervisors may help coordinate labor, verify field conditions, and communicate changing needs or problems from the field to management. Equipment operators are responsible for implementing the plan by running pumps, opening or closing valves, adjusting controller settings, and ensuring that irrigation equipment is functioning as intended. Agronomists or crop advisors may also influence decisions by providing recommendations based on crop condition, soil behavior, weather patterns, or production goals. In addition, external stakeholders such as water districts or regulators can shape operations by imposing delivery schedules, reporting requirements, allocation limits, or compliance constraints that must be considered during planning and execution.
 
-#### 2.1.2 Technologies and Tools Currently Used
+### 2.1.2 Technologies and Tools Currently Used
 
 The technologies and tools currently used in many irrigation operations are often practical and familiar, but they are not always well integrated. Manual valve and pump controls are still common, especially in operations where physical infrastructure has developed over time and automation is partial rather than comprehensive. Irrigation controllers or timers may be used to automate portions of watering activity, but they often operate independently from broader planning tools or decision logic. Spreadsheets and paper logs remain common for tracking schedules, water use, observations, and operational notes, particularly because they are flexible and easy for local staff to modify. Weather apps or local forecasts are frequently consulted to anticipate heat, rainfall, or evapotranspiration-related conditions, while standalone soil moisture sensors provide additional field-specific information where they are installed. Larger operations may also use SCADA systems or pump-monitoring tools to track equipment status, flows, and runtime, but these systems are often focused on equipment oversight rather than integrated irrigation decision support. Communication between managers and field crews often relies on phone calls or text messages, which are useful for immediate coordination but may not create a durable or structured decision record. Accounting records and utility bills may later be used to review pumping cost, but this information is often analyzed after the fact rather than incorporated directly into daily irrigation planning.
 
@@ -157,87 +117,81 @@ The system is also frequently reactive, with adjustments made after crop stress,
 
 ### 2.1.4 Typical Current Operational Flow
 
-| Step | Current Operation |
-|---|---|
-| 1. Assess conditions | Grower or irrigation manager reviews recent weather, looks at field conditions, checks soil visually or via sensors if available, and considers crop growth stage. |
-| 2. Estimate need | Water demand is estimated based on experience, past schedules, crop type, recent temperatures, and expected rainfall. |
-| 3. Check constraints | Labor availability, pump capacity, water allotments, irrigation district deliveries, energy cost, and equipment limitations are considered. |
-| 4. Create schedule | A daily or weekly irrigation plan is created for each field or block, often manually. |
-| 5. Execute irrigation | Workers run pumps, valves, pivots, drip systems, or set controller programs. |
-| 6. Monitor results | The team checks whether irrigation occurred as intended and watches for signs of plant stress, runoff, or overwatering. |
-| 7. Adjust | The next schedule is adjusted based on observed conditions, supply changes, or weather shifts. |
+| Step                  | Current Operation                                                                                                                                                  |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1. Assess conditions  | Grower or irrigation manager reviews recent weather, looks at field conditions, checks soil visually or via sensors if available, and considers crop growth stage. |
+| 2. Estimate need      | Water demand is estimated based on experience, past schedules, crop type, recent temperatures, and expected rainfall.                                              |
+| 3. Check constraints  | Labor availability, pump capacity, water allotments, irrigation district deliveries, energy cost, and equipment limitations are considered.                        |
+| 4. Create schedule    | A daily or weekly irrigation plan is created for each field or block, often manually.                                                                              |
+| 5. Execute irrigation | Workers run pumps, valves, pivots, drip systems, or set controller programs.                                                                                       |
+| 6. Monitor results    | The team checks whether irrigation occurred as intended and watches for signs of plant stress, runoff, or overwatering.                                            |
+| 7. Adjust             | The next schedule is adjusted based on observed conditions, supply changes, or weather shifts.                                                                     |
 
 ## 2.2 Deficiencies and Opportunities
 
-Current irrigation planning is often manual, fragmented, and heavily dependent on experience rather than integrated analysis. Data relevant to irrigation decisions is spread across multiple sources, and scheduling is often reactive or based on fixed routines that do not adapt well to weather, soil, crop stage, cost, or water-supply constraints.
+Current irrigation planning and execution methods do not adequately support growers and irrigation managers in determining when, where, and how much to irrigate under changing and uncertain conditions. Relevant information is often fragmented across weather data, soil moisture readings, pump records, field observations, water delivery constraints, and cost considerations. As a result, irrigation scheduling is frequently reactive, inconsistent, and dependent on individual judgment rather than supported by structured system-level analysis.
 
-1. Irrigation decisions rely too heavily on individual judgment
+This creates several risks. Water may be over-applied, increasing waste and pumping cost. Water may also be under-applied, stressing crops and reducing yield or quality. Limited water resources may not be allocated to the highest-priority fields at the right time. Managers may also struggle to justify or document decisions in the face of operational, financial, or regulatory pressure. The challenge is sufficiently complex that it cannot be addressed well through a single calculation or isolated manual process. It involves multiple data sources, multiple stakeholders, competing objectives, and repeated decisions over time.
 
+These broader problems can be seen more specifically in several recurring deficiencies:
+
+1. **Irrigation decisions rely too heavily on individual judgment**
    Many farms depend on the experience of growers or irrigation managers to decide when and how much to water. That experience is valuable, but it can also make decision-making inconsistent, hard to scale, and vulnerable when knowledgeable personnel are unavailable. Watering decisions may vary from person to person, may not be documented clearly, and may be difficult to repeat consistently across seasons, fields, or staff.
 
-2. Data is fragmented across multiple tools and people
-
+2. **Data is fragmented across multiple tools and people**
    Relevant information is often spread across weather apps, soil sensors, controller interfaces, pump records, spreadsheets, handwritten notes, and verbal communication with crews. These pieces are rarely integrated into one decision-support view. Managers must mentally combine multiple data sources, which increases effort, slows decisions, and raises the risk that important information will be overlooked.
 
-3. Scheduling is often reactive instead of proactive
-
+3. **Scheduling is often reactive instead of proactive**
    Current practice often adjusts irrigation after visible signs of stress, changing weather, supply disruption, or unexpected operational issues appear. Even where planning exists, it may be based on fixed routines rather than dynamic conditions. Fields may be overwatered or underwatered before corrections are made, reducing efficiency and potentially affecting crop quality or yield.
 
-4. Fixed schedules do not adapt well to changing conditions
-
+4. **Fixed schedules do not adapt well to changing conditions**
    Many irrigation schedules are based on habit, historical practice, or generalized assumptions. However, actual water needs can change with temperature, crop growth stage, recent irrigation, rainfall, and soil variation. Water is not always applied in the right amount or at the right time, which can create waste, stress plants, and increase pumping costs.
 
-5. Current systems may not account well for resource constraints
-
+5. **Current systems may not account well for resource constraints**
    Even when crop water needs are understood, decisions must also reflect real constraints such as limited water allocation, well output, pump capacity, labor availability, and electricity cost. The resulting schedule may be agronomically reasonable but operationally inefficient or financially costly.
 
-6. Limited support for uncertainty and risk
-
+6. **Limited support for uncertainty and risk**
    Water availability can change due to drought, rainfall variability, delivery restrictions, groundwater limitations, or regulatory changes. Most current practices do not provide structured support for making irrigation decisions under uncertain future conditions. Managers may be forced to make high-stakes decisions without clear visibility into tradeoffs, contingency plans, or likely outcomes.
 
-7. Poor traceability and justification of decisions
-
+7. **Poor traceability and justification of decisions**
    When decisions are made informally, it can be difficult to explain why a certain field was irrigated, why another was deferred, or why water use changed over time. This makes management review, performance improvement, and possible compliance or reporting tasks harder.
 
-8. Difficulty prioritizing across multiple fields or zones
-
+8. **Difficulty prioritizing across multiple fields or zones**
    When water, pumping capacity, or labor is limited, managers need to decide which fields or irrigation zones should receive water first. Current methods may not support systematic prioritization. Resources may be allocated inefficiently, especially during shortage conditions.
 
 ### 2.2.1 Opportunities for Improvement
 
 These deficiencies create a clear opportunity for an integrated software-based precision irrigation scheduling and planning system. Such a system could combine environmental, agronomic, and operational data into a unified decision-support platform, generate adaptive irrigation recommendations for each field or zone, and compare alternative schedules under different supply, weather, and operational assumptions. By helping users determine when, where, and how much to irrigate under changing conditions, the system could improve water-use efficiency, reduce pumping cost, support better prioritization under scarcity, and increase the consistency and traceability of irrigation decisions.
 
-1. Integrate relevant irrigation data into one platform
+1. **Integrate relevant irrigation data into one platform**
+   A software system could combine weather forecasts, crop data, soil moisture readings, irrigation history, field-zone information, and operational constraints into one view. This would reduce mental workload and improve decision quality by making relevant information easier to access and interpret.
 
-   A software system could combine weather forecasts, crop data, soil moisture readings, irrigation history, field-zone information, and operational constraints into one view. This will reduce mental workload and improve decision quality by making relevant information easier to access and interpret.
+2. **Provide decision support for irrigation scheduling and planning**
+   Instead of relying only on intuition or fixed calendars, the system could recommend irrigation timing and quantity for each field or zone based on current and forecasted conditions while also comparing multiple feasible alternatives. This would improve water-use efficiency while maintaining crop health and making tradeoffs more visible.
 
-2. Provide decision support for optimal irrigation scheduling
+3. **Adapt recommendations dynamically as conditions change**
+   The system could update schedules when weather forecasts shift, rainfall occurs, pumps fail, water allocations change, or sensor readings indicate unusual conditions. This would enable more proactive and resilient irrigation planning.
 
-   Instead of relying only on intuition or fixed calendars, the system could recommend irrigation timing and quantity for each field or zone based on current and forecasted conditions. This will improve water-use efficiency while maintaining crop health.
+4. **Balance agronomic, operational, and economic factors**
+   The software could account not just for plant water needs, but also for pumping costs, energy timing, equipment limitations, and water availability. This would support decisions that are both agronomically sound and operationally realistic.
 
-3. Adapt recommendations dynamically as conditions change
+5. **Help prioritize water use under scarcity**
+   When water is limited, the system could rank fields or zones based on urgency, crop sensitivity, expected impact, or management priorities. This would improve outcomes during shortage periods and make tradeoffs more explicit.
 
-   The system could update schedules when weather forecasts shift, rainfall occurs, pumps fail, water allocations change, or sensor readings indicate unusual conditions. This will enable more proactive and resilient irrigation planning.
+6. **Increase consistency and transparency of decisions**
+   A structured system could document assumptions, recommendations, actions, and changes over time. This would make decisions easier to explain, evaluate, and improve across seasons.
 
-4. Balance agronomic, operational, and economic factors
+7. **Reduce waste and avoid unnecessary pumping expense**
+   By applying water more precisely and only when needed, the system could reduce over-irrigation and support more efficient pump usage. This could lower operating cost while conserving water.
 
-   The software could account not just for plant water needs, but also for pumping costs, energy timing, equipment limitations, and water availability. A system can potentially support decisions that are both agronomically sound and operationally realistic.
+8. **Create a foundation for future automation or compliance support**
+   Even if the initial concept is a recommendation and planning system rather than a control system, it could later connect to irrigation controllers, reporting tools, or regulatory documentation workflows. This would provide long-term extensibility beyond basic scheduling.
 
-5. Help prioritize water use under scarcity
+### 2.2.2 Desired Future State
 
-   When water is limited, the system could rank fields or zones based on urgency, crop sensitivity, expected impact, or management priorities. A system will improve outcomes during shortage periods and make tradeoffs more explicit.
+A successful future state would be one in which irrigation decisions are no longer based primarily on disconnected tools and informal judgment, but instead are supported by a unified system that provides timely, explainable, and operationally feasible planning alternatives. In that future state, users would be able to generate irrigation schedules at the field or zone level using current and forecasted conditions, compare alternative scenarios under normal or constrained supply conditions, and understand the major tradeoffs behind each option before selecting a plan.
 
-6. Increase consistency and transparency of decisions
-
-   A structured system can document assumptions, recommendations, actions, and changes over time. This makes decisions easier to explain, evaluate, and improve across seasons.
-
-7. Reduce waste and avoid unnecessary pumping expense
-
-   By applying water more precisely and only when needed, the system could reduce over-irrigation and support more efficient pump usage. A system can help lower operating cost while conserving water.
-
-8. Create a foundation for future automation or compliance support
-
-   Even if the initial concept is a recommendation system rather than a control system, it could later connect to irrigation controllers, reporting tools, or regulatory documentation workflows. A recommendation system can provide long-term extensibility beyond basic scheduling.
+This improved state would also make irrigation management more deliberate and resilient. Water use would become more efficient without unnecessarily harming crop health or yield, pumping could be shifted more intelligently when cost is high, and scarce water could be allocated more systematically during shortage periods. At the same time, decisions, changes, and outcomes would be recorded in a way that supports operational review, verification, and longer-term learning. Together, these improvements would make the farm operation more consistent, transparent, and better able to respond to uncertainty.
 
 # 3. Stakeholder Analysis
 
@@ -486,134 +440,7 @@ Based on the weighted Pugh matrix, **Concept 3: Scenario-Based Optimization and 
 
 The system context for the proposed concept is focused on direct users, external information sources, and external constraint-setting entities that interact with the proposed system during normal operation. It is not intended to show every stakeholder affected by irrigation outcomes. The proposed system interacts directly with farm-side users who provide planning inputs, review alternative scenarios, refine recommendations, and approve irrigation plans. It also relies on external sources of operational information and constraints, including weather data services, field and equipment monitoring systems, utility pricing inputs, and water-delivery or regulatory constraints imposed by irrigation districts and groundwater agencies. Broader stakeholders such as local communities, consumers, environmental interests, and investors remain important in the stakeholder analysis, but they are not modeled here as direct system interfaces because they do not normally exchange operational data, constraints, or planning information with the system.
 
-```plantuml
-@startuml
-top to bottom direction
-skinparam shadowing false
-skinparam linetype ortho
-skinparam defaultFontName Arial
-skinparam defaultTextAlignment center
-skinparam defaultFontSize 15
-skinparam nodesep 70
-skinparam ranksep 80
-
-skinparam ArrowColor #4A5568
-skinparam ArrowThickness 1.3
-skinparam ArrowFontColor #1A202C
-skinparam ArrowFontSize 12
-
-skinparam rectangle {
-  RoundCorner 10
-  BorderColor #4A5568
-  FontColor #1A202C
-  BackgroundColor #FFFFFF
-}
-
-skinparam package {
-  RoundCorner 16
-  BorderColor #4A5568
-  FontColor #1A202C
-  BackgroundColor #FFFFFF
-}
-
-package "Passive Stakeholders" as PASSIVE #EAF4EA {
-
-  rectangle "Farm Workers" as Workers
-  rectangle "Water District /\nIrrigation District" as District
-  rectangle "Groundwater Agencies /\nRegulators" as Regulators
-
-  rectangle "Utility Providers /\nEnergy Suppliers" as Utility
-
-  package "Active Stakeholders" as ACTIVE #E8F1FB {
-    rectangle "Grower /\nFarm Owner" as Grower
-    rectangle "Irrigation\nManager" as IrrMgr
-    rectangle "Farm Operations\nManager" as OpsMgr
-
-    rectangle "Field Supervisor /\nCrew Lead" as CrewLead
-    rectangle "Precision Irrigation\nScheduling System" as System #FFF4D6
-    rectangle "Agronomist /\nCrop Advisor" as Agronomist
-
-    rectangle "System Admin /\nIT Support" as IT
-    rectangle "Data Analyst /\nFarm Mgmt Staff" as Analyst
-    rectangle "Maintenance Tech /\nEquipment Manager" as Maint
-  }
-
-  rectangle "Local\nCommunities" as Community
-
-  rectangle "Consumers /\nProduce Buyers" as Buyers
-  rectangle "Environmental Interests /\nEcosystems" as Enviro
-  rectangle "Investors /\nBusiness Partners" as Investors
-}
-
-' -----------------------------
-' Active stakeholder layout
-' -----------------------------
-Grower -[hidden]right- IrrMgr
-IrrMgr -[hidden]right- OpsMgr
-
-CrewLead -[hidden]right- System
-System -[hidden]right- Agronomist
-
-IT -[hidden]right- Analyst
-Analyst -[hidden]right- Maint
-
-Grower -[hidden]down- CrewLead
-CrewLead -[hidden]down- IT
-
-IrrMgr -[hidden]down- System
-System -[hidden]down- Analyst
-
-OpsMgr -[hidden]down- Agronomist
-Agronomist -[hidden]down- Maint
-
-' -----------------------------
-' Passive stakeholder layout
-' -----------------------------
-Workers -[hidden]right- District
-District -[hidden]right- Regulators
-
-Workers -[hidden]down- Utility
-District -[hidden]down- ACTIVE
-Regulators -[hidden]down- Community
-
-Utility -[hidden]right- ACTIVE
-ACTIVE -[hidden]right- Community
-
-Utility -[hidden]down- Buyers
-ACTIVE -[hidden]down- Enviro
-Community -[hidden]down- Investors
-
-Buyers -[hidden]right- Enviro
-Enviro -[hidden]right- Investors
-
-' -----------------------------
-' Active stakeholder interactions
-' -----------------------------
-Grower <--> System : review /\napprove
-IrrMgr <--> System : plan /\nadjust
-OpsMgr <--> System : resource\nconstraints
-CrewLead <--> System : schedule /\nstatus
-Agronomist <--> System : crop input /\nreview
-IT <--> System : config /\nsupport
-Analyst <--> System : reports /\nanalysis
-Maint <--> System : alerts /\nmaintenance
-
-' -----------------------------
-' Passive stakeholder relationships
-' -----------------------------
-System -left-> Workers : task\nclarity
-District -down-> System : water\nlimits
-Regulators <-right-> System : compliance /\nreporting
-
-Utility -right-> System : energy\nprices
-System -right-> Community : water\nsustainability
-
-System -down-> Buyers : reliable\noutput
-System -down-> Enviro : reduced\nwaste
-System -down-> Investors : efficiency /\nresilience
-
-@enduml
-```
+![System Context](system-context.svg)
 
 ## 5.5 “To Be” Operational Scenarios
 
@@ -667,407 +494,42 @@ This support scenario shows that the proposed system contributes not only during
 
 This sequence diagram describes the operational version of UC-01: Generate and Compare Irrigation Scenarios. The Irrigation Manager initiates scenario generation, and the system retrieves previously stored farm and planning information from internal records so that other authorized users, such as the Farm Operations Manager and Grower / Farm Owner, can review or update relevant constraints and priorities without needing to participate simultaneously. The system then gathers current external information from weather services, soil moisture sensors, the irrigation district, and utility pricing data before generating multiple irrigation scenarios. These results allow users to compare tradeoffs in water use, timing, operational feasibility, and cost before revising inputs or proceeding to plan selection.
 
-```plantuml
-@startuml
-title UC-01.a Generate and Compare Irrigation Scenarios (Operational Planning)
-
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam sequence {
-  ArrowColor #4A5568
-  LifeLineBorderColor #4A5568
-  LifeLineBackgroundColor #FFFFFF
-  ParticipantBorderColor #4A5568
-  ParticipantBackgroundColor #E8F1FB
-  ActorBorderColor #4A5568
-  ActorBackgroundColor #FFFFFF
-}
-
-actor "Irrigation\nManager" as IrrMgr
-actor "Farm Operations\nManager" as OpsMgr
-actor "Grower /\nFarm Owner" as Grower
-
-participant "Precision Irrigation\nScheduling System" as System
-participant "Farm Records /\nPlanning Database" as Records
-participant "Weather Data /\nForecast Service" as Weather
-participant "Soil Moisture /\nSensor Platform" as Sensors
-participant "Water District /\nIrrigation District" as District
-participant "Utility Pricing /\nEnergy Cost Data" as Utility
-
-IrrMgr -> System : Request scenario generation
-System --> IrrMgr : Prompt for planning horizon,\nfields/zones, and scenario settings
-
-IrrMgr -> System : Submit scenario request
-System -> Records : Retrieve stored constraints,\npriorities, and historical planning data
-Records --> System : Return stored farm and planning inputs
-
-System --> OpsMgr : Present retrieved operational constraints\nfor review or update
-OpsMgr -> System : Confirm or update labor /\nequipment constraints
-
-System --> Grower : Present stored priorities\nfor review or update
-Grower -> System : Confirm or update priorities
-
-System -> Weather : Request forecast and ET data
-Weather --> System : Return forecast and ET data
-
-System -> Sensors : Request current soil moisture data
-Sensors --> System : Return field moisture readings
-
-System -> District : Request water availability\nand delivery constraints
-District --> System : Return water limits and delivery conditions
-
-System -> Utility : Request current energy pricing
-Utility --> System : Return energy price data
-
-System --> IrrMgr : Display generated irrigation scenarios
-System --> OpsMgr : Display feasibility and resource impacts
-System --> Grower : Display tradeoffs and priority impacts
-
-IrrMgr -> System : Request revised comparison
-System --> IrrMgr : Display updated scenarios
-
-@enduml
-```
+![UC-01a](uc-01a.svg)
 
 This sequence diagram describes an independent analytical version of UC-01 used for ad hoc historical review or retrospective analysis. In this case, the Data Analyst requests scenario analysis for a selected historical period, and the system retrieves stored planning records along with historical weather, field, water-constraint, and energy-cost data. Using those records, the system reconstructs or compares prior irrigation scenarios and presents the results for review. This supports reporting, retrospective evaluation, and deeper analysis without placing the Data Analyst inside the live operational planning workflow.
 
-```plantuml
-@startuml
-title UC-01.b Generate and Compare Irrigation Scenarios (Ad Hoc Historical / Retrospective Analysis)
+![UC-01b](uc-01b.svg)
 
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam sequence {
-  ArrowColor #4A5568
-  LifeLineBorderColor #4A5568
-  LifeLineBackgroundColor #FFFFFF
-  ParticipantBorderColor #4A5568
-  ParticipantBackgroundColor #E8F1FB
-  ActorBorderColor #4A5568
-  ActorBackgroundColor #FFFFFF
-}
-
-actor "Data Analyst" as Analyst
-
-participant "Precision Irrigation\nScheduling System" as System
-participant "Farm Records /\nPlanning Database" as Records
-participant "Historical Weather /\nEnvironmental Data" as HistWeather
-participant "Historical Sensor /\nField Data" as HistSensors
-participant "Historical Water /\nConstraint Records" as HistWater
-participant "Historical Energy /\nCost Records" as HistEnergy
-
-Analyst -> System : Request ad hoc scenario analysis
-System --> Analyst : Prompt for time period,\nfields/zones, and analysis parameters
-
-Analyst -> System : Submit retrospective analysis request
-System -> Records : Retrieve historical plans,\ninputs, and outcomes
-Records --> System : Return stored planning history
-
-System -> HistWeather : Retrieve historical weather data
-HistWeather --> System : Return historical weather records
-
-System -> HistSensors : Retrieve historical field and sensor data
-HistSensors --> System : Return historical field measurements
-
-System -> HistWater : Retrieve historical water limits\nand delivery records
-HistWater --> System : Return historical water data
-
-System -> HistEnergy : Retrieve historical pricing\nand cost data
-HistEnergy --> System : Return historical energy records
-
-System --> Analyst : Display reconstructed scenarios,\ncomparisons, and outcome summaries
-Analyst -> System : Request filtered comparison or\nalternative retrospective view
-System --> Analyst : Display updated analysis results
-
-@enduml
-```
 
 ### 5.7.2 UC-02
 
 This sequence diagram describes how the system supports UC-02: Select and Approve Irrigation Plan. The Irrigation Manager retrieves and reviews previously generated irrigation scenarios, selects a preferred plan, and submits it to the Grower / Farm Owner for approval. The system presents the selected plan with its key tradeoffs, including timing, water use, resource impacts, and planning priorities, so the approver can make a defensible decision. Once the plan is approved, the system stores the approval decision, selected plan, approver identity, timestamp, and updated plan status in the planning database so the outcome can be traced, reported, and verified later.
 
-```plantuml
-@startuml
-title UC-02 Select and Approve Irrigation Plan
-
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam sequence {
-  ArrowColor #4A5568
-  LifeLineBorderColor #4A5568
-  LifeLineBackgroundColor #FFFFFF
-  ParticipantBorderColor #4A5568
-  ParticipantBackgroundColor #E8F1FB
-  ActorBorderColor #4A5568
-  ActorBackgroundColor #FFFFFF
-}
-
-actor "Irrigation\nManager" as IrrMgr
-actor "Grower /\nFarm Owner" as Grower
-
-participant "Precision Irrigation\nScheduling System" as System
-participant "Farm Records /\nPlanning Database" as Records
-
-IrrMgr -> System : Open scenario comparison
-System -> Records : Retrieve candidate scenarios\nand supporting data
-Records --> System : Return scenarios and stored inputs
-System --> IrrMgr : Display candidate plans,\ntradeoffs, and expected impacts
-
-IrrMgr -> System : Select preferred plan
-System --> IrrMgr : Show selected plan summary\nfor review
-
-IrrMgr -> System : Submit selected plan for approval
-System --> Grower : Present proposed irrigation plan
-
-Grower -> System : Review plan details and tradeoffs
-System --> Grower : Display timing, water use,\nresource impacts, and priorities
-
-Grower -> System : Approve selected plan
-System -> Records : Store approval decision,\nselected plan, approver, and timestamp
-Records --> System : Confirm decision stored
-
-System --> IrrMgr : Confirm approved plan
-System -> Records : Store approved plan status\nfor later reporting and verification
-Records --> System : Confirm plan status updated
-
-@enduml
-```
+![UC-02](uc-02.svg)
 
 ### 5.7.3 UC-03
 
 This sequence diagram describes how the system supports UC-03: Review Field and Resource Conditions. The Irrigation Manager begins by opening the review function, and the system retrieves stored field, crop, and planning information from internal records while also gathering current external information from weather services, soil moisture sensors, the irrigation district, and utility pricing data. The resulting combined view allows the manager to assess current conditions, resource limits, and any relevant alerts before planning begins. The Agronomist / Crop Advisor can independently review the condition summary and add advisory notes or concerns, which the system stores and then presents back to the Irrigation Manager so those inputs can be incorporated into later scenario generation and decision-making.
 
-```plantuml
-@startuml
-title UC-03 Review Field and Resource Conditions
-
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam sequence {
-  ArrowColor #4A5568
-  LifeLineBorderColor #4A5568
-  LifeLineBackgroundColor #FFFFFF
-  ParticipantBorderColor #4A5568
-  ParticipantBackgroundColor #E8F1FB
-  ActorBorderColor #4A5568
-  ActorBackgroundColor #FFFFFF
-}
-
-actor "Irrigation\nManager" as IrrMgr
-actor "Agronomist /\nCrop Advisor" as Agronomist
-
-participant "Precision Irrigation\nScheduling System" as System
-participant "Farm Records /\nPlanning Database" as Records
-participant "Weather Data /\nForecast Service" as Weather
-participant "Soil Moisture /\nSensor Platform" as Sensors
-participant "Water District /\nIrrigation District" as District
-participant "Utility Pricing /\nEnergy Cost Data" as Utility
-
-IrrMgr -> System : Open field and resource review
-System -> Records : Retrieve field, crop,\nand historical planning data
-Records --> System : Return stored field and planning data
-
-System -> Weather : Request current weather\nand forecast data
-Weather --> System : Return weather and ET data
-
-System -> Sensors : Request current field\nand soil moisture data
-Sensors --> System : Return field sensor readings
-
-System -> District : Request current water availability\nand delivery constraints
-District --> System : Return water limits and delivery conditions
-
-System -> Utility : Request current energy pricing
-Utility --> System : Return energy price data
-
-System --> IrrMgr : Display field conditions,\nresource limits, and alerts
-
-Agronomist -> System : Review crop and field status
-System --> Agronomist : Display field condition summary
-
-Agronomist -> System : Enter advisory notes or concerns
-System -> Records : Store agronomic notes\nand review updates
-Records --> System : Confirm notes stored
-
-System --> IrrMgr : Display updated review\nwith agronomic input
-
-IrrMgr -> System : Confirm reviewed conditions
-System -> Records : Store reviewed condition state\nfor later planning use
-Records --> System : Confirm review state stored
-
-@enduml
-```
+![UC-03](uc-03.svg)
 
 ### 5.7.4 UC-04
 
 This sequence diagram describes how the system supports UC-04: Maintain System Operation. The System Admin / IT Support actor reviews system status, configuration state, alert history, and integration health, while the Maintenance Tech / Equipment Manager reviews equipment- or connection-related alerts that may affect reliable operation. The system checks relevant external interfaces such as the soil sensor platform, irrigation district data feed, and utility pricing feed to determine whether integrations are healthy or degraded. When corrective actions are taken, the system stores configuration changes, maintenance actions, operator identity, and timestamps in the planning database so system status changes remain traceable and auditable over time.
 
-```plantuml
-@startuml
-title UC-04 Maintain System Operation
-
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam sequence {
-  ArrowColor #4A5568
-  LifeLineBorderColor #4A5568
-  LifeLineBackgroundColor #FFFFFF
-  ParticipantBorderColor #4A5568
-  ParticipantBackgroundColor #E8F1FB
-  ActorBorderColor #4A5568
-  ActorBackgroundColor #FFFFFF
-}
-
-actor "System Admin /\nIT Support" as IT
-actor "Maintenance Tech /\nEquipment Manager" as Maint
-
-participant "Precision Irrigation\nScheduling System" as System
-participant "Farm Records /\nPlanning Database" as Records
-participant "Soil Moisture /\nSensor Platform" as Sensors
-participant "Water District /\nIrrigation District" as District
-participant "Utility Pricing /\nEnergy Cost Data" as Utility
-
-IT -> System : Open system status and configuration view
-System -> Records : Retrieve current configuration,\nalert history, and system logs
-Records --> System : Return configuration state\nand recent incident records
-System --> IT : Display alerts, config state,\nand integration status
-
-Maint -> System : Open maintenance status
-System --> Maint : Display device and connection alerts
-
-IT -> System : Request integration and health check
-System -> Sensors : Check sensor connection status
-Sensors --> System : Return sensor interface status
-
-System -> District : Check water constraint data feed
-District --> System : Return feed status
-
-System -> Utility : Check pricing data feed
-Utility --> System : Return feed status
-
-System --> IT : Display integration health results
-System --> Maint : Display equipment-related status
-
-IT -> System : Update configuration or\nrecord corrective action
-System -> Records : Store configuration change,\noperator identity, and timestamp
-Records --> System : Confirm configuration stored
-
-Maint -> System : Record maintenance action taken
-System -> Records : Store maintenance action,\naffected interface, and timestamp
-Records --> System : Confirm maintenance record stored
-
-System --> IT : Confirm updated system state
-System --> Maint : Confirm maintenance completion
-
-@enduml
-```
+![UC-04](uc-04.svg)
 
 ### 5.7.5 UC-05
 
 This sequence diagram describes how the system supports UC-05: Pull Reports and Verify Plan. The Irrigation Manager requests the approved plan report, and the system retrieves the selected plan, supporting scenario information, and stored decision records from the planning database. The Field Supervisor / Crew Lead then reviews the approved plan from an execution perspective, using the report and plan details to verify that the schedule is understandable and feasible for field operations. Any verification feedback or execution concerns are stored by the system, and the resulting verified plan status is recorded so the decision can be reviewed, reported, and traced later.
 
-```plantuml
-@startuml
-title UC-05 Pull Reports and Verify Plan
-
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam sequence {
-  ArrowColor #4A5568
-  LifeLineBorderColor #4A5568
-  LifeLineBackgroundColor #FFFFFF
-  ParticipantBorderColor #4A5568
-  ParticipantBackgroundColor #E8F1FB
-  ActorBorderColor #4A5568
-  ActorBackgroundColor #FFFFFF
-}
-
-actor "Irrigation\nManager" as IrrMgr
-actor "Field Supervisor /\nCrew Lead" as CrewLead
-
-participant "Precision Irrigation\nScheduling System" as System
-participant "Farm Records /\nPlanning Database" as Records
-
-IrrMgr -> System : Request plan report and verification view
-System -> Records : Retrieve approved plan,\nscenario summary, and stored decision data
-Records --> System : Return approved plan,\nreport data, and verification records
-System --> IrrMgr : Display plan report,\nresource summary, and approval details
-
-CrewLead -> System : Open execution verification view
-System --> CrewLead : Display approved plan,\nfield schedule, and execution details
-
-CrewLead -> System : Review plan for field readiness\nand execution feasibility
-System --> CrewLead : Display supporting report data\nand plan assumptions
-
-CrewLead -> System : Record verification feedback\nor execution concern
-System -> Records : Store verification result,\nfeedback, and timestamp
-Records --> System : Confirm verification record stored
-
-System --> IrrMgr : Display verification status\nand field feedback
-
-IrrMgr -> System : Confirm verified plan
-System -> Records : Store verified plan state\nfor later reporting and traceability
-Records --> System : Confirm verified status stored
-
-System --> IrrMgr : Confirm plan verification complete
-
-@enduml
-```
+![UC-05](uc-05.svg)
 
 ### 5.7.6 UC-06
 
 This sequence diagram describes how the system supports UC-06: Trace Data Lineage. The Data Analyst initiates a lineage query by selecting a dataset, field or zone, time period, or specific plan or report reference. The system then retrieves stored lineage records, user-entered inputs, timestamps, and source references from internal records, while also obtaining relevant metadata from external sources such as weather services, sensor platforms, the irrigation district, and utility pricing feeds. The resulting lineage view allows the analyst to determine where required data originated, when it was captured or updated, how frequently it was refreshed, and how those inputs contributed to later plans, reports, or decisions.
 
-```plantuml
-@startuml
-title UC-06 Trace Data Lineage
-
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam sequence {
-  ArrowColor #4A5568
-  LifeLineBorderColor #4A5568
-  LifeLineBackgroundColor #FFFFFF
-  ParticipantBorderColor #4A5568
-  ParticipantBackgroundColor #E8F1FB
-  ActorBorderColor #4A5568
-  ActorBackgroundColor #FFFFFF
-}
-
-actor "Data Analyst" as Analyst
-
-participant "Precision Irrigation\nScheduling System" as System
-participant "Farm Records /\nPlanning Database" as Records
-participant "Weather Data /\nForecast Service" as Weather
-participant "Soil Moisture /\nSensor Platform" as Sensors
-participant "Water District /\nIrrigation District" as District
-participant "Utility Pricing /\nEnergy Cost Data" as Utility
-
-Analyst -> System : Request data lineage view
-System --> Analyst : Prompt for dataset, field/zone,\ntime period, or plan/report reference
-
-Analyst -> System : Submit lineage query
-System -> Records : Retrieve stored lineage metadata,\nuser inputs, timestamps, and source references
-Records --> System : Return lineage records and metadata
-
-System -> Weather : Request source metadata reference
-Weather --> System : Return source name,\ntimestamp, and refresh cadence
-
-System -> Sensors : Request source metadata reference
-Sensors --> System : Return device/source ID,\ntimestamp, and collection cadence
-
-System -> District : Request source metadata reference
-District --> System : Return source name,\ntimestamp, and update cadence
-
-System -> Utility : Request source metadata reference
-Utility --> System : Return source name,\ntimestamp, and update cadence
-
-System --> Analyst : Display lineage view showing\nsource, time, cadence, and origin of inputs
-
-Analyst -> System : Request detailed trace for\nselected input or decision element
-System --> Analyst : Display expanded lineage details,\nmetadata, and dependency chain
-
-@enduml
-```
+![UC-06](uc-06.svg)
 
 ## 5.8 QFD Analysis
 
@@ -1138,41 +600,7 @@ This next version of the input/output matrix organizes the system by major opera
 
 This first-level functional decomposition organizes the proposed system into its main mission-oriented functions. Acquire and Manage Planning Data captures the collection and organization of the data needed for planning. Assess Field and Resource Conditions represents evaluation of the current agricultural and operational state before decisions are made. Generate and Compare Irrigation Scenarios is the core analytical function, where feasible alternatives are produced and evaluated. Select and Approve Irrigation Plans represents the human decision and approval step that turns analysis into an actionable plan. Generate Reports and Verify Plans covers reporting and operational confirmation of approved outputs, while Trace Data Lineage ensures that plans, reports, and decisions can be linked back to their underlying inputs and metadata. Together, these functions describe the major internal responsibilities of the system at a high level without yet decomposing them into lower-level subfunctions.
 
-```plantuml
-@startuml
-top to bottom direction
-skinparam shadowing false
-skinparam defaultFontName Arial
-skinparam defaultTextAlignment center
-skinparam defaultFontSize 14
-skinparam ArrowColor #4A5568
-skinparam ArrowThickness 1.2
-
-skinparam rectangle {
-  RoundCorner 12
-  BorderColor #4A5568
-  FontColor #1A202C
-  BackgroundColor #E8F1FB
-}
-
-rectangle "Precision Irrigation\nScheduling System" as Root #DCEBFA
-
-rectangle "Acquire and Manage\nPlanning Data" as F1
-rectangle "Assess Field and\nResource Conditions" as F2
-rectangle "Generate and Compare\nIrrigation Scenarios" as F3
-rectangle "Select Plan Selection\nand Approval" as F4
-rectangle "Generate Reports and Verify Plans" as F5
-rectangle "Trace Data Lineage" as F6
-
-Root -down-> F1
-Root -down-> F2
-Root -down-> F3
-Root -down-> F4
-Root -down-> F5
-Root -down-> F6
-
-@enduml
-```
+![System Decomposition](system-decomposition.svg)
 
 ## 6.3 IDEF0 Model
 
