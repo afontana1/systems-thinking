@@ -1220,6 +1220,7 @@ The most significant risks for this concept are tied to external dependencies, o
 User trust and traceability are also critical. If stakeholders cannot understand why a recommendation was produced, they may reject the system regardless of its analytical quality. Likewise, if the system cannot preserve approval decisions, supporting records, and source metadata, then reporting, verification, and lineage review will break down. The risk management approach therefore combines preventive design choices with measurable monitoring so that the most important technical risks remain visible and manageable throughout development and operation.
 
 ![risk-reduction](risk-reduction.jpg)
+- [source](https://silsafe.net/glossary/risk-matrix/)
 
 # 8. Reflection
 
