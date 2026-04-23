@@ -1,4 +1,6 @@
-# Table of Contents
+# Precision Irrigation Scheduling System
+
+## Table of Contents
 
 1. [Introduction](#1-introduction)
     1. [Background](#11-background)
