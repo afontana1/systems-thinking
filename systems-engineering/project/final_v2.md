@@ -277,64 +277,19 @@ Passive stakeholders do not directly operate the system, but they are still impo
 
 ### 3.2.1 Capabilities
 
-Capabilities: The proposed system should be capable of integrating environmental, agronomic, and operational data; estimating crop water demand; generating adaptive irrigation schedules; accounting for water, energy, and infrastructure constraints; prioritizing irrigation under scarcity; explaining recommendations; and tracking irrigation decisions and outcomes over time.
+The proposed system must support the core activities required for effective irrigation planning and review under changing agricultural and operational conditions. At a high level, it should be able to gather and integrate relevant environmental, agronomic, and operational information into a unified decision-support environment. This includes combining stored farm information with current external inputs so that users can evaluate irrigation needs using a more complete and timely picture of field and resource conditions.
 
-1. **Collect and integrate data**  
-   The system should gather data from weather forecasts, historical weather, soil moisture sensors, crop profiles, field maps, irrigation history, pump data, and water availability records.
+Using those inputs, the system should support field- or zone-level irrigation planning by estimating irrigation demand, generating feasible schedules or scenarios, and accounting for the major constraints that shape real-world operations. These constraints include water availability, labor, equipment capacity, infrastructure limitations, delivery windows, and energy-related considerations. The system should also remain adaptive by updating its outputs when important conditions change, such as weather shifts, soil moisture changes, or changing water supply conditions.
 
-2. **Estimate irrigation demand**  
-   It should estimate crop water needs for each field or irrigation zone based on crop type, growth stage, soil conditions, and forecasted weather.
-
-3. **Generate irrigation schedules**  
-   The system should recommend when irrigation should occur, where it should occur, and how much water should be applied.
-
-4. **Adjust recommendations dynamically**  
-   It should update recommendations when rainfall changes, temperatures shift, sensors detect unusual moisture conditions, or water supply constraints change.
-
-5. **Support prioritization under scarcity**  
-   When water, pumping capacity, labor, or time is limited, the system should help rank fields or zones by urgency and expected impact.
-
-6. **Evaluate alternative irrigation scenarios**  
-   The system should compare multiple feasible irrigation plans under different assumptions such as restricted water supply, changing rainfall forecasts, energy price differences, or revised crop-priority rules.
-
-7. **Incorporate operational constraints**  
-   The system should account for pump capacity, irrigation infrastructure limitations, labor availability, delivery windows, and energy pricing.
-
-8. **Provide decision justification**  
-   Users should be able to see why a recommendation or scenario was generated, including the major inputs and tradeoffs that influenced it.
-
-9. **Track irrigation actions and outcomes**  
-   The system should record planned schedules, executed schedules, deviations, and outcomes for later review.
-
-10. **Alert users to important conditions**  
-   It should notify users about potential overwatering, underwatering, forecasted rain, equipment issues, or supply shortfalls.
-
-11. **Support reporting and review**  
-    The system should summarize water use, scheduling efficiency, missed recommendations, and seasonal patterns for managers. It should maintain historical records for analysis and accountability.
+Beyond generating recommendations, the system should help users compare alternatives, understand tradeoffs, and make defensible choices under uncertainty. This includes supporting prioritization during scarcity, evaluating multiple feasible irrigation scenarios, and explaining why a particular recommendation or scenario was produced. The system should also preserve a record of actions, outcomes, and important conditions over time so that users can review past decisions, assess performance, and support later reporting and accountability.
 
 ### 3.2.2 Characteristics
 
-Characteristics: The system should be usable, reliable, scalable, flexible, explainable, and interoperable with relevant external data and control systems. It should support field- or zone-level decision-making, provide traceable recommendations, support comparison of feasible planning scenarios, and remain effective under uncertain and changing conditions.
+In addition to the capabilities above, the proposed system must possess a set of characteristics that make it practical and trustworthy in real agricultural operations. It should be understandable and usable by its intended users, especially growers, irrigation managers, and other operational personnel who may not be technical specialists. Because irrigation planning occurs under changing field conditions, the system must also be responsive enough to remain useful when weather, sensor inputs, or supply conditions change.
 
-### Functional characteristics
+The system should be reliable and trustworthy, meaning that it consistently produces credible outputs and continues to provide useful support even when some inputs are delayed, incomplete, or temporarily unavailable. It should also be explainable rather than opaque, so that users can understand the major assumptions, drivers, and tradeoffs behind its recommendations. This is especially important in a human-in-the-loop setting where recommendations must be reviewed, compared, and approved rather than accepted automatically.
 
-* **Field-level or zone-level precision** rather than only whole-farm recommendations
-* **Near real-time responsiveness** to changing conditions
-* **Explainable outputs** rather than black-box recommendations only
-* **Scenario-based planning**, such as normal supply vs restricted supply
-* **Human-in-the-loop control**, especially for early versions
-
-### Nonfunctional characteristics
-
-* **Usable** The interface should be understandable for growers and irrigation managers, not just technical staff.
-* **Reliable** It should provide recommendations consistently and continue operating even if some sensor data is temporarily unavailable.
-* **Accurate enough to support trust** Recommendations do not need to be perfect, but they must be credible and consistently useful.
-* **Scalable** It should work for multiple fields, zones, and crop types without becoming too hard to manage.
-* **Flexible** The system should adapt to different farm sizes, irrigation methods, and available data sources.
-* **Interoperable** It should be able to interact with external systems such as sensor platforms, weather APIs, irrigation controllers, and farm management software.
-* **Traceable** Recommendations and actions should be logged so users can review what happened and why.
-* **Maintainable** The system should be structured so models, thresholds, and integrations can be updated over time.
-* **Secure** Farm data, operational records, and system access should be protected appropriately.
+The proposed system should also support precision and adaptability across a range of operating contexts. It should work at the field or irrigation-zone level rather than only at the whole-farm level, support scenario-based planning under different assumptions, and remain flexible enough to accommodate different farm sizes, crop types, irrigation methods, and available data sources. Finally, it should be interoperable, traceable, maintainable, and secure so that it can exchange data with external systems, preserve records of decisions and inputs, evolve over time as models and integrations change, and protect farm data and system access appropriately.
 
 ## 3.3 Stakeholder Needs Mapping
 
@@ -364,27 +319,34 @@ The following tables map stakeholder needs to the capabilities and characteristi
 | CHR-7 | Traceable | The system preserves a record of recommendations, decisions, and outcomes so users can review what happened and why. |
 | CHR-8 | Maintainable | The system can be updated over time as models, rules, integrations, and operating conditions evolve. |
 | CHR-9 | Secure | The system protects farm data, user access, and operational records appropriately. |
+| CHR-10 | Field-/zone-level precision   | The system supports irrigation planning and recommendation at the field or irrigation-zone level rather than only at the whole-farm level.          |
+| CHR-11 | Near real-time responsiveness | The system responds quickly enough to changing weather, sensor, or supply conditions to remain operationally useful during planning and adjustment. |
+| CHR-12 | Explainable outputs           | The system presents recommendations and scenario outputs in a way that users can understand, including major assumptions, drivers, and tradeoffs.   |
+| CHR-13 | Scenario-based planning       | The system supports comparison of multiple feasible irrigation strategies under different supply, weather, cost, or priority assumptions.           |
+| CHR-14 | Human-in-the-loop control     | The system supports human review, adjustment, and approval of recommendations rather than requiring fully autonomous execution.                     |
+
 
 ### 3.3.2 Stakeholder Needs Mapping Table
 
-| Stakeholder | Stakeholder Type | Capability | Characteristic |
-|---|---|---|---|
-| Grower / Farm Owner | Active | CAP-2, CAP-3, CAP-5, CAP-6, CAP-7, CAP-8, CAP-9, CAP-11 | CHR-1, CHR-2, CHR-3, CHR-5, CHR-7, CHR-9 |
-| Irrigation Manager | Active | CAP-1, CAP-2, CAP-3, CAP-4, CAP-5, CAP-6, CAP-7, CAP-8, CAP-9, CAP-10, CAP-11 | CHR-1, CHR-2, CHR-3, CHR-5, CHR-6, CHR-7 |
-| Farm Operations Manager | Active | CAP-3, CAP-4, CAP-5, CAP-6, CAP-7, CAP-9, CAP-10, CAP-11 | CHR-1, CHR-2, CHR-4, CHR-5, CHR-7 |
-| Field Supervisor / Irrigation Crew Lead | Active | CAP-3, CAP-7, CAP-9, CAP-10 | CHR-1, CHR-2, CHR-6, CHR-7 |
-| Agronomist / Crop Advisor | Active | CAP-1, CAP-2, CAP-3, CAP-4, CAP-6, CAP-8, CAP-11 | CHR-2, CHR-3, CHR-5, CHR-7 |
-| System Administrator / IT Support | Active | CAP-1, CAP-9, CAP-10, CAP-11 | CHR-2, CHR-4, CHR-6, CHR-8, CHR-9 |
-| Data Analyst / Farm Management Staff | Active | CAP-1, CAP-3, CAP-4, CAP-5, CAP-6, CAP-7, CAP-8, CAP-9, CAP-11 | CHR-2, CHR-3, CHR-4, CHR-6, CHR-7, CHR-8 |
-| Maintenance Technician / Equipment Manager | Active | CAP-1, CAP-4, CAP-7, CAP-9, CAP-10 | CHR-2, CHR-3, CHR-6, CHR-7, CHR-8 |
-| Farm Workers | Passive | CAP-3, CAP-9, CAP-10 | CHR-1, CHR-2 |
-| Water District / Irrigation District | Passive | CAP-5, CAP-6, CAP-7, CAP-9, CAP-11 | CHR-2, CHR-4, CHR-7 |
-| Groundwater Sustainability Agencies / Regulators | Passive | CAP-5, CAP-7, CAP-9, CAP-11 | CHR-2, CHR-7, CHR-9 |
-| Utility Providers / Energy Suppliers | Passive | CAP-7, CAP-11 | CHR-2, CHR-4, CHR-7 |
-| Local Communities | Passive | CAP-5, CAP-9, CAP-11 | CHR-2, CHR-7 |
-| Consumers / Produce Buyers | Passive | CAP-2, CAP-3, CAP-11 | CHR-2, CHR-3, CHR-4 |
-| Environmental Interests / Ecosystems | Passive | CAP-5, CAP-7, CAP-9, CAP-11 | CHR-2, CHR-7 |
-| Investors / Business Partners | Passive | CAP-3, CAP-5, CAP-6, CAP-7, CAP-9, CAP-11 | CHR-2, CHR-4, CHR-7, CHR-9 |
+| Stakeholder                                      | Stakeholder Type | Capability                                                                    | Characteristic                                                                   |
+| ------------------------------------------------ | ---------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Grower / Farm Owner                              | Active           | CAP-2, CAP-3, CAP-5, CAP-6, CAP-7, CAP-8, CAP-9, CAP-11                       | CHR-1, CHR-2, CHR-3, CHR-5, CHR-7, CHR-9, CHR-10, CHR-12, CHR-13, CHR-14         |
+| Irrigation Manager                               | Active           | CAP-1, CAP-2, CAP-3, CAP-4, CAP-5, CAP-6, CAP-7, CAP-8, CAP-9, CAP-10, CAP-11 | CHR-1, CHR-2, CHR-3, CHR-5, CHR-6, CHR-7, CHR-10, CHR-11, CHR-12, CHR-13, CHR-14 |
+| Farm Operations Manager                          | Active           | CAP-3, CAP-4, CAP-5, CAP-6, CAP-7, CAP-9, CAP-10, CAP-11                      | CHR-1, CHR-2, CHR-4, CHR-5, CHR-7, CHR-11, CHR-13, CHR-14                        |
+| Field Supervisor / Irrigation Crew Lead          | Active           | CAP-3, CAP-7, CAP-9, CAP-10                                                   | CHR-1, CHR-2, CHR-6, CHR-7, CHR-10, CHR-14                                       |
+| Agronomist / Crop Advisor                        | Active           | CAP-1, CAP-2, CAP-3, CAP-4, CAP-6, CAP-8, CAP-11                              | CHR-2, CHR-3, CHR-5, CHR-7, CHR-10, CHR-11, CHR-12, CHR-13, CHR-14               |
+| System Administrator / IT Support                | Active           | CAP-1, CAP-9, CAP-10, CAP-11                                                  | CHR-2, CHR-4, CHR-6, CHR-8, CHR-9, CHR-11, CHR-14                                |
+| Data Analyst / Farm Management Staff             | Active           | CAP-1, CAP-3, CAP-4, CAP-5, CAP-6, CAP-7, CAP-8, CAP-9, CAP-11                | CHR-2, CHR-3, CHR-4, CHR-6, CHR-7, CHR-8, CHR-11, CHR-12, CHR-13                 |
+| Maintenance Technician / Equipment Manager       | Active           | CAP-1, CAP-4, CAP-7, CAP-9, CAP-10                                            | CHR-2, CHR-3, CHR-6, CHR-7, CHR-8, CHR-11, CHR-14                                |
+| Farm Workers                                     | Passive          | CAP-3, CAP-9, CAP-10                                                          | CHR-1, CHR-2, CHR-14                                                             |
+| Water District / Irrigation District             | Passive          | CAP-5, CAP-6, CAP-7, CAP-9, CAP-11                                            | CHR-2, CHR-4, CHR-7, CHR-11, CHR-13                                              |
+| Groundwater Sustainability Agencies / Regulators | Passive          | CAP-5, CAP-7, CAP-9, CAP-11                                                   | CHR-2, CHR-7, CHR-9, CHR-11                                                      |
+| Utility Providers / Energy Suppliers             | Passive          | CAP-7, CAP-11                                                                 | CHR-2, CHR-4, CHR-7, CHR-11                                                      |
+| Local Communities                                | Passive          | CAP-5, CAP-9, CAP-11                                                          | CHR-2, CHR-7, CHR-11                                                             |
+| Consumers / Produce Buyers                       | Passive          | CAP-2, CAP-3, CAP-11                                                          | CHR-2, CHR-3, CHR-4, CHR-10                                                      |
+| Environmental Interests / Ecosystems             | Passive          | CAP-5, CAP-7, CAP-9, CAP-11                                                   | CHR-2, CHR-7, CHR-11                                                             |
+| Investors / Business Partners                    | Passive          | CAP-3, CAP-5, CAP-6, CAP-7, CAP-9, CAP-11                                     | CHR-2, CHR-4, CHR-7, CHR-9, CHR-13                                               |
+
 
 ### 3.3.3 Interpretation
 
@@ -1109,28 +1071,108 @@ System --> Analyst : Display expanded lineage details,\nmetadata, and dependency
 
 ## 5.8 QFD Analysis
 
+The QFD analysis was used to translate key stakeholder characteristics into system-level objectives for the proposed precision irrigation scheduling system. The WHAT rows capture the most important stakeholder concerns identified earlier, including usability, responsiveness, reliability, trustworthiness, explainability, and maintainability, each decomposed into more specific sub-characteristics. The HOW columns represent the main system objectives that respond to those concerns, such as data integration, scenario generation, constraint modeling, reporting, lineage tracking, degraded-mode handling, and configuration management. The resulting relationships show that the most important stakeholder concerns are supported by a combination of analytical capability, traceability features, and operational support functions. The attic correlations are also reasonable because they highlight where system objectives reinforce one another, such as the relationship between historical record storage and lineage tracking, while also acknowledging limited tradeoffs where additional tracking or storage can introduce complexity or overhead.
+
 ### 5.8.1 QFD Matrix
+
+![QFD Matrix](qfd.png)
+
+The body of the QFD matrix shows how each system objective contributes to satisfying the identified stakeholder characteristics. Several of the strongest positive relationships are concentrated where the connection between stakeholder concern and design response is especially direct. For example, **Recommendation Rationale Display** has a strong relationship with the explainability-related rows, especially **Clear Rationale** and **Visible Assumptions and Tradeoffs**, because making the logic, assumptions, and comparisons visible is central to helping users understand why the system produced a recommendation. Similarly, **Constraint Modeling Logic** and **Unified Data Integration Layer** are strongly related to **Credible Recommendations** and **Use of Current Inputs** under trustworthiness, since users are more likely to trust the output when it is based on current, integrated data and realistic operational constraints. Strong correlations also appear between **Alerting and Degraded-Mode Handling** and the reliability and maintainability rows, because reliable operation and maintainable support both depend on the system being able to detect problems, communicate them clearly, and continue operating when some inputs or integrations are degraded. Other highlighted relationships in the body reflect the system’s broader operational and traceability goals. **Report Generation and Verification**, **Historical Record Storage**, and **Metadata and Lineage Tracking** all show meaningful support for explainability and maintainability because reports, stored records, and lineage information help users verify plans, understand documentation, and review what changed over time. 
+
+The body of the QFD matrix is mostly positive because the selected HOWs were defined as system objectives intended to support stakeholder-valued WHATs, not work against them. That said, negative relationships could exist in principle. For example, a WHAT such as Usability, especially Simple Interface, could be weakly at odds with a HOW such as Metadata and Lineage Tracking if too much provenance detail were exposed directly in the main interface, and a WHAT such as Responsiveness could be weakly at odds with Historical Record Storage or Lineage Tracking if additional storage and audit functionality introduced processing overhead. These kinds of tensions were not represented as negative body relationships because the design assumption is that they can be mitigated through implementation choices, such as placing detailed lineage information in drill-down views or optimizing storage and retrieval performance. As a result, the body emphasizes the intended supportive role of each HOW, while the more significant tradeoffs between design objectives are represented in the attic.
+
+The strongest positive correlations in the attic reflect system objectives that naturally reinforce one another. For example, the correlation between **Scenario Generation Engine** and **Tradeoff Comparison Engine** is strong because meaningful tradeoff analysis depends on the system’s ability to produce multiple feasible irrigation scenarios for comparison. Likewise, **Historical Record Storage** and **Metadata and Lineage Tracking** are strongly correlated because lineage is only useful when the underlying historical plans, inputs, approvals, and timestamps are preserved. Another strong positive relationship appears between **Alerting and Degraded-Mode Handling** and **Configuration and Integration Management**, since the system’s ability to detect failures and continue operating in a degraded state depends heavily on well-managed configurations and properly maintained external interfaces.
+
+One weak negative correlation appears between the **Scenario Generation Engine** and **Historical Record Storage**. This negative relationship is reasonable because richer storage of historical data and more extensive recordkeeping can introduce additional retrieval and processing overhead, which may slightly reduce computational efficiency during scenario generation. The conflict is weak rather than strong because the two objectives are still broadly compatible; the issue is not that they oppose each other conceptually, but that increasing one may impose some performance or complexity costs on the other.
+
 
 ## 5.9 System Requirements
 
-| Requirement Number | System Requirement | Traceability | Verification |
-|---|---|---|---|
-| SR-001 | The system shall... | Stakeholder / Use Case / QFD / Acceptance Criteria | Test / Analysis / Inspection / Demonstration |
-| SR-002 | The system shall... |  |  |
-| SR-003 | The system shall... |  |  |
-| SR-004 | The system shall... |  |  |
-| SR-005 | The system shall... |  |  |
-| SR-006 | The system shall... |  |  |
-| SR-007 | The system shall... |  |  |
-| SR-008 | The system shall... |  |  |
-| SR-009 | The system shall... |  |  |
-| SR-010 | The system shall... |  |  |
+The system requirements were written to be traceable, testable, and scoped to the proposed system boundary. Each requirement maps to one or more use cases so that the requirements remain grounded in specific system interactions rather than abstract goals. Functional requirements trace directly to the operational use cases, such as scenario generation, plan approval, reporting, maintenance, and lineage review, while nonfunctional requirements constrain the performance or quality of those same interactions. Support, interface, data, and security requirements were also tied to the relevant use cases so that every requirement can be justified by a concrete user or support activity. In addition, the requirements were written as singular “shall” statements to improve clarity and verifiability, avoiding unnecessary bundling of multiple obligations into one row. This makes each requirement easier to inspect, demonstrate, analyze, or test, and helps ensure that the set as a whole reflects good systems-engineering practice by being specific, implementable, traceable to stakeholder needs and use cases, and capable of objective verification.
+
+
+| Requirement Number | Requirement Type      | System Requirement                                                                                                                   | Traceability                                                                                                                            | Verification              |
+| ------------------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| SR-001             | Functional            | The system shall allow an authorized user to review current field conditions before generating an irrigation scenario.               | Stakeholders: Irrigation Manager, Agronomist / UC-03 / QFD: Trustworthiness, Explainability                                             | Demonstration, Inspection |
+| SR-002             | Functional            | The system shall allow an authorized user to review current resource conditions before generating an irrigation scenario.            | Stakeholders: Irrigation Manager / UC-03 / QFD: Trustworthiness                                                                         | Demonstration, Inspection |
+| SR-003             | Functional            | The system shall generate multiple irrigation scenarios for a user-selected planning horizon.                                        | Stakeholders: Irrigation Manager, Farm Operations Manager / UC-01 / QFD: Responsiveness, Trustworthiness / AC-1                         | Test, Analysis            |
+| SR-004             | Functional            | The system shall apply operational constraints during irrigation scenario generation.                                                | Stakeholders: Irrigation Manager, Farm Operations Manager / UC-01 / QFD: Trustworthiness, Reliability / AC-3                            | Test, Analysis            |
+| SR-005             | Functional            | The system shall display tradeoff information for each generated irrigation scenario.                                                | Stakeholders: Irrigation Manager, Grower / UC-01 / QFD: Explainability, Usability / AC-4                                                | Demonstration, Inspection |
+| SR-006             | Functional            | The system shall allow an authorized user to select an irrigation scenario for approval.                                             | Stakeholders: Irrigation Manager, Grower / UC-02 / QFD: Usability, Explainability                                                       | Demonstration, Test       |
+| SR-007             | Data                  | The system shall store the approval decision for a selected irrigation plan.                                                         | Stakeholders: Grower, Irrigation Manager / UC-02 / QFD: Maintainability, Explainability                                                 | Test, Inspection          |
+| SR-008             | Data                  | The system shall store the approver identity and approval timestamp for a selected irrigation plan.                                  | Stakeholders: Grower, Irrigation Manager / UC-02 / QFD: Maintainability, Explainability                                                 | Test, Inspection          |
+| SR-009             | Functional            | The system shall allow an authorized user to retrieve a report for an approved irrigation plan.                                      | Stakeholders: Irrigation Manager, Field Supervisor / UC-05 / QFD: Explainability, Usability                                             | Demonstration, Inspection |
+| SR-010             | Data                  | The system shall provide lineage information for stored plans, reports, and planning inputs.                                         | Stakeholders: Data Analyst / UC-06 / QFD: Explainability, Trustworthiness, Maintainability                                              | Demonstration, Inspection |
+| SR-011             | Nonfunctional         | The system shall generate an irrigation scenario set within 5 minutes under nominal operating conditions.                            | Stakeholders: Irrigation Manager / UC-01 / QFD: Responsiveness / AC-1                                                                   | Test                      |
+| SR-012             | Nonfunctional         | The system shall update affected recommendations within 10 minutes of a significant input change under nominal operating conditions. | Stakeholders: Irrigation Manager / UC-01, UC-03 / QFD: Responsiveness / AC-2                                                            | Test                      |
+| SR-013             | Interface             | The system shall retrieve planning data from external sources when such data is available.                                           | Stakeholders: Irrigation Manager, Agronomist / UC-01, UC-03 / QFD: Trustworthiness, Reliability                                         | Test, Demonstration       |
+| SR-014             | Support / Maintenance | The system shall provide authorized support users with access to system status and integration health information.                   | Stakeholders: System Admin / IT Support, Maintenance Tech / UC-04 / QFD: Reliability, Maintainability                                   | Demonstration, Inspection |
+| SR-015             | Security              | The system shall restrict approval, maintenance, reporting, and lineage functions based on user role.                                | Stakeholders: Grower, Irrigation Manager, IT Support, Data Analyst / UC-02, UC-04, UC-05, UC-06 / QFD: Trustworthiness, Maintainability | Test, Inspection          |
+
 
 # 6. Functional and Physical Architecture
 
 ## 6.1 Input/Output Matrices
 
+This input/output matrix organizes the system’s major inputs and outputs into four categories: data, operational, human, and environmental. The intended inputs are the information, constraints, and user actions the system is expected to receive in order to support irrigation planning and review. The unintended inputs are disruptive or external influences, such as missing data, degraded infrastructure, staffing problems, and unusual environmental conditions, that can affect system performance even though they are not deliberately provided. The desired outputs are the useful results the system is designed to produce, including scenarios, approved plans, reports, reviews, and stored records. The undesired outputs are potential negative consequences, such as stale information, infeasible plans, coordination problems, or degraded recommendation quality, which should be anticipated and minimized through design.
+
+| Category          | Inputs – Intended                                                                                                               | Inputs – Unintended                                                                                                              | Outputs – Desired                                                                                            | Outputs – Undesired                                                                                                       |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| **Data**          | Weather data, soil moisture data, crop records, field maps, irrigation history, water availability data, energy pricing data    | Missing sensor data, stale forecasts, delayed district updates, inconsistent timestamps, incomplete records                      | Integrated planning data, condition summaries, scenario inputs, historical records, lineage information      | Stale data in planning view, incomplete records, inconsistent data versions, misleading input picture                     |
+| **Operational**   | Planning horizon, selected fields/zones, labor limits, equipment limits, delivery windows, user-defined constraints             | Pump failures, infrastructure limitations, unexpected labor shortages, communication delays, rapidly changing supply conditions  | Feasible irrigation scenarios, approved plans, verification reports, maintenance status information          | Unrealistic schedules, delayed approvals, infeasible plans, degraded operational coordination                             |
+| **Human**         | User-entered priorities, approval decisions, agronomic notes, verification feedback, maintenance actions, configuration updates | Incorrect manual inputs, user misunderstanding, delayed review, conflicting stakeholder priorities, unauthorized access attempts | Approved plan decisions, stored approvals, review notes, verification records, corrective action logs        | Input errors, approval bottlenecks, poor traceability of decisions, user confusion, inconsistent plan interpretation      |
+| **Environmental** | Normal field conditions, expected weather variation, seasonal crop conditions, normal water supply conditions                   | Extreme heat, unexpected rainfall, drought restrictions, poor connectivity, sensor degradation, unusual field conditions         | Adaptive recommendations, updated scenarios, alerts on changing conditions, field/resource condition reviews | Overreaction to noisy conditions, missed updates, alert fatigue, reduced recommendation quality under degraded conditions |
+
+This next version of the input/output matrix organizes the system by major operational functions: planning, approval/decision, execution/verification, maintenance/support, and reporting/traceability. Intended inputs represent the information, constraints, and user actions required for each activity, while unintended inputs capture disruptions or conditions outside the system’s direct control that can affect performance. Desired outputs are the useful products the system should generate in each area, such as scenarios, approvals, verification records, maintenance status, and lineage views. Undesired outputs represent foreseeable negative results, such as unrealistic scenarios, approval delays, incomplete traceability, or degraded operation, which should be identified early and reduced through system design.
+
+| Category                     | Inputs – Intended                                                                                                                                   | Inputs – Unintended                                                                                                      | Outputs – Desired                                                                                        | Outputs – Undesired                                                                                      |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Planning**                 | Planning horizon, selected fields/zones, weather data, soil moisture data, crop data, water constraints, labor and equipment limits, energy pricing | Stale forecasts, missing sensor data, conflicting constraints, rapidly changing water availability, poor input quality   | Feasible irrigation scenarios, tradeoff comparisons, prioritized alternatives, updated recommendations   | Unrealistic scenarios, incomplete comparisons, delayed planning outputs, misleading prioritization       |
+| **Approval / Decision**      | Selected scenario, approval request, user roles, stored priorities, supporting tradeoff information                                                 | Delayed decision-making, ambiguous scenario differences, missing approval context, conflicting stakeholder preferences   | Approved irrigation plan, stored approval decision, approver identity, timestamped decision record       | Approval bottlenecks, suboptimal plan selection, unauthorized approval, incomplete decision traceability |
+| **Execution / Verification** | Approved plan, execution details, report request, field feedback, verification input                                                                | Miscommunication, field-readiness issues, outdated plan information, connectivity limitations in the field               | Verification report, execution-readiness confirmation, stored verification feedback, plan review summary | Execution confusion, unverifiable plan, outdated reports, extra manual coordination effort               |
+| **Maintenance / Support**    | System status request, alert data, integration health data, maintenance actions, configuration updates                                              | API outages, sensor failures, district feed failures, software misconfiguration, network instability                     | Health status view, maintenance records, restored configurations, corrected integration state            | Prolonged degraded operation, silent failures, unresolved alerts, incorrect support actions              |
+| **Reporting / Traceability** | Historical plans, stored reports, source metadata, timestamps, lineage query, historical field and planning records                                 | Missing metadata, inconsistent timestamps, incomplete source history, record corruption, changed external source formats | Historical summaries, lineage views, provenance traces, auditable planning and decision history          | Incomplete lineage, hard-to-interpret provenance, missing records, weak retrospective accountability     |
+
+
 ## 6.2 First Level Decomposition
+
+This first-level functional decomposition organizes the proposed system into its main mission-oriented functions. Acquire and Manage Planning Data captures the collection and organization of the data needed for planning. Assess Field and Resource Conditions represents evaluation of the current agricultural and operational state before decisions are made. Generate and Compare Irrigation Scenarios is the core analytical function, where feasible alternatives are produced and evaluated. Select and Approve Irrigation Plans represents the human decision and approval step that turns analysis into an actionable plan. Generate Reports and Verify Plans covers reporting and operational confirmation of approved outputs, while Trace Data Lineage ensures that plans, reports, and decisions can be linked back to their underlying inputs and metadata. Together, these functions describe the major internal responsibilities of the system at a high level without yet decomposing them into lower-level subfunctions.
+
+```plantuml
+@startuml
+top to bottom direction
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultTextAlignment center
+skinparam defaultFontSize 14
+skinparam ArrowColor #4A5568
+skinparam ArrowThickness 1.2
+
+skinparam rectangle {
+  RoundCorner 12
+  BorderColor #4A5568
+  FontColor #1A202C
+  BackgroundColor #E8F1FB
+}
+
+rectangle "Precision Irrigation\nScheduling System" as Root #DCEBFA
+
+rectangle "Acquire and Manage\nPlanning Data" as F1
+rectangle "Assess Field and\nResource Conditions" as F2
+rectangle "Generate and Compare\nIrrigation Scenarios" as F3
+rectangle "Select Plan Selection\nand Approval" as F4
+rectangle "Generate Reports and Verify Plans" as F5
+rectangle "Trace Data Lineage" as F6
+
+Root -down-> F1
+Root -down-> F2
+Root -down-> F3
+Root -down-> F4
+Root -down-> F5
+Root -down-> F6
+
+@enduml
+```
 
 ## 6.3 IDEF0 Model
 
