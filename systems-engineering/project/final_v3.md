@@ -6,17 +6,15 @@
     1. [Background](#11-background)
     2. [Job to Be Done](#12-job-to-be-done)
     3. [Need Statement](#13-need-statement)
-
 2. [Current Situation](#2-current-situation)
     1. [Current Systems and Operations](#21-current-systems-and-operations)
         1. [Human Actors](#211-human-actors)
         2. [Technologies and Tools Currently Used](#212-technologies-and-tools-currently-used)
         3. [Typical Characteristics of the Current System](#213-typical-characteristics-of-the-current-system)
         4. [Typical Current Operational Flow](#214-typical-current-operational-flow)
-    2. [Deficiencies and Opportunities](#22-deficiencies-and-opportunities)
-        1. [Opportunities for Improvement](#221-opportunities-for-improvement)
-        2. [Desired Future State](#222-desired-future-state)
-
+    2. [Deficiencies](#22-deficiencies-and-opportunities)
+    3. [Opportunities for Improvement](#23-opportunities-for-improvement)
+    4. [Desired Future State](#24-desired-future-state)
 3. [Stakeholder Analysis](#3-stakeholder-analysis)
     1. [Stakeholder Identification and Analysis](#31-stakeholder-identification-and-analysis)
         1. [Active Stakeholders](#311-active-stakeholders)
@@ -28,16 +26,13 @@
         1. [Capability and Characteristic Key](#331-capability-and-characteristic-key)
         2. [Stakeholder Needs Mapping Table](#332-stakeholder-needs-mapping-table)
         3. [Interpretation](#333-interpretation)
-
 4. [Acceptance Criteria](#4-acceptance-criteria)
     1. [Defined Acceptance Criteria](#41-defined-acceptance-criteria)
-    2. [Explanation of Acceptance Criteria](#42-explanation-of-acceptance-criteria)
-
 5. [Concept for the Proposed System](#5-concept-for-the-proposed-system)
     1. [Concept Generation](#51-concept-generation)
-    2. [CONOPS](#52-conops)
-    3. [Concept Selection](#53-concept-selection)
-        1. [Pugh Matrix](#531-pugh-matrix)
+    2. [Concept Selection](#52-concept-selection)
+        1. [Pugh Matrix](#521-pugh-matrix)
+    3. [CONOPS](#53-conops)
     4. [System Context](#54-system-context)
     5. ["To Be" Operational Scenarios](#55-to-be-operational-scenarios)
     6. [Use Case Model](#56-use-case-model)
@@ -51,16 +46,13 @@
     8. [QFD Analysis](#58-qfd-analysis)
         1. [QFD Matrix](#581-qfd-matrix)
     9. [System Requirements](#59-system-requirements)
-
 6. [Functional and Physical Architecture](#6-functional-and-physical-architecture)
     1. [Input/Output Matrices](#61-inputoutput-matrices)
     2. [First Level Decomposition](#62-first-level-decomposition)
     3. [IDEF0 Model](#63-idef0-model)
-
 7. [Risk Assessment](#7-risk-assessment)
     1. [Technical Performance Measures](#71-technical-performance-measures)
     2. [Risk Management Plan](#72-risk-management-plan)
-
 8. [Reflection](#8-reflection)
 
 ---
@@ -91,19 +83,17 @@ This creates a clear need for a software-intensive irrigation planning and decis
 
 ## 2.1 Current Systems and Operations
 
-In the current situation, irrigation decisions are often made using a mix of human judgment, manual coordination, and partially connected tools. Typical decision inputs include grower experience, fixed irrigation calendars, manual field inspection, weather reports, pump and flow records, spreadsheets or handwritten logs, recommendations from agronomists or irrigation consultants, and data from disconnected tools such as soil moisture sensors, weather stations, or controller systems.
+In the current situation, irrigation decisions are often made using a combination of human judgment, manual coordination, and partially connected tools. Typical inputs include grower experience, field inspection, weather information, pump and flow records, agronomic recommendations, and data from sensors or controller systems. In many operations, irrigation planning and execution do not occur through a single integrated platform. Instead, decisions are made across a patchwork of spreadsheets, handwritten records, weather applications, sensor dashboards, controller interfaces, and direct communication with field crews.
 
-In many operations, irrigation planning and execution do not occur through a single integrated system. Instead, the current operational environment is a patchwork of spreadsheets, handwritten records, weather applications, sensor dashboards, irrigation controllers, and direct communication with field crews. Scheduling decisions are therefore often made manually and revised reactively as conditions change.
-
-The typical process involves assessing field conditions, estimating water demand, checking operational and resource constraints, scheduling irrigation by field or block, executing the plan through pumps and valves or automated controllers, and monitoring outcomes through field inspection and later adjustments.
+The typical process involves assessing field conditions, estimating water demand, checking operational and resource constraints, creating a schedule by field or block, executing the plan through pumps, valves, or controllers, and then monitoring results for later adjustment. Because this process is distributed across people and tools rather than supported by a unified system, scheduling decisions are often manual and revised reactively as conditions change.
 
 ### 2.1.1 Human Actors
 
-The current irrigation decision environment involves several human actors, each with a distinct role in planning, approving, executing, or responding to irrigation activity. The grower or farm owner is often the primary decision-maker or the person ultimately accountable for crop performance, water use, and operating cost. In some operations, that person makes irrigation decisions directly; in others, authority is shared with or delegated to an irrigation manager. The irrigation manager typically plays the central operational role by interpreting conditions across fields, balancing resource constraints, and translating priorities into an irrigation schedule. Field supervisors may help coordinate labor, verify field conditions, and communicate changing needs or problems from the field to management. Equipment operators are responsible for implementing the plan by running pumps, opening or closing valves, adjusting controller settings, and ensuring that irrigation equipment is functioning as intended. Agronomists or crop advisors may also influence decisions by providing recommendations based on crop condition, soil behavior, weather patterns, or production goals. In addition, external stakeholders such as water districts or regulators can shape operations by imposing delivery schedules, reporting requirements, allocation limits, or compliance constraints that must be considered during planning and execution.
+The current irrigation decision environment includes several human roles involved in planning, approving, executing, and adjusting irrigation activity. The grower or farm owner is typically the primary decision-maker or the person ultimately accountable for crop performance, water use, and operating cost. The irrigation manager often plays the central day-to-day operational role by interpreting field conditions, balancing constraints, and translating priorities into a schedule. Field supervisors and equipment operators help execute the plan and communicate field conditions or equipment issues, while agronomists or crop advisors may provide crop- and soil-related guidance. External actors such as water districts or regulators also influence operations by imposing delivery constraints, allocation limits, or reporting requirements.
 
 ### 2.1.2 Technologies and Tools Currently Used
 
-The technologies and tools currently used in many irrigation operations are often practical and familiar, but they are not always well integrated. Manual valve and pump controls are still common, especially in operations where physical infrastructure has developed over time and automation is partial rather than comprehensive. Irrigation controllers or timers may be used to automate portions of watering activity, but they often operate independently from broader planning tools or decision logic. Spreadsheets and paper logs remain common for tracking schedules, water use, observations, and operational notes, particularly because they are flexible and easy for local staff to modify. Weather apps or local forecasts are frequently consulted to anticipate heat, rainfall, or evapotranspiration-related conditions, while standalone soil moisture sensors provide additional field-specific information where they are installed. Larger operations may also use SCADA systems or pump-monitoring tools to track equipment status, flows, and runtime, but these systems are often focused on equipment oversight rather than integrated irrigation decision support. Communication between managers and field crews often relies on phone calls or text messages, which are useful for immediate coordination but may not create a durable or structured decision record. Accounting records and utility bills may later be used to review pumping cost, but this information is often analyzed after the fact rather than incorporated directly into daily irrigation planning.
+The tools used in many irrigation operations are often practical and familiar, but they are not always well integrated. Common tools include manual valve and pump controls, irrigation controllers or timers, spreadsheets or paper logs, weather applications, standalone soil moisture sensors, pump-monitoring tools, and direct communication methods such as phone calls or text messages. Larger operations may also use [SCADA](https://en.wikipedia.org/wiki/SCADA) or related monitoring systems, but these are often focused on equipment oversight rather than integrated irrigation planning. As a result, information needed for scheduling is frequently spread across multiple tools and records rather than brought together into a single decision-support environment.
 
 ### 2.1.3 Typical Characteristics of the Current System
 
@@ -127,7 +117,7 @@ The system is also frequently reactive, with adjustments made after crop stress,
 | 6. Monitor results    | The team checks whether irrigation occurred as intended and watches for signs of plant stress, runoff, or overwatering.                                            |
 | 7. Adjust             | The next schedule is adjusted based on observed conditions, supply changes, or weather shifts.                                                                     |
 
-## 2.2 Deficiencies and Opportunities
+## 2.2 Deficiencies
 
 Current irrigation planning and execution methods do not adequately support growers and irrigation managers in determining when, where, and how much to irrigate under changing and uncertain conditions. Relevant information is often fragmented across weather data, soil moisture readings, pump records, field observations, water delivery constraints, and cost considerations. As a result, irrigation scheduling is frequently reactive, inconsistent, and dependent on individual judgment rather than supported by structured system-level analysis.
 
@@ -159,7 +149,7 @@ These broader problems can be seen more specifically in several recurring defici
 8. **Difficulty prioritizing across multiple fields or zones**
    When water, pumping capacity, or labor is limited, managers need to decide which fields or irrigation zones should receive water first. Current methods may not support systematic prioritization. Resources may be allocated inefficiently, especially during shortage conditions.
 
-### 2.2.1 Opportunities for Improvement
+### 2.3 Opportunities for Improvement
 
 These deficiencies create a clear opportunity for an integrated software-based precision irrigation scheduling and planning system. Such a system could combine environmental, agronomic, and operational data into a unified decision-support platform, generate adaptive irrigation recommendations for each field or zone, and compare alternative schedules under different supply, weather, and operational assumptions. By helping users determine when, where, and how much to irrigate under changing conditions, the system could improve water-use efficiency, reduce pumping cost, support better prioritization under scarcity, and increase the consistency and traceability of irrigation decisions.
 
@@ -187,7 +177,7 @@ These deficiencies create a clear opportunity for an integrated software-based p
 8. **Create a foundation for future automation or compliance support**
    Even if the initial concept is a recommendation and planning system rather than a control system, it could later connect to irrigation controllers, reporting tools, or regulatory documentation workflows. This would provide long-term extensibility beyond basic scheduling.
 
-### 2.2.2 Desired Future State
+### 2.4 Desired Future State
 
 A successful future state would be one in which irrigation decisions are no longer based primarily on disconnected tools and informal judgment, but instead are supported by a unified system that provides timely, explainable, and operationally feasible planning alternatives. In that future state, users would be able to generate irrigation schedules at the field or zone level using current and forecasted conditions, compare alternative scenarios under normal or constrained supply conditions, and understand the major tradeoffs behind each option before selecting a plan.
 
@@ -197,9 +187,39 @@ This improved state would also make irrigation management more deliberate and re
 
 ## 3.1 Stakeholder Identification and Analysis
 
-The proposed precision irrigation scheduling system has both active and passive stakeholders. Active stakeholders are those who directly interact with, operate, configure, maintain, or make decisions with the system, or who rely on it to support operational decisions. These include the grower or farm owner, irrigation manager, farm operations manager, field supervisor, irrigation crew lead, agronomist, and system support personnel. These stakeholders use the system to plan irrigation, review recommendations, compare scenarios, allocate resources, execute field activities, and monitor performance.
+Stakeholders were identified using a representative interview-style elicitation method. Rather than starting with a fixed list of stakeholders, two hypothetical conversations were used to surface needs, constraints, decision authority, dependencies, and external influences within the irrigation planning environment. The first conversation focused on a farm-side decision-maker, which helped identify the active users and operators of the proposed system. The second focused on an irrigation-district water-management perspective, which helped identify external and passive stakeholders who constrain or influence the system even if they do not directly operate it. Together, these conversations provided a practical basis for deriving the broader set of active and passive stakeholders analyzed below.
 
-Passive stakeholders do not directly operate the system, but they are still important because they either constrain the system’s feasible operating space or are affected by its outcomes. Some passive stakeholders, such as irrigation districts, regulators, and utility providers, act primarily as external constraint-setting institutions whose policies, delivery conditions, reporting expectations, or pricing structures shape what schedules are feasible. Others, such as local communities, consumers, environmental interests, and business stakeholders, are primarily affected by the long-term operational results of the system. Their interests relate to efficient water use, sustainability, cost control, agricultural reliability, and reduced environmental impact.
+### Interview Summary 1: Almond Farmer
+
+The representative almond farmer was used to identify the needs and constraints of a primary operational stakeholder. This conversation was intended to surface how irrigation decisions are currently made, what information is needed, where uncertainty enters the process, and which other actors influence or support those decisions. From this conversation, key active stakeholders such as the grower or farm owner, irrigation manager, farm operations manager, field supervisor, agronomist, and supporting operational personnel emerged.
+
+**Example elicitation questions:**
+
+* How do you currently decide when and how much to irrigate each block or zone?
+* What information do you rely on most when making irrigation decisions?
+* What constraints most often limit your preferred irrigation plan?
+* How do you prioritize fields when water, labor, or pumping capacity is limited?
+* What kinds of changes force you to revise a plan after it has already been made?
+* Who else is involved in reviewing, approving, executing, or adjusting irrigation decisions?
+* What makes an irrigation recommendation trustworthy enough for you to act on it?
+* What records or explanations do you wish you had after decisions are made?
+
+### Interview Summary 2: Irrigation District Chief Hydrologist
+
+The representative irrigation district chief hydrologist was used to identify the external actors, constraints, and institutional considerations that shape the planning environment. This conversation was intended to surface the district’s role in water availability, allocation, delivery constraints, regulatory pressures, and future uncertainty related to water rights. From this conversation, passive or external stakeholders such as irrigation districts, groundwater agencies, regulators, utility providers, and broader oversight interests emerged.
+
+**Example elicitation questions:**
+
+* What is the district’s role in determining water availability and delivery conditions for growers?
+* How do allocation limits, delivery windows, or shortage conditions affect on-farm irrigation decisions?
+* What upcoming issues related to water rights, regulation, or allocation are likely to affect growers?
+* What information do growers typically misunderstand about district water constraints?
+* What kinds of reporting, compliance, or coordination requirements shape district decisions?
+* Which outside entities most strongly influence district operations, such as regulators or groundwater agencies?
+* What would make farm-side irrigation planning more compatible with district constraints?
+* Where do you expect the greatest uncertainty or pressure in future water management decisions?
+
+Together, these interviews provided a practical basis for identifying both the direct operational users of the system and the external stakeholders who constrain or are influenced by its results.
 
 ### 3.1.1 Active Stakeholders
 
@@ -312,60 +332,18 @@ Passive stakeholders generally do not interact directly with the system, but the
 
 # 4. Acceptance Criteria
 
+The following acceptance criteria define the observable conditions under which the proposed system would be judged acceptable with respect to its core operational goals. Each criterion is written to be testable and tied to a specific aspect of system performance, such as timeliness, adaptability, feasibility under constraints, explainability, or traceability. Together, these criteria establish a practical basis for evaluating whether the selected concept provides useful decision support in realistic irrigation planning conditions.
+
 ## 4.1 Defined Acceptance Criteria
 
-| ID | Criterion | Testing Method |
-|---|---|---|
-| AC-1 | The system shall generate a field- or zone-level irrigation schedule within 5 minutes of user request under nominal operating conditions with all required inputs available. | Test |
-| AC-2 | The system shall update affected irrigation recommendations within 10 minutes of receiving a significant change in weather, soil moisture, or water availability data. | Test |
-| AC-3 | The system shall produce a prioritized irrigation schedule within defined water, pumping, and irrigation-time constraints when demand exceeds available resources. | Test, Analysis |
-| AC-4 | The system shall generate and display at least three feasible irrigation scenarios when the user specifies alternative water-supply, weather, or energy-cost assumptions for the same planning period. | Test |
-| AC-5 | The system shall display the field or zone, irrigation amount, irrigation timing, and three contributing factors for each recommendation or scenario under normal schedule generation. | Inspection |
-| AC-6 | The system shall allow an authorized user to retrieve the complete 30-day decision history for any field or zone within 30 seconds. | Test |
-
-## 4.2 Explanation of Acceptance Criteria
-
-### 4.2.1 AC-1
-
-**Focus:** schedule generation timeliness  
-**Purpose:** verifies that the system produces a usable irrigation schedule quickly enough for operational planning.  
-**Acceptance context:** nominal conditions, required inputs available, user-initiated schedule request.  
-**Why it matters:** if schedule generation is too slow, the system is not operationally useful.
-
-### 4.2.2 AC-2
-
-**Focus:** adaptive update response  
-**Purpose:** verifies that the system remains useful when important inputs change after an initial recommendation is generated.  
-**Acceptance context:** changed forecast, soil moisture, or water availability input received by the system.  
-**Why it matters:** irrigation planning must adapt to changing conditions, not remain static.
-
-### 4.2.3 AC-3
-
-**Focus:** constraint-aware prioritization  
-**Purpose:** verifies that the system can support shortage conditions and produce feasible schedules rather than idealized ones.  
-**Acceptance context:** total irrigation demand exceeds available resources for the planning period.  
-**Why it matters:** this is one of the most important operational needs in the problem domain.
-
-### 4.2.4 AC-4
-
-**Focus:** scenario generation  
-**Purpose:** verifies that the selected concept supports comparison of multiple feasible irrigation plans rather than only producing a single recommendation.  
-**Acceptance context:** user-defined alternative assumptions for the same planning period.  
-**Why it matters:** scenario comparison is a core differentiator of the proposed concept.
-
-### 4.2.5 AC-5
-
-**Focus:** recommendation explainability  
-**Purpose:** verifies that users can understand the basis of each recommendation or scenario.  
-**Acceptance context:** normal recommendation review by a grower or irrigation manager.  
-**Why it matters:** the system will not be trusted or adopted if recommendations cannot be explained.
-
-### 4.2.6 AC-6
-
-**Focus:** decision traceability  
-**Purpose:** verifies that the system preserves and retrieves a usable history of recommendations and actions.  
-**Acceptance context:** authorized historical review of a selected field or zone over a defined time window.  
-**Why it matters:** stakeholders need accountability, reviewability, and historical evidence for decisions.
+| ID | Criterion | Purpose | Testing Method |
+|---|---|---|---|
+| AC-1 | The system shall generate a field- or zone-level irrigation schedule within 5 minutes of user request under nominal operating conditions with all required inputs available. | Verifies that the system produces a usable irrigation schedule quickly enough for operational planning. | Test |
+| AC-2 | The system shall update affected irrigation recommendations within 10 minutes of receiving a significant change in weather, soil moisture, or water availability data. | Verifies that the system remains useful when important inputs change after an initial recommendation is generated. | Test |
+| AC-3 | The system shall produce a prioritized irrigation schedule within defined water, pumping, and irrigation-time constraints when demand exceeds available resources. | Verifies that the system can support shortage conditions and produce feasible schedules rather than idealized ones. | Test, Analysis |
+| AC-4 | The system shall generate and display at least three feasible irrigation scenarios when the user specifies alternative water-supply, weather, or energy-cost assumptions for the same planning period. | Verifies that the selected concept supports comparison of multiple feasible irrigation plans rather than only producing a single recommendation. | Test |
+| AC-5 | The system shall display the field or zone, irrigation amount, irrigation timing, and three contributing factors for each recommendation or scenario under normal schedule generation. | Verifies that users can understand the basis of each recommendation or scenario. | Inspection |
+| AC-6 | The system shall allow an authorized user to retrieve the complete 30-day decision history for any field or zone within 30 seconds. | Verifies that the system preserves and retrieves a usable history of recommendations and actions. | Test |
 
 # 5. Concept for the Proposed System
 
@@ -397,11 +375,9 @@ This concept includes decision support plus partial execution support. The syste
 
 This concept is distinct because it extends beyond recommendation into operational coordination and partial automation. It offers the greatest potential for reducing manual workload and improving execution consistency, but it also introduces greater integration complexity, higher implementation cost, and stronger dependence on reliable external interfaces.
 
-## 5.2 CONOPS
+## 5.2 Concept Selection
 
-## 5.3 Concept Selection
-
-### 5.3.1 Pugh Matrix
+### 5.2.1 Pugh Matrix
 
 To compare the candidate system concepts, a weighted Pugh matrix was used. Each concept was evaluated against six criteria derived from stakeholder needs, operational priorities, and practical implementation concerns identified earlier in the document, especially affordability, decision quality under scarcity, adaptability, explainability, and implementation feasibility. Scores use a 1–5 scale, where **1 = poor**, **3 = moderate**, and **5 = strong**. Cost was weighted most heavily because affordability and implementation burden are major factors in whether a farming operation would adopt the system.
 
@@ -436,11 +412,15 @@ To compare the candidate system concepts, a weighted Pugh matrix was used. Each 
 
 Based on the weighted Pugh matrix, **Concept 3: Scenario-Based Optimization and Planning System** is the preferred concept. It achieves the highest total weighted score and best balances affordability with analytical value. This concept is especially well aligned with the problem context because irrigation managers must make decisions under uncertainty, compare competing resource-allocation strategies, and justify tradeoffs during water-scarcity conditions. It therefore provides stronger support for stakeholder needs than the baseline or simple advisory concepts, while avoiding the implementation burden of semi-autonomous control.
 
+## 5.3 CONOPS
+
+![CONOPS](assets/conops.jpg)
+
 ## 5.4 System Context
 
 The system context for the proposed concept is focused on direct users, external information sources, and external constraint-setting entities that interact with the proposed system during normal operation. It is not intended to show every stakeholder affected by irrigation outcomes. The proposed system interacts directly with farm-side users who provide planning inputs, review alternative scenarios, refine recommendations, and approve irrigation plans. It also relies on external sources of operational information and constraints, including weather data services, field and equipment monitoring systems, utility pricing inputs, and water-delivery or regulatory constraints imposed by irrigation districts and groundwater agencies. Broader stakeholders such as local communities, consumers, environmental interests, and investors remain important in the stakeholder analysis, but they are not modeled here as direct system interfaces because they do not normally exchange operational data, constraints, or planning information with the system.
 
-![System Context](system-context.svg)
+![System Context](assets/system-context.svg)
 
 ## 5.5 “To Be” Operational Scenarios
 
@@ -476,7 +456,7 @@ This support scenario shows that the proposed system contributes not only during
 
 ## 5.6 Use Case Model
 
-![Use Case Diagram](use-case.jpg)
+![Use Case Diagram](assets/use-case.jpg)
 
 | ID    | Use Case                                      | Why It Is Important                                                                                                        | Main Actors Involved                                                           | What Happens in This Use Case                                                                                                                |
 | ----- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -494,42 +474,42 @@ This support scenario shows that the proposed system contributes not only during
 
 This sequence diagram describes the operational version of UC-01: Generate and Compare Irrigation Scenarios. The Irrigation Manager initiates scenario generation, and the system retrieves previously stored farm and planning information from internal records so that other authorized users, such as the Farm Operations Manager and Grower / Farm Owner, can review or update relevant constraints and priorities without needing to participate simultaneously. The system then gathers current external information from weather services, soil moisture sensors, the irrigation district, and utility pricing data before generating multiple irrigation scenarios. These results allow users to compare tradeoffs in water use, timing, operational feasibility, and cost before revising inputs or proceeding to plan selection.
 
-![UC-01a](uc-01a.svg)
+![UC-01a](assets/uc-01a.svg)
 
 This sequence diagram describes an independent analytical version of UC-01 used for ad hoc historical review or retrospective analysis. In this case, the Data Analyst requests scenario analysis for a selected historical period, and the system retrieves stored planning records along with historical weather, field, water-constraint, and energy-cost data. Using those records, the system reconstructs or compares prior irrigation scenarios and presents the results for review. This supports reporting, retrospective evaluation, and deeper analysis without placing the Data Analyst inside the live operational planning workflow.
 
-![UC-01b](uc-01b.svg)
+![UC-01b](assets/uc-01b.svg)
 
 
 ### 5.7.2 UC-02
 
 This sequence diagram describes how the system supports UC-02: Select and Approve Irrigation Plan. The Irrigation Manager retrieves and reviews previously generated irrigation scenarios, selects a preferred plan, and submits it to the Grower / Farm Owner for approval. The system presents the selected plan with its key tradeoffs, including timing, water use, resource impacts, and planning priorities, so the approver can make a defensible decision. Once the plan is approved, the system stores the approval decision, selected plan, approver identity, timestamp, and updated plan status in the planning database so the outcome can be traced, reported, and verified later.
 
-![UC-02](uc-02.svg)
+![UC-02](assets/uc-02.svg)
 
 ### 5.7.3 UC-03
 
 This sequence diagram describes how the system supports UC-03: Review Field and Resource Conditions. The Irrigation Manager begins by opening the review function, and the system retrieves stored field, crop, and planning information from internal records while also gathering current external information from weather services, soil moisture sensors, the irrigation district, and utility pricing data. The resulting combined view allows the manager to assess current conditions, resource limits, and any relevant alerts before planning begins. The Agronomist / Crop Advisor can independently review the condition summary and add advisory notes or concerns, which the system stores and then presents back to the Irrigation Manager so those inputs can be incorporated into later scenario generation and decision-making.
 
-![UC-03](uc-03.svg)
+![UC-03](assets/uc-03.svg)
 
 ### 5.7.4 UC-04
 
 This sequence diagram describes how the system supports UC-04: Maintain System Operation. The System Admin / IT Support actor reviews system status, configuration state, alert history, and integration health, while the Maintenance Tech / Equipment Manager reviews equipment- or connection-related alerts that may affect reliable operation. The system checks relevant external interfaces such as the soil sensor platform, irrigation district data feed, and utility pricing feed to determine whether integrations are healthy or degraded. When corrective actions are taken, the system stores configuration changes, maintenance actions, operator identity, and timestamps in the planning database so system status changes remain traceable and auditable over time.
 
-![UC-04](uc-04.svg)
+![UC-04](assets/uc-04.svg)
 
 ### 5.7.5 UC-05
 
 This sequence diagram describes how the system supports UC-05: Pull Reports and Verify Plan. The Irrigation Manager requests the approved plan report, and the system retrieves the selected plan, supporting scenario information, and stored decision records from the planning database. The Field Supervisor / Crew Lead then reviews the approved plan from an execution perspective, using the report and plan details to verify that the schedule is understandable and feasible for field operations. Any verification feedback or execution concerns are stored by the system, and the resulting verified plan status is recorded so the decision can be reviewed, reported, and traced later.
 
-![UC-05](uc-05.svg)
+![UC-05](assets/uc-05.svg)
 
 ### 5.7.6 UC-06
 
 This sequence diagram describes how the system supports UC-06: Trace Data Lineage. The Data Analyst initiates a lineage query by selecting a dataset, field or zone, time period, or specific plan or report reference. The system then retrieves stored lineage records, user-entered inputs, timestamps, and source references from internal records, while also obtaining relevant metadata from external sources such as weather services, sensor platforms, the irrigation district, and utility pricing feeds. The resulting lineage view allows the analyst to determine where required data originated, when it was captured or updated, how frequently it was refreshed, and how those inputs contributed to later plans, reports, or decisions.
 
-![UC-06](uc-06.svg)
+![UC-06](assets/uc-06.svg)
 
 ## 5.8 QFD Analysis
 
@@ -537,11 +517,11 @@ The QFD analysis was used to translate key stakeholder characteristics into syst
 
 ### 5.8.1 QFD Matrix
 
-![QFD Matrix](qfd.png)
+![QFD Matrix](assets/qfd.png)
 
 The body of the QFD matrix shows how each system objective contributes to satisfying the identified stakeholder characteristics. Several of the strongest positive relationships are concentrated where the connection between stakeholder concern and design response is especially direct. For example, **Recommendation Rationale Display** has a strong relationship with the explainability-related rows, especially **Clear Rationale** and **Visible Assumptions and Tradeoffs**, because making the logic, assumptions, and comparisons visible is central to helping users understand why the system produced a recommendation. Similarly, **Constraint Modeling Logic** and **Unified Data Integration Layer** are strongly related to **Credible Recommendations** and **Use of Current Inputs** under trustworthiness, since users are more likely to trust the output when it is based on current, integrated data and realistic operational constraints. Strong correlations also appear between **Alerting and Degraded-Mode Handling** and the reliability and maintainability rows, because reliable operation and maintainable support both depend on the system being able to detect problems, communicate them clearly, and continue operating when some inputs or integrations are degraded. Other highlighted relationships in the body reflect the system’s broader operational and traceability goals. **Report Generation and Verification**, **Historical Record Storage**, and **Metadata and Lineage Tracking** all show meaningful support for explainability and maintainability because reports, stored records, and lineage information help users verify plans, understand documentation, and review what changed over time. 
 
-The body of the QFD matrix is mostly positive because the selected HOWs were defined as system objectives intended to support stakeholder-valued WHATs, not work against them. That said, negative relationships could exist in principle. For example, a WHAT such as Usability, especially Simple Interface, could be weakly at odds with a HOW such as Metadata and Lineage Tracking if too much provenance detail were exposed directly in the main interface, and a WHAT such as Responsiveness could be weakly at odds with Historical Record Storage or Lineage Tracking if additional storage and audit functionality introduced processing overhead. These kinds of tensions were not represented as negative body relationships because the design assumption is that they can be mitigated through implementation choices, such as placing detailed lineage information in drill-down views or optimizing storage and retrieval performance. As a result, the body emphasizes the intended supportive role of each HOW, while the more significant tradeoffs between design objectives are represented in the attic.
+The body of the QFD matrix is mostly positive because the selected HOWs were defined as system objectives intended to support stakeholder-valued WHATs. That said, negative relationships could exist in principle. For example, a WHAT such as Usability, especially Simple Interface, could be weakly at odds with a HOW such as Metadata and Lineage Tracking if too much provenance detail were exposed directly in the main interface, and a WHAT such as Responsiveness could be weakly at odds with Historical Record Storage or Lineage Tracking if additional storage and audit functionality introduced processing overhead. These kinds of tensions were not represented as negative body relationships because the design assumption is that they can be mitigated through implementation choices, such as placing detailed lineage information in drill-down views or optimizing storage and retrieval performance. As a result, the body emphasizes the intended supportive role of each HOW, while the more significant tradeoffs between design objectives are represented in the attic.
 
 The strongest positive correlations in the attic reflect system objectives that naturally reinforce one another. For example, the correlation between **Scenario Generation Engine** and **Tradeoff Comparison Engine** is strong because meaningful tradeoff analysis depends on the system’s ability to produce multiple feasible irrigation scenarios for comparison. Likewise, **Historical Record Storage** and **Metadata and Lineage Tracking** are strongly correlated because lineage is only useful when the underlying historical plans, inputs, approvals, and timestamps are preserved. Another strong positive relationship appears between **Alerting and Degraded-Mode Handling** and **Configuration and Integration Management**, since the system’s ability to detect failures and continue operating in a degraded state depends heavily on well-managed configurations and properly maintained external interfaces.
 
@@ -600,11 +580,11 @@ This next version of the input/output matrix organizes the system by major opera
 
 This first-level functional decomposition organizes the proposed system into its main mission-oriented functions. Acquire and Manage Planning Data captures the collection and organization of the data needed for planning. Assess Field and Resource Conditions represents evaluation of the current agricultural and operational state before decisions are made. Generate and Compare Irrigation Scenarios is the core analytical function, where feasible alternatives are produced and evaluated. Select and Approve Irrigation Plans represents the human decision and approval step that turns analysis into an actionable plan. Generate Reports and Verify Plans covers reporting and operational confirmation of approved outputs, while Trace Data Lineage ensures that plans, reports, and decisions can be linked back to their underlying inputs and metadata. Together, these functions describe the major internal responsibilities of the system at a high level without yet decomposing them into lower-level subfunctions.
 
-![System Decomposition](system-decomposition.svg)
+![System Decomposition](assets/system-decomposition.svg)
 
 ## 6.3 IDEF0 Model
 
-![IDEF0](idef0.jpg)
+![IDEF0](assets/idef0.jpg)
 
 The first-level IDEF0 decomposition identifies the main functional nodes of the proposed system along with their major inputs, controls, outputs, mechanisms, and internal flows. The most important external inputs are the environmental and operational data sources the system depends on, such as weather data, sensor data, irrigation district information, utility pricing data, and stored farm records. The main controls are the rules, priorities, and policies that govern system behavior, including planning rules, crop profiles, thresholds, operational constraints, approval rules, reporting criteria, and lineage rules. The principal external outputs are the products the system provides to users, namely approved irrigation plans, reports and verification results, and traceability or lineage views. Together, these elements show how data enters the system, how it is governed and transformed by internal functions, and how the resulting planning and accountability outputs are produced.
 
@@ -649,17 +629,11 @@ The most significant risks for this concept are tied to external dependencies, o
 
 User trust and traceability are also critical. If stakeholders cannot understand why a recommendation was produced, they may reject the system regardless of its analytical quality. Likewise, if the system cannot preserve approval decisions, supporting records, and source metadata, then reporting, verification, and lineage review will break down. The risk management approach therefore combines preventive design choices with measurable monitoring so that the most important technical risks remain visible and manageable throughout development and operation.
 
-![risk-reduction](risk-reduction.jpg)
+![risk-reduction](assets/risk-reduction.jpg)
 - [source](https://silsafe.net/glossary/risk-matrix/)
 
 # 8. Reflection
 
-This project did not develop in a strictly linear way. Although the document is organized into sections that move from problem definition to stakeholders, requirements, concepts, architecture, and risk, the actual synthesis process was much more iterative. Early decisions about the problem and stakeholder set shaped the initial concept, but later work on use cases, sequence diagrams, requirements, and risk repeatedly forced a return to earlier sections to refine the system boundary and clarify what the system was really intended to do. In practice, the project evolved through repeated cycles of defining, testing, revising, and re-scoping rather than through a one-directional sequence of steps.
+This project did not develop in a strictly linear way. Although the report is organized as a sequence of sections, the actual synthesis process was iterative, with later decisions repeatedly forcing refinement of earlier work. As the concept, use cases, sequence diagrams, and requirements became more detailed, they revealed places where the original problem framing, system boundary, and stakeholder definitions needed to be adjusted. In particular, the system became more clearly defined as a scenario-based irrigation planning and decision-support system rather than a simple recommendation dashboard, which led to revisions in the need statement, acceptance criteria, and stakeholder requirements.
 
-One of the clearest examples of this iteration was the relationship between the selected concept and the earlier problem framing. At first, parts of the document described the system more like a general irrigation recommendation dashboard. However, once the concept selection and use cases were developed more fully, it became clear that the proposed system was better characterized as a scenario-based planning and decision-support system. That later decision required revisiting earlier sections such as the need statement, future success description, stakeholder requirements, and acceptance criteria so that they more clearly reflected scenario comparison, tradeoff analysis, and human approval rather than only single-output recommendations. In that sense, later design decisions provided insight into what the earlier problem formulation needed to emphasize.
-
-The stakeholder and system-boundary work was also recursive. Early in the project, stakeholders such as irrigation districts, regulators, and utility providers were identified mainly as affected parties. Later, while building the context diagram, use case model, and sequence diagrams, it became clear that some of these actors should be understood less as direct users and more as external constraint-setting or data-providing entities. That realization improved the distinction between active system users, passive stakeholders, and true external interfaces. It also helped sharpen the requirements and TPMs, since several of the most important technical concerns ultimately came from those external dependencies rather than from internal user interaction alone.
-
-The later modeling activities were especially valuable because they exposed inconsistencies that were not obvious in the earlier narrative sections. For example, drafting the use case model and sequence diagrams forced the requirements to become more precise and singular, rather than broad descriptive statements. Similarly, building the QFD matrix clarified which stakeholder concerns were most central to the design and which system objectives most directly supported them. The risk assessment then built on those same decisions by showing that the most important risks were not random, but tied directly to the same themes that had already emerged in the requirements and use cases: responsiveness, feasibility under constraints, external data dependence, and traceability.
-
-Overall, the project reinforced that systems synthesis is not simply a matter of filling in document sections one after another. Each modeling step functioned as a test of the decisions made earlier, and each later artifact revealed weaknesses, omissions, or ambiguities in the earlier work. The more detailed the system became, the more clearly the earlier assumptions could be evaluated and refined. That iterative movement between abstraction and detail ultimately made the proposed system more coherent, more defensible, and more aligned with both hypothetical stakeholder needs and practical operational use.
+The later modeling activities were especially useful because they exposed inconsistencies that were not obvious in the earlier narrative sections. The use case model and sequence diagrams pushed the requirements toward more precise and testable statements, while the QFD analysis clarified which stakeholder concerns were most central to the design. The risk assessment then reinforced those same themes by tying the main risks back to responsiveness, feasibility under constraints, external data dependence, and traceability. Overall, the project showed that systems synthesis is recursive: each later artifact served as a test of earlier assumptions, and the resulting revisions made the final concept more coherent and defensible.

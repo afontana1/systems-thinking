@@ -1,0 +1,276 @@
+<mxfile host="65bd71144e">
+    <diagram id="conops1" name="Page-1">
+        <mxGraphModel dx="2944" dy="978" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Concept of Operations — Precision Irrigation Scheduling System" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="10" width="700" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="system" value="&lt;b&gt;Precision Irrigation Scheduling System&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEBFA;strokeColor=#5B7FA5;arcSize=18;fontSize=18;fontStyle=1;align=center;verticalAlign=top;spacingTop=14;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="170" width="420" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys1" value="Integrates field, weather, and resource information" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B7FA5;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="225" width="280" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys2" value="Supports scenario-based irrigation planning and decision-making" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B7FA5;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="300" width="280" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys3" value="Provides explainable plans, reporting, and traceability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B7FA5;fontSize=14;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="375" width="280" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="extlbl" value="External data / constraint sources" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=14;fontStyle=1;fontColor=#374151;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="60" width="440" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="weather" value="Weather Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF4FB;strokeColor=#6B7280;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="90" width="160" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="sensor" value="Soil Moisture /&#xa;Sensor Platform" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF4FB;strokeColor=#6B7280;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="90" width="170" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="districtsrc" value="Irrigation District /&#xa;Water Availability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF4FB;strokeColor=#6B7280;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="90" width="190" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="utilitysrc" value="Utility Pricing Source" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF4FB;strokeColor=#6B7280;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="860" y="90" width="170" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="activelbl" value="Active stakeholders" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=14;fontStyle=1;fontColor=#374151;" parent="1" vertex="1">
+                    <mxGeometry x="-40" y="120" width="220" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="grower" value="Grower /&#xa;Farm Owner" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="150" width="180" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="irrmgr" value="Irrigation&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="215" width="180" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="opsmgr" value="Farm Operations&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="280" width="180" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="supervisor" value="Field Supervisor /&#xa;Crew Lead" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="345" width="180" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="agronomist" value="Agronomist /&#xa;Crop Advisor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="410" width="180" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="it" value="System Admin /&#xa;IT Support" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="475" width="180" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="analyst" value="Data Analyst" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="540" width="180" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="passivelbl" value="Passive stakeholders" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=14;fontStyle=1;fontColor=#374151;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="105" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="waterdist" value="Water District /&#xa;Irrigation District" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="140" width="210" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="regulators" value="Groundwater Agencies /&#xa;Regulators" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="205" width="210" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="utilityprov" value="Utility Providers /&#xa;Energy Suppliers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="270" width="210" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="community" value="Local Communities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="360" width="210" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="consumers" value="Consumers /&#xa;Produce Buyers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="417" width="210" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="environment" value="Environmental Interests /&#xa;Ecosystems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="482" width="210" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="investors" value="Investors /&#xa;Business Partners" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="547" width="210" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="outputlbl" value="Operational outputs" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=14;fontStyle=1;fontColor=#374151;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="610" width="560" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="out1" value="Irrigation planning&#xa;recommendations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9F5E8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="640" width="170" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="out2" value="Approved&#xa;irrigation plans" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9F5E8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="640" width="170" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="out3" value="Reports and&#xa;verification information" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9F5E8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="640" width="190" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="out4" value="Traceability /&#xa;lineage views" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9F5E8;strokeColor=#8C8C8C;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="640" width="170" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" value="Weather / forecast data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;endArrow=block;endFill=1;fontSize=11;" parent="1" source="weather" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="240" y="155"/>
+                            <mxPoint x="240" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" value="Field condition data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;endArrow=block;endFill=1;fontSize=11;" parent="1" source="sensor" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="465" y="155"/>
+                            <mxPoint x="465" y="215"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" value="Water availability / constraints" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;endArrow=block;endFill=1;fontSize=11;" parent="1" source="districtsrc" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="705" y="155"/>
+                            <mxPoint x="705" y="215"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" value="Energy pricing data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;endArrow=block;endFill=1;fontSize=11;" parent="1" source="utilitysrc" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="945" y="155"/>
+                            <mxPoint x="945" y="215"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a1" value="Approves plans" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;startArrow=oval;startFill=1;fontSize=11;" parent="1" source="grower" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="174"/>
+                            <mxPoint x="400" y="174"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a2" value="Provides priorities / reviews plans" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;startArrow=oval;startFill=1;fontSize=11;" parent="1" source="irrmgr" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="239"/>
+                            <mxPoint x="400" y="239"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3" value="Provides operational constraints" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;startArrow=oval;startFill=1;fontSize=11;" parent="1" source="opsmgr" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="304"/>
+                            <mxPoint x="400" y="304"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a4" value="Provides field feedback" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;startArrow=oval;startFill=1;fontSize=11;" parent="1" source="supervisor" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="369"/>
+                            <mxPoint x="400" y="369"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a5" value="Provides agronomic insight" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;startArrow=oval;startFill=1;fontSize=11;" parent="1" source="agronomist" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="434"/>
+                            <mxPoint x="400" y="434"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a6" value="Configures / maintains" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;startArrow=oval;startFill=1;fontSize=11;" parent="1" source="it" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="499"/>
+                            <mxPoint x="400" y="499"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a7" value="Retrieves reports / retrospectives" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;startArrow=oval;startFill=1;fontSize=11;" parent="1" source="analyst" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="564"/>
+                            <mxPoint x="400" y="564"/>
+                            <mxPoint x="400" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p1" value="Water allocation / delivery conditions" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;endFill=1;fontSize=11;" parent="1" source="waterdist" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1040" y="164"/>
+                            <mxPoint x="880" y="164"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2" value="Regulatory constraints / expectations" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;endFill=1;fontSize=11;" parent="1" source="regulators" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1040" y="229"/>
+                            <mxPoint x="880" y="229"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3" value="Pricing structure" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;endFill=1;fontSize=11;" parent="1" source="utilityprov" target="system" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1040" y="294"/>
+                            <mxPoint x="880" y="294"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p4" value="More efficient water use" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;endFill=1;fontSize=11;" parent="1" source="system" target="community" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="381"/>
+                            <mxPoint x="1040" y="381"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p5" value="Agricultural reliability / quality support" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;endFill=1;fontSize=11;" parent="1" source="system" target="consumers" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="441"/>
+                            <mxPoint x="1040" y="441"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p6" value="Reduced waste / sustainability impact" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;endFill=1;fontSize=11;" parent="1" source="system" target="environment" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="506"/>
+                            <mxPoint x="1040" y="506"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p7" value="Operational efficiency / risk visibility" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#FFFFFF;strokeColor=#6B7280;endArrow=block;endFill=1;fontSize=11;" parent="1" source="system" target="investors" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="571"/>
+                            <mxPoint x="1040" y="571"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="o1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4B5563;endArrow=block;endFill=1;" parent="1" source="system" target="out1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="520" y="600"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="o2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4B5563;endArrow=block;endFill=1;" parent="1" source="system" target="out2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="600" y="600"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="o3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4B5563;endArrow=block;endFill=1;" parent="1" source="system" target="out3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="730" y="600"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="o4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4B5563;endArrow=block;endFill=1;" parent="1" source="system" target="out4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="600"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
