@@ -1,8 +1,12 @@
 # [Systems engineering](https://en.wikipedia.org/wiki/Category:Systems_engineering)
 
 ## Foundational Overviews
+- [Systems Engineering Overview](https://sebokwiki.org/wiki/Systems_Engineering_Overview)
 - [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
 - [Systems Thinking, Systems Practice](https://sebokwiki.org/wiki/Systems_Thinking,_Systems_Practice)
+- [Overview of the Systems Approach](https://sebokwiki.org/wiki/Overview_of_the_Systems_Approach)
+  - [Applying the Systems Approach](https://sebokwiki.org/wiki/Applying_the_Systems_Approach)
+- [Deploying, Using, and Sustaining Systems to Solve Problems](https://sebokwiki.org/wiki/Deploying,_Using,_and_Sustaining_Systems_to_Solve_Problems)
 - [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
 - [Systems of Systems (SoS)](https://sebokwiki.org/wiki/Systems_of_Systems_(SoS))
   - [Systems of Systems and Complexity](https://sebokwiki.org/wiki/System_of_Systems_and_Complexity)
@@ -50,8 +54,15 @@
 - [Systems Development Life Cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
 - [SEMP](https://www.nasa.gov/reference/appendix-j-semp-content-outline/)
 - [Configuration Management](https://en.wikipedia.org/wiki/Configuration_management)
+- [Cycles and Phases of Systems](https://sebokwiki.org/wiki/Cycles_and_the_Phases_of_Systems)
 - [Life Cycle Models](https://sebokwiki.org/wiki/Life_Cycle_Models)
-- [Life-Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
+  - [Generic Lifecycle Model](https://sebokwiki.org/wiki/Generic_Life_Cycle_Model)
+  - [Lifecycle Model Selection and Adaptation](https://sebokwiki.org/wiki/Life_Cycle_Model_Selection_and_Adaptation)
+  - [Adapting the Lifecycle Model](https://sebokwiki.org/wiki/Adapting_the_Life_Cycle_Model)
+  - [Applying Life Cycle Processes](https://sebokwiki.org/wiki/Applying_Life_Cycle_Processes)
+- [Life Cycle Stages](https://sebokwiki.org/wiki/Life_Cycle_Stages)
+- [Life Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
+- [Service Life Management](https://sebokwiki.org/wiki/Service_Life_Management)
 
 ---
 
@@ -101,6 +112,7 @@
   - [Functional Flow Block Diagram](https://en.wikipedia.org/wiki/Functional_flow_block_diagram)
   - [N2 Chart](https://en.wikipedia.org/wiki/N2_chart)
   - [IDEF0](https://en.wikipedia.org/wiki/IDEF0)
+- [Process Description](https://sebokwiki.org/wiki/Process_Description)
 
 ### Enterprise & process architecture
 - [Enterprise_modeling](https://en.wikipedia.org/wiki/Category:Enterprise_modelling)
