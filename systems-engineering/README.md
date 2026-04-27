@@ -111,7 +111,12 @@
   - [Functional Decomposition](https://en.wikipedia.org/wiki/Functional_decomposition)
   - [Functional Flow Block Diagram](https://en.wikipedia.org/wiki/Functional_flow_block_diagram)
   - [N2 Chart](https://en.wikipedia.org/wiki/N2_chart)
-  - [IDEF0](https://en.wikipedia.org/wiki/IDEF0)
+  - [IDEF](https://en.wikipedia.org/wiki/IDEF)
+    - [IDEF0](https://en.wikipedia.org/wiki/IDEF0)
+    - [IDEF1X](https://en.wikipedia.org/wiki/IDEF1X)
+    - [IDEF3](https://en.wikipedia.org/wiki/IDEF3)
+    - [IDEF5](https://en.wikipedia.org/wiki/IDEF5)
+    - [IDEF6](https://en.wikipedia.org/wiki/IDEF6)
 - [Process Description](https://sebokwiki.org/wiki/Process_Description)
 
 ### Enterprise & process architecture
