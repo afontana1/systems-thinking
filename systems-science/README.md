@@ -64,6 +64,8 @@
     * [General Equilibrium Theory](https://en.wikipedia.org/wiki/Category:General_equilibrium_theory)
 - [Phase Locked Loop](https://en.wikipedia.org/wiki/Phase-locked_loop)
 - [Autopoiesis](https://en.wikipedia.org/wiki/Autopoiesis)
+- [Equifinality](https://en.wikipedia.org/wiki/Equifinality)
+- [Regime Shift](https://en.wikipedia.org/wiki/Regime_shift)
 
 ---
 
