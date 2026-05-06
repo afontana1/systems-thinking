@@ -11,6 +11,7 @@
 - [Systems of Systems (SoS)](https://sebokwiki.org/wiki/Systems_of_Systems_(SoS))
   - [Systems of Systems and Complexity](https://sebokwiki.org/wiki/System_of_Systems_and_Complexity)
   - [Complex Adaptive Systems](https://sebokwiki.org/wiki/Complex_Adaptive_System_%28CAS%29_%28glossary%29)
+- [Object-oriented analysis and design](https://en.wikipedia.org/wiki/Object-oriented_analysis_and_design)
 
 ---
 
@@ -100,6 +101,7 @@
   - [Use Case Diagram](https://en.wikipedia.org/wiki/Use_case)
   - [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram)
   - [Activity Diagram](https://en.wikipedia.org/wiki/Activity_diagram)
+  - [Event Partitioning](https://en.wikipedia.org/wiki/Event_partitioning)
   - [Message Sequence Chart](https://en.wikipedia.org/wiki/Message_sequence_chart)
 - [View Model](https://en.wikipedia.org/wiki/View_model)
 - [Operational View](https://en.wikipedia.org/wiki/Operational_View)
