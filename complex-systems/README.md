@@ -47,6 +47,7 @@
 30. [Omar A. Guerrero](https://oguerr.com/)
 31. [Matteo Guido Richiardi](https://scholar.google.com/citations?user=ug0IdhYAAAAJ&hl=en)
 32. [Mason Porter](https://scholar.google.com/citations?user=hSyfNekAAAAJ&hl=en)
+33. [Charles M. Macal Argonne](https://www.anl.gov/profile/charles-m-macal)
 
 ---
 
@@ -145,6 +146,10 @@
 	- [Non Linear Systems](https://en.wikipedia.org/wiki/Category:Nonlinear_systems)
 3. [Phase Transition](https://en.wikipedia.org/wiki/Phase_transition)
 4. [Turbulence](https://en.wikipedia.org/wiki/Turbulence)
+
+### Network Dynamics and Structure
+1. [Network Formation](https://en.wikipedia.org/wiki/Network_formation)
+2. [Community Structure](https://en.wikipedia.org/wiki/Community_structure)
 
 ---
 

@@ -1,26 +1,14 @@
 # Resources for "Systems" Disciplines
 
-## General Resources
 
-1. [Computational Science and Engineering](https://gitlab.math.ethz.ch/NumCSE/NumCSE)
-2. [Feedback Systems](http://www.cds.caltech.edu/~murray/amwiki/index.php/Main_Page)
-3. [Signals and Systems](https://pages.jh.edu/~bcooper8/sigma_files/courses/214/Signals_Home.html)
-4. [Dynamics and control](https://www.apmonitor.com/pdc/index.php)
-5. [Control Systems](https://ctms.engin.umich.edu/CTMS/index.php?aux=Home)
-6. [DP and Optimal Control](http://athenasc.com/dpbook.html)
-7. [Reinforcement learning](http://web.mit.edu/dimitrib/www/dpchapter.html)
-8. [awesome-control-theory](https://github.com/A-make/awesome-control-theory)
-9. [Math cheatsheets](https://stanford.edu/~shervine/)
-10. [awesome-scientific-computing](https://github.com/nschloe/awesome-scientific-computing)
-11. [Planning Algorithms](http://lavalle.pl/planning/)
-12. [Data Driven Dynamics and Control](https://www.eigensteve.com/)
-13. [Dynamic Optimization](https://apmonitor.com/do/index.php)
-14. [Handbook of Engineering Statistics](https://www.itl.nist.gov/div898/handbook/index.htm)
-15. [numerical-linear-algebra](https://github.com/fastai/numerical-linear-algebra)
-16. [Computational Science And Engineering I](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/)
-17. [Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm)
+## Core [Mathematical Modeling](https://en.wikipedia.org/wiki/Category:Mathematical_modeling)
 
-## Core Math
+- [Constraint Programming](https://ktiml.mff.cuni.cz/~bartak/constraints/index.html)
+- [Hands-On Mathematical Optimization with Python](https://mobook.github.io/MO-book/intro.html#)
+- [Data Driven Science and Engineering](https://databookuw.com/)
+- [Little Book of Discrete Event Simulation](https://des.hsma.co.uk/)
+- [Mojo GPU Programming](https://puzzles.modular.com/introduction.html)
+- [Computational Neuroscience Tutorials](https://compneuro.neuromatch.io/tutorials/intro.html)
 
 1. [Intro to Numerical Methods](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)
 2. [Differential Equations](https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/)
@@ -29,12 +17,27 @@
 5. [Essential Numerical Methods](https://ocw.mit.edu/courses/22-15-essential-numerical-methods-fall-2014/)
 6. [Engineering Math: Differential Equations and Dynamical Systems](https://www.youtube.com/playlist?list=PLMrJAkhIeNNTYaOnVI3QpH7jgULnAmvPA)
 7. [Differential Equations](https://youtube.com/playlist?list=PLC4YBo93SnyglJxoACLRbpKdrupQOQG22&si=j995AFDSp_fn-Hjc)
+8. [Computational Science and Engineering](https://gitlab.math.ethz.ch/NumCSE/NumCSE)
+9. [Feedback Systems](http://www.cds.caltech.edu/~murray/amwiki/index.php/Main_Page)
+10. [Signals and Systems](https://pages.jh.edu/~bcooper8/sigma_files/courses/214/Signals_Home.html)
+11. [Dynamics and control](https://www.apmonitor.com/pdc/index.php)
+12. [Control Systems](https://ctms.engin.umich.edu/CTMS/index.php?aux=Home)
+13. [DP and Optimal Control](http://athenasc.com/dpbook.html)
+14. [Reinforcement learning](http://web.mit.edu/dimitrib/www/dpchapter.html)
+15. [awesome-control-theory](https://github.com/A-make/awesome-control-theory)
+16. [Math cheatsheets](https://stanford.edu/~shervine/)
+17. [awesome-scientific-computing](https://github.com/nschloe/awesome-scientific-computing)
+18. [Planning Algorithms](http://lavalle.pl/planning/)
+19. [Data Driven Dynamics and Control](https://www.eigensteve.com/)
+20. [Dynamic Optimization](https://apmonitor.com/do/index.php)
+21. [Handbook of Engineering Statistics](https://www.itl.nist.gov/div898/handbook/index.htm)
+22. [numerical-linear-algebra](https://github.com/fastai/numerical-linear-algebra)
+23. [Computational Science And Engineering I](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/)
+24. [Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm)
 
 
-<details><summary><h2> Essential Computational Concepts </h2></summary>
+## Essential Computational Concepts
 
-- [Mathematical Modeling](https://en.wikipedia.org/wiki/Category:Mathematical_modeling)
-- [Engineering Portal](https://en.m.wikipedia.org/wiki/Portal:Engineering)
 
 1. [Theoretical Computer Science](https://en.wikipedia.org/wiki/Theoretical_computer_science)
 2. [Computational Complexity Theory](https://en.wikipedia.org/wiki/Category:Computational_complexity_theory)
@@ -45,13 +48,11 @@
 7. [Algorithms](https://en.wikipedia.org/wiki/Category:Algorithms)
 8. [Approximation Theory](https://en.wikipedia.org/wiki/Category:Approximation_theory)
 9. [Approximation Algorithms](https://en.wikipedia.org/wiki/Category:Approximation_algorithms)
-10. [Numerical Analysis](https://en.wikipedia.org/wiki/Category:Numerical_analysis)
+10. [Models of Computation](https://en.wikipedia.org/wiki/Category:Models_of_computation)
+    * [Automata](https://en.wikipedia.org/wiki/Category:Automata_(computation))
 11. [Finite State Machines](https://en.wikipedia.org/wiki/Category:Finite-state_machines)
 12. [Combinatorial algorithms](https://en.wikipedia.org/wiki/Category:Combinatorial_algorithms)
 13. [Data structures](https://en.wikipedia.org/wiki/Category:Data_structures)
-14. [Models of Computation](https://en.wikipedia.org/wiki/Category:Models_of_computation)
-    * [Automata](https://en.wikipedia.org/wiki/Category:Automata_(computation))
-
 
 ### Relevant CS Classes
 
@@ -75,5 +76,3 @@
 15. [Undergrad Complexity Theory at CMU](https://youtube.com/playlist?list=PLm3J0oaFux3YL5vLXpzOyJiLtqLp6dCW2&si=WqkP7mDDCfUMY9Hs)
 16. [Complexity Theory I - Easy Theory](https://youtube.com/playlist?list=PLylTVsqZiRXOpSWvkeuFoj-qzuF3xDiAs&si=GMk94l0uYeOXQ2D8)
 17. [Computational Complexity Lectures](https://youtube.com/playlist?list=PLdUzuimxVcC0DENcdT8mfhI3iRRJLVjqH&si=QzuWmMEfe8na4lm3)
-
-</details>

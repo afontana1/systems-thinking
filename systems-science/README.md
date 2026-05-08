@@ -1,7 +1,6 @@
 # [Systems Science](https://en.wikipedia.org/wiki/Portal:Systems_science)
 
-## Portals, framing, and core reading
-- [Systems Science](https://en.wikipedia.org/wiki/Portal:Systems_science)
+## Core reading
 - [Systems Thinking, Systems Practice](https://sebokwiki.org/wiki/Systems_Thinking%2C_Systems_Practice)
 - [Systems Science Textbook](https://web.archive.org/web/20221209041111/http://systems-sciences.uni-graz.at/etextbook/)
 
@@ -21,11 +20,11 @@
 - [Systems Theory and Cybernetics](https://chaturvedimayank.wordpress.com/category/systems-theory-and-cybernetics/)
 - [Stanford Thinking in Systems](http://sehub-modules.stanford.edu/SLS_thinking_in_systems/)
 - [Society for Industrial and Applied Mathematics](https://www.siam.org/)
+- [MIT Institute for Data Systems and Society](https://idss.mit.edu/)
 
 ---
 
-## System dynamics (topic + learning path)
-- [System Dynamics](https://en.wikipedia.org/wiki/System_dynamics)
+## [System Dynamics](https://en.wikipedia.org/wiki/System_dynamics)
 - [Introduction to System Dynamics Class](https://ocw.mit.edu/courses/15-871-introduction-to-system-dynamics-fall-2013/)
   - [Introduction to System Dyanmics](https://ocw.mit.edu/courses/15-871-introduction-to-system-dynamics-fall-2013/)
   - [Self Study Guide](https://ocw.mit.edu/courses/15-988-system-dynamics-self-study-fall-1998-spring-1999/pages/readings/)
@@ -34,6 +33,7 @@
   - [System Dynamics and Modeling for a Complex World](https://ocw.mit.edu/courses/res-15-004-system-dynamics-systems-thinking-and-modeling-for-a-complex-world-january-iap-2020/)
   - [System Dynamics Software](https://en.wikipedia.org/wiki/Comparison_of_system_dynamics_software)
 - [Causal Loop Diagram](https://en.wikipedia.org/wiki/Causal_loop_diagram)
+
 ---
 
 ## Systems thinking methods, frameworks, and practice

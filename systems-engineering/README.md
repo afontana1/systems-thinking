@@ -8,6 +8,7 @@
   - [Applying the Systems Approach](https://sebokwiki.org/wiki/Applying_the_Systems_Approach)
 - [Deploying, Using, and Sustaining Systems to Solve Problems](https://sebokwiki.org/wiki/Deploying,_Using,_and_Sustaining_Systems_to_Solve_Problems)
 - [Sociotechnical System](https://en.wikipedia.org/wiki/Sociotechnical_system)
+  - [Leeds: Sociotechnical Systems Theory](https://business.leeds.ac.uk/research-stc/doc/socio-technical-systems-theory)
 - [Systems of Systems (SoS)](https://sebokwiki.org/wiki/Systems_of_Systems_(SoS))
   - [Systems of Systems and Complexity](https://sebokwiki.org/wiki/System_of_Systems_and_Complexity)
   - [Complex Adaptive Systems](https://sebokwiki.org/wiki/Complex_Adaptive_System_%28CAS%29_%28glossary%29)
@@ -40,6 +41,9 @@
 - [Systems Engineering Research Center](https://sercuarc.org/)
 - [Enterprise Integration Laboratory – EIL](https://eil.mie.utoronto.ca/)
 - [Center for Systems Reliability - Sandia National Laboratory](https://www.sandia.gov/csr/)
+- [MIT Sociotechnical Systems Research Center](https://ssrc.mit.edu/)
+- [Pitt Sociotechnical Systems Research Lab](https://www.engineering.pitt.edu/subsites/Labs/sociotechnical-systems/home/)
+- [Microsoft Research Sociotechnical Systems](https://www.microsoft.com/en-us/research/theme/sociotechnical-systems/)
 
 ---
 
