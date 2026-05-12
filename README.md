@@ -58,6 +58,8 @@
 
 - [Tim Roughgarden Lectures](https://www.youtube.com/@timroughgardenlectures1861)
 - [Stanford Computer Science Course Graph](http://coursegra.ph/)
+- [Practical Electronics](https://youtube.com/playlist?list=PLNx89373hpKVb3tMPfRMUjmYNkkXohRv9&si=aghjah_oX_xlpvhE)
+- [Circuits & Electronics for Non-EEs](https://youtube.com/playlist?list=PLNx89373hpKVvhoQ3_z_t2KHn-YxgrOYi&si=C7L15d5ZOb7o54bC)
 
 1. [Foundations of Computer Science University of Toronto](https://www.teach.cs.toronto.edu/~csc110y/fall/notes/)
 2. [Introduction to Computer Science](https://introcs.cs.princeton.edu/java/home/)

@@ -50,6 +50,7 @@
 ## Courses, Lectures, and Reading Lists
 - [MIT Fundamentals of Systems Engineering](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/)
 - [Frameworks and Models in Engineering Systems / Engineering System Design](https://ocw.mit.edu/courses/esd-04j-frameworks-and-models-in-engineering-systems-engineering-system-design-spring-2007/)
+- [Introduction to Engineering Systems](https://ocw.mit.edu/courses/esd-00-introduction-to-engineering-systems-spring-2011/)
 - [Systems Engineering Theory and Practice (YouTube playlist)](https://www.youtube.com/playlist?list=PL_bA20lRoKDHuNg1lJkJ75ZEsynNdY_ww)
 - [Best Systems Engineering Books](https://www.joshuasutherland.com/best-systems-books/)
 
@@ -190,4 +191,5 @@
 ## Adjacent Disciplines
 - [Industrial Engineering](https://en.wikipedia.org/wiki/Category:Industrial_engineering)
   - [Industrial Safety Engineering](https://youtube.com/playlist?list=PLbRMhDVUMngdXebaRB59KdKwstzuAovua&si=hxUJiE0HnOjhyTUD)
+  - [Risk-based Engineering - NPTEL IIT Bombay](https://youtube.com/playlist?list=PLOzRYVm0a65e_EaQQvpr49Vwc2xfDPMX6&si=p6iAtzR4O8Pj5RdE)
 - [Process Engineering](https://en.wikipedia.org/wiki/Category:Process_engineering)
