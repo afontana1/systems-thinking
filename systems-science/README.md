@@ -21,18 +21,17 @@
 - [Stanford Thinking in Systems](http://sehub-modules.stanford.edu/SLS_thinking_in_systems/)
 - [Society for Industrial and Applied Mathematics](https://www.siam.org/)
 - [MIT Institute for Data Systems and Society](https://idss.mit.edu/)
+- [Biomimicry Institute](https://biomimicry.org/)
 
 ---
 
 ## [System Dynamics](https://en.wikipedia.org/wiki/System_dynamics)
-- [Introduction to System Dynamics Class](https://ocw.mit.edu/courses/15-871-introduction-to-system-dynamics-fall-2013/)
-  - [Introduction to System Dyanmics](https://ocw.mit.edu/courses/15-871-introduction-to-system-dynamics-fall-2013/)
-  - [Self Study Guide](https://ocw.mit.edu/courses/15-988-system-dynamics-self-study-fall-1998-spring-1999/pages/readings/)
-  - [System Dynamics II](https://ocw.mit.edu/courses/15-872-system-dynamics-ii-fall-2013/)
-  - [Applications of System Dynamics](https://ocw.mit.edu/courses/15-875-applications-of-system-dynamics-spring-2004/)
-  - [System Dynamics and Modeling for a Complex World](https://ocw.mit.edu/courses/res-15-004-system-dynamics-systems-thinking-and-modeling-for-a-complex-world-january-iap-2020/)
-  - [System Dynamics Software](https://en.wikipedia.org/wiki/Comparison_of_system_dynamics_software)
-- [Causal Loop Diagram](https://en.wikipedia.org/wiki/Causal_loop_diagram)
+- [Introduction to System Dynamics MIT](https://ocw.mit.edu/courses/15-871-introduction-to-system-dynamics-fall-2013/)
+  - [Introduction to System Dyanmics MIT](https://ocw.mit.edu/courses/15-871-introduction-to-system-dynamics-fall-2013/)
+  - [Self Study Guide MIT](https://ocw.mit.edu/courses/15-988-system-dynamics-self-study-fall-1998-spring-1999/pages/readings/)
+  - [System Dynamics II MIT](https://ocw.mit.edu/courses/15-872-system-dynamics-ii-fall-2013/)
+  - [Applications of System Dynamics MIT](https://ocw.mit.edu/courses/15-875-applications-of-system-dynamics-spring-2004/)
+  - [System Dynamics and Modeling for a Complex World MIT](https://ocw.mit.edu/courses/res-15-004-system-dynamics-systems-thinking-and-modeling-for-a-complex-world-january-iap-2020/)
 
 ---
 
@@ -66,16 +65,19 @@
 - [Autopoiesis](https://en.wikipedia.org/wiki/Autopoiesis)
 - [Equifinality](https://en.wikipedia.org/wiki/Equifinality)
 - [Regime Shift](https://en.wikipedia.org/wiki/Regime_shift)
+- [Causal Loop Diagram](https://en.wikipedia.org/wiki/Causal_loop_diagram)
 
 ---
 
 ## Videos
 ### MIT OpenCourseWare / academic courses
+
 1. [fundamentals-of-systems-engineering](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/)
 2. [introduction-to-system-dynamics](https://ocw.mit.edu/courses/15-871-introduction-to-system-dynamics-fall-2013/)
 3. [computational-science-and-engineering](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/)
 
 ### Classroom playlists (systems, sustainability, simulation, optimization)
+
 1. [SOS 220 (2023, Spring): Systems Thinking](https://youtube.com/playlist?list=PLXBbGVSkQJqHdAM-q6u4VDXANMn0IUn3v&si=ihAoUI77ZTIRgm9G)
 2. [SOS 212 (2022, Fall): Systems, Dynamics, and Sustainability](https://youtube.com/playlist?list=PLXBbGVSkQJqGW_cLGUG03EtB1MDOoisUt&si=KaJ0rcjMMWw60enW)
 3. [IEE 475 (2022, Fall): Simulating Stochastic Systems - Classroom Recordings](https://youtube.com/playlist?list=PLXBbGVSkQJqEabmdX7QMg0yj_Qjh54rJs&si=3ErIiudSaDmKTi90)
@@ -91,7 +93,7 @@
 13. [systems thinking - Josph Kasser](https://youtube.com/playlist?list=PLIYcHEnCwIBtoaWSPutwQsiOY1IqDaY4b&si=Z7EyWnMMe-t45hXB)
 14. [Requirements engineering - Joseph Kasser](https://youtube.com/playlist?list=PLIYcHEnCwIBvYpgy1gcb8fsCOpPpQ338f&si=4_KUqJzI6L3KuUeK)
 
-### System dynamics, control, chaos, earth systems (playlists/channels)
+### System dynamics, control, chaos, earth systems
 
 1. [Economics SIG](https://www.youtube.com/playlist?list=PLWTEBISypYFtmcRz2zoGAb_hEezzcO5cM)
 2. [System Dynamics Building Blocks for Beginners](https://www.youtube.com/watch?v=m9A7ygv8xkQ)
@@ -128,16 +130,12 @@
 
 ### General Systems Playlists and Videos
 
-1. [Lecture Collection | Human Behavioral Biology](https://www.youtube.com/playlist?list=PL848F2368C90DDC3D)
-2. [Behavioural Finance Lectures](https://youtube.com/playlist?list=PL0A21A329D01D0CFE&si=JUbAqCu4EvtBlsav)
-3. [MIT 14.13 Psychology and Economics, Spring 2020](https://youtube.com/playlist?list=PLUl4u3cNGP63Z979ri_UXXk_1zrvrF77Q&si=SzfITgTSjNZtn9i3)
-4. [SFI Community Lecture Series](https://youtube.com/playlist?list=PL7D69D1FFE63DA81A&si=YDnFg4lYgOg0UPfb)
-5. [SFI Ulam Memorial Lecture Series](https://youtube.com/playlist?list=PLZlVBTf7N6GqsN1u1eu_yTD7VxFVCrFzZ&si=tV00lCdc8vnGNEeW)
-6. [Collective Computation (C4) Public Lecture Videos](https://youtube.com/playlist?list=PLZlVBTf7N6Gojp0vRGmTom0rwqFuoaT_d&si=YHSZvHSEeJB3FhsR)
-7. [SFI Seminars](https://youtube.com/playlist?list=PLZlVBTf7N6Gpc690KyysAO5J8iuc-ffyP&si=CriRa_bj_c_GuhJt)
-8. [Complexity Podcast](https://youtube.com/playlist?list=PLZlVBTf7N6GqWUtLVQ-pWehJElcMTGiea&si=B1itTI_hhlqEeMYu)
-9. [Science as Process and Perspective – A Crash Course in the Philosophy of Science for Researchers](https://youtube.com/playlist?list=PL8vh-kVsYPqPVrV0m4HjZexgO6oDkgkK0&si=Tt5_PgYP5KyIXwq2)
-10. [Beyond Networks: The Evolution of Living Systems](https://youtube.com/playlist?list=PL8vh-kVsYPqOKJOboONJIQBd8ds0ueM_W&si=HpU6LKYycWB6pAmc)
+1. [SFI Community Lecture Series](https://youtube.com/playlist?list=PL7D69D1FFE63DA81A&si=YDnFg4lYgOg0UPfb)
+2. [SFI Ulam Memorial Lecture Series](https://youtube.com/playlist?list=PLZlVBTf7N6GqsN1u1eu_yTD7VxFVCrFzZ&si=tV00lCdc8vnGNEeW)
+3. [Collective Computation (C4) Public Lecture Videos](https://youtube.com/playlist?list=PLZlVBTf7N6Gojp0vRGmTom0rwqFuoaT_d&si=YHSZvHSEeJB3FhsR)
+4. [SFI Seminars](https://youtube.com/playlist?list=PLZlVBTf7N6Gpc690KyysAO5J8iuc-ffyP&si=CriRa_bj_c_GuhJt)
+5. [Complexity Podcast](https://youtube.com/playlist?list=PLZlVBTf7N6GqWUtLVQ-pWehJElcMTGiea&si=B1itTI_hhlqEeMYu)
+6. [Beyond Networks: The Evolution of Living Systems](https://youtube.com/playlist?list=PL8vh-kVsYPqOKJOboONJIQBd8ds0ueM_W&si=HpU6LKYycWB6pAmc)
 
 ### General Systems Concepts
 
@@ -155,17 +153,12 @@
 12. [Why you should be using systems thinking to solve problems](https://youtu.be/wXj-lCYSmGk?si=a9qB3o_7B88McKqG)
 13. [Workshop: Complexity Methods - Robert Axtell](https://youtu.be/AV1tMyinot0?si=T96zzjIsaQsv6rK5)
 14. [Let’s just stop writing requirements, we can’t write them properly anyhow](https://youtu.be/FqdqSXvYT7I?si=VHTDJ98oNAF3F7bq)
-15. [Systems Thinking #2 - Andrew Howley - NASA, Biomimicry, Circular Economy, Energy Systems](https://youtu.be/Eq6JqwNe-Gc?si=s4UEgCy9Aa9CH_nu)
-16. [Systems Thinking: Feedback Loops - Optimization, Measurements, KPI, Key Activities, Exponentials](https://youtu.be/jnVju8udX9I?si=dzCVtRSuIwybIGT5)
-17. [Systems Thinking: Bob Royce - Information Architecture, Organizational Structure, Education](https://youtu.be/pg66wNpL3wY?si=utEmpDTDTB7D3-pW)
-18. [Distillation: The Keystone Skill of Systems Thinking - Aphorisms, Mantras, Acronyms, and Mnemonics](https://youtu.be/34YCjljm9jA?si=rmtcbDLFbMNhm8Px)
-19. [Forcing Functions - Constraints, Affordances, Bounds, and Systems Behavior [SYSTEMS THINKING]](https://youtu.be/optxZVxt9Ao?si=I0n-EizYVEV-J2j1)
-20. [Systems Thinking Tools: Archetypes](https://youtu.be/XRf_OaoJpCs?si=lZ_SVZi2-zcgMKpp)
-21. [A Philosophical Look at System Dynamics](https://youtu.be/XL_lOoomRTA?si=qyBDUBGIw41qs9XJ)
-22. [Dana (Donella) Meadows Lecture: Sustainable Systems (Part 1 of 4)](https://youtu.be/HMmChiLZZHg?si=ohr3RFc9mQT9r5Sa)
-23. [Dana (Donella) Meadows Lecture: Sustainable Systems (Part 2 of 4)](https://youtu.be/HuIoego-xVc?si=Fkl6482X53Qgi5gK)
-24. [Dana (Donella) Meadows Lecture: Sustainable Systems (Part 3 of 4)](https://youtu.be/j-k5oSlgIbA?si=8Y8qOtMR9Ax9CdPs)
-25. [Dana (Donella) Meadows Lecture: Sustainable Systems (Part 4 of 4)](https://youtu.be/d9Lfp8SQ6rc?si=c_l3_HcXF7NRbqaF)
+15. [Systems Thinking Tools: Archetypes](https://youtu.be/XRf_OaoJpCs?si=lZ_SVZi2-zcgMKpp)
+16. [A Philosophical Look at System Dynamics](https://youtu.be/XL_lOoomRTA?si=qyBDUBGIw41qs9XJ)
+17. [Dana (Donella) Meadows Lecture: Sustainable Systems (Part 1 of 4)](https://youtu.be/HMmChiLZZHg?si=ohr3RFc9mQT9r5Sa)
+18. [Dana (Donella) Meadows Lecture: Sustainable Systems (Part 2 of 4)](https://youtu.be/HuIoego-xVc?si=Fkl6482X53Qgi5gK)
+19. [Dana (Donella) Meadows Lecture: Sustainable Systems (Part 3 of 4)](https://youtu.be/j-k5oSlgIbA?si=8Y8qOtMR9Ax9CdPs)
+20. [Dana (Donella) Meadows Lecture: Sustainable Systems (Part 4 of 4)](https://youtu.be/d9Lfp8SQ6rc?si=c_l3_HcXF7NRbqaF)
 ---
 
 ## People
