@@ -23,6 +23,8 @@
 - [NASA Systems Engineering Handbook](https://www.nasa.gov/reference/systems-engineering-handbook/)
 - [Handbook on Enterprise Architecture](https://sebokwiki.org/wiki/Handbook_on_Enterprise_Architecture)
 - [ESMD Course Material : Fundamentals of Lunar and Systems Engineering for Senior Project Teams, with Application to a Lunar Excavator](https://www.eng.auburn.edu/~dbeale/ESMDCourse/index.htm)
+- [MODAF](https://en.wikipedia.org/wiki/MODAF)
+- [NATO Architecture Framework](https://en.wikipedia.org/wiki/NATO_Architecture_Framework)
 
 ### Standards
 - [Systems Engineering Standards (INCOSE)](https://www.incose.org/about-systems-engineering/se-standards)
@@ -51,8 +53,7 @@
 - [MIT Fundamentals of Systems Engineering](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/)
 - [Frameworks and Models in Engineering Systems / Engineering System Design](https://ocw.mit.edu/courses/esd-04j-frameworks-and-models-in-engineering-systems-engineering-system-design-spring-2007/)
 - [Introduction to Engineering Systems](https://ocw.mit.edu/courses/esd-00-introduction-to-engineering-systems-spring-2011/)
-- [Systems Engineering Theory and Practice (YouTube playlist)](https://www.youtube.com/playlist?list=PL_bA20lRoKDHuNg1lJkJ75ZEsynNdY_ww)
-- [Best Systems Engineering Books](https://www.joshuasutherland.com/best-systems-books/)
+- [Systems Engineering Theory and Practice](https://www.youtube.com/playlist?list=PL_bA20lRoKDHuNg1lJkJ75ZEsynNdY_ww)
 
 ---
 
@@ -83,6 +84,7 @@
   - [Software Quality](https://en.wikipedia.org/wiki/Category:Software_quality)
   - [List of System Quality Attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes)
   - [Quality Function Deployment](https://en.wikipedia.org/wiki/Quality_function_deployment)
+- [Interface Control Document](https://en.wikipedia.org/wiki/Interface_control_document)
 
 ---
 
@@ -149,6 +151,7 @@
   - [Decision Matrix Method (Pugh Method)](https://en.wikipedia.org/wiki/Decision-matrix_method)
 - [Trade Study](https://en.wikipedia.org/wiki/Trade_study)
 - [Interoperability](https://en.wikipedia.org/wiki/Interoperability)
+- [Mission Engineering](https://sebokwiki.org/wiki/Mission_Engineering)
 
 ---
 
