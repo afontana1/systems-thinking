@@ -114,42 +114,167 @@
 	- [Book: Introduction to the Modeling and Analysis of Complex Systems (Sayama)](https://math.libretexts.org/Bookshelves/Scientific_Computing_Simulations_and_Modeling/Book%3A_Introduction_to_the_Modeling_and_Analysis_of_Complex_Systems_(Sayama))
 2. [Complex Systems](https://complexsystemstheory.net/complexity-explorer/)
 3. [Complex_adaptive_system](https://en.wikipedia.org/wiki/Complex_adaptive_system)
-4. [Emergence](https://en.wikipedia.org/wiki/Emergence)
 
-### Diffusion, cascades, and criticality
-1. [Diffusion](https://en.wikipedia.org/wiki/Category:Diffusion)
-2. [Percolation Theory](https://en.wikipedia.org/wiki/Percolation_theory)
-3. [Thresholds and Tipping Points](http://www.complexity.soton.ac.uk/theory/_Thresholds_and_Tipping_Points.php)
-4. [Scale_invariance](https://en.wikipedia.org/wiki/Scale_invariance)
-5. [Self Organized Criticality](https://en.wikipedia.org/wiki/Self-organized_criticality)
-6. [Path Dependence](https://en.wikipedia.org/wiki/Path_dependence)
-7. [Critical Point](https://en.wikipedia.org/wiki/Critical_point_(network_science))
-8. [Power Law](https://en.wikipedia.org/wiki/Power_law)
-9. [Scale Invariance](https://en.wikipedia.org/wiki/Scale_invariance)
-10. [Cascading Failure](https://en.wikipedia.org/wiki/Cascading_failure)
-	* [Information Cascade](https://en.wikipedia.org/wiki/Information_cascade)
+## Criticality, Thresholds, and Systemic Transitions
 
-### Self-organization & computation-inspired models
-1. [Cellular Automata](https://en.wikipedia.org/wiki/Category:Cellular_automata)
-2. [Self Organization](https://en.wikipedia.org/wiki/Category:Self-organization)
+Concepts related to abrupt qualitative change, instability, collective transitions, and critical phenomena.
 
-### Dynamical systems & phases
-1. [Phase Space](https://en.wikipedia.org/wiki/Phase_space)
-2. [Dynamical Systems](https://en.wikipedia.org/wiki/Category:Dynamical_systems)
-	- [Time Reversibility](https://en.wikipedia.org/wiki/Time_reversibility)
-	- [Perturbation_theory](https://en.wikipedia.org/wiki/Perturbation_theory)
-	- [Attractor](https://en.wikipedia.org/wiki/Attractor)
-	- [Feedback](https://en.wikipedia.org/wiki/Feedback)
-	- [Chaos_theory](https://en.wikipedia.org/wiki/Chaos_theory)
-	- [Numerical Differential Equations](https://en.wikipedia.org/wiki/Category:Numerical_differential_equations)
-	- [Partial Differential Equations](https://en.wikipedia.org/wiki/Category:Partial_differential_equations)
-	- [Non Linear Systems](https://en.wikipedia.org/wiki/Category:Nonlinear_systems)
-3. [Phase Transition](https://en.wikipedia.org/wiki/Phase_transition)
-4. [Turbulence](https://en.wikipedia.org/wiki/Turbulence)
+1. [Phase Transition](https://en.wikipedia.org/wiki/Phase_transition)
+2. [Critical Point](https://en.wikipedia.org/wiki/Critical_point_(network_science))
+3. [Criticality](https://en.wikipedia.org/wiki/Criticality)
+4. [Self-Organized Criticality](https://en.wikipedia.org/wiki/Self-organized_criticality)
+5. [Threshold Models](https://en.wikipedia.org/wiki/Threshold_model)
+6. [Thresholds and Tipping Points](http://www.complexity.soton.ac.uk/theory/_Thresholds_and_Tipping_Points.php)
+7. [Tipping Point](https://en.wikipedia.org/wiki/Tipping_point)
+8. [Regime Shift](https://en.wikipedia.org/wiki/Regime_shift)
+9. [Bifurcation Theory](https://en.wikipedia.org/wiki/Bifurcation_theory)
+10. [Catastrophe Theory](https://en.wikipedia.org/wiki/Catastrophe_theory)
+11. [Metastability](https://en.wikipedia.org/wiki/Metastability)
+12. [Hysteresis](https://en.wikipedia.org/wiki/Hysteresis)
+13. [Critical Slowing Down](https://en.wikipedia.org/wiki/Critical_slowing_down)
+14. [Avalanche Dynamics](https://en.wikipedia.org/wiki/Avalanche_effect)
+15. [Cascade](https://en.wikipedia.org/wiki/Cascading_failure)
+	- [Cascading Failure](https://en.wikipedia.org/wiki/Cascading_failure)
+	- [Information Cascade](https://en.wikipedia.org/wiki/Information_cascade)
+	- [Failure Cascade](https://en.wikipedia.org/wiki/Cascading_failure)
+16. [Percolation Theory](https://en.wikipedia.org/wiki/Percolation_theory)
+17. [Diffusion](https://en.wikipedia.org/wiki/Category:Diffusion)
+18. [Contagion](https://en.wikipedia.org/wiki/Social_contagion)
+19. [Synchronization](https://en.wikipedia.org/wiki/Synchronization)
+20. [Collective Behavior](https://en.wikipedia.org/wiki/Collective_behavior)
+21. [Emergence](https://en.wikipedia.org/wiki/Emergence)
 
-### Network Dynamics and Structure
-1. [Network Formation](https://en.wikipedia.org/wiki/Network_formation)
-2. [Community Structure](https://en.wikipedia.org/wiki/Community_structure)
+---
+
+## Scaling, Universality, and Statistical Structure
+
+Concepts describing scale-free behavior, invariance, heavy tails, and universal statistical properties.
+
+1. [Scale Invariance](https://en.wikipedia.org/wiki/Scale_invariance)
+2. [Universality](https://en.wikipedia.org/wiki/Universality_(dynamical_systems))
+3. [Power Law](https://en.wikipedia.org/wiki/Power_law)
+4. [Heavy-Tailed Distribution](https://en.wikipedia.org/wiki/Heavy-tailed_distribution)
+5. [Fractal](https://en.wikipedia.org/wiki/Fractal)
+6. [Renormalization Group](https://en.wikipedia.org/wiki/Renormalization_group)
+7. [Self-Similarity](https://en.wikipedia.org/wiki/Self-similarity)
+8. [Scale-Free Network](https://en.wikipedia.org/wiki/Scale-free_network)
+
+---
+
+## Dynamical Systems, Stability, and State Space
+
+Mathematical frameworks for describing evolving systems, attractors, instability, and nonlinear dynamics.
+
+1. [Dynamical Systems](https://en.wikipedia.org/wiki/Category:Dynamical_systems)
+2. [Phase Space](https://en.wikipedia.org/wiki/Phase_space)
+3. [State Space](https://en.wikipedia.org/wiki/State_space)
+4. [Attractor](https://en.wikipedia.org/wiki/Attractor)
+	- [Strange Attractor](https://en.wikipedia.org/wiki/Strange_attractor)
+	- [Limit Cycle](https://en.wikipedia.org/wiki/Limit_cycle)
+5. [Basin of Attraction](https://en.wikipedia.org/wiki/Basin_of_attraction)
+6. [Feedback](https://en.wikipedia.org/wiki/Feedback)
+	- [Positive Feedback](https://en.wikipedia.org/wiki/Positive_feedback)
+	- [Negative Feedback](https://en.wikipedia.org/wiki/Negative_feedback)
+7. [Nonlinear System](https://en.wikipedia.org/wiki/Category:Nonlinear_systems)
+8. [Chaos Theory](https://en.wikipedia.org/wiki/Chaos_theory)
+9. [Edge of Chaos](https://en.wikipedia.org/wiki/Edge_of_chaos)
+10. [Sensitivity to Initial Conditions](https://en.wikipedia.org/wiki/Sensitive_dependence_on_initial_conditions)
+11. [Perturbation Theory](https://en.wikipedia.org/wiki/Perturbation_theory)
+12. [Time Reversibility](https://en.wikipedia.org/wiki/Time_reversibility)
+13. [Numerical Differential Equations](https://en.wikipedia.org/wiki/Category:Numerical_differential_equations)
+14. [Partial Differential Equations](https://en.wikipedia.org/wiki/Category:Partial_differential_equations)
+15. [Stability Theory](https://en.wikipedia.org/wiki/Stability_theory)
+16. [Turbulence](https://en.wikipedia.org/wiki/Turbulence)
+
+---
+
+## Networks, Connectivity, and Propagation
+
+Concepts concerning relational structure, connectivity, transmission, and topology.
+
+1. [Network Science](https://en.wikipedia.org/wiki/Network_science)
+2. [Complex Network](https://en.wikipedia.org/wiki/Complex_network)
+3. [Network Formation](https://en.wikipedia.org/wiki/Network_formation)
+4. [Community Structure](https://en.wikipedia.org/wiki/Community_structure)
+5. [Small-World Network](https://en.wikipedia.org/wiki/Small-world_network)
+6. [Scale-Free Network](https://en.wikipedia.org/wiki/Scale-free_network)
+7. [Preferential Attachment](https://en.wikipedia.org/wiki/Preferential_attachment)
+8. [Network Effects](https://en.wikipedia.org/wiki/Network_effect)
+9. [Connectivity](https://en.wikipedia.org/wiki/Connectivity_(graph_theory))
+10. [Graph Theory](https://en.wikipedia.org/wiki/Graph_theory)
+11. [Random Graph](https://en.wikipedia.org/wiki/Random_graph)
+12. [Information Diffusion](https://en.wikipedia.org/wiki/Information_diffusion)
+13. [Epidemic Model](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology)
+
+---
+
+## Self-Organization, Adaptation, and Emergent Order
+
+Concepts focused on spontaneous order, adaptation, decentralized coordination, and computation-inspired emergence.
+
+1. [Self-Organization](https://en.wikipedia.org/wiki/Category:Self-organization)
+2. [Emergence](https://en.wikipedia.org/wiki/Emergence)
+3. [Cellular Automata](https://en.wikipedia.org/wiki/Category:Cellular_automata)
+	- [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+4. [Agent-Based Model](https://en.wikipedia.org/wiki/Agent-based_model)
+5. [Complex Adaptive System](https://en.wikipedia.org/wiki/Complex_adaptive_system)
+6. [Swarm Intelligence](https://en.wikipedia.org/wiki/Swarm_intelligence)
+7. [Distributed System](https://en.wikipedia.org/wiki/Distributed_computing)
+8. [Collective Intelligence](https://en.wikipedia.org/wiki/Collective_intelligence)
+9. [Pattern Formation](https://en.wikipedia.org/wiki/Pattern_formation)
+10. [Morphogenesis](https://en.wikipedia.org/wiki/Morphogenesis)
+11. [Adaptive System](https://en.wikipedia.org/wiki/Adaptive_system)
+
+---
+
+## Resilience, Memory, and Evolutionary Dynamics
+
+Concepts dealing with persistence, irreversibility, adaptation, ecological resilience, and historical dependence.
+
+1. [Resilience (Ecology)](https://en.wikipedia.org/wiki/Resilience_(ecology))
+2. [Adaptive Cycle](https://en.wikipedia.org/wiki/Adaptive_cycle)
+3. [Panarchy](https://en.wikipedia.org/wiki/Panarchy)
+4. [Path Dependence](https://en.wikipedia.org/wiki/Path_dependence)
+5. [Lock-In](https://en.wikipedia.org/wiki/Vendor_lock-in)
+6. [Irreversibility](https://en.wikipedia.org/wiki/Irreversible_process)
+7. [Evolutionary Dynamics](https://en.wikipedia.org/wiki/Evolutionary_dynamics)
+8. [Fitness Landscape](https://en.wikipedia.org/wiki/Fitness_landscape)
+9. [Ecological Stability](https://en.wikipedia.org/wiki/Stability_(ecology))
+10. [Resilience Theory](https://en.wikipedia.org/wiki/Resilience_theory)
+
+---
+
+## Information, Computation, and Complexity
+
+Concepts linking information processing, entropy, computation, and complexity.
+
+1. [Complexity Theory](https://en.wikipedia.org/wiki/Complexity_theory)
+2. [Computational Complexity Theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
+3. [Information Theory](https://en.wikipedia.org/wiki/Information_theory)
+4. [Entropy](https://en.wikipedia.org/wiki/Entropy)
+	- [Shannon Entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory))
+5. [Algorithmic Information Theory](https://en.wikipedia.org/wiki/Algorithmic_information_theory)
+6. [Cybernetics](https://en.wikipedia.org/wiki/Cybernetics)
+7. [Systems Theory](https://en.wikipedia.org/wiki/Systems_theory)
+8. [Statistical Mechanics](https://en.wikipedia.org/wiki/Statistical_mechanics)
+9. [Complexity Economics](https://en.wikipedia.org/wiki/Complexity_economics)
+
+---
+
+## Related Cross-Disciplinary Meta-Frameworks
+
+Broad interdisciplinary frameworks tying many of these concepts together.
+
+1. [Complex Systems](https://en.wikipedia.org/wiki/Complex_system)
+2. [Complexity Science](https://en.wikipedia.org/wiki/Complexity)
+3. [Systems Science](https://en.wikipedia.org/wiki/Systems_science)
+4. [Non-Equilibrium Thermodynamics](https://en.wikipedia.org/wiki/Non-equilibrium_thermodynamics)
+5. [Synergetics](https://en.wikipedia.org/wiki/Synergetics_(Haken))
+6. [Network Dynamics](https://en.wikipedia.org/wiki/Dynamics_on_complex_networks)
+7. [Statistical Physics](https://en.wikipedia.org/wiki/Statistical_physics)
+8. [Mathematical Sociology](https://en.wikipedia.org/wiki/Mathematical_sociology)
+9. [Econophysics](https://en.wikipedia.org/wiki/Econophysics)
+10. [Computational Social Science](https://en.wikipedia.org/wiki/Computational_social_science)
 
 ---
 
