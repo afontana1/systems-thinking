@@ -92,6 +92,7 @@
 - [The Computational Social Sciences Society of the Americas](https://computationalsocialscience.org/)
 - [ASU - School of Complex Adaptive Systems](https://scas.asu.edu/research/)
 - [Argonne National Laboratory - Social, Behavioral, and Decision Science](https://www.anl.gov/dis/social-behavioral-and-decision-science)
+- [Complex Resilient Intelligent Systems Laboratory](https://cris.cheme.columbia.edu/)
 
 ### [Complexity Economics](https://en.wikipedia.org/wiki/Category:Complexity_economics)
 

@@ -188,6 +188,7 @@
 - [Risk Analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
   - [Risk Register](https://en.wikipedia.org/wiki/Risk_register)
 - [Hazard Analysis](https://en.wikipedia.org/wiki/Category:Hazard_analysis)
+- [Resilience Modeling](https://sebokwiki.org/wiki/Resilience_Modeling)
 
 ---
 
