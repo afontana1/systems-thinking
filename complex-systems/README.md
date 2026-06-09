@@ -57,6 +57,7 @@
 - [Journal of Artificial Societies and Social Simulation](https://www.jasss.org/JASSS.html)
 - [International Journal of Microsimulation](https://www.microsimulation.org/journal/)
 	- [Traffic Analysis Toolbox Volume III: Guidelines for Applying Traffic Microsimulation Modeling Software](https://ops.fhwa.dot.gov/publications/fhwahop18036/index.htm)
+- [Living Systems Theory](https://www.panarchy.org/miller/livingsystems.html)
 
 ---
 
