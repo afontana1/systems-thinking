@@ -46,6 +46,7 @@
 - [MIT Sociotechnical Systems Research Center](https://ssrc.mit.edu/)
 - [Pitt Sociotechnical Systems Research Lab](https://www.engineering.pitt.edu/subsites/Labs/sociotechnical-systems/home/)
 - [Microsoft Research Sociotechnical Systems](https://www.microsoft.com/en-us/research/theme/sociotechnical-systems/)
+- [Resilience Engineering Association](https://www.resilience-engineering-association.org/resources/where-do-i-start/)
 
 ---
 
@@ -188,7 +189,10 @@
 - [Risk Analysis Methodologies](https://en.wikipedia.org/wiki/Category:Risk_analysis_methodologies)
   - [Risk Register](https://en.wikipedia.org/wiki/Risk_register)
 - [Hazard Analysis](https://en.wikipedia.org/wiki/Category:Hazard_analysis)
-- [Resilience Modeling](https://sebokwiki.org/wiki/Resilience_Modeling)
+- [System Resilience](https://sebokwiki.org/wiki/System_Resilience)
+  - [Resilience Modeling](https://sebokwiki.org/wiki/Resilience_Modeling)
+  - [Resilience Engineering](https://en.wikipedia.org/wiki/Resilience_engineering)
+  - [Resilience Engineering Papers](https://github.com/lorin/resilience-engineering)
 
 ---
 
