@@ -91,6 +91,7 @@
 
 ## Modeling, Architecture, and Views
 
+- [Object Management Group (OMG) Specification Catalog](https://www.omg.org/spec/)
 - [SysML](https://sysml.org/)
 - [SysML Forum](https://sysmlforum.com/)
 
@@ -147,7 +148,7 @@
 
 ---
 
-## Decisions, Trade Studies, and Interoperability
+## Missions, Decisions, Trade Studies, and Interoperability
 - [Decision Analysis](https://en.wikipedia.org/wiki/Category:Decision_analysis)
   - [Decision Matrix Method (Pugh Method)](https://en.wikipedia.org/wiki/Decision-matrix_method)
 - [Trade Study](https://en.wikipedia.org/wiki/Trade_study)

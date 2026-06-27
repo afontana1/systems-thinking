@@ -2,6 +2,57 @@ Below is a broad taxonomy of **models and diagrams used in systems engineering /
 
 A useful grounding principle: architecture is usually described through **multiple views governed by viewpoints**, rather than one “master diagram.” ISO/IEC/IEEE 42010 frames architecture descriptions around concerns, stakeholders, viewpoints, and views; viewpoint conventions can include model kinds, languages, notations, methods, and analysis techniques. ([IEEE Standards Association][1]) SysML is a general-purpose MBSE language for modeling requirements, structure, behavior, analysis cases, and verification cases. ([OMG][2]) UAF provides enterprise/system-of-systems architecture viewpoints such as Strategic, Operational, Services, Personnel, Resources, Security, Project, Standards, and Actual Resources. ([OMG][3])
 
+
+**Table of Contents**
+
+- [1. Views and Viewpoints](#1-views-and-viewpoints)
+  - [1.1 Enterprise / Mission / Strategic View](#11-enterprise-mission-strategic-view)
+  - [1.2 Stakeholder / Context View](#12-stakeholder-context-view)
+  - [1.3 Operational View](#13-operational-view)
+  - [1.4 Capability View](#14-capability-view)
+  - [1.5 Functional / Logical View](#15-functional-logical-view)
+  - [1.6 Behavioral / Dynamic View](#16-behavioral-dynamic-view)
+  - [1.7 Information / Data View](#17-information-data-view)
+  - [1.9 Service View](#19-service-view)
+  - [1.1.0 Physical / Structural View](#110-physical-structural-view)
+  - [1.1.1 Interface View](#111-interface-view)
+  - [1.1.2 Allocation / Traceability View](#112-allocation-traceability-view)
+  - [1.1.3 Requirements / Needs View](#113-requirements-needs-view)
+  - [1.1.4 Verification, Validation, and Test View](#114-verification-validation-and-test-view)
+  - [1.1.5 Analysis / Performance / Simulation View](#115-analysis-performance-simulation-view)
+  - [1.1.6 Safety / Security / Assurance View](#116-safety-security-assurance-view)
+  - [1.1.7 Deployment / Installation / Operational Support View](#117-deployment-installation-operational-support-view)
+  - [1.1.8 Project / Lifecycle / Evolution View](#118-project-lifecycle-evolution-view)
+  - [Compact checklist version](#compact-checklist-version)
+- [2. Enterprise, mission, and strategic models](#2-enterprise-mission-and-strategic-models)
+- [3. Stakeholder, context, and environment models](#3-stakeholder-context-and-environment-models)
+- [4. Operational architecture models](#4-operational-architecture-models)
+- [5. Capability models](#5-capability-models)
+- [6. Functional architecture models](#6-functional-architecture-models)
+- [7. Behavioral and dynamic models](#7-behavioral-and-dynamic-models)
+- [8. Information and data architecture models](#8-information-and-data-architecture-models)
+- [9. Service architecture models](#9-service-architecture-models)
+- [10. Physical, structural, and resource architecture models](#10-physical-structural-and-resource-architecture-models)
+- [11. Interface and integration models](#11-interface-and-integration-models)
+- [12. Requirements and specification models](#12-requirements-and-specification-models)
+- [13. Allocation, traceability, and consistency models](#13-allocation-traceability-and-consistency-models)
+- [14. Verification, validation, and test models](#14-verification-validation-and-test-models)
+- [15. Performance, analysis, and trade-study models](#15-performance-analysis-and-trade-study-models)
+- [16. Safety, security, resilience, and assurance models](#16-safety-security-resilience-and-assurance-models)
+- [17. Software architecture models](#17-software-architecture-models)
+- [18. Human, organizational, and personnel models](#18-human-organizational-and-personnel-models)
+- [19. Deployment, operations, sustainment, and lifecycle models](#19-deployment-operations-sustainment-and-lifecycle-models)
+- [20. Project, program, and governance models](#20-project-program-and-governance-models)
+- [21. Architecture framework-specific view families](#21-architecture-framework-specific-view-families)
+  - [ISO/IEC/IEEE 42010 framing](#isoiecieee-42010-framing)
+  - [UAF / DoDAF-style architecture families](#uaf-dodaf-style-architecture-families)
+  - [SysML v1 diagram families](#sysml-v1-diagram-families)
+  - [SysML v2 model emphasis](#sysml-v2-model-emphasis)
+- [22. Cross-view “master hierarchy” of model types](#22-cross-view-master-hierarchy-of-model-types)
+- [23. How the major views relate](#23-how-the-major-views-relate)
+- [24. “Which diagram should I use?” by question](#24-which-diagram-should-i-use-by-question)
+- [25. Minimal “complete architecture package” for a serious system](#25-minimal-complete-architecture-package-for-a-serious-system)
+
 ---
 
 # 1. Views and Viewpoints
@@ -412,7 +463,7 @@ Questions someone might ask:
 
 ---
 
-# 1.1.6 Safety / Security / Assurance View
+## 1.1.6 Safety / Security / Assurance View
 
 **Core question:** How can the system cause harm, be compromised, or fail assurance expectations?
 

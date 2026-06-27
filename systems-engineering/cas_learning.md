@@ -2,7 +2,7 @@
 
 ## Purpose of this document
 
-This document consolidates and structures the content from our conversation into a single learning outline and curriculum. It is designed for a technically experienced reader with a background in data engineering, software systems, analytics, and some prior exposure to systems architecture, who wants to understand:
+This document consolidates and structures content into a single learning outline and curriculum. It is designed for a technically experienced reader with a background in data engineering, software systems, analytics, and some prior exposure to systems architecture, who wants to understand:
 
 1. how **systems engineering** approaches **complex adaptive systems (CAS)**,
 2. what major questions systems engineers are trying to answer,
