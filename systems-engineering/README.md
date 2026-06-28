@@ -71,6 +71,8 @@
 - [Life Cycle Stages](https://sebokwiki.org/wiki/Life_Cycle_Stages)
 - [Life Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
 - [Service Life Management](https://sebokwiki.org/wiki/Service_Life_Management)
+- [Quality Function Deployment](https://en.wikipedia.org/wiki/Quality_function_deployment)
+- [Multiple Criterion Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
 
 ---
 

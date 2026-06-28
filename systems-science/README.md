@@ -3,6 +3,7 @@
 ## Core reading
 - [Systems Thinking, Systems Practice](https://sebokwiki.org/wiki/Systems_Thinking%2C_Systems_Practice)
 - [Systems Science Textbook](https://web.archive.org/web/20221209041111/http://systems-sciences.uni-graz.at/etextbook/)
+- [Systems Thinking Overview](https://github.com/lorin/systems-thinking)
 
 ## Institutes, labs, societies, and programs
 - [International Institute for Applied Systems Analysis](https://iiasa.ac.at/)
@@ -72,7 +73,7 @@
 ## Videos
 ### MIT OpenCourseWare / academic courses
 
-1. [fundamentals-of-systems-engineering](https://ocw.mit.edu/courses/16-842-fundamentals-of-systems-engineering-fall-2015/)
+1. [Systems Thinking for Global Problems](https://www.cs.toronto.edu/~sme/SystemsThinking/)
 2. [introduction-to-system-dynamics](https://ocw.mit.edu/courses/15-871-introduction-to-system-dynamics-fall-2013/)
 3. [computational-science-and-engineering](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/)
 
