@@ -165,3 +165,4 @@
 ## People
 1. [Dr. Kathleen M. Carley](https://s3d.cmu.edu/people/core-faculty/carley-kathleen.html)
 2. [Professor Ali Jadbabaie](https://jadbabaie.mit.edu/)
+3. [Zhichang Zhu](https://scholar.google.com/citations?user=pXpqv38AAAAJ&hl=en)
