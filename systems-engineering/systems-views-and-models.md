@@ -1,3 +1,5 @@
+# System Views
+
 Below is a broad taxonomy of **models and diagrams used in systems engineering / systems architecture**. It is notation-neutral where possible, but I’ll map common artifacts to **SysML, UML, UAF/DoDAF/MODAF/NAF, MBSE, safety, software, physical engineering, and operations** practices.
 
 A useful grounding principle: architecture is usually described through **multiple views governed by viewpoints**, rather than one “master diagram.” ISO/IEC/IEEE 42010 frames architecture descriptions around concerns, stakeholders, viewpoints, and views; viewpoint conventions can include model kinds, languages, notations, methods, and analysis techniques. ([IEEE Standards Association][1]) SysML is a general-purpose MBSE language for modeling requirements, structure, behavior, analysis cases, and verification cases. ([OMG][2]) UAF provides enterprise/system-of-systems architecture viewpoints such as Strategic, Operational, Services, Personnel, Resources, Security, Project, Standards, and Actual Resources. ([OMG][3])
