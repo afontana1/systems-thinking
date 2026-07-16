@@ -196,6 +196,13 @@
   - [Resilience Modeling](https://sebokwiki.org/wiki/Resilience_Modeling)
   - [Resilience Engineering](https://en.wikipedia.org/wiki/Resilience_engineering)
   - [Resilience Engineering Papers](https://github.com/lorin/resilience-engineering)
+  - [System Resilience: What Exactly is it?](https://www.sei.cmu.edu/blog/system-resilience-what-exactly-is-it/)
+  - [System Resilience Part 2: How System Resilience Relates to Other Quality Attributes](https://www.sei.cmu.edu/blog/system-resilience-part-2-how-system-resilience-relates-to-other-quality-attributes/)
+  - [System Resilience Part 3: Engineering System Resilience Requirements](https://www.sei.cmu.edu/blog/system-resilience-part-3-engineering-system-resilience-requirements/)
+  - [System Resilience Part 4: Classifying System Resilience Techniques](https://www.sei.cmu.edu/blog/system-resilience-part-4-classifying-system-resilience-techniques/)
+  - [System Resilience Part 5: Commonly-Used System Resilience Techniques](https://www.sei.cmu.edu/blog/system-resilience-part-5-commonly-used-system-resilience-techniques/)
+  - [System Resilience Part 6: Verification and Validation](https://www.sei.cmu.edu/blog/system-resilience-part-6-verification-and-validation/)
+  - [System Resilience Part 7: 16 Guiding Principles for System Resilience](https://www.sei.cmu.edu/blog/system-resilience-part-7-16-guiding-principles-for-system-resilience/)
 
 ---
 

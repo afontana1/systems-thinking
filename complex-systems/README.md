@@ -485,3 +485,8 @@ Broad interdisciplinary frameworks tying many of these concepts together.
 25. [rust agent based models](https://github.com/facorread/rust-agent-based-models)
 26. [Warteschlangensimulator](https://github.com/A-Herzog/Warteschlangensimulator)
 27. [generative-agents](https://github.com/mkturkcan/generative-agents)
+28. [Particle Life](https://github.com/hunar4321/particle-life)
+29. [NiaPy](https://github.com/NiaOrg/NiaPy)
+30. [rednose](https://github.com/commaai/rednose)
+31. [agentpy](https://github.com/jofmi/agentpy)
+32. [cellpylib](https://github.com/lantunes/cellpylib)
