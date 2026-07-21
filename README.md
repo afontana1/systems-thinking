@@ -1,6 +1,5 @@
 # Resources for "Systems" Disciplines
 
-
 ## Core [Mathematical Modeling](https://en.wikipedia.org/wiki/Category:Mathematical_modeling)
 
 - [Constraint Programming](https://ktiml.mff.cuni.cz/~bartak/constraints/index.html)
