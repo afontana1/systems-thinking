@@ -542,25 +542,11 @@ A type label such as *complex adaptive system* should be treated as shorthand fo
 For example:
 
 $$
-\mathrm{AdaptiveSystem}
-=
-\mathrm{Feedback}
-\land
-\mathrm{Memory}
-\land
-\mathrm{PolicyModification}.
+\mathrm{AdaptiveSystem} = \mathrm{Feedback} \land \mathrm{Memory} \land \mathrm{PolicyModification}.
 $$
 
 $$
-\mathrm{ComplexAdaptiveSystem}
-=
-\mathrm{Adaptive}
-\land
-\mathrm{ManyAgents}
-\land
-\mathrm{NonlinearInteraction}
-\land
-\mathrm{Emergence}.
+\mathrm{ComplexAdaptiveSystem} = \mathrm{Adaptive} \land \mathrm{ManyAgents} \land \mathrm{NonlinearInteraction} \land \mathrm{Emergence}.
 $$
 
 This resembles description logics or formal ontology engineering more than classical taxonomy.
