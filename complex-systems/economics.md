@@ -362,17 +362,13 @@ System classes could then be logical regions in that descriptor space.
 For example:
 
 $$
-\mathrm{CAS}
-=
-\{\mathcal{S} : A=\text{adaptive},\; E\neq\text{fixed},\; C=\text{interactive},\; \text{macro-emergence present}\}.
+\mathrm{CAS} = \{\mathcal{S} : A=\text{adaptive},\; E\neq\text{fixed},\; C=\text{interactive},\; \text{macro-emergence present}\}.
 $$
 
 And a system-of-systems class could be described as:
 
 $$
-\mathrm{SoS}
-=
-\{\mathcal{S}: \text{operational independence} + \text{managerial independence} + \text{emergence} + \text{evolution}\}.
+\mathrm{SoS}=\{\mathcal{S}: \text{operational independence} + \text{managerial independence} + \text{emergence} + \text{evolution}\}.
 $$
 
 ---
