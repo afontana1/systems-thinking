@@ -1538,41 +1538,14 @@ Alternative theoretical definitions could weaken, strengthen, or modify these co
 
 # 21. Rule semantics
 
-Decision and institutional rules should be separated into multiple semantic levels.
+Decision and institutional rules should be distinguished across four semantic levels:
 
-## 21.1 Behavioral rules
-
-What agents tend to do:
-
-$$
-\text{if inventories are low, increase production}.
-$$
-
-## 21.2 Constitutive rules
-
-What creates an institutional fact:
-
-$$
-\text{registration} + \text{capital contribution}
-\Rightarrow
-\text{legal corporation}.
-$$
-
-## 21.3 Regulative rules
-
-What actors are permitted, required, or prohibited from doing:
-
-$$
-\text{banks must maintain a reserve ratio above } r.
-$$
-
-## 21.4 Metarules
-
-How rules themselves may be changed:
-
-$$
-\text{the central bank may change } r \text{ under procedure } P.
-$$
+| Rule type        | Meaning                                                       | Example                                                                                  |
+| ---------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Behavioral**   | What agents tend to do                                        | $\text{if inventories are low, increase production}$                                     |
+| **Constitutive** | What creates an institutional fact                            | $\text{registration} + \text{capital contribution} \Rightarrow \text{legal corporation}$ |
+| **Regulative**   | What actors are permitted, required, or prohibited from doing | $\text{banks must maintain a reserve ratio above } r$                                    |
+| **Metarules**    | How rules themselves may be changed                           | $\text{the central bank may change } r \text{ under procedure } P$                       |
 
 Metarules are essential for adaptive political economies because institutional actors can rewrite parts of the system's operating logic.
 
@@ -1580,46 +1553,24 @@ Metarules are essential for adaptive political economies because institutional a
 
 # 22. Benefits for agent-based modeling
 
-Ontology-backed ABMs could improve several recurring weaknesses in agent-based economics.
+Ontology-backed ABMs could address several recurring weaknesses in agent-based economics:
 
-## 22.1 Traceability
+| Benefit                            | Contribution                                                                                                                                      |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Traceability**                   | Connects explicit theoretical assumptions to code constructs, reducing the gap $\text{theoretical claim} \not\equiv \text{implemented behavior}$. |
+| **Explicit semantics**             | Gives defined meanings to agent attributes, roles, rules, permissions, processes, and relations.                                                  |
+| **Automated consistency checking** | Detects invalid combinations of roles, rights, states, or rules before simulation.                                                                |
+| **Scenario generation**            | Represents institutional reforms as formal transformations of the system description.                                                             |
+| **Model comparison**               | Exposes differences between models that use the same label but make different assumptions.                                                        |
+| **Procedural transparency**        | Replaces opaque agent methods with explicit, inspectable processes.                                                                               |
 
-The gap between verbal theory and code is often large:
+For example, two models that both claim to represent capitalism may differ because:
 
-$$
-\text{theoretical claim}
-\not\equiv
-\text{implemented behavior}.
-$$
-
-An ontology can link code constructs to explicit theoretical assumptions.
-
-## 22.2 Explicit semantics
-
-Every agent attribute, role, rule, permission, process, and relation can have a defined meaning.
-
-## 22.3 Automated consistency checking
-
-Invalid combinations of roles, rights, states, or rules can be detected before simulation.
-
-## 22.4 Scenario generation
-
-Institutional reforms can be expressed as formal transformations of the system description.
-
-## 22.5 Model comparison
-
-Two models that both claim to represent capitalism may differ substantially:
-
-- one includes wage bargaining;
-- one assumes fixed wages;
-- one includes endogenous credit;
-- one treats money as passive;
-- one permits institutional evolution;
-- one fixes all institutional rules.
+* one includes wage bargaining while another assumes fixed wages;
+* one includes endogenous credit while another treats money as passive;
+* one permits institutional evolution while another fixes all institutional rules.
 
 An ontology can expose these differences directly.
-
-## 22.6 Procedural transparency
 
 Instead of an opaque method such as:
 
@@ -1643,105 +1594,42 @@ $$
 \mathrm{Produce}.
 $$
 
-Each process can have:
-
-- preconditions;
-- resource requirements;
-- institutional permissions;
-- effects;
-- alternative implementations.
+Each process can specify its **preconditions, resource requirements, institutional permissions, effects,** and **alternative implementations**.
 
 ---
 
 # 23. Example: market exchange with emergency rationing
 
-A good is normally allocated through markets, but rationing is imposed during shortages.
+Consider a good normally allocated through markets, with rationing imposed during shortages.
 
-The ontology describes:
+The ontology describes **buyers and sellers, inventory, money, market bids, eligibility certificates, a shortage condition, an authority empowered to activate rationing,** and **a rule that changes the allocation mechanism**.
 
-- buyers and sellers;
-- inventory;
-- money;
-- market bids;
-- eligibility certificates;
-- a shortage condition;
-- an authority empowered to activate rationing;
-- a rule that changes the allocation mechanism.
+| Modeling layer    | Representation                                                                                                                  |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **State machine** | $\mathrm{NormalMarket} \rightarrow \mathrm{ShortageEmergency} \rightarrow \mathrm{Rationing} \rightarrow \mathrm{NormalMarket}$ |
+| **Petri net**     | Purchases under rationing require both a money token and an entitlement token.                                                  |
+| **Agent**         | Buyers may substitute goods, search informal markets, lobby, save certificates, or misreport eligibility.                       |
+| **Network**       | Informal trading connections may emerge over time.                                                                              |
+| **Aggregate**     | Inventory and consumption are tracked using equations or stock-flow models.                                                     |
 
-## State-machine layer
-
-$$
-\mathrm{NormalMarket}
-\rightarrow
-\mathrm{ShortageEmergency}
-\rightarrow
-\mathrm{Rationing}
-\rightarrow
-\mathrm{NormalMarket}.
-$$
-
-## Petri-net layer
-
-Purchases under rationing require both:
-
-- a money token;
-- an entitlement token.
-
-## Agent layer
-
-Buyers may respond by:
-
-- substituting goods;
-- searching informal markets;
-- lobbying;
-- saving certificates;
-- misreporting eligibility.
-
-## Network layer
-
-Informal trading connections may emerge over time.
-
-## Aggregate layer
-
-Inventory and consumption are tracked using equations or stock-flow models.
-
-This example shows how a regime change alters:
-
-- available actions;
-- permissions;
-- resource requirements;
-- actor strategies;
-- network formation;
-- aggregate outcomes.
+The regime change therefore alters **available actions, permissions, resource requirements, actor strategies, network formation,** and **aggregate outcomes**.
 
 ---
 
-# 24. Main technical obstacle: semantic composition
+# 24. Semantic composition
 
-Combining formalisms is possible, but not automatically valid.
+Combining Petri nets, state machines, ABMs, process calculi, differential equations, and other formalisms is possible, but not automatically valid. These formalisms may make different assumptions about **time, simultaneity, causality, randomness, identity, state, event ordering, observation,** and **determinism**.
 
-Petri nets, state machines, ABMs, process calculi, and differential equations may make different assumptions about:
-
-- time;
-- simultaneity;
-- causality;
-- randomness;
-- identity;
-- state;
-- event ordering;
-- observation;
-- determinism.
-
-A continuous-time model and a round-based ABM may disagree about event ordering. A state machine may assume atomic transitions while a process calculus permits interleaving.
+For example, a continuous-time model and a round-based ABM may disagree about event ordering, while a state machine may assume atomic transitions and a process calculus may permit interleaving.
 
 The framework therefore requires explicit semantic adapters specifying:
 
 $$
 \begin{aligned}
-&\text{how time advances},\\
-&\text{how events are ordered},\\
-&\text{how state is shared},\\
-&\text{how conflicts are resolved},\\
+&\text{how time advances},\
+&\text{how events are ordered},\
+&\text{how state is shared},\
+&\text{how conflicts are resolved},\
 &\text{how abstractions at different scales interact}.
 \end{aligned}
 $$
@@ -1752,104 +1640,22 @@ The ontology supplies conceptual semantics, but an execution semantics is also n
 
 # 25. Proposed research architecture
 
-A complete implementation could contain six layers.
+A complete implementation could contain six layers:
 
-## 25.1 Upper systems ontology
-
-General concepts:
-
-- system;
-- environment;
-- boundary;
-- entity;
-- relation;
-- state;
-- process;
-- event;
-- resource;
-- information;
-- function;
-- mechanism.
-
-## 25.2 Socioeconomic domain ontology
-
-Domain concepts:
-
-- person;
-- household;
-- firm;
-- state;
-- ministry;
-- bank;
-- market;
-- contract;
-- money;
-- credit;
-- labor;
-- property right;
-- authority;
-- class;
-- planning body;
-- cooperative.
-
-## 25.3 Institutional rule language
-
-Formal constructs for:
-
-- permissions;
-- obligations;
-- prohibitions;
-- constitutive rules;
-- enforcement;
-- rule-changing procedures.
-
-## 25.4 Procedural language
-
-Arthur-style verbs:
-
-- search;
-- bid;
-- bargain;
-- produce;
-- hire;
-- lend;
-- invest;
-- imitate;
-- innovate;
-- regulate;
-- organize.
-
-## 25.5 Formalism mappings
-
-Mappings into:
-
-- Petri nets;
-- process calculi;
-- state machines;
-- graph transformations;
-- equations;
-- optimization models;
-- ABMs;
-- discrete-event models.
-
-## 25.6 Analysis layer
-
-Capabilities for:
-
-- simulation;
-- reachability;
-- model checking;
-- causal analysis;
-- sensitivity analysis;
-- institutional comparison;
-- resilience testing;
-- counterfactual transformation.
+| Layer                             | Contents or capabilities                                                                                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Upper systems ontology**        | system; environment; boundary; entity; relation; state; process; event; resource; information; function; mechanism                                           |
+| **Socioeconomic domain ontology** | person; household; firm; state; ministry; bank; market; contract; money; credit; labor; property right; authority; class; planning body; cooperative         |
+| **Institutional rule language**   | permissions; obligations; prohibitions; constitutive rules; enforcement; rule-changing procedures                                                            |
+| **Procedural language**           | search; bid; bargain; produce; hire; lend; invest; imitate; innovate; regulate; organize                                                                     |
+| **Formalism mappings**            | Petri nets; process calculi; state machines; graph transformations; equations; optimization models; ABMs; discrete-event models                              |
+| **Analysis layer**                | simulation; reachability; model checking; causal analysis; sensitivity analysis; institutional comparison; resilience testing; counterfactual transformation |
 
 ---
 
-# 26. The core methodological reversal
+# 26. Core methodological reversal
 
-Conventional modeling often starts with a technique:
+Conventional modeling often begins with a technique:
 
 > How can this economy be represented using equations, optimization, or an ABM?
 
@@ -1869,56 +1675,29 @@ $$
 }
 $$
 
-The ontology is therefore not merely a vocabulary. It is a model-construction discipline.
+The ontology is therefore not merely a vocabulary, but a model-construction discipline.
 
 ---
 
 # 27. Open research questions
 
-The conversation suggests a number of unresolved research questions.
+The framework raises the following unresolved questions:
 
-## 27.1 Descriptor primitives
+| Topic                               | Research question                                                                                                                                                                       |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Descriptor primitives**           | What fundamental descriptors are sufficiently general across engineered, natural, social, and economic systems?                                                                         |
+| **Ontological categories**          | Which distinctions are essential: entity, relation, process, event, mechanism, rule, capability, emergent property, function, resource, information, authority, objective, or boundary? |
+| **Descriptor form**                 | Which descriptors should be Boolean, ordinal, continuous, probabilistic, relational, contextual, or time-dependent?                                                                     |
+| **Implication and incompatibility** | Which features imply, require, enable, inhibit, or preclude others?                                                                                                                     |
+| **Emergence**                       | How should emergent properties be formally linked to lower-level attributes and mechanisms?                                                                                             |
+| **Observation and identification**  | How can empirical observations, laws, documents, organizational charts, financial data, interviews, and historical records be mapped into the ontology?                                 |
+| **Model generation**                | Which ontology patterns should map to which formalism templates?                                                                                                                        |
+| **Formal verification**             | Can institutional claims be checked through reachability, invariant checking, deadlock analysis, liveness, safety, temporal logic, or probabilistic model checking?                     |
+| **Ideal-type comparison**           | How should ideological and theoretical prototypes be encoded without hiding contestable assumptions?                                                                                    |
+| **Scale and boundary dependence**   | How can one system receive different but compatible descriptions at firm, sector, national, transnational, short-run, and long-run evolutionary levels?                                 |
+| **Reflexivity**                     | How should the ontology represent agents who react to descriptions, predictions, classifications, and policies directed at the system itself?                                           |
 
-What are the most fundamental descriptors that are sufficiently general across engineered, natural, social, and economic systems?
-
-## 27.2 Ontological categories
-
-Which distinctions are essential?
-
-Possible candidates include:
-
-- entity;
-- relation;
-- process;
-- event;
-- mechanism;
-- rule;
-- capability;
-- emergent property;
-- function;
-- resource;
-- information;
-- authority;
-- objective;
-- boundary.
-
-## 27.3 Graded versus categorical descriptors
-
-Which descriptors should be:
-
-- Boolean;
-- ordinal;
-- continuous;
-- probabilistic;
-- relational;
-- contextual;
-- time-dependent?
-
-## 27.4 Implication and incompatibility relations
-
-Which features imply, require, enable, inhibit, or preclude others?
-
-For example:
+One possible conceptual axiom for implication relations is:
 
 $$
 \mathrm{Adaptation}
@@ -1927,53 +1706,11 @@ $$
 \land
 \mathrm{Feedback}
 \land
-\mathrm{PolicyModification}
+\mathrm{PolicyModification},
 $$
 
-may be useful as a conceptual axiom, but the exact conditions require careful formalization.
+although the exact conditions require careful formalization.
 
-## 27.5 Emergence
-
-How should emergent properties be formally linked to lower-level attributes and mechanisms?
-
-## 27.6 Observation and identification
-
-How can empirical observations, laws, documents, organizational charts, financial data, interviews, and historical records be mapped into the ontology?
-
-## 27.7 Model generation
-
-Which ontology patterns should map to which formalism templates?
-
-## 27.8 Formal verification
-
-Can institutional claims be checked through:
-
-- reachability;
-- invariant checking;
-- deadlock analysis;
-- liveness;
-- safety;
-- temporal logic;
-- probabilistic model checking?
-
-## 27.9 Comparison of ideal types
-
-How should ideological and theoretical prototypes be encoded without hiding contestable assumptions?
-
-## 27.10 Scale and boundary dependence
-
-How can the same system receive different, compatible descriptions at:
-
-- firm level;
-- sector level;
-- national level;
-- transnational level;
-- short-run level;
-- long-run evolutionary level?
-
-## 27.11 Reflexivity
-
-How should the ontology represent agents who react to descriptions, predictions, classifications, and policies directed at the system itself?
 
 ---
 
