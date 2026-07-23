@@ -48,6 +48,7 @@
 31. [Matteo Guido Richiardi](https://scholar.google.com/citations?user=ug0IdhYAAAAJ&hl=en)
 32. [Mason Porter](https://scholar.google.com/citations?user=hSyfNekAAAAJ&hl=en)
 33. [Charles M. Macal Argonne](https://www.anl.gov/profile/charles-m-macal)
+34. [Ricardo Hausmann](https://scholar.google.com/citations?user=wuB-2j4AAAAJ&hl=en)
 
 ---
 
@@ -107,6 +108,7 @@
 8. [World Economics Association - Complexity Economics](https://www.worldeconomicsassociation.org/newsletterarticles/complexity-economics/)
 9. [Social Economics Lab](https://socialeconomicslab.org/)
 10. [Experimental Economics Center - Georgia State University](https://excenopen.gsu.edu/center/)
+11. [The Growth Lab - Harvard](https://growthlab.hks.harvard.edu/)
 
 ---
 
@@ -408,6 +410,15 @@ Broad interdisciplinary frameworks tying many of these concepts together.
 28. [Generative Agents: Interactive Simulacra of Human Behavior](https://www.youtube.com/watch?v=xWnhHu5MibY&t=912s)
 29. [Generative Agents - Deep Dive and GPT-4 Recreation](https://www.youtube.com/watch?v=44TH6uKlNC4)
 30. [Agent-Based Modeling](https://youtube.com/playlist?list=PLF0b3ThojznRKYcrw8moYMUUJK2Ra8Hwl&si=UhqaQCPZHR0A7DvU)
+31. [BI 203 David Krakauer: How To Think Like a Complexity Scientist](https://youtu.be/__V89ZR3vUE?si=Ks_UNOXhCrgtWMfO)
+32. [W. Brian Arthur - Complexity and the Economy](https://youtu.be/P8IzaECeQOk?si=0jN6H1twHXiN3ySi)
+33. [Mindscape 72 | César Hidalgo on Information in Societies, Economies, and the Universe](https://youtu.be/uiQWSZF9ktg?si=skfiVK8dR2u70nbs)
+34. [Why Scientists Can't Rebuild a Polaroid Camera [César Hidalgo]](https://youtu.be/vzpFOJRteeI?si=sNjjHuu6hgWjZQTP)
+35. [W. Brian Arthur on Economics in Nouns and Verbs (Part 1)](https://youtu.be/85epdHDAT3w?si=5ttfUuXPFRtY7v3T)
+36. [Harvard University Growth Lab's Atlas of Economic Complexity | Hinrich Foundation](https://youtu.be/FXOb_3r4AjU?si=PDW74B_oikeQ_HfP)
+37. [W. Brian Arthur (Part 1) on The History of Complexity Economics](https://youtu.be/gnkY6tJnuPg?si=RMNzTh9fDsQ567lQ)
+38. [Making Sense of Chaos: A Better Economics for a Better World](https://www.youtube.com/live/R2mqangYo6U?si=QERD5XzRUcM43Pis)
+39. [Carlos Gershenson on Balance, Criticality, Antifragility, and The Philosophy of Complex Systems](https://youtu.be/c4ShhqDzYnU?si=hBInUuteeVKU6ff0)
 
 ---
 
