@@ -847,140 +847,52 @@ This makes the economy not merely adaptive, but institutionally evolutionary and
 
 # 12. Layers of a compositional socioeconomic system description
 
-A general socioeconomic ontology should include at least the following layers.
+A general socioeconomic ontology should include eight interconnected layers:
 
-## 12.1 Boundary and environment
+| Layer                             | Contents and purpose                                                                                                                                                                                                                                                                                                                                   |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Boundary and environment**      | Defines what is being modeled, such as a national economy, regional production network, firm, household sector, financial system, or transnational supply chain. Boundaries matter because the same economy may require different descriptions at domestic, sectoral, and global scales.                                                               |
+| **Stocks and flows**              | Includes natural resources, labor, capital goods, money and credit, information, goods and services, ownership claims, taxes, subsidies, rents, profits, and transfers.                                                                                                                                                                                |
+| **Actors and organizations**      | Includes households, private firms, state-owned enterprises, cooperatives, banks, ministries, local governments, political parties, trade unions, and foreign investors. Actors should not be assumed to have homogeneous goals.                                                                                                                       |
+| **Institutional relations**       | Distinguishes ownership, operational control, residual income rights, appointment authority, regulatory jurisdiction, contracting rights, taxation rights, access to credit, responsibility for losses, and rights of exit, voice, and participation. This prevents several distinct relations from being compressed into the single term *ownership*. |
+| **Allocation and coordination**   | Identifies the mechanisms through which particular objects are allocated and coordinated.                                                                                                                                                                                                                                                              |
+| **Governance and metagovernance** | Represents both rule-making authorities and control over the procedures through which rules themselves are changed.                                                                                                                                                                                                                                    |
+| **Dynamics and adaptation**       | Captures learning, innovation, entry and exit, bankruptcy, organizational replication, firm selection, policy experimentation, institutional change, technological evolution, and endogenous preference formation.                                                                                                                                     |
+| **Emergent properties**           | Represents system-level properties such as resilience, robustness, efficiency, inequality, legitimacy, adaptability, innovation capacity, and ecological sustainability.                                                                                                                                                                               |
 
-The analyst must specify what is being modeled:
-
-- national economy;
-- regional production network;
-- firm;
-- household sector;
-- financial system;
-- transnational supply chain.
-
-System boundaries matter because the same economy may have different descriptions at domestic, sectoral, and global scales.
-
-## 12.2 Stocks and flows
-
-Relevant stocks and flows include:
-
-- natural resources;
-- labor;
-- capital goods;
-- money and credit;
-- information;
-- goods and services;
-- ownership claims;
-- taxes;
-- subsidies;
-- rents;
-- profits;
-- transfers.
-
-## 12.3 Actors and organizational units
-
-Examples include:
-
-- households;
-- private firms;
-- state-owned enterprises;
-- cooperatives;
-- banks;
-- ministries;
-- local governments;
-- political parties;
-- trade unions;
-- foreign investors.
-
-Actors should not be assumed to possess homogeneous goals.
-
-## 12.4 Institutional relations
-
-The ontology should distinguish:
-
-- ownership;
-- operational control;
-- residual income rights;
-- appointment authority;
-- regulatory jurisdiction;
-- contracting rights;
-- taxation rights;
-- access to credit;
-- responsibility for losses;
-- rights of exit, voice, and participation.
-
-This avoids compressing several distinct relations into the single word *ownership*.
-
-## 12.5 Allocation and coordination mechanisms
-
-An economy may contain multiple mechanisms simultaneously:
+An economy may combine several allocation and coordination mechanisms:
 
 $$
 \mathcal{M}=
-\{\text{markets},\text{administrative commands},\text{bargaining},\text{networks},\text{auctions},\text{rationing},\text{household allocation},\text{reciprocity},\text{professional norms}\}.
+{
+\text{markets},
+\text{administrative commands},
+\text{bargaining},
+\text{networks},
+\text{auctions},
+\text{rationing},
+\text{household allocation},
+\text{reciprocity},
+\text{professional norms}
+}.
 $$
 
-The meaningful question is not simply "market or plan?" but:
+The relevant question is therefore not simply *market or plan?*, but:
 
 > Which objects are allocated by which mechanisms, under whose authority, at what scale, and under which constraints?
 
-## 12.6 Governance and metagovernance
+Rule-making and rule-changing authorities may include **legislatures, courts, ministries, political parties, central banks, corporate boards, local administrations, popular votes,** and **informal elite networks**. Metagovernance refers specifically to authority over how such rules may be revised.
 
-Relevant rule-changing authorities include:
-
-- legislatures;
-- courts;
-- ministries;
-- political parties;
-- central banks;
-- corporate boards;
-- local administrations;
-- popular votes;
-- informal elite networks.
-
-Metagovernance refers to control over how rules themselves are changed.
-
-## 12.7 Dynamics and adaptation
-
-Relevant processes include:
-
-- learning;
-- innovation;
-- entry and exit;
-- bankruptcy;
-- organizational replication;
-- selection among firms;
-- policy experimentation;
-- institutional change;
-- technological evolution;
-- endogenous preference formation.
-
-## 12.8 Emergent properties
-
-Emergent properties include:
-
-- resilience;
-- robustness;
-- efficiency;
-- inequality;
-- legitimacy;
-- adaptability;
-- innovation capacity;
-- ecological sustainability.
-
-These must be indexed to goals, disturbances, time horizons, and distributions.
-
-For example:
+Emergent properties must be indexed to the relevant **goals, disturbances, time horizons,** and **distributions**. For example,
 
 $$
 \mathrm{Resilience}(S,d,\tau,\phi)
 $$
 
-could denote the ability of system $S$, after disturbance $d$, to recover within time $\tau$ while preserving function $\phi$.
+may denote the ability of system $S$, following disturbance $d$, to recover within time $\tau$ while preserving function $\phi$.
 
-A system can be resilient with respect to industrial output while being non-resilient with respect to household income, political legitimacy, or ecosystem integrity.
+Resilience is therefore not a unitary property: a system may be resilient with respect to industrial output while remaining non-resilient with respect to household income, political legitimacy, or ecosystem integrity.
+
 
 ---
 
@@ -1190,22 +1102,20 @@ References:
 
 # 17. Matching system structures to computational formalisms
 
-Different formalisms are appropriate for different aspects of an economic system.
+Different aspects of an economic system require different computational representations:
 
-## 17.1 Petri nets
+| Formalism                           | Best suited for                               | Key features                                                                                                                                 |
+| ----------------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Petri nets**                      | Resource flows and event structure            | Concurrency, synchronization, enabling conditions, capacity constraints, deadlocks, reachability, and possible or impossible event sequences |
+| **State machines and statecharts**  | Institutional status and regime change        | Guarded transitions, alternative outcomes, nested states, and concurrent statuses                                                            |
+| **Process calculi**                 | Interaction and communication                 | Message passing, protocols, synchronization, nondeterministic choice, relationship creation, contractual sequencing, and concurrency         |
+| **Agent-based models**              | Heterogeneous and adaptive actors             | Internal state, local information, varied decision procedures, learning, imitation, evolving networks, and emergent aggregate patterns       |
+| **Dynamical systems and equations** | Aggregate stocks and continuous relationships | Difference or differential equations describing accumulation, depletion, growth, and other continuous dynamics                               |
+| **Multilayer networks**             | Relational structure                          | Ownership, trade, credit, authority, employment, information, and supply dependencies represented as distinct but connected layers           |
 
-Petri nets are appropriate for:
+## Representative structures
 
-- resource flows;
-- concurrency;
-- synchronization;
-- enabling conditions;
-- capacity constraints;
-- deadlocks;
-- reachability;
-- possible and impossible event sequences.
-
-An example transition:
+A Petri-net transition may represent:
 
 $$
 \text{Credit available}
@@ -1215,34 +1125,15 @@ $$
 \text{Capacity expansion}.
 $$
 
-A production transition may consume:
-
-- labor hours;
-- energy;
-- intermediate goods;
-- machine capacity;
-
-and produce:
-
-- finished goods;
-- wages;
-- emissions;
-- depreciation;
-- tax liabilities.
-
-Colored or typed Petri nets can distinguish commodities, ownership forms, regions, firms, and worker categories.
+A production transition may consume **labor hours, energy, intermediate goods,** and **machine capacity**, while producing **finished goods, wages, emissions, depreciation,** and **tax liabilities**. Colored or typed Petri nets can additionally distinguish commodities, ownership forms, regions, firms, and worker categories.
 
 Petri-net reachability is computationally difficult and has non-elementary lower bounds.
 
 Reference:
 
-- <https://arxiv.org/abs/1809.07115>
+* https://arxiv.org/abs/1809.07115
 
-## 17.2 State machines and statecharts
-
-State machines are appropriate for institutional status and regime transitions.
-
-For example:
+A state machine may represent institutional trajectories such as:
 
 $$
 \text{Operating}
@@ -1250,13 +1141,13 @@ $$
 \text{Financial distress}
 \rightarrow
 \begin{cases}
-\text{Bankruptcy},\\
-\text{State bailout},\\
+\text{Bankruptcy},\
+\text{State bailout},\
 \text{Restructuring}.
 \end{cases}
 $$
 
-A guarded transition could be:
+Transitions can be guarded by institutional conditions:
 
 $$
 \mathrm{Nationalize}(f)
@@ -1268,73 +1159,63 @@ $$
 \mathrm{AuthorizationGranted}.
 $$
 
-Hierarchical statecharts can represent nested and concurrent statuses.
+Hierarchical statecharts extend this representation to nested and concurrent statuses.
 
-## 17.3 Process calculi
-
-Process calculi are appropriate for:
-
-- communication;
-- interaction protocols;
-- message passing;
-- synchronization;
-- nondeterministic choice;
-- creation of new relationships;
-- contractual sequencing;
-- concurrency.
-
-A simplified exchange protocol could be represented as:
+A process calculus may represent an exchange protocol as:
 
 $$
 \begin{aligned}
 \mathrm{Buyer}
 &=
-\overline{\mathrm{request}}\langle q,p\rangle .\mathrm{awaitResponse},\\
+\overline{\mathrm{request}}\langle q,p\rangle
+.\mathrm{awaitResponse},\
 \mathrm{Seller}
 &=
-\mathrm{request}(q,p).(\mathrm{accept}+\mathrm{reject}).\mathrm{end}.
+\mathrm{request}(q,p)
+.(\mathrm{accept}+\mathrm{reject})
+.\mathrm{end}.
 \end{aligned}
 $$
 
-There are formal translations between process calculi and Petri nets. Multi-CCS, for example, was designed with Petri-net semantics and can represent finite place-transition nets within a process language.
+Formal translations exist between process calculi and Petri nets. Multi-CCS, for example, was designed with Petri-net semantics and can represent finite place-transition nets within a process language.
 
 Reference:
 
-- <https://arxiv.org/abs/1011.6433>
-
-## 17.4 Agent-based models
-
-ABMs are appropriate where:
-
-- actors differ;
-- actors have internal state;
-- information is local or incomplete;
-- decision procedures vary;
-- actors learn or imitate;
-- networks evolve;
-- aggregate patterns emerge.
+* https://arxiv.org/abs/1011.6433
 
 An ontology-backed agent can be represented as:
 
 $$
 A_i=
-(\text{roles},\text{resources},\text{capabilities},\text{information},\text{beliefs},\text{objectives},\text{decision procedures},\text{institutional permissions}).
+(
+\text{roles},
+\text{resources},
+\text{capabilities},
+\text{information},
+\text{beliefs},
+\text{objectives},
+\text{decision procedures},
+\text{institutional permissions}
+).
 $$
 
-Arthur's procedural perspective suggests that each agent has a repertoire:
+Following Arthur's procedural perspective, each agent may possess a repertoire:
 
 $$
 \Pi_i=
-\{\pi_{\text{price}},\pi_{\text{hire}},\pi_{\text{invest}},\pi_{\text{negotiate}},\pi_{\text{evade}},\pi_{\text{learn}}\}.
+{
+\pi_{\text{price}},
+\pi_{\text{hire}},
+\pi_{\text{invest}},
+\pi_{\text{negotiate}},
+\pi_{\text{evade}},
+\pi_{\text{learn}}
+}.
 $$
 
-Agents select, modify, or compose procedures according to context.
+Agents select, modify, or compose these procedures according to context.
 
-## 17.5 Dynamical systems and equations
-
-Differential and difference equations remain appropriate for aggregate stocks and continuous relationships.
-
-For example:
+Aggregate stocks and continuous relationships may remain algebraic:
 
 $$
 K_{t+1}=K_t+I_t-\delta K_t,
@@ -1344,21 +1225,9 @@ $$
 N_{t+1}=N_t+r(N_t)-X_t.
 $$
 
-The proposal is not to reject algebra, but to use it where aggregate continuous relationships are the correct abstraction, while using procedural representations for sequence, construction, institutional contingency, and concurrency.
+The proposal is therefore not to reject equations, but to use them where continuous aggregate relationships are the correct abstraction, while using procedural representations for sequence, construction, institutional contingency, and concurrency.
 
-## 17.6 Multilayer networks
-
-Networks can represent:
-
-- ownership;
-- trade;
-- credit;
-- authority;
-- employment;
-- information;
-- supply dependencies.
-
-A multilayer edge set may be:
+Finally, multilayer networks can combine distinct relational structures:
 
 $$
 E=
@@ -1371,14 +1240,8 @@ E_{\text{trade}}
 E_{\text{authority}}.
 $$
 
-This permits distinctions such as a firm being:
+This makes it possible to describe a firm as simultaneously **central in production, peripheral in finance, privately owned, dependent on public procurement, operationally autonomous,** and **politically subordinate**.
 
-- central in production;
-- peripheral in finance;
-- privately owned;
-- dependent on public procurement;
-- operationally autonomous;
-- politically subordinate.
 
 ---
 
