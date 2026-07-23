@@ -975,7 +975,7 @@ These must be indexed to goals, disturbances, time horizons, and distributions.
 For example:
 
 $$
-\operatorname{Resilience}(S,d,\tau,\phi)
+\mathrm{Resilience}(S,d,\tau,\phi)
 $$
 
 could denote the ability of system $S$, after disturbance $d$, to recover within time $\tau$ while preserving function $\phi$.
@@ -1016,7 +1016,7 @@ A communist prototype, depending on the philosophical tradition formalized, may 
 Observed systems can then be compared with idealized prototypes using a context- and weight-dependent similarity function:
 
 $$
-\operatorname{Sim}(S,P\mid C,W),
+\mathrm{Sim}(S,P\mid C,W),
 $$
 
 where:
