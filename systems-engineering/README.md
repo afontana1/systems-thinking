@@ -94,6 +94,9 @@
 ## Modeling, Architecture, and Views
 
 - [Object Management Group (OMG) Specification Catalog](https://www.omg.org/spec/)
+  - [UML](https://www.omg.org/spec/UML)
+  - [UAF](https://www.omg.org/spec/UAF)
+  - [SysML](https://www.omg.org/spec/SysML)
 - [SysML](https://sysml.org/)
 - [SysML Forum](https://sysmlforum.com/)
 
