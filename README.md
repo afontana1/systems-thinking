@@ -8,6 +8,8 @@
 - [Little Book of Discrete Event Simulation](https://des.hsma.co.uk/)
 - [Mojo GPU Programming](https://puzzles.modular.com/introduction.html)
 - [Computational Neuroscience Tutorials](https://compneuro.neuromatch.io/tutorials/intro.html)
+- [Introduction to Computational Thinking and Data Science](https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/)
+- [Introduction to Computational Thinking](https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020/)
 
 1. [Intro to Numerical Methods](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)
 2. [Differential Equations](https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/)
@@ -77,3 +79,4 @@
 15. [Undergrad Complexity Theory at CMU](https://youtube.com/playlist?list=PLm3J0oaFux3YL5vLXpzOyJiLtqLp6dCW2&si=WqkP7mDDCfUMY9Hs)
 16. [Complexity Theory I - Easy Theory](https://youtube.com/playlist?list=PLylTVsqZiRXOpSWvkeuFoj-qzuF3xDiAs&si=GMk94l0uYeOXQ2D8)
 17. [Computational Complexity Lectures](https://youtube.com/playlist?list=PLdUzuimxVcC0DENcdT8mfhI3iRRJLVjqH&si=QzuWmMEfe8na4lm3)
+18. [Mathematics for Computer Science](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/)
