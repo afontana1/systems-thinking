@@ -7,7 +7,7 @@ A useful grounding principle: architecture is usually described through **multip
 
 **Table of Contents**
 
-- [1. Views and Viewpoints](#1-views-and-viewpoints)
+- [Part I — Views and Viewpoints](#part-i--views-and-viewpoints)
   - [1.1 Enterprise / Mission / Strategic View](#11-enterprise--mission--strategic-view)
   - [1.2 Stakeholder / Context View](#12-stakeholder--context-view)
   - [1.3 Operational View](#13-operational-view)
@@ -15,49 +15,51 @@ A useful grounding principle: architecture is usually described through **multip
   - [1.5 Functional / Logical View](#15-functional--logical-view)
   - [1.6 Behavioral / Dynamic View](#16-behavioral--dynamic-view)
   - [1.7 Information / Data View](#17-information--data-view)
-  - [1.9 Service View](#19-service-view)
-  - [1.1.0 Physical / Structural View](#110-physical--structural-view)
-  - [1.1.1 Interface View](#111-interface-view)
-  - [1.1.2 Allocation / Traceability View](#112-allocation--traceability-view)
-  - [1.1.3 Requirements / Needs View](#113-requirements--needs-view)
-  - [1.1.4 Verification, Validation, and Test View](#114-verification-validation-and-test-view)
-  - [1.1.5 Analysis / Performance / Simulation View](#115-analysis--performance--simulation-view)
-  - [1.1.6 Safety / Security / Assurance View](#116-safety--security--assurance-view)
-  - [1.1.7 Deployment / Installation / Operational Support View](#117-deployment--installation--operational-support-view)
-  - [1.1.8 Project / Lifecycle / Evolution View](#118-project--lifecycle--evolution-view)
+  - [1.8 Service View](#18-service-view)
+  - [1.9 Physical / Structural View](#19-physical--structural-view)
+  - [1.10 Interface View](#110-interface-view)
+  - [1.11 Allocation / Traceability View](#111-allocation--traceability-view)
+  - [1.12 Requirements / Needs View](#112-requirements--needs-view)
+  - [1.13 Verification, Validation, and Test View](#113-verification-validation-and-test-view)
+  - [1.14 Analysis / Performance / Simulation View](#114-analysis--performance--simulation-view)
+  - [1.15 Safety / Security / Assurance View](#115-safety--security--assurance-view)
+  - [1.16 Deployment / Installation / Operational Support View](#116-deployment--installation--operational-support-view)
+  - [1.17 Project / Lifecycle / Evolution View](#117-project--lifecycle--evolution-view)
   - [Compact checklist version](#compact-checklist-version)
-- [2. Enterprise, mission, and strategic models](#2-enterprise-mission-and-strategic-models)
-- [3. Stakeholder, context, and environment models](#3-stakeholder-context-and-environment-models)
-- [4. Operational architecture models](#4-operational-architecture-models)
-- [5. Capability models](#5-capability-models)
-- [6. Functional architecture models](#6-functional-architecture-models)
-- [7. Behavioral and dynamic models](#7-behavioral-and-dynamic-models)
-- [8. Information and data architecture models](#8-information-and-data-architecture-models)
-- [9. Service architecture models](#9-service-architecture-models)
-- [10. Physical, structural, and resource architecture models](#10-physical-structural-and-resource-architecture-models)
-- [11. Interface and integration models](#11-interface-and-integration-models)
-- [12. Requirements and specification models](#12-requirements-and-specification-models)
-- [13. Allocation, traceability, and consistency models](#13-allocation-traceability-and-consistency-models)
-- [14. Verification, validation, and test models](#14-verification-validation-and-test-models)
-- [15. Performance, analysis, and trade-study models](#15-performance-analysis-and-trade-study-models)
-- [16. Safety, security, resilience, and assurance models](#16-safety-security-resilience-and-assurance-models)
-- [17. Software architecture models](#17-software-architecture-models)
-- [18. Human, organizational, and personnel models](#18-human-organizational-and-personnel-models)
-- [19. Deployment, operations, sustainment, and lifecycle models](#19-deployment-operations-sustainment-and-lifecycle-models)
-- [20. Project, program, and governance models](#20-project-program-and-governance-models)
-- [21. Architecture framework-specific view families](#21-architecture-framework-specific-view-families)
-  - [ISO/IEC/IEEE 42010 framing](#isoiecieee-42010-framing)
-  - [UAF / DoDAF-style architecture families](#uaf--dodaf-style-architecture-families)
-  - [SysML v1 diagram families](#sysml-v1-diagram-families)
-  - [SysML v2 model emphasis](#sysml-v2-model-emphasis)
-- [22. Cross-view “master hierarchy” of model types](#22-cross-view-master-hierarchy-of-model-types)
-- [23. How the major views relate](#23-how-the-major-views-relate)
-- [24. “Which diagram should I use?” by question](#24-which-diagram-should-i-use-by-question)
-- [25. Minimal “complete architecture package” for a serious system](#25-minimal-complete-architecture-package-for-a-serious-system)
+- [Part II — Model and Diagram Class Reference](#part-ii--model-and-diagram-class-reference)
+  - [2. Enterprise, mission, and strategic models](#2-enterprise-mission-and-strategic-models)
+  - [3. Stakeholder, context, and environment models](#3-stakeholder-context-and-environment-models)
+  - [4. Operational architecture models](#4-operational-architecture-models)
+  - [5. Capability models](#5-capability-models)
+  - [6. Functional architecture models](#6-functional-architecture-models)
+  - [7. Behavioral and dynamic models](#7-behavioral-and-dynamic-models)
+  - [8. Information and data architecture models](#8-information-and-data-architecture-models)
+  - [9. Service architecture models](#9-service-architecture-models)
+  - [10. Physical, structural, and resource architecture models](#10-physical-structural-and-resource-architecture-models)
+  - [11. Interface and integration models](#11-interface-and-integration-models)
+  - [12. Requirements and specification models](#12-requirements-and-specification-models)
+  - [13. Allocation, traceability, and consistency models](#13-allocation-traceability-and-consistency-models)
+  - [14. Verification, validation, and test models](#14-verification-validation-and-test-models)
+  - [15. Performance, analysis, and trade-study models](#15-performance-analysis-and-trade-study-models)
+  - [16. Safety, security, resilience, and assurance models](#16-safety-security-resilience-and-assurance-models)
+  - [17. Software architecture models](#17-software-architecture-models)
+  - [18. Human, organizational, and personnel models](#18-human-organizational-and-personnel-models)
+  - [19. Deployment, operations, sustainment, and lifecycle models](#19-deployment-operations-sustainment-and-lifecycle-models)
+  - [20. Project, program, and governance models](#20-project-program-and-governance-models)
+- [Part III — Frameworks and Cross-View Guidance](#part-iii--frameworks-and-cross-view-guidance)
+  - [21. Architecture framework-specific view families](#21-architecture-framework-specific-view-families)
+  - [22. Cross-view “master hierarchy” of model types](#22-cross-view-master-hierarchy-of-model-types)
+  - [23. How the major views relate](#23-how-the-major-views-relate)
+  - [24. “Which diagram should I use?” by question](#24-which-diagram-should-i-use-by-question)
+  - [25. Minimal “complete architecture package” for a serious system](#25-minimal-complete-architecture-package-for-a-serious-system)
 
 ---
 
-# 1. Views and Viewpoints
+# Part I — Views and Viewpoints
+
+A **view** is organized around stakeholder concerns and the questions the architecture must answer. A **model or diagram class** is a representation that can help construct one or more views. The relationship is therefore many-to-many: one view may use several model classes, and one model class may support several views.
+
+Each view below contains its engagement questions followed by links to the most relevant model and diagram families in Part II. The complete model descriptions remain in Part II so that no model is forced into only one view.
 
 ## 1.1 Enterprise / Mission / Strategic View
 
@@ -88,6 +90,15 @@ Questions someone might ask:
 
 ---
 
+
+### Supporting model and diagram classes
+
+- [Enterprise, mission, and strategic models](#2-enterprise-mission-and-strategic-models)
+- [Capability models](#5-capability-models)
+- [Project, program, and governance models](#20-project-program-and-governance-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
 ## 1.2 Stakeholder / Context View
 
 **Core question:** Who and what surrounds the system?
@@ -116,6 +127,15 @@ Questions someone might ask:
 20. What context changes would break the architecture?
 
 ---
+
+
+### Supporting model and diagram classes
+
+- [Stakeholder, context, and environment models](#3-stakeholder-context-and-environment-models)
+- [Operational architecture models](#4-operational-architecture-models)
+- [Human, organizational, and personnel models](#18-human-organizational-and-personnel-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
 
 ## 1.3 Operational View
 
@@ -146,6 +166,16 @@ Questions someone might ask:
 
 ---
 
+
+### Supporting model and diagram classes
+
+- [Operational architecture models](#4-operational-architecture-models)
+- [Behavioral and dynamic models](#7-behavioral-and-dynamic-models)
+- [Human, organizational, and personnel models](#18-human-organizational-and-personnel-models)
+- [Information and data architecture models](#8-information-and-data-architecture-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
 ## 1.4 Capability View
 
 **Core question:** What abilities must the enterprise or system provide?
@@ -174,6 +204,15 @@ Questions someone might ask:
 20. How does this system contribute to enterprise capability?
 
 ---
+
+
+### Supporting model and diagram classes
+
+- [Capability models](#5-capability-models)
+- [Enterprise, mission, and strategic models](#2-enterprise-mission-and-strategic-models)
+- [Allocation, traceability, and consistency models](#13-allocation-traceability-and-consistency-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
 
 ## 1.5 Functional / Logical View
 
@@ -204,6 +243,15 @@ Questions someone might ask:
 
 ---
 
+
+### Supporting model and diagram classes
+
+- [Functional architecture models](#6-functional-architecture-models)
+- [Behavioral and dynamic models](#7-behavioral-and-dynamic-models)
+- [Allocation, traceability, and consistency models](#13-allocation-traceability-and-consistency-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
 ## 1.6 Behavioral / Dynamic View
 
 **Core question:** How does the system behave over time?
@@ -232,6 +280,15 @@ Questions someone might ask:
 20. Is the behavior deterministic, probabilistic, adaptive, or emergent?
 
 ---
+
+
+### Supporting model and diagram classes
+
+- [Behavioral and dynamic models](#7-behavioral-and-dynamic-models)
+- [Operational architecture models](#4-operational-architecture-models)
+- [Verification, validation, and test models](#14-verification-validation-and-test-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
 
 ## 1.7 Information / Data View
 
@@ -262,7 +319,16 @@ Questions someone might ask:
 
 ---
 
-## 1.9 Service View
+
+### Supporting model and diagram classes
+
+- [Information and data architecture models](#8-information-and-data-architecture-models)
+- [Interface and integration models](#11-interface-and-integration-models)
+- [Software architecture models](#17-software-architecture-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.8 Service View
 
 **Core question:** What services are provided and consumed?
 
@@ -291,7 +357,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.0 Physical / Structural View
+
+### Supporting model and diagram classes
+
+- [Service architecture models](#9-service-architecture-models)
+- [Interface and integration models](#11-interface-and-integration-models)
+- [Software architecture models](#17-software-architecture-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.9 Physical / Structural View
 
 **Core question:** What is the system made of?
 
@@ -320,7 +395,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.1 Interface View
+
+### Supporting model and diagram classes
+
+- [Physical, structural, and resource architecture models](#10-physical-structural-and-resource-architecture-models)
+- [Software architecture models](#17-software-architecture-models)
+- [Deployment, operations, sustainment, and lifecycle models](#19-deployment-operations-sustainment-and-lifecycle-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.10 Interface View
 
 **Core question:** How do system elements interact across boundaries?
 
@@ -349,7 +433,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.2 Allocation / Traceability View
+
+### Supporting model and diagram classes
+
+- [Interface and integration models](#11-interface-and-integration-models)
+- [Information and data architecture models](#8-information-and-data-architecture-models)
+- [Service architecture models](#9-service-architecture-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.11 Allocation / Traceability View
 
 **Core question:** How do requirements, functions, behaviors, components, tests, and risks connect?
 
@@ -378,7 +471,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.3 Requirements / Needs View
+
+### Supporting model and diagram classes
+
+- [Allocation, traceability, and consistency models](#13-allocation-traceability-and-consistency-models)
+- [Requirements and specification models](#12-requirements-and-specification-models)
+- [Verification, validation, and test models](#14-verification-validation-and-test-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.12 Requirements / Needs View
 
 **Core question:** What must the system satisfy?
 
@@ -407,7 +509,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.4 Verification, Validation, and Test View
+
+### Supporting model and diagram classes
+
+- [Requirements and specification models](#12-requirements-and-specification-models)
+- [Stakeholder, context, and environment models](#3-stakeholder-context-and-environment-models)
+- [Allocation, traceability, and consistency models](#13-allocation-traceability-and-consistency-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.13 Verification, Validation, and Test View
 
 **Core question:** How will we prove the system is correct and useful?
 
@@ -436,7 +547,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.5 Analysis / Performance / Simulation View
+
+### Supporting model and diagram classes
+
+- [Verification, validation, and test models](#14-verification-validation-and-test-models)
+- [Requirements and specification models](#12-requirements-and-specification-models)
+- [Performance, analysis, and trade-study models](#15-performance-analysis-and-trade-study-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.14 Analysis / Performance / Simulation View
 
 **Core question:** How well does the system perform, and what tradeoffs matter?
 
@@ -465,7 +585,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.6 Safety / Security / Assurance View
+
+### Supporting model and diagram classes
+
+- [Performance, analysis, and trade-study models](#15-performance-analysis-and-trade-study-models)
+- [Behavioral and dynamic models](#7-behavioral-and-dynamic-models)
+- [Safety, security, resilience, and assurance models](#16-safety-security-resilience-and-assurance-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.15 Safety / Security / Assurance View
 
 **Core question:** How can the system cause harm, be compromised, or fail assurance expectations?
 
@@ -494,7 +623,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.7 Deployment / Installation / Operational Support View
+
+### Supporting model and diagram classes
+
+- [Safety, security, resilience, and assurance models](#16-safety-security-resilience-and-assurance-models)
+- [Requirements and specification models](#12-requirements-and-specification-models)
+- [Verification, validation, and test models](#14-verification-validation-and-test-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.16 Deployment / Installation / Operational Support View
 
 **Core question:** How is the system fielded, operated, maintained, and supported?
 
@@ -523,7 +661,16 @@ Questions someone might ask:
 
 ---
 
-## 1.1.8 Project / Lifecycle / Evolution View
+
+### Supporting model and diagram classes
+
+- [Deployment, operations, sustainment, and lifecycle models](#19-deployment-operations-sustainment-and-lifecycle-models)
+- [Physical, structural, and resource architecture models](#10-physical-structural-and-resource-architecture-models)
+- [Human, organizational, and personnel models](#18-human-organizational-and-personnel-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
+## 1.17 Project / Lifecycle / Evolution View
 
 **Core question:** How will the system change over time?
 
@@ -552,6 +699,15 @@ Questions someone might ask:
 
 ---
 
+
+### Supporting model and diagram classes
+
+- [Project, program, and governance models](#20-project-program-and-governance-models)
+- [Deployment, operations, sustainment, and lifecycle models](#19-deployment-operations-sustainment-and-lifecycle-models)
+- [Enterprise, mission, and strategic models](#2-enterprise-mission-and-strategic-models)
+
+These references are intentionally not one-to-one. The same model class may support this view and several others, depending on the stakeholder concern and the content selected for presentation.
+
 ## Compact checklist version
 
 | View                                | Primary engagement question                  |
@@ -575,6 +731,10 @@ Questions someone might ask:
 | Project / Lifecycle / Evolution     | How will it change over time?                |
 
 ---
+
+# Part II — Model and Diagram Class Reference
+
+This part is a reference catalog organized by model or diagram family. It retains the complete purposes, notations, framework mappings, and examples from the original taxonomy. These families are not substitutes for views: they are reusable model kinds that can contribute to multiple views.
 
 # 2. Enterprise, mission, and strategic models
 
@@ -1041,6 +1201,10 @@ These answer: **How is the architecture delivered and governed?**
 | Portfolio map                       | Systems/projects and investment relationships      |
 
 ---
+
+# Part III — Frameworks and Cross-View Guidance
+
+This part preserves the framework-specific mappings, consolidated hierarchy, cross-view relationships, diagram-selection guidance, and baseline architecture package.
 
 # 21. Architecture framework-specific view families
 
