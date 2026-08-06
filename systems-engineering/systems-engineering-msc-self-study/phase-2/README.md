@@ -142,9 +142,7 @@ Do not overlap the three courses unless the learner is using a real project with
 | EN.645.768 System Design & Integration | **Fully expanded** | 2026-08-05 |
 | EN.645.769 System Test & Evaluation | **Fully expanded** | 2026-08-05 |
 
-“Fully expanded” means the course includes a complete specification, readiness diagnostic, detailed weekly learning outcomes and readings, worked examples, guided and independent exercises, deliverable specifications, rubrics, mastery gates, formal reviews, a capstone, and handoff requirements.
-
-All three Phase 2 courses are now fully expanded. The phase can be completed as a continuous concept-to-evidence portfolio using the baseline and review rules above.
+All three Phase 2 courses are fully expanded. “Fully expanded” means the course includes a complete specification, readiness diagnostic, detailed weekly learning outcomes and readings, worked examples, guided and independent exercises, deliverable specifications, rubrics, mastery gates, formal reviews, a capstone, and handoff requirements.
 
 ## Phase exit criteria
 

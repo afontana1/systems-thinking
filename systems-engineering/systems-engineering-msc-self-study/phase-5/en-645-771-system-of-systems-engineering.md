@@ -1,479 +1,1847 @@
 # EN.645.771 — System of Systems Engineering
 
-**Credits:** 3
+**Credits:** 3  
+**Prerequisite:** EN.645.769 System Test & Evaluation or instructor/advisor approval  
+**Recommended self-study preparation:** EN.645.781 Systems Thinking and Systems Dynamics, EN.645.784 Decision Science & Analytics, EN.645.632 Applied Analytics for MBSE, EN.645.758 Advanced Systems Modeling and Simulation, and EN.645.782 Foundations of Digital and Mission Engineering
 
-This course addresses the special engineering problems associated with conceiving, developing, and operating systems composed of groups of complex systems closely linked to function as integral entities. The course will start with the underlying fundamentals of systems’ requirements, design, test and evaluation, and deployment, and how they are altered in the multi-system environment. These topics will then be extended to information flow and system interoperability, confederated modeling and simulation, use of commercial off-the-shelf elements, and systems engineering collaboration between different organizations. Advanced principles of information fusion, causality theory with Bayesian networks, and capability dependencies will be explored. Several case studies will be discussed for specific military systems of systems, including missile defense and combatant vehicle design, as well as selected commercial examples.Course Note(s): Selected as one of the electives in the MSE or MS program or a required course for the post-master’s certificate.
-Prerequisite(s): EN.645.769 System Test and Evaluation OR EN.655.769 Healthcare Systems Engineering Test and Evaluation or advisor and instructor approval.
+## 1. Course purpose
 
-This course sits on top of core systems engineering, but shifts the focus to **systems made from independently useful constituent systems** that must still coordinate to produce a larger capability. That distinction is central to current SoS guidance from SEBoK and INCOSE. ([SEBoK][202])
+This course prepares a systems engineer to conceive, analyze, architect, integrate, test, operate, and evolve a **system of systems (SoS)**: a capability assembled from independently useful and independently managed constituent systems whose interactions create outcomes no constituent can deliver alone.
 
-### How to use this plan
+The course does not treat an SoS as a large product with more boxes. It treats constituent independence, asynchronous evolution, distributed authority, incomplete information, conflicting objectives, legacy constraints, interoperability, and emergence as first-class engineering conditions. Requirements become negotiated capability agreements. Architecture becomes a set of mission, logical, physical, information, governance, and evolution constraints. Integration and T&E become distributed evidence problems. Risk includes cascading dependencies and strategic behavior. Decisions must remain defensible when no actor controls the entire lifecycle.
 
-Pick one **running SoS case** for all 12 weeks so your artifacts build on each other. Good options:
+The final product is a controlled **Regional Mobility and Emergency Access SoS Engineering Release** containing the SoS framing, constituent and authority registry, mission and capability architecture, physical and information architecture, interoperability contracts, COTS/vendor assessment, information-fusion and Bayesian analysis, federated M&S concept, risk/resilience and distributed T&E strategy, evolution roadmap, decision record, live-change response, and oral defense.
 
-* integrated air and missile defense network
-* autonomous vehicle fleet and traffic-control ecosystem
-* emergency response communications SoS
-* hospital network plus EMS plus public-health coordination system
-* port logistics and freight tracking SoS
+## 2. Source scope and self-study adaptation
 
-Budget about **8–10 hours per week**:
+The Fall 2026 JHU syllabus organizes the course around eight topic groups: SoS definitions, attributes, and behaviors; management of SoS development; logical architecture; physical architecture; risk management and T&E; information architecture; SoS modeling and simulation; and decision making under uncertainty. Its learning outcomes require learners to identify SoS attributes and interactions, plan acquisition and fielding, develop model-based logical/physical/information architectures, manage technical and operational risk, represent uncertainty and information flow mathematically, and apply decision theory to alternative paths. ([1], [2])
 
-* 3 hours reading
-* 2 hours lectures/course notes
-* 3 hours exercises and artifacts
-* 1–2 hours reflection
+The source syllabus uses Jamshidi's *System of Systems Engineering* and the 2008 DoD *Systems Engineering Guide for Systems of Systems*. This self-study adaptation preserves that spine while adding:
 
-By the end, you should have a small **SoSE portfolio**:
+* a controlled civil/public-service SoS case that complements the source military examples;
+* explicit distinction among directed, acknowledged, collaborative, and virtual SoS conditions;
+* mission-thread and capability-dependency modeling aligned with current Mission Engineering guidance;
+* ISO/IEC/IEEE 42010 architecture-description discipline and an optional UAF modeling path;
+* syntactic, semantic, temporal, behavioral, security, policy, and organizational interoperability analysis;
+* governed information fusion, provenance, confidence, and Bayesian-network exercises;
+* HLA-based federated M&S concepts and model-credibility planning;
+* distributed integration and T&E across constituent ownership boundaries;
+* COTS/vendor, data-rights, update-cadence, supply-chain, cyber-resilience, and lifecycle analysis;
+* network analysis, cascading-failure scenarios, uncertainty, robustness, and evolution roadmapping;
+* formal reviews, a live constituent-change challenge, required revision, and oral defense.
 
-* SoS context and constituent-system map
-* requirements and capability-dependency model
-* interoperability and information-flow analysis
-* COTS assessment
-* federated M&S concept
-* fusion/Bayesian reasoning exercise
-* collaboration/governance plan
-* case-study memos
-* final SoSE recommendation package
+The course does not reproduce private JHU lectures, unpublished assignments, or copyrighted textbook chapters. Public standards pages, public government guidance, the learner's authorized copies, and original course exercises are used instead.
+
+## 3. Relationship to adjacent courses
+
+### Inputs from earlier phases
+
+The learner receives:
+
+* controlled lifecycle, requirements, architecture, interface, integration, T&E, risk, and configuration baselines;
+* MBSE, UAF/SysML, network, simulation, uncertainty, decision-analysis, and model-credibility capabilities;
+* mission threads, digital-thread governance, process improvement, and transformation evidence;
+* the Autonomous Campus Mobility 2030 technical and organizational baselines.
+
+### Outputs to later Phase 5 courses
+
+The course produces:
+
+* an independently managed constituent and organization registry;
+* a capability, mission-thread, logical, physical, and information architecture;
+* an authority, governance, interoperability, risk, and evolution baseline;
+* evidence about enterprise conflicts, incentives, processes, investment, and control limitations for EN.645.753;
+* network, feedback, adaptation, cascading-risk, and intervention hypotheses for EN.645.742.
+
+## 4. Prerequisites and readiness diagnostic
+
+Before Week 1, complete a 90-minute diagnostic. The learner should be able to:
+
+1. Distinguish a system element, subsystem, external system, platform, product line, family of systems, SoS, enterprise, and ecosystem.
+2. Trace one mission outcome through scenarios, functions, requirements, architecture, interfaces, verification, and operational evidence.
+3. Explain why constituent operational and managerial independence changes requirements, integration, and test planning.
+4. Construct a basic directed network and interpret centrality, path, cut-set, and dependency results cautiously.
+5. Read a conditional-probability table and perform a simple Bayes update.
+6. Explain verification, validation, accreditation/use authorization, and the limits of a model-supported claim.
+7. Identify syntactic, semantic, temporal, security, and governance interoperability failures.
+8. Reproduce one prior notebook/model from a fresh checkout and update its assumptions and decision record.
+
+**Diagnostic standard:** at least 80%, with no failure on constituent independence, mission traceability, probability interpretation, model credibility, or distributed evidence. Complete targeted remediation before beginning the SoS baseline.
+
+## 5. Course learning outcomes
+
+By the end of the course, the learner will be able to:
+
+1. **Identify and justify** whether a capability is a directed, acknowledged, collaborative, or virtual SoS and explain the engineering consequences. *(C1, C11)*
+2. **Define and govern** SoS boundaries, constituents, organizations, authority, ownership, lifecycle, assumptions, and evolution constraints. *(C1, C10, C11)*
+3. **Develop** mission outcomes, scenarios, mission threads, capabilities, dependencies, and SoS-level requirements under distributed ownership. *(C2, C3, C11)*
+4. **Construct and assess** logical and physical SoS architectures, constituent allocations, interface contracts, alternatives, and change impacts. *(C3, C4, C11)*
+5. **Develop and validate** an information architecture addressing exchange content, semantics, timing, provenance, confidence, security, privacy, policy, and degraded behavior. *(C3, C5, C11)*
+6. **Analyze** COTS, vendor, legacy, data-rights, update-cadence, supply-chain, and open-architecture tradeoffs. *(C3, C5, C10, C11)*
+7. **Design and evaluate** information-fusion and Bayesian-network models with explicit causality assumptions, calibration, uncertainty, and decision use. *(C7, C8, C9, C11)*
+8. **Plan and assess** a federated SoS M&S environment with interoperability, time, ownership, verification, validation, and credibility controls. *(C4, C7, C8, C11)*
+9. **Integrate** risk, cyber resilience, safety, cascading dependencies, recovery, and mission assurance across constituent boundaries. *(C6, C10, C11)*
+10. **Develop** a distributed integration, verification, validation, and operational T&E strategy for SoS capability claims. *(C6, C11)*
+11. **Apply** network, uncertainty, sensitivity, robustness, and decision-analysis methods to SoS architecture and evolution choices. *(C8, C9, C11)*
+12. **Recommend and defend** an implementable SoS architecture and evolution roadmap with authorities, evidence, risks, unresolved conflicts, and conditions for revision. *(C9, C10, C11, C12)*
+
+## 6. Essential questions
+
+* What makes this capability an SoS rather than a large integrated system?
+* Which outcomes require coordination, and which constituent systems remain independently useful?
+* Who can authorize, fund, implement, reject, delay, or reverse each change?
+* Which capability claims are owned at SoS level, constituent level, or jointly?
+* What architecture can remain coherent while constituents evolve asynchronously?
+* Which interoperability failures are technical, semantic, temporal, security-related, policy-related, or organizational?
+* How should conflicting or uncertain information be fused without hiding provenance and confidence?
+* What can a federated model establish, and what still requires distributed test or operational evidence?
+* How can the SoS degrade, reconfigure, recover, and learn after disruption?
+* Which decision remains robust when constituent participation, interfaces, data quality, threats, costs, or missions change?
+
+## 7. Running case and controlled evidence
+
+### Regional Mobility and Emergency Access SoS
+
+The learner serves as lead SoS engineer for a fictional regional coalition charged with maintaining accessible mobility and emergency access during normal operations and disruption.
+
+The initial constituent set includes:
+
+* municipal bus and rail services;
+* campus shuttle and autonomous-mobility services;
+* regional paratransit providers;
+* EMS dispatch and hospital transport coordination;
+* traffic management and connected signals;
+* emergency communications and public alerts;
+* electric utility and charging networks;
+* telecommunications, mapping, identity, and payment services;
+* private rideshare, micromobility, logistics, and autonomy vendors;
+* public-safety, accessibility, labor, privacy, cybersecurity, regulatory, and community organizations.
+
+Controlled scenario data include:
+
+* normal weekday demand and accessibility-service requests;
+* a stadium-event surge;
+* a severe storm with localized flooding and power loss;
+* a ransomware event affecting one payment/identity provider;
+* a hospital evacuation requiring time-critical accessible transport;
+* conflicting location and availability reports from multiple sources;
+* planned constituent upgrades with incompatible release windows;
+* a vendor acquisition that changes data rights and support policy.
+
+The case is fictional. No operational, personal, medical, law-enforcement, or security-sensitive data are used.
+
+### Required case artifacts
+
+Maintain:
+
+* SoS charter, boundary, classification, and assumptions;
+* constituent-system and organization registry;
+* authority, ownership, funding, and change-control map;
+* mission outcomes, measures, scenarios, threads, and capability dependencies;
+* logical, physical, and information architectures;
+* interface and interoperability contracts;
+* COTS/vendor/legacy assessment;
+* information-fusion and Bayesian model;
+* federated M&S and credibility plan;
+* risk, resilience, cyber, safety, and cascading-dependency analysis;
+* distributed integration and T&E strategy;
+* architecture alternatives, decision analysis, evolution roadmap, and review records.
+
+## 8. Tool and environment policy
+
+Use open, inspectable tools unless a licensed environment is already available.
+
+**Minimum toolchain**
+
+* Git or equivalent version control;
+* Markdown and CSV/JSON/YAML source artifacts;
+* Mermaid, PlantUML, diagrams.net, or a SysML/UAF-capable modeler;
+* Python 3 with Jupyter;
+* NetworkX for dependency/network analysis;
+* pandas and scipy for analysis;
+* pgmpy, pomegranate, or transparent custom code for Bayesian networks;
+* SimPy for a lightweight federated/discrete-event prototype.
+
+**Optional advanced path**
+
+* Cameo/UAF or another architecture repository;
+* an HLA runtime infrastructure or FMI co-simulation environment;
+* graph database and query tooling;
+* geospatial tools for scenario and route analysis.
+
+A screenshot is not a model, a dashboard is not evidence, and a probabilistic output is not credible unless source data, assumptions, code, calibration, limitations, and decision use are controlled.
+
+## 9. Resource hierarchy
+
+### Required backbone
+
+* Fall 2026 JHU syllabus and course page. ([1], [2])
+* DoD *Systems Engineering Guide for Systems of Systems* and current DoD Systems Engineering Guidebook. ([3], [4])
+* DoD Mission Engineering Guide 2.0 and Mission Architecture Style Guide. ([5], [6])
+* ISO/IEC/IEEE 42010 architecture-description concepts and OMG UAF. ([7], [8])
+
+### Analytic and assurance resources
+
+* IEEE 1516-2025 HLA framework and interface family. ([9], [10])
+* NASA-STD-7009B and NASA-HDBK-7009B for model credibility. ([11], [12])
+* NIST SP 800-160 Vol. 2 Rev. 1 for cyber resilience. ([13])
+* NASA and NIST Bayesian-network applications. ([14], [15])
+* NASA Risk Management Handbook and DoD cyber DT&E guidance. ([16], [17])
+* NASA COTS/commercial systems handbook. ([18])
+
+### Tool references
+
+* NetworkX, pgmpy, and SimPy documentation. ([19], [20], [21])
+
+## 10. Assessment structure
+
+| Assessment category | Weight |
+|---|---:|
+| Weekly knowledge checks and retrieval | 10% |
+| Weekly SoS artifacts and revision | 25% |
+| Architecture and interoperability reviews | 15% |
+| Analytic models: network, Bayesian, and federated M&S | 15% |
+| Risk, resilience, and distributed T&E package | 10% |
+| Final SoS Engineering Release | 15% |
+| Live change and oral defense | 10% |
+
+All critical findings must be closed or explicitly accepted as residual risk. Point accumulation cannot compensate for fabricated evidence, unsupported mission claims, hidden uncertainty, or an architecture that assumes authority the coalition does not possess.
+
+## 11. Twelve-week course map
+
+| Week | Topic | Primary evidence |
+|---|---|---|
+| 1 | SoS definition, attributes, behavior, and receiving review | SoS framing and classification baseline |
+| 2 | Management, governance, acquisition, fielding, and evolution | Constituent/authority registry and governance plan |
+| 3 | Mission outcomes, capability dependencies, and logical architecture | Mission threads and logical architecture |
+| 4 | Physical architecture, allocations, interfaces, COTS, and legacy | Physical alternatives and constituent contracts |
+| 5 | Information architecture and interoperability | Information-exchange and interoperability baseline |
+| 6 | Information fusion, provenance, confidence, and data quality | Fusion architecture and confidence model |
+| 7 | Bayesian networks, causality, and uncertainty | Verified Bayesian decision-support model |
+| 8 | Federated modeling, simulation, and credibility | Federation design and M&S credibility plan |
+| 9 | Risk, cascading failure, cyber resilience, and mission assurance | Integrated risk/resilience model |
+| 10 | Distributed integration, verification, validation, and operational T&E | SoS T&E and evidence strategy |
+| 11 | Decision making, deployment, evolution, and portfolio roadmap | Robust architecture decision and evolution roadmap |
+| 12 | Final SoS Engineering Review and live constituent change | Controlled release, defense, and Phase 5 handoff |
+
+## 12. Formal review gates
+
+| Gate | Timing | Decision |
+|---|---|---|
+| SoS Framing and Governance Review | End of Week 2 | Is the SoS boundary, classification, mission, constituent set, and authority model credible enough to architect? |
+| Logical and Physical Architecture Review | End of Week 4 | Do mission threads, capability dependencies, allocations, interfaces, and alternatives support the required outcomes? |
+| Information and Interoperability Review | End of Week 6 | Are information, semantics, timing, provenance, confidence, security, and governance adequate for analysis and integration? |
+| M&S, Risk, and T&E Readiness Review | End of Week 10 | Are models and distributed evidence plans credible for the stated decisions and capability claims? |
+| SoS Evolution Decision Review | End of Week 11 | Which architecture/evolution path is recommended, under what conditions, and with what residual risk? |
+| Final SoS Engineering Review | Week 12 | Is the integrated release coherent, reproducible, implementable, and defensible under live change? |
+
+## 13. Major assignment specifications
+
+### A. SoS architecture baseline
+
+Produce a queryable or source-controlled architecture containing mission context, capabilities, threads, constituents, organizations, logical nodes, physical allocations, interfaces, information exchanges, measures, risks, and evidence relationships. At least three mission threads must include degraded or off-nominal paths.
+
+### B. Information-fusion and Bayesian analysis
+
+Develop a bounded decision-support model for conflicting reports about service availability, route safety, constituent health, or emergency transport capacity. Preserve source provenance, dependence assumptions, conditional probabilities, calibration evidence, sensitivity, and prohibited uses.
+
+### C. Federated M&S and distributed T&E package
+
+Define participating models and test environments, ownership, exchanged objects, time management, initialization, data rights, verification, validation, accreditation/use decision, distributed test responsibilities, and operational evidence gaps.
+
+### D. SoS evolution decision
+
+Compare at least three feasible paths, including a low-integration or governance-first alternative. Evaluate mission outcomes, interoperability, resilience, affordability, schedule, participation, vendor/data-rights, uncertainty, and decision reversals.
+
+## 14. Common rubric dimensions
+
+| Dimension | Excellent | Proficient | Developing | Insufficient |
+|---|---|---|---|---|
+| SoS framing and independence | Boundary, constituent utility, authority, and evolution are explicit and validated | Main conditions are correct with minor gaps | Independence or authority is simplified | Treats SoS as a hierarchical product |
+| Architecture and traceability | Mission, capability, logical, physical, information, and evidence views are queryably connected | Traceability is substantially complete | Multiple orphaned relationships remain | Architecture is disconnected or decorative |
+| Interoperability and information quality | Semantics, timing, provenance, confidence, security, policy, and degradation are engineered | Major exchange conditions are covered | Focuses mainly on format/connectivity | Critical information assumptions are hidden |
+| Analytic credibility | Network, Bayesian, simulation, and uncertainty claims are verified, validated, reproducible, and bounded | Methods generally support the claim | Weak assumptions or validation reduce confidence | Results are opaque, irreproducible, or overstated |
+| Risk, resilience, and T&E | Cascades, degraded modes, recovery, distributed test, and residual risk are integrated | Main risks and evidence paths are credible | Analysis is constituent-centric or incomplete | Mission claims lack credible evidence |
+| Governance and evolution | Decision rights, incentives, participation, funding, configuration, and roadmap are implementable | Governance is workable with minor gaps | Relies on informal cooperation or assumed authority | Recommendation cannot be authorized or sustained |
+| Communication and configuration | Clear, audience-appropriate, reproducible, and under control | Reviewable with minor defects | Difficult to reproduce or navigate | Uncontrolled or misleading |
+
+## 15. Critical criteria and mastery gates
+
+A learner cannot pass with any of the following unresolved:
+
+* classification of a large hierarchical system as an SoS without evidence of constituent independence;
+* a mission-critical capability claim with no end-to-end thread, constituent ownership, or evidence path;
+* an interface or information exchange lacking semantic, timing, security, provenance, or degraded-operation treatment;
+* a Bayesian, network, or simulation result with hidden assumptions, invalid dependence, or no verification/validation;
+* a recommendation that assumes authority, data access, funding, or constituent participation not actually available;
+* distributed T&E that proves only constituent performance while asserting SoS mission effectiveness;
+* fabricated, irreproducible, or security-sensitive evidence.
+
+**Completion standard:** at least 80% overall, at least 70% in each major category, Proficient or better on every critical capstone dimension, clean reproduction, successful live change, and successful oral defense.
+
+## 16. Capstone specification
+
+### Decision
+
+Recommend how the regional coalition should deliver accessible mobility and emergency access across normal operations, severe weather, power loss, cyber disruption, major events, and hospital evacuation while constituent systems remain independently managed.
+
+### Required outputs
+
+* 20–25 page SoS engineering report;
+* 15-slide executive/technical review briefing;
+* controlled architecture and model repository;
+* constituent/organization/authority registry;
+* mission threads and capability dependencies;
+* logical, physical, and information architectures;
+* interface/interoperability and COTS/vendor baseline;
+* information-fusion and Bayesian analysis;
+* federated M&S and credibility plan;
+* integrated risk, cyber resilience, safety, and cascading-failure analysis;
+* distributed integration and T&E strategy;
+* alternatives, robustness, evolution roadmap, decision record, and residual risks;
+* live-change result, review findings, dispositions, and Phase 5 handoff.
+
+### Live-change challenge
+
+During the final review, one constituent withdraws, changes an interface, loses data-sharing authority, accelerates an upgrade, or suffers a cyber/operational disruption. The learner must identify affected mission threads, architecture elements, models, tests, risks, authorities, measures, and decisions; revise the recommendation; and explain what evidence must be regenerated.
+
+## 17. Oral defense prompts
+
+1. Why is this an SoS rather than a large system, enterprise, or ecosystem?
+2. Which constituent can leave with the greatest mission effect, and how do you know?
+3. Which mission claim has the weakest evidence chain?
+4. Which interface is semantically compatible but operationally unsafe?
+5. What conditional-independence assumption matters most in the Bayesian model?
+6. What can the federated simulation not establish?
+7. How would your T&E strategy change if one constituent refuses instrumentation?
+8. Which architecture alternative is most robust to asynchronous upgrades?
+9. What authority does the SoS integrator actually possess?
+10. Which risk is shifted to another organization or population by your recommendation?
+11. What result would cause you to reverse the decision?
+12. What should EN.645.753 analyze next at enterprise level?
+
+## 18. Portfolio and maintenance
+
+Retain the controlled final release, key intermediate baselines, models and code, completed rubrics, review findings and dispositions, decision/assumption log, live-change evidence, oral-defense recording or transcript, and a one-page retrospective.
+
+| Revision date | Change | Reason | Source/evidence | Effect |
+|---|---|---|---|---|
+| 2026-08-05 | Full course expansion | Replace sparse outline with complete self-study course | JHU Fall 2026 syllabus and current public guidance | Added outcomes, weekly units, reviews, models, rubrics, capstone, and mastery gates |
+
+---
+## Week 1 — SoS definition, attributes, behavior, and receiving review
+
+### Competency alignment
+
+**Program competencies:** C1, C11, C12  
+**Weekly role:** Foundation  
+**Nominal effort:** 10–12 hours
+
+### Professional context and essential question
+
+The first failure in SoS work is often categorical: an organization labels a large integrated system an SoS, or treats a genuine SoS as if one program manager controls every constituent. The engineering method, governance, evidence, and feasible architecture all depend on getting this distinction right.
+
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Distinguish systems, families, product lines, enterprises, ecosystems, and SoS using observable criteria.
+2. Classify directed, acknowledged, collaborative, and virtual SoS conditions and explain implications.
+3. Identify operational and managerial independence, geographic distribution, evolutionary development, and emergent behavior.
+4. Define the regional SoS boundary, mission outcomes, constituents, exclusions, assumptions, and evidence gaps.
+5. Construct an initial constituent interaction network without treating centrality as importance by itself.
+
+### Prerequisite retrieval and readiness check
+
+* Sketch the Phase 4 mission/evidence chain from memory.
+* List five independently useful candidate constituents and their owners.
+* Explain one example of emergence that cannot be assigned to a single constituent.
+* Calculate degree and betweenness for a five-node toy network, then state what each measure does not prove.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* [1]: course topics, goals, and CLOs.
+* [3]: Executive Summary and introductory discussion of SoS characteristics.
+* [5]: Sections on mission problem and mission characterization.
+* [19]: NetworkX introductory graph concepts.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* A constituent is not simply a box in a decomposition; it has its own purpose, users, management, lifecycle, and ability to operate outside the SoS mission.
+* SoS classifications describe governance conditions, not maturity levels. A coalition may move among them by mission or period.
+* Emergent behavior can be beneficial, harmful, or ambiguous and may arise from interactions, timing, adaptation, policy, and human response.
+* Boundaries are decision-dependent. Include what must be considered to answer the decision, not everything that exists.
+* Network measures are prompts for investigation. They do not substitute for mission semantics, capacity, quality, authority, or failure behavior.
+
+### Worked example
+
+A municipal rail operator, two campus shuttle services, a paratransit provider, and EMS dispatch can each deliver useful services independently. During a hospital evacuation, however, coordinated routing, accessible capacity, traffic priority, and hospital intake status create a capability no constituent can deliver alone. The coalition is initially acknowledged: a regional coordinator has mission responsibility but limited authority over constituent budgets and designs.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Build a constituent candidate list from the case brief.
+* For each candidate, record independent mission, owner, users, lifecycle, interfaces, and right to refuse change.
+* Classify the SoS under two scenarios and explain why classification changes.
+* Create a network view and annotate mission meaning, not just edges.
+* Run a receiving review that identifies inherited evidence and unacceptable assumptions.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Classify ten examples as system, family, SoS, enterprise, or ecosystem and justify each.
+* **Application:** Produce the SoS charter, boundary diagram, and constituent registry v0.1.
+* **Analysis:** Compare directed and acknowledged governance for the evacuation scenario.
+* **Synthesis:** Write a two-page framing memo identifying the three most consequential SoS conditions.
+* **Stretch:** Test how boundary changes alter network measures and decision conclusions.
+
+### Weekly deliverable
+
+**SoS Framing Baseline v0.1**: charter, decision statement, outcome measures, boundary, SoS classification, constituent/organization registry, interaction network, assumptions, exclusions, and receiving-review findings.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| SoS distinction and classification | 25% |
+| Boundary, mission, and constituent evidence | 25% |
+| Independence and authority analysis | 20% |
+| Network interpretation and limitations | 15% |
+| Traceability and configuration | 15% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Treating subordinate components as independently managed constituents.
+* Excluding a mission-critical actor solely because it is outside program authority.
+* Presenting network centrality as mission criticality without evidence.
+* Using real personal or operationally sensitive data.
+
+### Knowledge check and answer guidance
+
+1. **What two independence conditions are most important?**  
+   **Answer guidance:** Operational usefulness outside the SoS and managerial control over its own lifecycle and decisions.
+2. **Does every distributed system qualify as an SoS?**  
+   **Answer guidance:** No. Distribution alone does not establish constituent independence or emergent cross-system capability.
+3. **Why can SoS type change?**  
+   **Answer guidance:** Governance, authority, participation, mission, and lifecycle conditions can differ by scenario and time.
+4. **What is the purpose of the boundary?**  
+   **Answer guidance:** To identify the entities and relationships required to answer the stated decision credibly.
+5. **What does betweenness centrality fail to show?**  
+   **Answer guidance:** Mission semantics, quality, capacity, substitutability, authority, and actual failure consequence.
+
+### Revision and mastery gate
+
+Revise until every constituent has evidence of independent utility and management, the mission outcome cannot be satisfied by one constituent, and the boundary/SoS classification survives red-team challenge.
+
+### Suggested workload
+
+Target: **10–12 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Baseline `SOS-0.1`; tag `SOS-W01-FRAMING`; open issues for missing authority, evidence, and constituent data.
 
 ---
 
-### Week 1 — What makes a system of systems different?
+## Week 2 — Managing SoS development, governance, acquisition, fielding, and evolution
 
-**Goal**
-Understand how SoSE differs from ordinary systems engineering.
+### Competency alignment
 
-SEBoK describes SoSE as applying technical management to a mix of existing and new systems while the constituent systems still retain responsibility for their own technical management. DoD’s SoS guide similarly emphasizes that an SoS combines independently useful systems to deliver a capability no one constituent system can achieve alone. ([SEBoK][202])
+**Program competencies:** C1, C10, C11, C12  
+**Weekly role:** Foundation  
+**Nominal effort:** 10–12 hours
 
-**Read**
+### Professional context and essential question
 
-* SEBoK: **Systems of Systems (SoS)**. ([SEBoK][202])
-* INCOSE **Systems of Systems Working Group** overview. ([INCOSE][203])
-* DoD **Systems Engineering Guide for Systems of Systems** summary or full guide. ([CTO][204])
+An SoS rarely has a single acquisition strategy, budget, release train, or configuration authority. Engineering must therefore make authority, commitments, incentives, and asynchronous evolution visible before architecture decisions are treated as implementable.
 
-**Exercises**
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
 
-1. Write a 1-page memo: “Why my case is an SoS and not just a large system.”
-2. Identify constituent systems and what each can do independently.
-3. Identify the higher-level mission enabled only by coordination.
-4. Note where authority is centralized, federated, or absent.
+### Weekly learning outcomes
 
-**Deliverable**
+1. Map decision rights, funding, ownership, data rights, configuration authority, and escalation paths.
+2. Compare development and acquisition strategies for directed, acknowledged, collaborative, and virtual conditions.
+3. Define minimum governance needed for mission threads, interfaces, evidence, and change control.
+4. Identify asynchronous lifecycle and fielding conflicts among constituents.
+5. Develop an evolution and participation-risk register.
 
-* SoS framing memo
-* Constituent-system map
+### Prerequisite retrieval and readiness check
 
----
+* Reproduce the SoS classification and constituent registry without opening Week 1.
+* Identify one constituent with high mission effect but low coalition authority.
+* Explain the difference among governance, management, coordination, and command.
+* List three ways funding timing can invalidate a technical roadmap.
 
-### Week 2 — Revisiting requirements, design, test, and deployment in an SoS
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
 
-**Goal**
-See how classical lifecycle concepts change in a multi-system environment.
+### Required study
 
-The course description explicitly starts with requirements, design, test/evaluation, and deployment, then asks how they are altered in a multi-system setting. Current SoS guidance emphasizes that these activities must now account for evolving constituent systems, partial control, and cross-system dependencies. ([SEBoK][202])
+* [3]: sections on SoS management and translating capability objectives.
+* [4]: technical planning, stakeholder, interface, configuration, and decision-management guidance.
+* [5]: mission engineering management and synchronization concepts.
+* [16]: NASA risk-management framing for decision and performance risk.
 
-**Read**
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
 
-* SEBoK: **Systems of Systems (SoS)**. ([SEBoK][202])
-* DoD **Systems Engineering Guide for Systems of Systems**. ([CTO][204])
-* DoD **Systems Engineering Guidebook** for the baseline classical SE view. ([Mission Capabilities][205])
+### Instructor-style lesson notes
 
-**Exercises**
+* Authority must be modeled per decision: architecture standards, interface changes, data sharing, test access, operations, funding, and emergency control may have different owners.
+* Governance defines how decisions are made and enforced; collaboration alone is not a control mechanism.
+* SoS configuration management often controls agreements, interfaces, mission baselines, and evidence rather than every constituent internal baseline.
+* Evolution plans need triggers, windows, compatibility policies, sunset rules, and fallback modes.
+* Participation is uncertain. Treat withdrawal, delay, noncompliance, and strategic behavior as scenario variables.
 
-1. Compare single-system vs SoS handling of:
+### Worked example
 
-   * requirements ownership
-   * architecture/design authority
-   * integration sequencing
-   * test responsibility
-   * deployment control
-2. For your case, list 10 SoS-level requirements.
-3. Mark which requirements no single constituent can satisfy alone.
-4. Note where verification will require multi-organization coordination.
+The regional coordinator can set emergency-routing objectives and convene reviews but cannot force a private rideshare vendor to expose vehicle-health data. A hospital can require arrival information for its own campus but cannot change municipal signal timing. The governance design therefore creates an interface council, emergency authority protocol, data-use agreements, test memorandum, and compatibility window rather than a fictitious single configuration board.
 
-**Deliverable**
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
 
-* Lifecycle comparison table
-* SoS requirements v1
+### Guided practice
 
----
+* Create an authority matrix for ten decisions.
+* Map constituent lifecycle milestones and identify incompatible windows.
+* Draft a governance charter with representation, quorum, escalation, emergency authority, and dispute resolution.
+* Define controlled SoS artifacts and which constituent artifacts remain references only.
+* Run a scenario in which a vendor declines a required change.
 
-### Week 3 — Capability dependencies and mission threads
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
 
-**Goal**
-Model how capabilities depend on interactions among constituent systems.
+### Independent exercises
 
-This is one of the most important SoSE habits: think in terms of **mission threads** and **cross-system capability dependencies**, not just component hierarchies. That fits both the course description and modern SoS practice. ([SEBoK][202])
+* **Foundation:** Distinguish responsibility, accountability, consultation, consent, and veto in five decisions.
+* **Application:** Complete the constituent/organization/authority registry and lifecycle roadmap.
+* **Analysis:** Identify governance single points of failure and unowned decisions.
+* **Synthesis:** Propose a minimum viable SoS governance and configuration strategy.
+* **Stretch:** Model participation as uncertain and compare mission impact under withdrawal scenarios.
 
-**Read**
+### Weekly deliverable
 
-* SEBoK: **Systems of Systems (SoS)**. ([SEBoK][202])
-* INCOSE SoS Working Group materials. ([INCOSE][203])
+**SoS Governance and Evolution Baseline v0.2**: authority/decision matrix, governance charter, lifecycle synchronization map, agreements inventory, configuration strategy, participation risks, and evolution assumptions.
 
-**Exercises**
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
 
-1. Define 3–5 mission threads for your SoS.
-2. For each thread, identify:
+### Analytic rubric
 
-   * initiating event
-   * participating systems
-   * information exchanges
-   * timing constraints
-   * failure points
-3. Build a capability-dependency map.
+| Criterion | Weight |
+|---|---:|
+| Decision-right and authority accuracy | 25% |
+| Governance implementability | 25% |
+| Lifecycle/evolution analysis | 20% |
+| Participation and incentive risk | 15% |
+| Controlled artifacts and rationale | 15% |
 
-**Deliverable**
+Minimum weekly performance is 80%, with no critical failure.
 
-* Mission-thread set
-* Capability-dependency matrix
+### Critical failures
 
----
+* Assigning authority to an entity that does not possess it.
+* Using RACI as a substitute for consent, funding, or legal authority.
+* No process for constituent withdrawal, asynchronous upgrade, or emergency operation.
+* Attempting to control internal constituent baselines without agreement.
 
-### Week 4 — Information flow and interoperability
+### Knowledge check and answer guidance
 
-**Goal**
-Study the heart of many SoS failures: systems can connect physically but still fail semantically, temporally, or organizationally.
+1. **What is governed at SoS level?**  
+   **Answer guidance:** Shared mission outcomes, interfaces, information agreements, evidence, decisions, and evolution constraints—not necessarily every internal constituent design.
+2. **Why is a memorandum not sufficient by itself?**  
+   **Answer guidance:** Its authority, enforcement, resources, duration, and operational procedures must be credible.
+3. **What is asynchronous evolution?**  
+   **Answer guidance:** Constituents change on different schedules, creating compatibility and evidence risks.
+4. **Why model participation risk?**  
+   **Answer guidance:** The SoS capability may depend on actors who can delay, limit, or withdraw cooperation.
+5. **What should an emergency authority protocol contain?**  
+   **Answer guidance:** Trigger, scope, duration, authorized actions, communication, safeguards, records, and return-to-normal criteria.
 
-The course description explicitly calls out **information flow and interoperability**, and that is a core SoS concern because independent systems often use different data models, update cycles, interfaces, and governance rules. ([SEBoK][202])
+### Revision and mastery gate
 
-**Read**
+Pass the SoS Framing and Governance Review with no unowned mission-critical decision, fictitious authority, or unmanaged lifecycle incompatibility.
 
-* DoD **Systems Engineering Guide for Systems of Systems**. ([CTO][204])
-* DoD **Engineering of Defense Systems Guidebook** for integration and interoperability context. ([CTO][206])
-* SEBoK SoS page again, focusing on cross-system integration concerns. ([SEBoK][202])
+### Suggested workload
 
-**Exercises**
+Target: **10–12 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
 
-1. Build an information-exchange inventory:
+### Configuration and portfolio update
 
-   * sender
-   * receiver
-   * data type
-   * format/protocol
-   * latency tolerance
-   * security constraints
-2. Identify interoperability risks:
-
-   * syntactic
-   * semantic
-   * timing
-   * policy/access
-   * version mismatch
-3. Write 5 interoperability test cases.
-
-**Deliverable**
-
-* Information-flow model
-* Interoperability risk register
+Baseline `SOS-0.2`; tag `SOS-W02-GOV`; issue signed or simulated governance decision record.
 
 ---
 
-### Week 5 — Confederated modeling and simulation
+## Week 3 — Mission outcomes, capability dependencies, and logical SoS architecture
 
-**Goal**
-Learn how modeling and simulation change when multiple independently owned systems must be represented together.
+### Competency alignment
 
-The course explicitly names **confederated modeling and simulation**, which is a natural fit for SoS because no single model typically owns the whole truth. In practice, federated/confederated modeling helps examine behavior across systems without pretending there is one monolithic integrated design model. That need is consistent with modern SoS guidance about separately managed constituent systems. ([SEBoK][202])
+**Program competencies:** C2, C3, C4, C11  
+**Weekly role:** Architecture development  
+**Nominal effort:** 11–13 hours
 
-**Read**
+### Professional context and essential question
 
-* DoD **Systems Engineering Guide for Systems of Systems**. ([CTO][204])
-* SEBoK SoS page. ([SEBoK][202])
+A constituent inventory does not explain how regional outcomes occur. The learner must build solution-independent mission threads and capability dependencies before allocating them to constituent systems.
 
-**Exercises**
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
 
-1. Define what each constituent system model would represent.
-2. Decide what must be simulated jointly:
+### Weekly learning outcomes
 
-   * timing
-   * information flow
-   * sensor uncertainty
-   * command logic
-   * logistics/resource constraints
-3. Sketch a federated simulation concept:
+1. Define measurable mission outcomes, scenarios, constraints, and off-nominal conditions.
+2. Construct mission threads and capability dependencies independent of current implementations.
+3. Identify timing, information, decision, and resource dependencies across threads.
+4. Develop a logical architecture with alternatives and traceability to outcomes.
+5. Analyze path, cut-set, bottleneck, and substitutability questions without overclaiming.
 
-   * participating models
-   * exchanged variables
-   * synchronization assumptions
-   * validation concerns
-4. Note what cannot be trusted from the model alone.
+### Prerequisite retrieval and readiness check
 
-**Deliverable**
+* Recreate the decision/authority map for the hospital-evacuation scenario.
+* Write one mission outcome and distinguish it from a constituent performance measure.
+* Identify one dependency that is informational and one that is institutional.
+* Explain why a current operational process should not automatically become the logical architecture.
 
-* Confederated M&S concept note
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
 
----
+### Required study
 
-### Week 6 — COTS elements in systems of systems
+* [5]: mission problem, characterization, metrics, and mission-thread development.
+* [6]: sections on mission context, mission threads, and mission engineering threads.
+* [7]: UAF capability, operational, resource, and traceability concepts.
+* [8]: stakeholder concerns, viewpoints, and architecture-description concepts.
 
-**Goal**
-Analyze how commercial off-the-shelf elements help and hurt SoS development.
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
 
-The catalog explicitly includes **COTS**, and SoS environments often rely on COTS because constituent systems evolve on different timelines and budgets. The tradeoff is reduced development time versus reduced control over interfaces, upgrades, cybersecurity posture, and lifecycle alignment. That concern is consistent with SoS practice in DoD guidance. ([CTO][204])
+### Instructor-style lesson notes
 
-**Read**
+* Mission threads are scenario-specific sequences of activities and decisions required to achieve an outcome.
+* Logical architecture asks what roles, functions, information, and decisions are needed before naming current systems.
+* Capability dependencies may be conjunctive, alternative, conditional, capacity-limited, or time-dependent.
+* A cut set identifies a structural vulnerability only under stated assumptions about success and substitution.
+* Measures belong at outcome, mission-thread, interface, and constituent levels and must not be conflated.
 
-* DoD **Engineering of Defense Systems Guidebook**. ([CTO][206])
-* DoD **Systems Engineering Guide for Systems of Systems**. ([CTO][204])
+### Worked example
 
-**Exercises**
+The evacuation outcome is “transport all high-priority patients to accepting facilities within medically approved time windows while maintaining accessible handling and custody records.” The logical thread requires assess, prioritize, match destination, allocate accessible transport, establish route, move, hand over, and confirm. The current rideshare platform is one possible performer for a subset of tasks, not part of the logical definition.
 
-1. List candidate COTS elements in your SoS.
-2. For each, assess:
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
 
-   * interoperability fit
-   * vendor dependency
-   * update cadence
-   * security implications
-   * data rights / integration burden
-3. Write a 1-page trade memo: custom vs COTS for one critical function.
+### Guided practice
 
-**Deliverable**
+* Define three mission scenarios: normal disruption, severe storm, and hospital evacuation.
+* Construct one solution-independent mission thread and identify decisions and exchanges.
+* Build a capability dependency graph with alternatives and conditional branches.
+* Calculate candidate cut sets and then challenge their assumptions.
+* Create two logical architecture variants and compare their mission implications.
 
-* COTS assessment table
-* COTS trade memo
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
 
----
+### Independent exercises
 
-### Week 7 — Cross-organization collaboration and governance
+* **Foundation:** Rewrite ten implementation-biased functions as solution-independent activities.
+* **Application:** Build three mission threads and a capability dependency matrix.
+* **Analysis:** Identify bottlenecks, unowned dependencies, and substitution options.
+* **Synthesis:** Develop a logical architecture and measures hierarchy.
+* **Stretch:** Use NetworkX to compare paths under constituent or interface loss.
 
-**Goal**
-Address the fact that SoS engineering usually spans organizations with separate budgets, priorities, and authorities.
+### Weekly deliverable
 
-SEBoK and INCOSE both treat this as a defining SoSE condition: the constituent systems remain independently managed, so collaboration mechanisms matter as much as technical interfaces. ([SEBoK][202])
+**Mission and Logical Architecture Baseline v0.3**: outcomes, measures, scenarios, mission threads, capability model, dependency graph, logical nodes, alternatives, and trace links.
 
-**Read**
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
 
-* SEBoK: **Systems of Systems (SoS)**. ([SEBoK][202])
-* INCOSE **Systems of Systems Working Group** page. ([INCOSE][203])
-* DoD **Systems Engineering Guide for Systems of Systems**. ([CTO][204])
+### Analytic rubric
 
-**Exercises**
+| Criterion | Weight |
+|---|---:|
+| Outcome/scenario quality | 20% |
+| Mission-thread completeness | 25% |
+| Capability dependency logic | 20% |
+| Logical architecture and alternatives | 20% |
+| Analysis and traceability | 15% |
 
-1. Map the organizations involved in your SoS.
-2. For each, note:
+Minimum weekly performance is 80%, with no critical failure.
 
-   * objectives
-   * authority
-   * resources
-   * change-control power
-   * data-sharing limits
-3. Design a governance scheme:
+### Critical failures
 
-   * interface control board
-   * joint test forum
-   * configuration coordination
-   * dispute escalation
-4. Identify 5 likely collaboration failures.
+* Encoding the incumbent physical solution as the logical architecture.
+* No off-nominal or degraded thread.
+* Critical task, decision, or exchange with no owner or dependency.
+* Using graph metrics without mission-semantic validation.
 
-**Deliverable**
+### Knowledge check and answer guidance
 
-* SoS collaboration/governance plan
+1. **What distinguishes a mission outcome from an MOP?**  
+   **Answer guidance:** The outcome expresses mission success; an MOP describes a system or process performance contributing to it.
+2. **Why create solution-independent threads?**  
+   **Answer guidance:** To expose required behavior and enable real alternatives rather than ratifying the current implementation.
+3. **What is a conditional dependency?**  
+   **Answer guidance:** A capability or task is required only under a stated scenario, state, or prior result.
+4. **What does a cut set mean?**  
+   **Answer guidance:** A set of losses that disconnects success under the model assumptions; it is not automatically a real-world failure proof.
+5. **Why include degraded threads?**  
+   **Answer guidance:** SoS value often depends on reconfiguration and continuity when constituents or information are unavailable.
 
----
+### Revision and mastery gate
 
-### Week 8 — Information fusion and distributed sensemaking
+Achieve complete outcome-to-thread-to-capability traceability for at least three scenarios and correct every unsupported critical-path or cut-set claim.
 
-**Goal**
-Study how multiple systems combine observations into useful decisions.
+### Suggested workload
 
-The course explicitly includes **advanced principles of information fusion**. In SoS contexts, fusion is not just an algorithm problem; it also depends on data pedigree, timing, uncertainty, and trust across systems. ([SEBoK][202])
+Target: **11–13 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
 
-**Read**
+### Configuration and portfolio update
 
-* Revisit DoD and SEBoK SoS guidance with a focus on information dependency and decision support. ([SEBoK][202])
-
-**Exercises**
-
-1. Pick one fusion problem in your case:
-
-   * multiple sensors
-   * multiple logistics feeds
-   * multiple operational-status sources
-2. Define:
-
-   * sources
-   * uncertainties
-   * conflicts
-   * timing/skew
-   * confidence reporting
-3. Create a fusion logic sketch.
-4. List failure modes:
-
-   * double counting
-   * stale data
-   * conflicting reports
-   * hidden bias
-   * missing-source dependency
-
-**Deliverable**
-
-* Information-fusion worksheet
+Baseline `SOS-0.3`; tag `SOS-W03-LOGICAL`; publish query results and unresolved dependencies.
 
 ---
 
-### Week 9 — Causality and Bayesian networks
+## Week 4 — Physical architecture, constituent allocations, interfaces, COTS, and legacy
 
-**Goal**
-Use probabilistic and causal reasoning for diagnosis and decision support.
+### Competency alignment
 
-The catalog explicitly mentions **causality theory with Bayesian networks**. MIT OCW has good open materials for Bayesian and probabilistic inference, and MIT also has causal-inference material that helps separate correlation from causal reasoning. ([MIT OpenCourseWare][207])
+**Program competencies:** C3, C4, C5, C10, C11  
+**Weekly role:** Architecture development  
+**Nominal effort:** 11–13 hours
 
-**Read / watch**
+### Professional context and essential question
 
-* MIT OCW: **Probabilistic Systems Analysis** Bayesian inference lecture. ([MIT OpenCourseWare][207])
-* MIT OCW: **Artificial Intelligence** probabilistic inference material. ([MIT OpenCourseWare][208])
-* MIT OCW: **Causal Inference, Part 1**. ([MIT OpenCourseWare][209])
+Physical SoS architecture allocates logical responsibilities to systems the coalition may not own, on interfaces it may not control, with commercial and legacy constraints that evolve independently.
 
-**Exercises**
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
 
-1. Build a small Bayesian network for one SoS problem, such as:
+### Weekly learning outcomes
 
-   * target identification confidence
-   * fault diagnosis across systems
-   * route disruption likelihood
-   * mission success probability
-2. Define nodes, causal links, and prior assumptions.
-3. Run 3 evidence-updating examples by hand.
-4. Write a 1-page reflection on where Bayesian reasoning helps and where it may mislead.
+1. Allocate logical activities and capabilities to constituent systems, people, organizations, services, and facilities.
+2. Develop at least three physical architecture alternatives.
+3. Specify interface responsibilities, compatibility windows, and degraded modes.
+4. Assess COTS, vendor, legacy, data-rights, update-cadence, and supply-chain constraints.
+5. Perform change-impact and architecture trade analysis.
 
-**Deliverable**
+### Prerequisite retrieval and readiness check
 
-* Small Bayesian-network model
-* Causality reflection memo
+* Reproduce one mission thread and logical architecture from Week 3.
+* Identify one allocation that requires consent from another organization.
+* List five lifecycle risks introduced by a commercial service.
+* Explain the difference among interface, agreement, adapter, gateway, and mediator.
 
----
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
 
-### Week 10 — Test, evaluation, and deployment in the multi-system environment
+### Required study
 
-**Goal**
-Return to V&V, but now with SoS-specific realities.
+* [3]: architecture and constituent-system discussion.
+* [4]: architecture, interface management, MOSA/open systems, and configuration guidance.
+* [6]: mission elements, capability configurations, alternatives, and excursions.
+* [18]: NASA handbook for major commercial/COTS system selection and insight.
 
-The course says it begins with classical requirements/design/test/deployment and then extends them for the multi-system environment. In SoS, validation often depends on joint mission behavior, not just constituent-system conformance. That aligns with current SEBoK and DoD SoS guidance. ([SEBoK][202])
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
 
-**Read**
+### Instructor-style lesson notes
 
-* SEBoK SoS page. ([SEBoK][202])
-* DoD **Systems Engineering Guide for Systems of Systems**. ([CTO][204])
-* DoD **Systems Engineering Guidebook** as baseline test/deployment context. ([Mission Capabilities][205])
+* Allocation is a decision with evidence, authority, capacity, and lifecycle consequences—not a line on a diagram.
+* Physical alternatives should vary performers, centralization, mediation, fallback, and governance, not just product brands.
+* COTS shifts engineering effort from design control to selection, insight, interface control, qualification, update management, data rights, and exit strategy.
+* Legacy constraints may be stable interfaces, undocumented behavior, safety certification, scarce expertise, or unsupported hardware.
+* Compatibility windows and graceful degradation are part of architecture when synchronized upgrades are impossible.
 
-**Exercises**
+### Worked example
 
-1. Build an SoS verification/validation matrix.
-2. Identify what can be verified at constituent level vs only at SoS level.
-3. Define 3 joint test scenarios.
-4. Identify deployment risks caused by asynchronous upgrades across constituent systems.
+Alternative A routes all emergency mobility coordination through a regional broker; Alternative B uses federated local brokers with a minimal regional directory; Alternative C retains bilateral agreements and adds only an event-specific coordination cell. The centralized option improves visibility but creates authority, availability, privacy, and scaling risks. The federated option requires stronger semantic contracts and distributed testing.
 
-**Deliverable**
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
 
-* SoS V&V matrix
-* Deployment risk memo
+### Guided practice
 
----
+* Allocate every logical activity in one mission thread to candidate performers.
+* Develop three physical variants including a low-integration alternative.
+* Create interface contracts with owner, version, service level, failure behavior, and change process.
+* Assess two COTS services and one legacy constituent using lifecycle criteria.
+* Run a change-impact scenario for an incompatible vendor update.
 
-### Week 11 — Military and commercial case studies
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
 
-**Goal**
-Learn how SoSE principles show up in real domains.
+### Independent exercises
 
-The catalog explicitly mentions **missile defense**, **combatant vehicle design**, and selected commercial examples. INCOSE and DoD materials are especially relevant for the military side, while the same SoS principles transfer to transportation, logistics, and emergency response ecosystems. ([INCOSE][203])
+* **Foundation:** Distinguish allocation, delegation, outsourcing, and dependency.
+* **Application:** Build physical architecture variants and interface inventory.
+* **Analysis:** Perform a COTS/legacy and data-rights assessment.
+* **Synthesis:** Recommend a physical baseline with compatibility and fallback strategy.
+* **Stretch:** Develop a modular open-systems migration path for one locked interface.
 
-**Read**
+### Weekly deliverable
 
-* INCOSE SoS Working Group materials. ([INCOSE][203])
-* DoD **Engineering of Defense Systems Guidebook**. ([CTO][206])
-* DoD **Systems Engineering Guide for Systems of Systems**. ([CTO][204])
+**Physical Architecture and Constituent Contract Baseline v0.4**: allocations, three alternatives, interface contracts, COTS/vendor/legacy assessment, compatibility roadmap, trade analysis, and change-impact result.
 
-**Exercises**
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
 
-1. Write two short case briefs:
+### Analytic rubric
 
-   * one defense-oriented
-   * one commercial
-2. For each, analyze:
+| Criterion | Weight |
+|---|---:|
+| Allocation completeness and authority | 20% |
+| Alternative quality | 20% |
+| Interface and degraded-mode engineering | 25% |
+| COTS/vendor/legacy lifecycle analysis | 20% |
+| Decision rationale and traceability | 15% |
 
-   * constituent systems
-   * interoperability challenge
-   * governance problem
-   * capability dependency
-   * likely V&V difficulty
-3. Compare both to your running case.
+Minimum weekly performance is 80%, with no critical failure.
 
-**Deliverable**
+### Critical failures
 
-* Two case-study briefs
+* Allocating a responsibility to a constituent without capacity, agreement, or authority.
+* No low-integration or fallback alternative.
+* Ignoring vendor update, data rights, obsolescence, or exit risk.
+* Interfaces described only by protocol or connector.
 
----
+### Knowledge check and answer guidance
 
-### Week 12 — Final synthesis and recommendation package
+1. **Why is COTS not “buy instead of engineer”?**  
+   **Answer guidance:** Engineering shifts to selection, qualification, integration, insight, updates, assurance, rights, and exit.
+2. **What is a compatibility window?**  
+   **Answer guidance:** A controlled period/version range in which independently evolving constituents remain interoperable.
+3. **Why require a low-integration alternative?**  
+   **Answer guidance:** It reveals the marginal value and burden of deeper integration and may be more robust or governable.
+4. **What makes an allocation credible?**  
+   **Answer guidance:** Capability, capacity, authority, agreement, interface, lifecycle, evidence, and fallback.
+5. **What is the purpose of a mediator?**  
+   **Answer guidance:** To reconcile protocols, semantics, timing, policy, or behavior without forcing every constituent to change identically.
 
-**Goal**
-Pull the course together into one coherent SoSE study.
+### Revision and mastery gate
 
-**Exercises**
-Assemble a final package with:
+Pass the Logical and Physical Architecture Review with credible allocations, at least three true alternatives, and no unmanaged mission-critical interface or commercial dependency.
 
-1. SoS definition and constituent-system map
-2. SoS requirements and mission threads
-3. capability-dependency model
-4. information-flow and interoperability analysis
-5. federated M&S concept
-6. COTS assessment
-7. collaboration/governance plan
-8. fusion/Bayesian reasoning example
-9. SoS V&V/deployment view
-10. final recommendation memo
+### Suggested workload
 
-Write a **4–6 page synthesis memo** explaining:
+Target: **11–13 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
 
-* what makes the case an SoS
-* where the main capability dependencies sit
-* which interoperability risks matter most
-* where governance is as important as engineering
-* how uncertainty and evidence should be handled
-* what next engineering actions you recommend
+### Configuration and portfolio update
 
-**Deliverable**
-
-* Final SoSE binder
-* Executive summary memo
+Baseline `SOS-0.4`; tag `SOS-W04-PHYSICAL`; record architecture decision and rejected alternatives.
 
 ---
 
-### Best resource stack for this course
+## Week 5 — Information architecture and multidimensional interoperability
 
-These are the strongest anchors for the full 12 weeks:
+### Competency alignment
 
-* **SEBoK v2.13** and especially the **Systems of Systems (SoS)** entry, because it reflects current SoSE framing and was updated in late 2025. ([SEBoK][202])
-* **INCOSE Systems of Systems Working Group**, because it directly tracks current SoSE practice and community thinking. ([INCOSE][203])
-* **DoD Systems Engineering Guide for Systems of Systems**, because it addresses integrating independently useful systems into a larger SoS capability. ([CTO][204])
-* **DoD Engineering of Defense Systems Guidebook**, because it gives broader engineering context for complex defense SoS work. ([CTO][206])
-* **MIT OCW Bayesian/probabilistic/causal materials**, because they map well to the course’s Bayesian networks and causality portion. ([MIT OpenCourseWare][207])
+**Program competencies:** C3, C4, C5, C11  
+**Weekly role:** Architecture development  
+**Nominal effort:** 10–12 hours
 
-### What you should be able to do after 12 weeks
+### Professional context and essential question
 
-By the end, you should be able to:
+Most SoS failures are not caused by an absent cable. Systems exchange data but disagree about meaning, timing, confidence, identity, authority, state, security, or permissible use.
 
-* explain how SoSE differs from single-system engineering
-* model capability dependencies across constituent systems
-* analyze interoperability and information-flow problems
-* reason about federated modeling and simulation
-* evaluate COTS choices in an SoS context
-* design collaboration structures for cross-organization engineering
-* apply basic Bayesian-network reasoning to SoS uncertainty
-* create SoS-level V&V and deployment plans grounded in mission threads
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Develop an information architecture tied to mission decisions and threads.
+2. Specify data and information-exchange contracts with semantics, timing, quality, provenance, security, privacy, and policy.
+3. Assess syntactic, semantic, temporal, behavioral, organizational, and lifecycle interoperability.
+4. Define authoritative sources, reconciliation rules, and degraded-information behavior.
+5. Create an interoperability verification and monitoring plan.
+
+### Prerequisite retrieval and readiness check
+
+* Trace one mission decision to the information it requires.
+* Identify one syntactically valid but semantically wrong exchange.
+* Explain the difference among data, information, knowledge, and decision evidence.
+* List three privacy or policy constraints that may override technical availability.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* [6]: architecture conventions, mission threads, mission engineering threads, and end-to-end views.
+* [7]: UAF information, operational, service, resource, and security viewpoints.
+* [8]: viewpoint and stakeholder-concern discipline.
+* [13]: cyber-resilience goals, objectives, techniques, and architecture considerations.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* Information architecture begins with decisions and mission consequences, not a data catalog.
+* An exchange contract should define producer, consumer, concept, schema, units, identity, timestamp, latency, freshness, confidence, provenance, security, policy, error behavior, and versioning.
+* Authoritative does not mean perfect; it means the recognized source for a stated element and context.
+* Reconciliation must preserve disagreement and provenance when sources cannot be safely collapsed.
+* Interoperability monitoring is operational engineering: version drift, latency, missingness, and semantic exceptions require detection and ownership.
+
+### Worked example
+
+A rail system reports “available capacity” as standing plus seated riders; a paratransit provider reports only safely serviceable wheelchair positions; a hospital interprets capacity as medically suitable transport. All use an integer field named `capacity`. Syntactic interoperability exists, but semantic mismatch could create unsafe evacuation assignments.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Select two mission decisions and enumerate required information.
+* Create exchange contracts for location, availability, route status, and acceptance capacity.
+* Build a semantic mapping and identify lossy transformations.
+* Define authoritative-source and reconciliation rules for conflicting reports.
+* Write interoperability tests for normal, stale, missing, conflicting, and unauthorized data.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Diagnose twelve interoperability failures by dimension.
+* **Application:** Build the information architecture and exchange catalog.
+* **Analysis:** Conduct semantic, timing, privacy, and degraded-mode hazard analysis.
+* **Synthesis:** Define an interoperability assurance and operational monitoring plan.
+* **Stretch:** Implement schema/contract tests and a semantic exception dashboard.
+
+### Weekly deliverable
+
+**Information and Interoperability Baseline v0.5**: decision-information matrix, information architecture, exchange contracts, semantic mappings, authority/provenance rules, degraded modes, risks, and verification/monitoring plan.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| Decision-driven information needs | 20% |
+| Exchange-contract completeness | 25% |
+| Semantic/temporal/policy analysis | 25% |
+| Authority, provenance, and degradation | 15% |
+| Verification and monitoring | 15% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Treating schema validation as full interoperability.
+* No units, time basis, identity, provenance, or confidence for mission-critical information.
+* Collapsing conflicting sources without preserving disagreement.
+* Assuming data may be shared because it technically exists.
+
+### Knowledge check and answer guidance
+
+1. **What is semantic interoperability?**  
+   **Answer guidance:** Shared or explicitly mapped meaning sufficient for the intended decision and context.
+2. **Why is freshness part of meaning?**  
+   **Answer guidance:** A correct but stale value can lead to an incorrect or unsafe decision.
+3. **Can two sources both be authoritative?**  
+   **Answer guidance:** Yes, for different elements, contexts, jurisdictions, or times; reconciliation rules must be explicit.
+4. **What is degraded-information behavior?**  
+   **Answer guidance:** How the SoS detects, communicates, limits, substitutes, or stops decisions when information quality is inadequate.
+5. **What should interoperability monitoring detect?**  
+   **Answer guidance:** Version drift, missingness, latency, semantic exceptions, unauthorized use, confidence degradation, and contract breaches.
+
+### Revision and mastery gate
+
+Demonstrate end-to-end information sufficiency for three mission decisions and close every critical semantic, timing, provenance, security, or policy gap.
+
+### Suggested workload
+
+Target: **10–12 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Baseline `SOS-0.5`; tag `SOS-W05-INFO`; release machine-readable exchange contracts where feasible.
 
 ---
 
-[Back to Phase 5 README](README.md) · [Back to program README](../README.md)
+## Week 6 — Information fusion, provenance, confidence, and data quality
 
+### Competency alignment
+
+**Program competencies:** C5, C7, C8, C11  
+**Weekly role:** Architecture development  
+**Nominal effort:** 11–13 hours
+
+### Professional context and essential question
+
+The SoS receives incomplete, delayed, correlated, and conflicting reports from systems with different incentives and sensing limitations. Fusion must improve decisions without manufacturing false certainty.
+
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Define a decision-specific fusion problem and distinguish association, estimation, classification, situation, and impact questions.
+2. Develop a fusion architecture preserving source provenance and confidence.
+3. Assess correlation, common-mode error, bias, deception, missingness, and latency.
+4. Compare rule-based, probabilistic, and human-in-the-loop fusion approaches.
+5. Validate fused outputs against decision needs and failure consequences.
+
+### Prerequisite retrieval and readiness check
+
+* Identify four sources for route availability and their likely errors.
+* Explain why averaging two reports may be invalid.
+* Distinguish confidence, probability, data quality, and trust.
+* List one fusion error that could improve mean accuracy while worsening mission safety.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* [1]: source-course emphasis on information fusion and information flow.
+* [14]: NIST Bayesian-network uncertainty integration application.
+* [15]: NASA Bayesian-network application to lifecycle risk.
+* [13]: cyber-resilience considerations for deception, diversity, and analytic monitoring.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* Fusion is a process tied to a decision; there is no universally best fused truth.
+* Source dependence must be modeled. Two reports derived from the same upstream feed are not independent corroboration.
+* Confidence should be decomposable into source quality, recency, method, consistency, and contextual validity.
+* Human judgment can add context but also bias, delay, and nonrepeatability; preserve interventions and rationale.
+* Abstention and escalation are valid outputs when evidence is inadequate.
+
+### Worked example
+
+Traffic sensors, crowdsourced maps, police reports, and bus telemetry disagree about whether a flooded underpass is passable. The fusion design first associates reports to the same segment and time, records shared weather-source dependence, excludes a stale bus report, and returns “uncertain—do not route medically critical transport” rather than a forced binary answer.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Define the route-safety fusion decision and loss consequences.
+* Create a source/error/provenance matrix.
+* Implement a transparent rule-based baseline.
+* Add confidence and abstention behavior.
+* Test correlated errors, stale data, malicious input, and missing high-quality sources.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Classify fusion tasks and failure modes.
+* **Application:** Build a fusion architecture and provenance graph.
+* **Analysis:** Compare naive averaging, weighted rules, and probabilistic fusion.
+* **Synthesis:** Define validation, thresholds, abstention, and human escalation.
+* **Stretch:** Implement a reproducible fusion prototype with adversarial test cases.
+
+### Weekly deliverable
+
+**Information Fusion Baseline v0.6**: decision/loss statement, source and dependence model, provenance graph, fusion architecture, baseline algorithm, confidence/abstention logic, validation results, and prohibited uses.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| Decision and loss framing | 20% |
+| Source/dependence/provenance analysis | 25% |
+| Fusion method transparency | 20% |
+| Validation and failure testing | 20% |
+| Confidence, abstention, and governance | 15% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Assuming source independence without evidence.
+* Producing a single fused value with no provenance or uncertainty.
+* No abstention/escalation for safety-critical ambiguity.
+* Validating against agreement with inputs instead of decision-relevant truth/evidence.
+
+### Knowledge check and answer guidance
+
+1. **Why can more sources reduce reliability?**  
+   **Answer guidance:** They may share errors, add biased or malicious data, create latency, or overwhelm reconciliation.
+2. **What is association?**  
+   **Answer guidance:** Determining which observations refer to the same entity, event, location, or time before combining them.
+3. **Why preserve provenance?**  
+   **Answer guidance:** To explain, audit, update, challenge, and selectively remove evidence.
+4. **What is abstention?**  
+   **Answer guidance:** An engineered decision not to assert a result when evidence quality is below a defined threshold.
+5. **How should human overrides be handled?**  
+   **Answer guidance:** Record actor, evidence, rationale, authority, time, effect, and subsequent validation.
+
+### Revision and mastery gate
+
+Pass the Information and Interoperability Review with a reproducible fusion baseline, dependence-aware confidence, and safe behavior under conflicting or inadequate evidence.
+
+### Suggested workload
+
+Target: **11–13 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Baseline `SOS-0.6`; tag `SOS-W06-FUSION`; freeze source taxonomy and validation cases.
+
+---
+
+## Week 7 — Bayesian networks, causality, and decision uncertainty
+
+### Competency alignment
+
+**Program competencies:** C7, C8, C9, C11  
+**Weekly role:** Analytic integration  
+**Nominal effort:** 12–14 hours
+
+### Professional context and essential question
+
+Bayesian networks can combine heterogeneous evidence and update beliefs, but a visually plausible graph can encode invalid causality, double count evidence, or produce precise nonsense.
+
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Construct a bounded Bayesian network from a documented causal hypothesis.
+2. Elicit, estimate, normalize, and test conditional-probability tables.
+3. Perform prior-to-posterior updating and explain conditional independence.
+4. Conduct sensitivity, calibration, scenario, and decision-threshold analysis.
+5. Separate predictive association, causal claims, and decision utility.
+
+### Prerequisite retrieval and readiness check
+
+* Perform a Bayes update for a two-state diagnostic example.
+* Identify a collider, mediator, and common cause in a simple graph.
+* Explain why correlated evidence can be double counted.
+* State one condition under which a posterior should not drive action.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* [14]: NIST framework integrating uncertainty with Bayesian networks.
+* [15]: NASA requirements-volatility Bayesian-network application.
+* [16]: risk-informed decision principles and uncertainty communication.
+* [20]: pgmpy model structure, inference, and validation documentation.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* A Bayesian network factorizes a joint distribution according to graph assumptions; arrows do not automatically prove causation.
+* Conditional independence is the source of computational structure and a major source of model error.
+* CPTs may come from data, expert elicitation, physics, simulation, or combinations; provenance and uncertainty matter.
+* Calibration asks whether events assigned a probability occur at that rate in comparable cases.
+* A decision requires utilities, losses, constraints, and authority in addition to posterior probability.
+
+### Worked example
+
+Nodes represent storm severity, utility outage, signal availability, telecom degradation, reported route status, and actual route usability. A naive model treats signal and telecom reports as independent given route status, but both depend on the same utility outage. Adding the common cause lowers the apparent confidence from corroborating reports and changes the emergency-routing threshold.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Define a six-to-ten-node causal hypothesis for route or constituent availability.
+* Specify node states, evidence sources, and CPT provenance.
+* Verify normalization, impossible states, and d-separation expectations.
+* Run posterior updates for normal, conflicting, and missing evidence.
+* Perform one-way sensitivity and decision-threshold analysis.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Solve hand calculations and diagnose graph structures.
+* **Application:** Implement and document the Bayesian network.
+* **Analysis:** Test alternative graph structures and dependence assumptions.
+* **Synthesis:** Connect posterior results to a bounded routing or deployment decision.
+* **Stretch:** Perform parameter uncertainty or Bayesian model averaging.
+
+### Weekly deliverable
+
+**Bayesian Decision-Support Model v0.7**: causal hypothesis, graph, node/state dictionary, CPTs with provenance, verification tests, calibration evidence, sensitivity, decision thresholds, limitations, and reproducible notebook.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| Causal/structural rationale | 25% |
+| Probability/CPT quality | 20% |
+| Verification and calibration | 20% |
+| Sensitivity and decision use | 20% |
+| Reproducibility and limitations | 15% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Using arrows as evidence of causation.
+* Invalid or undocumented CPTs.
+* Double counting correlated evidence.
+* Reporting posterior precision unsupported by data/model quality.
+* Making a safety-critical decision without losses, thresholds, and authority.
+
+### Knowledge check and answer guidance
+
+1. **What does d-separation express?**  
+   **Answer guidance:** Conditional independencies implied by the graph.
+2. **Why can a collider create bias?**  
+   **Answer guidance:** Conditioning on a common effect can induce association between otherwise independent causes.
+3. **What is calibration?**  
+   **Answer guidance:** Agreement between assigned probabilities and observed frequencies in relevant cases.
+4. **Does a high posterior require action?**  
+   **Answer guidance:** Not by itself; action also depends on consequence, cost, alternatives, constraints, and authority.
+5. **What is structural sensitivity?**  
+   **Answer guidance:** How results change when plausible graph relationships or state definitions change.
+
+### Revision and mastery gate
+
+Verify the network, document every CPT, pass structural and parameter sensitivity tests, and defend the decision threshold without overstating causality or precision.
+
+### Suggested workload
+
+Target: **12–14 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Baseline `SOS-0.7`; tag `SOS-W07-BN`; export model, tests, environment, and decision record.
+
+---
+
+## Week 8 — Federated SoS modeling, simulation, interoperability, and credibility
+
+### Competency alignment
+
+**Program competencies:** C4, C7, C8, C11  
+**Weekly role:** Analytic integration  
+**Nominal effort:** 12–14 hours
+
+### Professional context and essential question
+
+No organization owns a complete executable model of the regional SoS. A federation must combine independently developed models without assuming their semantics, time, fidelity, or validation evidence are compatible.
+
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Define federation purpose, use cases, participating models, owners, and decision claims.
+2. Develop a conceptual federation architecture and object/information model.
+3. Specify time management, initialization, ownership, synchronization, and failure behavior.
+4. Plan verification, validation, accreditation/use authorization, and uncertainty management.
+5. Implement a lightweight federated or co-simulation prototype.
+
+### Prerequisite retrieval and readiness check
+
+* List the intended uses and limitations of two Phase 3 models.
+* Explain the difference among federation, confederation, integration, and monolithic model.
+* Identify one time-synchronization error that changes a decision.
+* State why validated constituent models do not automatically create a valid federation.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* [9] and [10]: IEEE 1516-2025 HLA framework and federate interface concepts.
+* [11] and [12]: NASA model/simulation credibility requirements and implementation guidance.
+* [3]: SoS modeling and simulation discussion.
+* [21]: SimPy environment and process interaction documentation.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* Federation purpose determines required fidelity, interfaces, time, scenario, and credibility—not the availability of existing models.
+* A federation object model defines shared concepts and exchanges; semantic agreement remains necessary beyond API compatibility.
+* Time management includes timestamp meaning, causality, step size, lookahead, latency, event ordering, and real-time constraints.
+* Federation V&V must address constituent suitability, interfaces, composition, emergent behavior, scenario validity, and output use.
+* Accreditation or use authorization is a decision by an authority for a stated purpose and context, not an intrinsic model property.
+
+### Worked example
+
+A traffic-flow model advances in 5-second steps, a fleet-dispatch model is event-driven, and a utility-outage model updates every minute. If the dispatch model sees a signal outage after assigning routes, it overstates evacuation throughput. The federation contract introduces timestamped state changes, conservative synchronization, initialization checks, and a use limit for sub-minute routing claims.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Write the federation decision/use statement.
+* Select participating models and assess fitness for use.
+* Create a federation object/information model and ownership table.
+* Define time, initialization, synchronization, exception, and logging contracts.
+* Build a small SimPy or message-based prototype and inject ordering/failure faults.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Diagnose federation semantic and temporal faults.
+* **Application:** Produce federation architecture and execution plan.
+* **Analysis:** Conduct constituent-model and composition credibility assessment.
+* **Synthesis:** Implement and verify one end-to-end mission-thread simulation.
+* **Stretch:** Map the design to HLA services or an FMI co-simulation environment.
+
+### Weekly deliverable
+
+**Federated M&S and Credibility Baseline v0.8**: purpose, federation architecture, model inventory, object model, time/ownership contracts, scenario plan, prototype, verification/validation evidence, uncertainty, use decision, and limitations.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| Purpose and fitness-for-use | 20% |
+| Federation semantics and time | 25% |
+| Prototype verification | 20% |
+| Validation/credibility plan | 20% |
+| Use limits and reproducibility | 15% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Federating models solely because they are available.
+* No semantic or time contract.
+* Assuming validated constituents imply valid composition.
+* No independent result check or fault injection.
+* Using the federation beyond its approved purpose.
+
+### Knowledge check and answer guidance
+
+1. **What does HLA provide?**  
+   **Answer guidance:** A framework, rules, object-model structure, and services/interfaces for coordinated distributed simulation; it does not provide domain semantics or validation.
+2. **What is federation validity?**  
+   **Answer guidance:** Adequacy of the composed federation for the stated use, including interactions and emergent outputs.
+3. **Why is initialization important?**  
+   **Answer guidance:** Inconsistent starting state can dominate transient behavior and invalidate comparisons.
+4. **What is model accreditation/use authorization?**  
+   **Answer guidance:** An authority’s acceptance of a model or simulation for a specified use and context.
+5. **Why inject interface faults?**  
+   **Answer guidance:** To verify synchronization, error handling, observability, and claims under realistic composition failures.
+
+### Revision and mastery gate
+
+Demonstrate reproducible execution, correct ordering/ownership behavior, independent checks, and a defensible use decision before model outputs support SoS recommendations.
+
+### Suggested workload
+
+Target: **12–14 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Baseline `SOS-0.8`; tag `SOS-W08-FED`; archive model inventory, interface contracts, logs, and credibility record.
+
+---
+
+## Week 9 — Cascading risk, cyber resilience, safety, and mission assurance
+
+### Competency alignment
+
+**Program competencies:** C6, C8, C10, C11  
+**Weekly role:** Analytic integration  
+**Nominal effort:** 11–13 hours
+
+### Professional context and essential question
+
+SoS risks propagate across technical, organizational, information, and infrastructure dependencies. A constituent may meet its own requirements while creating regional mission failure or shifting harm to another population.
+
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Construct an integrated risk model linking threats, hazards, dependencies, controls, mission effects, and owners.
+2. Analyze cascading failures, common-cause conditions, correlated risks, and recovery dependencies.
+3. Apply cyber-resilience objectives and techniques to the SoS architecture.
+4. Define graceful degradation, reconfiguration, recovery, and continuity strategies.
+5. Evaluate risk transfer, equity, public impact, and residual mission risk.
+
+### Prerequisite retrieval and readiness check
+
+* Trace one constituent outage through two mission threads.
+* Identify a common cause affecting at least three constituents.
+* Distinguish robustness, resilience, reliability, safety, security, and continuity.
+* Explain one way a mitigation shifts risk to another organization or user group.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* [13]: NIST cyber-resilience goals, objectives, approaches, and techniques.
+* [16]: NASA risk-management concepts and risk-informed decision making.
+* [17]: current DoD cyber DT&E lifecycle and evidence guidance.
+* [4]: system security, resilience, risk, and specialty-engineering considerations.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* Risk registers organized by constituent hide propagation. Model causal chains, shared dependencies, barriers, recovery resources, and mission effects.
+* Common cause can be technical, supplier, infrastructure, identity, policy, workforce, information, or environmental.
+* Resilience includes anticipate, withstand, recover, adapt, and learn; each needs measurable outcomes.
+* Graceful degradation must define preserved services, priority rules, communication, human authority, and unacceptable states.
+* Residual risk ownership must match actual authority and consequence—not whoever writes the report.
+
+### Worked example
+
+A ransomware event disables the shared identity/payment provider. Bus operations continue, but riders cannot validate eligibility, paratransit dispatch cannot confirm profiles, and campus gates deny vehicles. The architecture shifts to signed offline entitlements, local allow-lists, time-bounded manual override, later reconciliation, fraud monitoring, and an emergency privacy rule.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Build a dependency-based risk graph for utility, telecom, identity, and traffic services.
+* Identify common causes and minimum cut sets under stated assumptions.
+* Map cyber-resilience objectives and techniques to the physical/information architecture.
+* Define degraded modes and restoration priorities for one mission thread.
+* Conduct a tabletop exercise with conflicting safety, privacy, and continuity objectives.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Classify risk, hazard, threat, vulnerability, failure, and consequence statements.
+* **Application:** Develop integrated risk/resilience architecture and measures.
+* **Analysis:** Simulate or calculate cascading-loss scenarios and recovery sensitivity.
+* **Synthesis:** Recommend a resilience portfolio with owners, triggers, and residual risks.
+* **Stretch:** Red-team strategic or malicious adaptation to the resilience controls.
+
+### Weekly deliverable
+
+**SoS Mission Assurance Baseline v0.9**: dependency/risk model, common causes, cyber-resilience mapping, safety/continuity analysis, degraded modes, recovery strategy, exercise results, equity/risk-transfer assessment, and residual-risk decisions.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| Causal/cascade analysis | 25% |
+| Cyber/safety/resilience integration | 25% |
+| Degraded and recovery design | 20% |
+| Ownership and risk transfer | 15% |
+| Evidence, measures, and decisions | 15% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Constituent-only risk analysis with no mission propagation.
+* No common-cause or shared-infrastructure treatment.
+* A degraded mode that violates safety, accessibility, privacy, or authority without explicit decision.
+* Assigning residual risk to an entity unable to control or accept it.
+
+### Knowledge check and answer guidance
+
+1. **What is cascading risk?**  
+   **Answer guidance:** Risk whose effects propagate through dependencies and interactions to create additional failures or mission consequences.
+2. **How does resilience differ from reliability?**  
+   **Answer guidance:** Reliability emphasizes continued correct performance; resilience also addresses disruption, degradation, recovery, adaptation, and learning.
+3. **What is a common-cause failure?**  
+   **Answer guidance:** Multiple failures produced by a shared cause that defeats assumed independence or redundancy.
+4. **Why assess risk transfer?**  
+   **Answer guidance:** A mitigation may reduce one owner’s risk while increasing harm, burden, or exposure elsewhere.
+5. **What makes a degraded mode credible?**  
+   **Answer guidance:** Defined trigger, preserved outcome, authority, resources, human role, evidence, communication, and exit criteria.
+
+### Revision and mastery gate
+
+Close every mission-critical cascade without an owner, detection method, degraded behavior, recovery dependency, or residual-risk decision.
+
+### Suggested workload
+
+Target: **11–13 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Baseline `SOS-0.9`; tag `SOS-W09-RESILIENCE`; record exercise findings and control changes.
+
+---
+
+## Week 10 — Distributed integration, verification, validation, and operational T&E
+
+### Competency alignment
+
+**Program competencies:** C6, C7, C8, C10, C11  
+**Weekly role:** Analytic integration  
+**Nominal effort:** 12–14 hours
+
+### Professional context and essential question
+
+Constituent qualification and bilateral interface tests do not prove end-to-end SoS mission effectiveness. Evidence must be assembled across organizations, environments, versions, scenarios, and operational authorities.
+
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Define SoS capability claims and decompose required evidence across constituent, interface, thread, mission, and operational levels.
+2. Develop a distributed integration and T&E architecture with responsibilities, environments, instrumentation, data, and configuration control.
+3. Plan progressive tests from interface conformance through mission-thread and operational evaluation.
+4. Address test limitations, unavailable constituents, synthetic substitutes, safety, cyber, privacy, and operational constraints.
+5. Evaluate evidence sufficiency and residual uncertainty.
+
+### Prerequisite retrieval and readiness check
+
+* Reproduce one mission claim and its full evidence chain.
+* Explain why passing all interface tests may still fail the mission.
+* Identify one constituent that may refuse instrumentation or test participation.
+* Distinguish verification, validation, operational effectiveness, and operational suitability.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* [3]: SoS T&E and implementation considerations.
+* [4]: integration, verification, validation, technical reviews, and T&E interfaces.
+* [17]: DoD cyber DT&E evidence and lifecycle guidance.
+* [11] and [12]: use of models/simulations as bounded evidence.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* Start from capability claims and failure consequences, then determine evidence—not from available test facilities.
+* Distributed T&E needs a common scenario, configuration manifest, time basis, data dictionary, instrumentation plan, custody, quality checks, and adjudication process.
+* Synthetic and surrogate constituents can reduce cost but create model-validity and interface-fidelity limits.
+* Operational evaluation must include representative users, workload, policy, degraded conditions, recovery, and organizational coordination.
+* Evidence sufficiency is a decision under uncertainty; document what remains untested and why.
+
+### Worked example
+
+A regional evacuation demonstration succeeds with all systems preconfigured and staffed by engineers. It does not validate operational suitability because normal dispatchers lack the shared tool, one hospital used a test-only interface, privacy approval was temporarily waived, and recovery from a dropped telecom link was not exercised.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Build a claim-evidence matrix for three mission outcomes.
+* Assign evidence ownership and identify cross-organization gaps.
+* Design integration increments and entry/exit criteria.
+* Define a mission-thread test with normal, degraded, cyber, and recovery conditions.
+* Conduct an evidence-sufficiency review using model, lab, field, and operational results.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Classify evidence by verification/validation/test level and claim.
+* **Application:** Develop distributed integration and T&E strategy.
+* **Analysis:** Identify configuration, instrumentation, and representativeness threats.
+* **Synthesis:** Recommend what can be claimed now, conditionally, or not at all.
+* **Stretch:** Design continuous operational monitoring as post-deployment evidence.
+
+### Weekly deliverable
+
+**Distributed SoS Integration and T&E Baseline v1.0-TRR**: claim-evidence matrix, integration architecture, responsibilities, configurations, environments, scenarios, instrumentation/data plan, model/surrogate use, safety/privacy/cyber controls, criteria, gaps, and readiness recommendation.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| Claim-to-evidence architecture | 25% |
+| Distributed integration/test design | 25% |
+| Configuration/data/representativeness | 20% |
+| Degraded and operational scenarios | 15% |
+| Evidence sufficiency and limitations | 15% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Claiming SoS effectiveness from constituent acceptance tests.
+* No common configuration, scenario, or data semantics across test sites.
+* Using a surrogate without fitness-for-use evidence.
+* Ignoring unavailable constituents, operational users, or recovery conditions.
+* Overstating results beyond the tested context.
+
+### Knowledge check and answer guidance
+
+1. **What is a SoS capability claim?**  
+   **Answer guidance:** A measurable end-to-end mission assertion requiring contributions and interactions across constituents.
+2. **Why is configuration control difficult?**  
+   **Answer guidance:** Constituents, interfaces, data, environments, and policies evolve under separate authorities.
+3. **What is test representativeness?**  
+   **Answer guidance:** The degree to which users, workload, environments, configurations, threats, policies, and interactions match the intended context.
+4. **Can operational monitoring substitute for predeployment test?**  
+   **Answer guidance:** It can add evidence and learning but cannot ethically replace evidence needed before exposing users or missions to unacceptable risk.
+5. **What is an evidence gap?**  
+   **Answer guidance:** A claim-relevant uncertainty not adequately addressed by available analysis, model, test, demonstration, or operational observation.
+
+### Revision and mastery gate
+
+Pass the M&S, Risk, and T&E Readiness Review with no unsupported critical claim, unowned evidence gap, uncontrolled configuration, or unbounded surrogate/model use.
+
+### Suggested workload
+
+Target: **12–14 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Baseline `SOS-1.0-TRR`; tag `SOS-W10-TE`; sign readiness decision and residual evidence plan.
+
+---
+
+## Week 11 — Decision making, deployment, evolution, and portfolio roadmap
+
+### Competency alignment
+
+**Program competencies:** C8, C9, C10, C11, C12  
+**Weekly role:** Decision and capstone  
+**Nominal effort:** 11–13 hours
+
+### Professional context and essential question
+
+The SoS architecture is never finished. Leaders must choose an implementable path across uncertain participation, funding, upgrades, interfaces, threats, and mission priorities while preserving options and avoiding irreversible lock-in.
+
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Define decision authority, alternatives, objectives, measures, constraints, and uncertainties.
+2. Compare at least three architecture/evolution paths including governance-first and low-integration options.
+3. Perform uncertainty, sensitivity, robustness, regret, and decision-reversal analysis.
+4. Develop deployment waves, compatibility windows, triggers, options, and retirement/exit strategies.
+5. Create an implementable coalition roadmap with agreements, funding, evidence, and review points.
+
+### Prerequisite retrieval and readiness check
+
+* List the current architecture alternatives and critical uncertainties.
+* Identify one irreversible decision and one real option.
+* Explain regret and decision reversal in plain language.
+* Name one architecture choice that improves performance but reduces coalition participation.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* [4]: decision analysis, technical planning, configuration, and transition guidance.
+* [5]: mission engineering analysis and results/decision communication.
+* [6]: baselines, alternatives, excursions, and decision-oriented architecture views.
+* [16]: risk-informed decision and uncertainty principles.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* A feasible alternative includes authority, funding, agreements, workforce, transition, interfaces, evidence, and operations—not only technical performance.
+* Robustness asks whether an alternative remains acceptable across plausible futures, not whether its expected score is highest.
+* Real options preserve the ability to learn, defer, scale, switch, or abandon at a known cost.
+* Roadmaps should align mission increments, constituent upgrades, interface versions, tests, agreements, training, and decommissioning.
+* Decision records must state what would change the recommendation and who can make that change.
+
+### Worked example
+
+The centralized regional broker has the best nominal throughput but depends on a new legal authority and two vendors’ proprietary feeds. The federated directory performs slightly worse in the mean but remains acceptable under vendor withdrawal, supports phased adoption, and has lower regret. The recommendation selects the federated path with a time-bounded broker pilot as an option.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Define the Week 11 decision and authority.
+* Construct three feasible alternatives and a no-action/current-course baseline.
+* Build objectives, measures, thresholds, uncertainty ranges, and stakeholder perspectives.
+* Run sensitivity, robustness, regret, and decision-reversal analysis.
+* Create a three-wave roadmap with compatibility, evidence, governance, and exit criteria.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Distinguish uncertainty, sensitivity, robustness, regret, and option value.
+* **Application:** Complete the multiobjective decision model.
+* **Analysis:** Identify dominated, fragile, and governance-infeasible alternatives.
+* **Synthesis:** Produce the evolution recommendation and roadmap.
+* **Stretch:** Optimize the order of upgrades under budget and compatibility constraints.
+
+### Weekly deliverable
+
+**SoS Evolution Decision Baseline v1.1**: decision frame, alternatives, objectives/measures, uncertainty, sensitivity, robustness, regret, participation scenarios, roadmap, agreements/funding needs, triggers, options, exit strategy, and signed recommendation.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| Decision framing and feasible alternatives | 20% |
+| Analytic correctness and uncertainty | 25% |
+| Robustness/regret/reversal insight | 20% |
+| Roadmap and implementability | 20% |
+| Decision record and communication | 15% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Comparing technically attractive but governance-infeasible alternatives.
+* Hiding stakeholder conflict in a single unexplained weighted score.
+* No decision-reversal or participation sensitivity.
+* Roadmap without interfaces, evidence, agreements, resources, or retirement.
+
+### Knowledge check and answer guidance
+
+1. **What is a robust alternative?**  
+   **Answer guidance:** One that remains acceptable across a defined range of plausible conditions and uncertainties.
+2. **What is regret?**  
+   **Answer guidance:** The loss from selecting an alternative compared with the best choice after the future becomes known.
+3. **What is a real option?**  
+   **Answer guidance:** A designed right, not obligation, to defer, scale, switch, expand, or abandon as evidence changes.
+4. **Why include a current-course baseline?**  
+   **Answer guidance:** To reveal the value, cost, and risk of intervention relative to doing nothing or continuing existing plans.
+5. **What belongs in a decision-reversal condition?**  
+   **Answer guidance:** Observable threshold, evidence source, authority, timing, affected artifacts, and required action.
+
+### Revision and mastery gate
+
+Pass the SoS Evolution Decision Review with feasible alternatives, transparent stakeholder conflict, correct uncertainty analysis, and an authorized, evidence-linked roadmap.
+
+### Suggested workload
+
+Target: **11–13 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Baseline `SOS-1.1`; tag `SOS-W11-EVOLUTION`; freeze capstone recommendation and open final-review findings.
+
+---
+
+## Week 12 — Final SoS Engineering Review and live constituent change
+
+### Competency alignment
+
+**Program competencies:** C1–C12 integrated, emphasis C9–C12  
+**Weekly role:** Decision and capstone  
+**Nominal effort:** 12–14 hours
+
+### Professional context and essential question
+
+The final review must demonstrate that architecture, information, models, tests, governance, risk, and evolution decisions form one controlled evidence system—and that the recommendation can adapt when a constituent changes outside the integrator’s control.
+
+> **Essential question:** What evidence and engineering decisions are required to make this week’s SoS claim credible under independent ownership and change?
+
+### Weekly learning outcomes
+
+1. Integrate all course artifacts into one coherent, controlled SoS release.
+2. Reproduce key network, Bayesian, simulation, and decision results from a fresh checkout.
+3. Defend mission claims, architecture, evidence, uncertainty, governance, and residual risk.
+4. Execute a live constituent change and propagate impacts through the evidence chain.
+5. Produce a clear enterprise/complexity handoff for the remaining Phase 5 courses.
+
+### Prerequisite retrieval and readiness check
+
+* State the final recommendation and three conditions that would reverse it.
+* Trace the weakest mission claim from outcome to evidence.
+* Reproduce one posterior and one simulation result without notes.
+* Identify one issue that cannot be solved within SoS engineering alone.
+
+Proceed only after correcting errors that would invalidate the weekly architecture, analysis, or decision.
+
+### Required study
+
+* Review [1] CLOs and course topics.
+* Review [3] SoS principles and implementation implications.
+* Review [5]–[6] mission architecture and decision communication.
+* Review [11]–[13] credibility and resilience controls.
+
+For each source, record the question it answers, the claim it supports, and one limitation or context difference.
+
+### Instructor-style lesson notes
+
+* The final release requests a decision and defines authority, commitments, evidence, risks, and next action.
+* Cross-artifact consistency matters more than visual polish. Mission threads, interfaces, information, models, tests, and roadmap must agree.
+* Live change tests whether traceability and governance are operational rather than decorative.
+* A mature recommendation states where control is limited, evidence is conditional, participation is uncertain, and enterprise or complexity analysis is required.
+* The Phase 5 handoff should identify value conflicts, incentives, governance gaps, adaptation, feedback, and unintended consequences for later courses.
+
+### Worked example
+
+At the review, the identity/payment vendor is acquired and announces a six-month interface deprecation plus new restrictions on derived data. The learner identifies affected threads and exchanges, updates the COTS/data-rights risk, revises the federation and T&E plan, activates offline entitlement and federated identity options, changes Wave 2 scope, and escalates enterprise procurement/governance issues to EN.645.753.
+
+Reproduce the reasoning with controlled case data, change one material assumption, and explain how the architecture, evidence, or decision changes.
+
+### Guided practice
+
+* Run a clean repository reproduction and manifest audit.
+* Trace three mission claims across all architecture and evidence views.
+* Rehearse constituent withdrawal, interface deprecation, data-rights loss, cyber event, and accelerated upgrade.
+* Conduct executive, operator, constituent-owner, safety/security, accessibility/privacy, tester, and skeptical-reviewer challenges.
+* Close or explicitly accept all critical findings.
+
+**Checkpoint:** compare the result with the reference rationale, record discrepancies, correct the source artifact or model, and rerun affected analysis.
+
+### Independent exercises
+
+* **Foundation:** Complete the final consistency and reference audit.
+* **Application:** Prepare report, briefing, controlled repository, and review package.
+* **Analysis:** Quantify residual uncertainty, risk, participation, and evidence limitations.
+* **Synthesis:** Conduct the Final SoS Engineering Review, live change, and oral defense.
+* **Stretch:** Produce a two-course handoff agenda for enterprise and complex-systems analysis.
+
+### Weekly deliverable
+
+**Final Regional Mobility and Emergency Access SoS Engineering Release v1.0**: complete capstone outputs, controlled sources/models/data, clean reproduction, live-change disposition, final decision request, review record, oral defense, and Phase 5 handoff.
+
+Submit native/textual source, controlled input data, generated views, a change log, and a one-page self-review. Screenshots alone are not acceptable evidence.
+
+### Analytic rubric
+
+| Criterion | Weight |
+|---|---:|
+| Integrated SoS evidence chain | 25% |
+| Architecture/interoperability coherence | 20% |
+| Analytic and T&E credibility | 20% |
+| Governance/evolution implementability | 15% |
+| Live change and reproducibility | 10% |
+| Executive and technical defense | 10% |
+
+Minimum weekly performance is 80%, with no critical failure.
+
+### Critical failures
+
+* Disconnected artifacts or contradictory baselines.
+* Clean reproduction or live change failure without transparent recovery.
+* Unsupported mission, causality, model, test, authority, or risk claim.
+* Recommendation with no implementable commitments, residual risks, or revision conditions.
+
+### Knowledge check and answer guidance
+
+1. **What is the strongest evidence for the recommendation?**  
+   **Answer guidance:** A reproducible end-to-end mission claim supported by architecture, analysis, distributed test, and operationally representative evidence.
+2. **What remains outside SoS control?**  
+   **Answer guidance:** Constituent internal decisions, enterprise incentives/funding, public policy, market behavior, and emergent adaptation not granted to the integrator.
+3. **Why is live change central?**  
+   **Answer guidance:** Asynchronous constituent change is normal; the SoS must detect, analyze, govern, and adapt without losing traceability.
+4. **What should EN.645.753 examine?**  
+   **Answer guidance:** Enterprise value, governance, investment, processes, incentives, contracts, organizations, and transformation feasibility.
+5. **What should EN.645.742 examine?**  
+   **Answer guidance:** Emergence, adaptation, nonlinear feedback, path dependence, policy resistance, resilience, and safe-to-learn interventions.
+
+### Revision and mastery gate
+
+Complete clean reproduction, pass the live constituent change, defend every critical claim and limitation, close review findings, and achieve Proficient or better on all critical dimensions.
+
+### Suggested workload
+
+Target: **12–14 hours**. Record actual time by reading/research, architecture/modeling, analysis, review, and revision.
+
+### Configuration and portfolio update
+
+Release `SOS-1.0-FINAL`; signed manifest and decision record; tag `SOS-W12-FINAL`; issue handoff baselines for EN.645.753 and EN.645.742.
+
+---
 ## References
 
-[202]: https://sebokwiki.org/wiki/Systems_of_Systems_%28SoS%29 "Systems of Systems (SoS)"
-[203]: https://www.incose.org/group/systems-of-systems-working-group "Systems of Systems Working Group"
-[204]: https://www.cto.mil/wp-content/uploads/2024/06/DoD-SE-for-SoS-2008.pdf "Systems Engineering Guide for Systems of Systems, V 1.0"
-[205]: https://ac.cto.mil/wp-content/uploads/2022/02/Systems-Eng-Guidebook_Feb2022-Cleared-slp.pdf "Systems Engineering Guidebook"
-[206]: https://www.cto.mil/wp-content/uploads/2023/06/Eng-Def-Sys-2022.pdf "Engineering of Defense Systems Guidebook"
-[207]: https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-22-video-1 "Lecture 22: Bayesian Statistical Inference - II | Probabilistic ..."
-[208]: https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/resources/lecture-22-probabilistic-inference-ii "Lecture 22: Probabilistic Inference II | Artificial Intelligence"
-[209]: https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/resources/lecture-14-causal-inference-part-1 "Causal Inference, Part 1 | Machine Learning for Healthcare"
+[1]: https://apps.ep.jhu.edu/syllabus/fall-2026/645.771.81 "Fall 2026 syllabus for EN.645.771"
+[2]: https://ep.jhu.edu/courses/645771-system-of-systems-engineering/ "JHU course page — System of Systems Engineering"
+[3]: https://acqnotes.com/wp-content/uploads/2014/09/DoD-Systems-Engineering-Guide-for-Systems-of-Systems-Aug-2008.pdf "DoD Systems Engineering Guide for Systems of Systems, August 2008"
+[4]: https://ac.cto.mil/wp-content/uploads/2022/08/Systems-Eng-Guidebook_Feb2022-Cleared.pdf "DoD Systems Engineering Guidebook, February 2022"
+[5]: https://ac.cto.mil/wp-content/uploads/2023/11/MEG_2_Oct2023.pdf "Department of Defense Mission Engineering Guide, Version 2.0"
+[6]: https://ac.cto.mil/wp-content/uploads/2025/01/U-Mission-Architecture-Style-Guide-Final_07Jan2025.pdf "DoD Mission Architecture Style Guide, January 2025"
+[7]: https://www.omg.org/spec/UAF/1.3/About-UAF "OMG Unified Architecture Framework 1.3"
+[8]: https://standards.ieee.org/ieee/42010/6846/ "ISO/IEC/IEEE 42010:2022 architecture description"
+[9]: https://standards.ieee.org/ieee/1516/6687/ "IEEE 1516-2025 HLA framework and rules"
+[10]: https://standards.ieee.org/ieee/1516.1/6688/ "IEEE 1516.1-2025 HLA federate interface specification"
+[11]: https://standards.nasa.gov/standard/nasa/nasa-std-7009 "NASA-STD-7009B Standard for Models and Simulations"
+[12]: https://standards.nasa.gov/standard/nasa/nasa-hdbk-7009 "NASA-HDBK-7009B implementation guide, February 2026"
+[13]: https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final "NIST SP 800-160 Volume 2 Revision 1 — Developing Cyber-Resilient Systems"
+[14]: https://www.nist.gov/publications/performance-evaluation-manufacturing-process-under-uncertainty-using-bayesian-networks "NIST Bayesian-network uncertainty integration example"
+[15]: https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20100012871.pdf "NASA — Assessing Requirements Volatility and Risk Using Bayesian Networks"
+[16]: https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20120000033.pdf "NASA Risk Management Handbook"
+[17]: https://aaf.dau.edu/storage/2025/06/Cyber-DTE-Guidebook-V3-June2025_Final.pdf "DoD Cyber Developmental Test and Evaluation Guidebook, Version 3.0, June 2025"
+[18]: https://standards.nasa.gov/node/12544 "NASA GSFC Handbook to Inform Major Fixed Price, Commercial, and COTS System Selection, Procurement, and Insight"
+[19]: https://networkx.org/documentation/stable/ "NetworkX documentation"
+[20]: https://pgmpy.org/ "pgmpy Bayesian-network documentation"
+[21]: https://simpy.readthedocs.io/ "SimPy documentation"
+
+[Back to Phase 5 README](README.md) · [Back to program README](../README.md)

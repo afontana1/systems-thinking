@@ -112,7 +112,7 @@ Each executable result must record:
 Repeated topics must become more advanced rather than merely repeated:
 
 * **EN.645.757** introduces intended use, conceptual modeling, discrete-event simulation, inputs, outputs, experiments, and credibility.
-* **EN.645.784** deepens decision framing, objectives and value models, influence diagrams, Pareto reasoning, multiobjective selection, design-space generation, experiments, surrogate models, and robustness.
+* **EN.645.784** deepens decision framing, value models, influence diagrams, Bayesian reasoning, multiobjective selection, and robustness.
 * **EN.645.781** shifts from event/process behavior to feedback, accumulation, delays, nonlinear dynamics, policy resistance, and leverage.
 * **EN.645.756** deepens stochastic characterization, DOE, statistical inference, performance surfaces, uncertainty, and lifecycle metrics.
 * **EN.645.632** makes the analytics queryable and traceable inside an MBSE/digital-thread environment.
@@ -139,7 +139,9 @@ Do not proceed merely because a model runs. Progress requires the weekly mastery
 | EN.645.781 Systems Thinking and Systems Dynamics | Fully expanded | Complete and pilot the course |
 | EN.645.756 Metrics, Modeling, and Simulation | Fully expanded | Complete and pilot the course |
 | EN.645.632 Applied Analytics for MBSE | Fully expanded | Complete and pilot the course |
-| EN.645.758 Advanced Systems Modeling and Simulation | Initial 12-week outline | Expand next and last in Phase 3 |
+| EN.645.758 Advanced Systems Modeling and Simulation | Fully expanded | Complete and pilot the course |
+
+All six Phase 3 courses are fully expanded. The remaining work is controlled piloting, workload calibration, tool-path verification, and maintenance of external references.
 
 ## 10. Phase exit criteria
 

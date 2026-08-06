@@ -1,6 +1,12 @@
 # Systems Engineering MSc Self-Study
 
-I have been interested in systems engineering for quite some time. The JHU curriculum seems comprehensive and of good quality; however, I am unwilling to pay upwards of 5,500$ for a course, even if my company is willing to cover the tuition. So what I've decided to do is construct a self-learning curriculum, based on the course descriptions. I had Chat GPT construct 12-week course outlines for each course in the program I found interesting. While not recieving recognized credit from a university, these concepts nonetheless will help a person in a career related to systems engineering.
+**Release:** Version 1.0.0  
+**Status:** Curriculum specification complete; ready for controlled piloting  
+**Last audited:** 2026-08-05
+
+This repository is an independent, self-directed systems-engineering curriculum inspired by publicly available Johns Hopkins Engineering for Professionals course descriptions and syllabi. It organizes 20 courses into a coherent prerequisite sequence and expands each course into a 12-week plan with readings, worked examples, guided and independent practice, deliverables, rubrics, mastery gates, formal reviews, and a portfolio handoff.
+
+The curriculum is intended for serious professional development. It is not affiliated with Johns Hopkins University, does not reproduce university instruction, and does not confer academic credit, enrollment status, certification, or an accredited degree.
 
 ---
 
@@ -23,9 +29,31 @@ The curriculum is organized into six phases. Each phase has its own overview and
 2. Read the `README.md` at the start of each phase before beginning its courses.
 3. Complete each course from its own Markdown file. Maintain the specified artifacts, revision history, decision records, and portfolio evidence.
 4. Use the program competency map below to understand how repeated subjects increase in independence, integration, complexity, and evidentiary rigor.
-5. Use the reusable templates as the standard for expanding or maintaining courses that have not yet received full weekly development.
+5. Use the reusable templates as the maintenance standard when revising a course, adding a new case, or replacing a reading, tool, exercise, or assessment.
 
 > This is a self-study curriculum. It does not confer university credit, enrollment status, certification, or an academic-equivalency waiver.
+
+---
+
+## Release and implementation documents
+
+- [Program-wide quality audit](PROGRAM-AUDIT.md)
+- [Pilot and implementation guide](PILOT-GUIDE.md)
+- [Release notes](RELEASE-NOTES.md)
+- [Phase 0 OOP readiness bridge](phase-0/oop-readiness-bridge.md)
+- [Phase 0 quantitative and computational bridge](phase-0/quantitative-and-computational-bridge.md)
+
+## Planning assumptions
+
+The full curriculum contains **20 courses and 240 instructional weeks**. Most courses target roughly **8–13 hours per week**, with additional time for tool setup, debugging, review preparation, revision, and optional stretch work. A reasonable planning range for the full program is approximately **2,400–3,000 hours**, excluding prerequisite remediation and extended project work.
+
+For a first implementation:
+
+- study one course at a time unless a phase README explicitly permits parallel work and you have enough time to preserve review and configuration discipline;
+- schedule at least one recovery and portfolio-consolidation week between courses;
+- schedule two to four consolidation weeks between phases;
+- treat the weekly workload as a pilot estimate and record actual hours;
+- do not claim course or program completion until critical mastery criteria and required revisions are closed.
 
 ---
 
@@ -46,7 +74,13 @@ The curriculum is organized into six phases. Each phase has its own overview and
 | EN.645.781 Systems Thinking and Systems Dynamics | Fully expanded | 2026-08-05 |
 | EN.645.756 Metrics, Modeling, and Simulation | Fully expanded | 2026-08-05 |
 | EN.645.632 Applied Analytics for MBSE | Fully expanded | 2026-08-05 |
-| Remaining Phase 3–5 courses | Initial 12-week outlines | — |
+| EN.645.758 Advanced Systems Modeling and Simulation | Fully expanded | 2026-08-05 |
+| EN.645.780 Agile Systems Engineering | Fully expanded | 2026-08-05 |
+| EN.645.782 Foundations of Digital and Mission Engineering | Fully expanded | 2026-08-05 |
+| EN.645.783 Systems Engineering Process Improvement | Fully expanded | 2026-08-05 |
+| EN.645.771 System of Systems Engineering | Fully expanded | 2026-08-05 |
+| EN.645.753 Enterprise Systems Engineering | Fully expanded | 2026-08-05 |
+| EN.645.742 Management of Complex Systems | Fully expanded | 2026-08-05 |
 
 “Fully expanded” means the course has a complete course specification, detailed weekly outcomes and resources, worked examples, guided and independent practice, deliverable specifications, rubrics, mastery gates, review events, and a capstone.
 
@@ -907,12 +941,10 @@ The templates are being applied in this order:
 4. **Completed:** rebuild and fully expand EN.605.704 Object-Oriented Analysis and Design;
 5. **Completed:** rebuild and fully expand EN.645.764 Software Systems Engineering;
 6. **Completed:** rebuild and fully expand all three Phase 2 lifecycle courses—EN.645.767 System Conceptual Design, EN.645.768 System Design & Integration, and EN.645.769 System Test & Evaluation—while preserving one controlled concept-to-evidence chain;
-7. **Completed:** expand the Phase 3 README and EN.645.757 Foundations of Modeling and Simulation in Systems Engineering, including the current NASA M&S credibility framework and open SimPy tool track;
-8. **Completed:** rebuild and fully expand EN.645.784 Decision Science & Analytics in Systems Engineering, including separate selection and engineering-design projects, Pareto/value analysis, morphology, multiobjective optimization, DOE, surrogate modeling, uncertainty, and robustness;
-9. **Completed:** rebuild and fully expand EN.645.781 Systems Thinking and Systems Dynamics, including dynamic problem formulation, behavior-over-time reference modes, causal-loop diagrams, archetypes, stock-and-flow modeling, Vensim implementation, model testing, supply and healthcare applications, and robust policy design;
-10. **Completed:** rebuild and fully expand EN.645.756 Metrics, Modeling, and Simulation for Systems Engineering, including technical measurement, stochastic characterization, data readiness, statistical inference, DOE, response modeling, RAM, Monte Carlo uncertainty propagation, requirement margins, and lifecycle upgrade/replacement/retirement decisions;
-11. **Completed:** rebuild and fully expand EN.645.632 Applied Analytics for Model Based Systems Engineering, including OOSEM tailoring, model planning, advanced stakeholder/behavior/logical/interface/requirements analysis, executable parametrics, trade-space analysis, variants and baselines, language extension, model queries, validation, generated products, and final design assessment;
-12. **Next:** rebuild and fully expand EN.645.758 Advanced Systems Modeling and Simulation, completing Phase 3.
+7. **Completed:** fully expand all six Phase 3 quantitative and analytic courses;
+8. **Completed:** fully expand all three Phase 4 agile, digital/mission, and process-improvement courses;
+9. **Completed:** fully expand all three Phase 5 courses—EN.645.771 System of Systems Engineering, EN.645.753 Enterprise Systems Engineering, and EN.645.742 Management of Complex Systems;
+10. **Completed:** conduct the program-level quality review, add pilot and remediation guidance, calibrate planning assumptions, correct repository-status inconsistencies, and prepare the Version 1.0 release package.
 
 Existing course material should be retained when it fits the template, rewritten when it is underspecified, and removed only when it is redundant, unsupported, obsolete, or outside the source course's intended scope.
 

@@ -320,19 +320,19 @@ A polished diagram cannot compensate for incorrect or disconnected underlying mo
 
 ## 12. Major review gates
 
-### Week 6 — Model Language and Architecture Review
+### Review gate — Week 6: Model Language and Architecture Review
 
 The learner demonstrates that the repository contains coherent stakeholder, requirement, behavior, structure, and interface content. The review must include live navigation from one mission need to behavior, structural responsibility, and an interface. Passing requires a restorable model, no duplicate authoritative elements for critical content, and no unresolved critical modeling-language misuse.
 
-### Week 9 — Alternative Architecture Review
+### Review gate — Week 9: Alternative Architecture Review
 
 The learner presents three materially distinct candidate physical architectures, shows how they satisfy the same logical intent, and uses model-derived measures and traceability to support a down-select. Passing requires explicit assumptions and sensitivity analysis.
 
-### Week 11 — Model Quality and Readiness Review
+### Review gate — Week 11: Model Quality and Readiness Review
 
 The learner presents orphan, coverage, naming, interface, allocation, and V&V gap reports; executes a supplied change request; and shows the affected model elements and outputs. Passing requires correction of all critical model defects before the final baseline.
 
-### Week 12 — Capstone Model Review
+### Review gate — Week 12: Capstone Model Review
 
 The final review assesses engineering usefulness, semantic quality, traceability, model governance, reproducibility, change-impact capability, and communication. It is not a diagram beauty contest.
 

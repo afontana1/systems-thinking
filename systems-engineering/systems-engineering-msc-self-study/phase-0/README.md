@@ -16,18 +16,18 @@ The current JHU sources are not perfectly consistent. For example, the current c
 ### Foundation courses
 
 1. [**EN.645.662 — Introduction to Systems Engineering**](en-645-662-introduction-to-systems-engineering.md)
-   Required before every systems-engineering course in the program. The complete course specification and 12-week map appear later in Phase 0 and establish lifecycle thinking, stakeholder needs, requirements, architecture, technical management, risk, integration, verification, validation, and technical reviews.
+   Required before every systems-engineering course in the program. Its course file contains the complete specification and 12-week curriculum establishing lifecycle thinking, stakeholder needs, requirements, architecture, technical management, risk, integration, verification, validation, and technical reviews.
 
 2. [**EN.645.667 — Management of Systems Projects**](en-645-667-management-of-systems-projects.md)
-   Required before Software Systems Engineering and the lifecycle core. The complete course specification, 12-week map, and fully developed weekly units appear later in Phase 0 and cover proposal development, scope and work authorization, estimating, scheduling, earned value, integrated project control, risk and change, communications and leadership, technical-performance management, configuration, quality, and agile or hybrid delivery.
+   Required before Software Systems Engineering and the lifecycle core. Its course file contains the complete specification and fully developed 12-week curriculum covering proposal development, scope and work authorization, estimating, scheduling, earned value, integrated project control, risk and change, communications and leadership, technical-performance management, configuration, quality, and agile or hybrid delivery.
 
 The two foundation courses can be studied sequentially or partially in parallel. On the first pass, take **645.662 first**, followed by **645.667**.
 
 ### Readiness gates rather than automatic extra courses
 
-**Object-oriented programming gate** — required before EN.605.704. A learner passes by demonstrating basic proficiency with classes, interfaces, inheritance, composition, exceptions, collections, and unit tests in Java, C++, C#, Python, or a comparable language. A learner who does not pass should complete a 4–6 week bridge.
+**Object-oriented programming gate** — required before EN.605.704. A learner passes by demonstrating basic proficiency with classes, interfaces, inheritance, composition, exceptions, collections, and unit tests in Java, C++, C#, Python, or a comparable language. A learner who does not pass should complete the [4-week OOP readiness bridge](oop-readiness-bridge.md), extending it to 6 weeks when additional programming practice is needed.
 
-**Quantitative and computational gate** — required before the quantitative modeling sequence. A learner passes by demonstrating algebra, functions, introductory calculus, probability, descriptive statistics, confidence intervals, regression basics, spreadsheet analysis, and introductory Python or equivalent computational work. A learner who does not pass should complete a 6–8 week bridge.
+**Quantitative and computational gate** — required before the quantitative modeling sequence. A learner passes by demonstrating algebra, functions, introductory calculus, probability, descriptive statistics, confidence intervals, regression basics, spreadsheet analysis, and introductory Python or equivalent computational work. A learner who does not pass should complete the [8-week quantitative and computational bridge](quantitative-and-computational-bridge.md).
 
 **Tooling gate** — recommended before Phase 1. Install and demonstrate basic use of Git, Markdown, a spreadsheet package, Python notebooks, a diagramming tool, and the selected UML/SysML tool.
 
@@ -83,7 +83,7 @@ For a learner taking one course at a time, use this order:
 
 #### Safe parallelization
 
-After completing Phase 0, the following pairs can be studied concurrently when workload permits:
+After completing Phase 0, the following pairs can be studied concurrently only after the learner has completed at least two courses successfully, can sustain approximately 20–24 hours per week, and can preserve separate baselines and review cycles:
 
 * EN.645.631 with EN.605.704
 * EN.645.757 with EN.645.784
@@ -109,6 +109,8 @@ Proceed when you can:
 
 - [EN.645.662 — Introduction to Systems Engineering](en-645-662-introduction-to-systems-engineering.md)
 - [EN.645.667 — Management of Systems Projects](en-645-667-management-of-systems-projects.md)
+- [Optional OOP readiness bridge](oop-readiness-bridge.md)
+- [Optional quantitative and computational bridge](quantitative-and-computational-bridge.md)
 
 [Back to program README](../README.md)
 
