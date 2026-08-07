@@ -153,13 +153,13 @@ Resources:
 
 A first-order approximation is:
 
-$$
+```math
 f(x+d)
 \approx
 f(x)
 +
 \nabla f(x)^\mathsf{T}d.
-$$
+```
 
 ### Probability
 
@@ -260,7 +260,7 @@ Create a small repository containing:
 
 A common linear program is:
 
-$$
+```math
 \begin{aligned}
 \mathrm{maximize}_{x} \quad
 & c^\mathsf{T}x \\
@@ -268,7 +268,7 @@ $$
 & Ax \le b, \\
 & x \ge 0.
 \end{aligned}
-$$
+```
 
 Study:
 
@@ -289,7 +289,7 @@ Study:
 
 For the primal model:
 
-$$
+```math
 \begin{aligned}
 \mathrm{maximize}_{x} \quad
 & c^\mathsf{T}x \\
@@ -297,11 +297,11 @@ $$
 & Ax \le b, \\
 & x \ge 0,
 \end{aligned}
-$$
+```
 
 a corresponding dual is:
 
-$$
+```math
 \begin{aligned}
 \mathrm{minimize}_{y} \quad
 & b^\mathsf{T}y \\
@@ -309,7 +309,7 @@ $$
 & A^\mathsf{T}y \ge c, \\
 & y \ge 0.
 \end{aligned}
-$$
+```
 
 Study:
 
@@ -425,7 +425,7 @@ Study:
 
 A minimum-cost flow model is:
 
-$$
+```math
 \begin{aligned}
 \mathrm{minimize}_{x} \quad
 & \sum_{(i,j)\in A} c_{ij}x_{ij} \\
@@ -439,7 +439,7 @@ b_i,
 & 0 \le x_{ij} \le u_{ij},
 \qquad (i,j)\in A.
 \end{aligned}
-$$
+```
 
 Algorithms:
 
@@ -457,7 +457,7 @@ Algorithms:
 
 A mixed-integer linear program is:
 
-$$
+```math
 \begin{aligned}
 \mathrm{minimize}_{x,y} \quad
 & c^\mathsf{T}x + d^\mathsf{T}y \\
@@ -466,7 +466,7 @@ $$
 & x \in \mathbb{R}^{n}, \\
 & y \in \mathbb{Z}^{p}.
 \end{aligned}
-$$
+```
 
 Study:
 
@@ -491,9 +491,9 @@ Study:
 
 A common implication is represented by:
 
-$$
+```math
 x \le My,
-$$
+```
 
 where `y` is binary. The value of `M` should be justified from valid bounds rather than chosen arbitrarily.
 
@@ -609,7 +609,7 @@ Review:
 
 The Markov property is:
 
-$$
+```math
 \Pr\left(
 X_{t+1}=j
 \mid
@@ -621,7 +621,7 @@ X_{t+1}=j
 \mid
 X_t=i
 \right).
-$$
+```
 
 Study:
 
@@ -637,19 +637,19 @@ Study:
 
 A stationary distribution satisfies:
 
-$$
+```math
 \pi^\mathsf{T}P
 =
 \pi^\mathsf{T}
-$$
+```
 
 and:
 
-$$
+```math
 \sum_i \pi_i
 =
 1.
-$$
+```
 
 ### Continuous-time Markov chains
 
@@ -680,33 +680,33 @@ Study:
 
 Little's law is:
 
-$$
+```math
 L
 =
 \lambda W.
-$$
+```
 
 For an M/M/1 queue:
 
-$$
+```math
 \rho
 =
 \frac{\lambda}{\mu}.
-$$
+```
 
 When:
 
-$$
+```math
 \rho < 1,
-$$
+```
 
 the expected time in the system is:
 
-$$
+```math
 W
 =
 \frac{1}{\mu-\lambda}.
-$$
+```
 
 Treat M/G/1 derivations and heavy-traffic limits as optional depth unless queueing is a specialization.
 
@@ -726,11 +726,11 @@ Focus on genuinely stochastic models:
 
 The newsvendor critical fractile is:
 
-$$
+```math
 F(Q^*)
 =
 \frac{C_u}{C_u+C_o}.
-$$
+```
 
 The deterministic EOQ model may be reviewed briefly, but it should not dominate this quarter.
 
@@ -837,12 +837,12 @@ You should be able to:
 
 A Monte Carlo estimate of an expectation is:
 
-$$
+```math
 \widehat{\mu}_n
 =
 \frac{1}{n}
 \sum_{i=1}^{n}g(X_i).
-$$
+```
 
 ### Simulation optimization
 
@@ -869,7 +869,7 @@ Spend approximately three to four weeks on:
 
 A simulated-annealing acceptance probability is:
 
-$$
+```math
 \Pr(\text{accept})
 =
 \min
@@ -879,7 +879,7 @@ $$
 -\frac{\Delta}{T}
 \right)
 \right\}.
-$$
+```
 
 Do not attempt to survey every nature-inspired algorithm. Neighborhood design, evaluation methodology, and comparison against credible baselines matter more.
 
@@ -976,17 +976,17 @@ You should be able to:
 
 A gradient step is:
 
-$$
+```math
 x_{k+1}
 =
 x_k
 -
 \alpha_k \nabla f(x_k).
-$$
+```
 
 Newton's method uses:
 
-$$
+```math
 x_{k+1}
 =
 x_k
@@ -995,13 +995,13 @@ x_k
 \nabla^2 f(x_k)
 \right]^{-1}
 \nabla f(x_k).
-$$
+```
 
 ### Constrained optimization
 
 A general constrained problem is:
 
-$$
+```math
 \begin{aligned}
 \mathrm{minimize}_{x} \quad
 & f(x) \\
@@ -1011,11 +1011,11 @@ $$
 & h_j(x) = 0,
 \qquad j=1,\ldots,p.
 \end{aligned}
-$$
+```
 
 The Lagrangian is:
 
-$$
+```math
 \mathcal{L}(x,\lambda,\nu)
 =
 f(x)
@@ -1023,7 +1023,7 @@ f(x)
 \sum_{i=1}^{m}\lambda_i g_i(x)
 +
 \sum_{j=1}^{p}\nu_j h_j(x).
-$$
+```
 
 Study:
 
@@ -1053,7 +1053,7 @@ Study:
 
 A function is convex when:
 
-$$
+```math
 f\left(
 \theta x+(1-\theta)y
 \right)
@@ -1063,7 +1063,7 @@ f\left(
 (1-\theta)f(y),
 \qquad
 0 \le \theta \le 1.
-$$
+```
 
 ### Important model classes
 
@@ -1077,20 +1077,20 @@ $$
 
 A convex quadratic program is:
 
-$$
+```math
 \begin{aligned}
 \mathrm{minimize}_{x} \quad
 & \frac{1}{2}x^\mathsf{T}Qx+c^\mathsf{T}x \\
 \text{subject to} \quad
 & Ax \le b,
 \end{aligned}
-$$
+```
 
 where:
 
-$$
+```math
 Q \succeq 0.
-$$
+```
 
 ## Primary Resources
 
@@ -1193,7 +1193,7 @@ You should be able to:
 
 A finite-horizon Bellman recursion is:
 
-$$
+```math
 V_t(s)
 =
 \min_{a \in \mathcal{A}(s)}
@@ -1207,7 +1207,7 @@ V_{t+1}(S_{t+1})
 S_t=s,A_t=a
 \right]
 \right\}.
-$$
+```
 
 ### Markov decision processes
 
@@ -1224,7 +1224,7 @@ Study:
 
 For a discounted MDP:
 
-$$
+```math
 V(s)
 =
 \min_{a \in \mathcal{A}(s)}
@@ -1235,7 +1235,7 @@ c(s,a)
 \sum_{s'}
 P(s' \mid s,a)V(s')
 \right\}.
-$$
+```
 
 ### Approximate methods
 
@@ -1328,7 +1328,7 @@ You should be able to:
 
 A two-stage stochastic program is:
 
-$$
+```math
 \mathrm{minimize}_{x \in \mathcal{X}}
 \left\{
 c^\mathsf{T}x
@@ -1338,11 +1338,11 @@ c^\mathsf{T}x
 Q(x,\xi)
 \right]
 \right\},
-$$
+```
 
 where the recourse problem is:
 
-$$
+```math
 Q(x,\xi)
 =
 \min_y
@@ -1355,7 +1355,7 @@ h(\xi)-T(\xi)x,
 \;
 y \ge 0
 \right\}.
-$$
+```
 
 Study:
 
@@ -1375,20 +1375,20 @@ Study:
 
 A chance constraint is:
 
-$$
+```math
 \Pr
 \left(
 g(x,\xi)\le 0
 \right)
 \ge
 1-\alpha.
-$$
+```
 
 ## Month 2: Robust Optimization
 
 A robust model is:
 
-$$
+```math
 \begin{aligned}
 \mathrm{minimize}_{x} \quad
 & f(x) \\
@@ -1397,7 +1397,7 @@ $$
 \qquad
 \forall u \in \mathcal{U}.
 \end{aligned}
-$$
+```
 
 Study:
 
@@ -1427,7 +1427,7 @@ Study:
 
 A contextual decision model is:
 
-$$
+```math
 \mathrm{minimize}_{x \in \mathcal{X}}
 \mathbb{E}
 \left[
@@ -1435,7 +1435,7 @@ c(x,\xi)
 \mid
 Z=z
 \right].
-$$
+```
 
 Important questions:
 
@@ -1543,18 +1543,18 @@ Study:
 
 Expected utility is:
 
-$$
+```math
 \mathbb{E}
 \left[
 u(X)
 \right]
 =
 \sum_x u(x)\Pr(X=x).
-$$
+```
 
 The expected value of perfect information is:
 
-$$
+```math
 \mathrm{EVPI}
 =
 \mathbb{E}
@@ -1567,7 +1567,7 @@ $$
 \left[
 U(a,\xi)
 \right].
-$$
+```
 
 Resources:
 
@@ -1596,7 +1596,7 @@ Study:
 
 For a two-player zero-sum game with payoff matrix `A`, one player's mixed strategy can be found through:
 
-$$
+```math
 \begin{aligned}
 \mathrm{maximize}_{p,v} \quad
 & v \\
@@ -1605,7 +1605,7 @@ $$
 & \mathbf{1}^\mathsf{T}p = 1, \\
 & p \ge 0.
 \end{aligned}
-$$
+```
 
 Resources:
 
@@ -1880,7 +1880,7 @@ warnings
 
 A common relative optimality-gap convention is:
 
-$$
+```math
 \mathrm{gap}
 =
 \frac{
@@ -1896,7 +1896,7 @@ z_{\text{primal}}
 \right|
 \right\}
 }.
-$$
+```
 
 State the exact convention used by the solver or report.
 
