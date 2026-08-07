@@ -262,7 +262,7 @@ A common linear program is:
 
 $$
 \begin{aligned}
-\operatorname{maximize}_{x} \quad
+\mathrm{maximize}_{x} \quad
 & c^\mathsf{T}x \\
 \text{subject to} \quad
 & Ax \le b, \\
@@ -291,7 +291,7 @@ For the primal model:
 
 $$
 \begin{aligned}
-\operatorname{maximize}_{x} \quad
+\mathrm{maximize}_{x} \quad
 & c^\mathsf{T}x \\
 \text{subject to} \quad
 & Ax \le b, \\
@@ -303,7 +303,7 @@ a corresponding dual is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{y} \quad
+\mathrm{minimize}_{y} \quad
 & b^\mathsf{T}y \\
 \text{subject to} \quad
 & A^\mathsf{T}y \ge c, \\
@@ -427,7 +427,7 @@ A minimum-cost flow model is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad
+\mathrm{minimize}_{x} \quad
 & \sum_{(i,j)\in A} c_{ij}x_{ij} \\
 \text{subject to} \quad
 & \sum_{j:(i,j)\in A}x_{ij}
@@ -459,7 +459,7 @@ A mixed-integer linear program is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x,y} \quad
+\mathrm{minimize}_{x,y} \quad
 & c^\mathsf{T}x + d^\mathsf{T}y \\
 \text{subject to} \quad
 & Ax + By \le b, \\
@@ -1003,7 +1003,7 @@ A general constrained problem is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad
+\mathrm{minimize}_{x} \quad
 & f(x) \\
 \text{subject to} \quad
 & g_i(x) \le 0,
@@ -1079,7 +1079,7 @@ A convex quadratic program is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad
+\mathrm{minimize}_{x} \quad
 & \frac{1}{2}x^\mathsf{T}Qx+c^\mathsf{T}x \\
 \text{subject to} \quad
 & Ax \le b,
@@ -1329,7 +1329,7 @@ You should be able to:
 A two-stage stochastic program is:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}}
+\mathrm{minimize}_{x \in \mathcal{X}}
 \left\{
 c^\mathsf{T}x
 +
@@ -1390,7 +1390,7 @@ A robust model is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad
+\mathrm{minimize}_{x} \quad
 & f(x) \\
 \text{subject to} \quad
 & g(x,u) \le 0,
@@ -1428,7 +1428,7 @@ Study:
 A contextual decision model is:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}}
+\mathrm{minimize}_{x \in \mathcal{X}}
 \mathbb{E}
 \left[
 c(x,\xi)
@@ -1555,7 +1555,7 @@ $$
 The expected value of perfect information is:
 
 $$
-\operatorname{EVPI}
+\mathrm{EVPI}
 =
 \mathbb{E}
 \left[
@@ -1598,7 +1598,7 @@ For a two-player zero-sum game with payoff matrix `A`, one player's mixed strate
 
 $$
 \begin{aligned}
-\operatorname{maximize}_{p,v} \quad
+\mathrm{maximize}_{p,v} \quad
 & v \\
 \text{subject to} \quad
 & A^\mathsf{T}p \ge v\mathbf{1}, \\
@@ -1881,7 +1881,7 @@ warnings
 A common relative optimality-gap convention is:
 
 $$
-\operatorname{gap}
+\mathrm{gap}
 =
 \frac{
 \left|

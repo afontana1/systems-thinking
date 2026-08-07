@@ -102,7 +102,7 @@ A generic mathematical optimization model is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad & f(x) \\
+\min_{x} \quad & f(x) \\
 \text{subject to} \quad & g_i(x) \le 0, \qquad i = 1,\ldots,m, \\
 & h_j(x) = 0, \qquad j = 1,\ldots,p, \\
 & x \in \mathcal{X}.
@@ -348,7 +348,7 @@ termination status
 A relative optimality gap is commonly reported as:
 
 $$
-\operatorname{gap}
+\mathrm{gap}
 =
 \frac{\left|z_{\text{primal}} - z_{\text{bound}}\right|}
 {\max\left\{1,\left|z_{\text{primal}}\right|\right\}}.
@@ -366,7 +366,7 @@ A common primal form is:
 
 $$
 \begin{aligned}
-\operatorname{maximize}_{x} \quad & c^\mathsf{T}x \\
+\max_{x} \quad & c^\mathsf{T}x \\
 \text{subject to} \quad & Ax \le b, \\
 & x \ge 0.
 \end{aligned}
@@ -412,7 +412,7 @@ For the primal linear program
 
 $$
 \begin{aligned}
-\operatorname{maximize}_{x} \quad & c^\mathsf{T}x \\
+\max_{x} \quad & c^\mathsf{T}x \\
 \text{subject to} \quad & Ax \le b, \\
 & x \ge 0,
 \end{aligned}
@@ -422,7 +422,7 @@ a corresponding dual is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{y} \quad & b^\mathsf{T}y \\
+\min_{y} \quad & b^\mathsf{T}y \\
 \text{subject to} \quad & A^\mathsf{T}y \ge c, \\
 & y \ge 0.
 \end{aligned}
@@ -447,7 +447,7 @@ A mixed-integer linear program can be written as:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x,y} \quad & c^\mathsf{T}x + d^\mathsf{T}y \\
+\min_{x,y} \quad & c^\mathsf{T}x + d^\mathsf{T}y \\
 \text{subject to} \quad & Ax + By \le b, \\
 & x \in \mathbb{R}^{n}, \\
 & y \in \mathbb{Z}^{p}.
@@ -525,7 +525,7 @@ A minimum-cost flow model is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad
+\min_{x} \quad
 & \sum_{(i,j)\in A} c_{ij}x_{ij} \\
 \text{subject to} \quad
 & \sum_{j:(i,j)\in A} x_{ij}
@@ -577,7 +577,7 @@ A general nonlinear program is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad & f(x) \\
+\min_{x} \quad & f(x) \\
 \text{subject to} \quad & g_i(x) \le 0,
 \qquad i = 1,\ldots,m, \\
 & h_j(x) = 0,
@@ -673,7 +673,7 @@ A quadratic program has the form:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad
+\min_{x} \quad
 & \frac{1}{2}x^\mathsf{T}Qx + c^\mathsf{T}x \\
 \text{subject to} \quad
 & Ax \le b.
@@ -801,15 +801,15 @@ Common scheduling environments:
 Common objectives:
 
 $$
-\operatorname{minimize} \quad C_{\max}
+\min \quad C_{\max}
 $$
 
 $$
-\operatorname{minimize} \quad \sum_j C_j
+\min \quad \sum_j C_j
 $$
 
 $$
-\operatorname{minimize} \quad \sum_j w_j T_j
+\min \quad \sum_j w_j T_j
 $$
 
 where the quantities represent makespan, completion times, and weighted tardiness.
@@ -855,7 +855,7 @@ A two-block model may be written as:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x,y} \quad
+\min_{x,y} \quad
 & c^\mathsf{T}x + d^\mathsf{T}y \\
 \text{subject to} \quad
 & Ax + By \ge b, \\
@@ -877,7 +877,7 @@ Resources:
 A multi-objective model is:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}}
+\min_{x \in \mathcal{X}}
 \left(
 f_1(x), f_2(x), \ldots, f_k(x)
 \right).
@@ -897,7 +897,7 @@ Important concepts:
 A weighted-sum scalarization is:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}}
+\min_{x \in \mathcal{X}}
 \sum_{r=1}^{k} w_r f_r(x),
 \qquad
 w_r \ge 0.
@@ -1210,7 +1210,7 @@ Stochastic programming models decisions with explicit random variables and proba
 A two-stage stochastic program is:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}}
+\min_{x \in \mathcal{X}}
 \left\{
 c^\mathsf{T}x
 +
@@ -1273,7 +1273,7 @@ A robust model is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad & f(x) \\
+\min_{x} \quad & f(x) \\
 \text{subject to} \quad
 & g(x,u) \le 0,
 \qquad
@@ -1309,7 +1309,7 @@ Distributionally robust optimization protects against uncertainty in the probabi
 A generic model is:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}}
+\min_{x \in \mathcal{X}}
 \sup_{\mathbb{P}\in\mathcal{P}}
 \mathbb{E}_{\mathbb{P}}
 \left[
@@ -1334,7 +1334,7 @@ Expected loss alone may not represent tail risk.
 Conditional value at risk can be written as:
 
 $$
-\operatorname{CVaR}_{\alpha}(L)
+\mathrm{CVaR}_{\alpha}(L)
 =
 \min_{\eta}
 \left\{
@@ -1463,9 +1463,9 @@ A stock evolves according to:
 $$
 \frac{dS(t)}{dt}
 =
-\operatorname{inflow}(t)
+\mathrm{inflow}(t)
 -
-\operatorname{outflow}(t).
+\mathrm{outflow}(t).
 $$
 
 Topics:
@@ -1490,7 +1490,7 @@ Simulation optimization searches for good decisions when performance is evaluate
 A generic problem is:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}}
+\min_{x \in \mathcal{X}}
 \mathbb{E}
 \left[
 Y(x,\omega)
@@ -1722,7 +1722,7 @@ for a discrete random outcome.
 The expected value of perfect information is:
 
 $$
-\operatorname{EVPI}
+\mathrm{EVPI}
 =
 \mathbb{E}
 \left[
@@ -1795,7 +1795,7 @@ For a two-player zero-sum game with payoff matrix `A`, the row player's problem 
 
 $$
 \begin{aligned}
-\operatorname{maximize}_{p,v} \quad & v \\
+\max_{p,v} \quad & v \\
 \text{subject to} \quad
 & A^\mathsf{T}p \ge v\mathbf{1}, \\
 & \mathbf{1}^\mathsf{T}p = 1, \\
@@ -1960,7 +1960,7 @@ Prescriptive analytics combines prediction, uncertainty, and optimization to rec
 A contextual decision problem can be written as:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}}
+\min_{x \in \mathcal{X}}
 \mathbb{E}
 \left[
 c(x,\xi)
@@ -1997,13 +1997,13 @@ Inverse optimization infers objective coefficients, constraints, or preferences 
 A generic inverse problem is:
 
 $$
-\operatorname{find} \quad \theta
+\mathrm{find} \quad \theta
 $$
 
 such that observed decisions are approximately optimal for:
 
 $$
-\operatorname{minimize}_{x \in \mathcal{X}(\theta)}
+\min_{x \in \mathcal{X}(\theta)}
 f(x;\theta).
 $$
 
@@ -2132,7 +2132,7 @@ A mean-variance portfolio model is:
 
 $$
 \begin{aligned}
-\operatorname{minimize}_{x} \quad
+\min_{x} \quad
 & x^\mathsf{T}\Sigma x \\
 \text{subject to} \quad
 & \mu^\mathsf{T}x \ge r_{\min}, \\
