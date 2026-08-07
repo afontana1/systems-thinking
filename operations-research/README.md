@@ -100,14 +100,14 @@ Operations research models often contain:
 
 A generic mathematical optimization model is:
 
-$$
+```math
 \begin{aligned}
 \min_{x} \quad & f(x) \\
 \text{subject to} \quad & g_i(x) \le 0, \qquad i = 1,\ldots,m, \\
 & h_j(x) = 0, \qquad j = 1,\ldots,p, \\
 & x \in \mathcal{X}.
 \end{aligned}
-$$
+```
 
 The choice of the functions, feasible set, uncertainty representation, and solution method determines the model class.
 
@@ -152,16 +152,16 @@ Important topics:
 
 For a differentiable function, a first-order approximation near a point is:
 
-$$
+```math
 f(x + d) \approx f(x) + \nabla f(x)^\mathsf{T}d.
-$$
+```
 
 A second-order approximation is:
 
-$$
+```math
 f(x + d) \approx f(x) + \nabla f(x)^\mathsf{T}d
 + \frac{1}{2}d^\mathsf{T}\nabla^2 f(x)d.
-$$
+```
 
 ## 3.3 Probability and Statistics
 
@@ -347,12 +347,12 @@ termination status
 
 A relative optimality gap is commonly reported as:
 
-$$
+```math
 \mathrm{gap}
 =
 \frac{\left|z_{\text{primal}} - z_{\text{bound}}\right|}
 {\max\left\{1,\left|z_{\text{primal}}\right|\right\}}.
-$$
+```
 
 ---
 
@@ -364,13 +364,13 @@ Linear programming optimizes a linear objective subject to linear constraints an
 
 A common primal form is:
 
-$$
+```math
 \begin{aligned}
 \max_{x} \quad & c^\mathsf{T}x \\
 \text{subject to} \quad & Ax \le b, \\
 & x \ge 0.
 \end{aligned}
-$$
+```
 
 Important topics:
 
@@ -410,23 +410,23 @@ Resources:
 
 For the primal linear program
 
-$$
+```math
 \begin{aligned}
 \max_{x} \quad & c^\mathsf{T}x \\
 \text{subject to} \quad & Ax \le b, \\
 & x \ge 0,
 \end{aligned}
-$$
+```
 
 a corresponding dual is:
 
-$$
+```math
 \begin{aligned}
 \min_{y} \quad & b^\mathsf{T}y \\
 \text{subject to} \quad & A^\mathsf{T}y \ge c, \\
 & y \ge 0.
 \end{aligned}
-$$
+```
 
 Important topics:
 
@@ -445,14 +445,14 @@ Integer programming introduces discrete variables for yes/no choices, counts, as
 
 A mixed-integer linear program can be written as:
 
-$$
+```math
 \begin{aligned}
 \min_{x,y} \quad & c^\mathsf{T}x + d^\mathsf{T}y \\
 \text{subject to} \quad & Ax + By \le b, \\
 & x \in \mathbb{R}^{n}, \\
 & y \in \mathbb{Z}^{p}.
 \end{aligned}
-$$
+```
 
 Important concepts:
 
@@ -475,9 +475,9 @@ Important concepts:
 
 A common linear implication is:
 
-$$
+```math
 x \le My,
-$$
+```
 
 where `y` is binary and `M` must be chosen carefully.
 
@@ -523,7 +523,7 @@ Major problem types:
 
 A minimum-cost flow model is:
 
-$$
+```math
 \begin{aligned}
 \min_{x} \quad
 & \sum_{(i,j)\in A} c_{ij}x_{ij} \\
@@ -536,7 +536,7 @@ $$
 & 0 \le x_{ij} \le u_{ij},
 \qquad (i,j)\in A.
 \end{aligned}
-$$
+```
 
 Algorithms:
 
@@ -575,7 +575,7 @@ Nonlinear optimization includes models with nonlinear objectives or constraints.
 
 A general nonlinear program is:
 
-$$
+```math
 \begin{aligned}
 \min_{x} \quad & f(x) \\
 \text{subject to} \quad & g_i(x) \le 0,
@@ -583,7 +583,7 @@ $$
 & h_j(x) = 0,
 \qquad j = 1,\ldots,p.
 \end{aligned}
-$$
+```
 
 Important topics:
 
@@ -615,23 +615,23 @@ Resources:
 
 A set is convex when the line segment between any two points in the set remains in the set:
 
-$$
+```math
 \theta x + (1-\theta)y \in \mathcal{C},
 \qquad
 x,y \in \mathcal{C},
 \qquad
 0 \le \theta \le 1.
-$$
+```
 
 A function is convex when:
 
-$$
+```math
 f\!\left(\theta x + (1-\theta)y\right)
 \le
 \theta f(x) + (1-\theta)f(y),
 \qquad
 0 \le \theta \le 1.
-$$
+```
 
 Important topics:
 
@@ -649,7 +649,7 @@ Important topics:
 
 For a differentiable constrained problem, the Lagrangian is:
 
-$$
+```math
 \mathcal{L}(x,\lambda,\nu)
 =
 f(x)
@@ -657,7 +657,7 @@ f(x)
 \sum_{i=1}^{m}\lambda_i g_i(x)
 +
 \sum_{j=1}^{p}\nu_j h_j(x).
-$$
+```
 
 Resources:
 
@@ -671,28 +671,28 @@ Resources:
 
 A quadratic program has the form:
 
-$$
+```math
 \begin{aligned}
 \min_{x} \quad
 & \frac{1}{2}x^\mathsf{T}Qx + c^\mathsf{T}x \\
 \text{subject to} \quad
 & Ax \le b.
 \end{aligned}
-$$
+```
 
 A second-order cone constraint often has the form:
 
-$$
+```math
 \lVert Ax + b \rVert_2
 \le
 c^\mathsf{T}x + d.
-$$
+```
 
 A semidefinite constraint has the form:
 
-$$
+```math
 X \succeq 0.
-$$
+```
 
 Topics:
 
@@ -728,17 +728,17 @@ Core topics:
 
 A constraint-satisfaction model seeks:
 
-$$
+```math
 x \in \mathcal{D}
-$$
+```
 
 such that:
 
-$$
+```math
 C_k(x) = \text{true},
 \qquad
 k = 1,\ldots,m.
-$$
+```
 
 Resources:
 
@@ -800,17 +800,17 @@ Common scheduling environments:
 
 Common objectives:
 
-$$
+```math
 \min \quad C_{\max}
-$$
+```
 
-$$
+```math
 \min \quad \sum_j C_j
-$$
+```
 
-$$
+```math
 \min \quad \sum_j w_j T_j
-$$
+```
 
 where the quantities represent makespan, completion times, and weighted tardiness.
 
@@ -853,7 +853,7 @@ Important methods:
 
 A two-block model may be written as:
 
-$$
+```math
 \begin{aligned}
 \min_{x,y} \quad
 & c^\mathsf{T}x + d^\mathsf{T}y \\
@@ -862,7 +862,7 @@ $$
 & x \in \mathcal{X}, \\
 & y \in \mathcal{Y}.
 \end{aligned}
-$$
+```
 
 Decomposition exploits separability, block structure, or a distinction between complicating and easy variables.
 
@@ -876,12 +876,12 @@ Resources:
 
 A multi-objective model is:
 
-$$
+```math
 \min_{x \in \mathcal{X}}
 \left(
 f_1(x), f_2(x), \ldots, f_k(x)
 \right).
-$$
+```
 
 Important concepts:
 
@@ -896,12 +896,12 @@ Important concepts:
 
 A weighted-sum scalarization is:
 
-$$
+```math
 \min_{x \in \mathcal{X}}
 \sum_{r=1}^{k} w_r f_r(x),
 \qquad
 w_r \ge 0.
-$$
+```
 
 Resources:
 
@@ -917,9 +917,9 @@ Resources:
 
 A stochastic process is a collection of random variables indexed by time or another ordered set:
 
-$$
+```math
 \left\{X_t : t \in \mathcal{T}\right\}.
-$$
+```
 
 Topics:
 
@@ -956,7 +956,7 @@ Video playlists:
 
 The Markov property is:
 
-$$
+```math
 \Pr\left(
 X_{t+1}=j
 \mid
@@ -968,7 +968,7 @@ X_{t+1}=j
 \mid
 X_t=i
 \right).
-$$
+```
 
 Topics:
 
@@ -989,15 +989,15 @@ Topics:
 
 A stationary distribution satisfies:
 
-$$
+```math
 \pi^\mathsf{T}P = \pi^\mathsf{T}
-$$
+```
 
 and:
 
-$$
+```math
 \sum_i \pi_i = 1.
-$$
+```
 
 Resources:
 
@@ -1039,39 +1039,39 @@ Core concepts:
 
 Kendall notation:
 
-$$
+```math
 A/S/c/K/N/D.
-$$
+```
 
 For an M/M/1 queue, utilization is:
 
-$$
+```math
 \rho = \frac{\lambda}{\mu}.
-$$
+```
 
 When:
 
-$$
+```math
 \rho < 1,
-$$
+```
 
 the steady-state expected number in the system is:
 
-$$
+```math
 L = \frac{\rho}{1-\rho},
-$$
+```
 
 and the expected time in the system is:
 
-$$
+```math
 W = \frac{1}{\mu-\lambda}.
-$$
+```
 
 Little's law is:
 
-$$
+```math
 L = \lambda W.
-$$
+```
 
 Methods:
 
@@ -1110,21 +1110,21 @@ Inventory theory studies stock decisions under demand, lead-time, supply, and se
 
 The classical economic order quantity is:
 
-$$
+```math
 Q^*
 =
 \sqrt{\frac{2DK}{h}},
-$$
+```
 
 where `D` is demand rate, `K` is order cost, and `h` is holding cost per unit per period.
 
 The newsvendor critical fractile is:
 
-$$
+```math
 F(Q^*)
 =
 \frac{C_u}{C_u+C_o},
-$$
+```
 
 where `C_u` is underage cost and `C_o` is overage cost.
 
@@ -1162,19 +1162,19 @@ Resources:
 
 Reliability is the probability that a component or system survives beyond time `t`:
 
-$$
+```math
 R(t)
 =
 \Pr(T>t).
-$$
+```
 
 The hazard rate is:
 
-$$
+```math
 h(t)
 =
 \frac{f(t)}{R(t)}.
-$$
+```
 
 Topics:
 
@@ -1209,18 +1209,18 @@ Stochastic programming models decisions with explicit random variables and proba
 
 A two-stage stochastic program is:
 
-$$
+```math
 \min_{x \in \mathcal{X}}
 \left\{
 c^\mathsf{T}x
 +
 \mathbb{E}_{\xi}\left[Q(x,\xi)\right]
 \right\},
-$$
+```
 
 where the recourse function is:
 
-$$
+```math
 Q(x,\xi)
 =
 \min_y
@@ -1233,7 +1233,7 @@ h(\xi)-T(\xi)x,
 \;
 y \ge 0
 \right\}.
-$$
+```
 
 Topics:
 
@@ -1252,11 +1252,11 @@ Topics:
 
 A chance constraint is:
 
-$$
+```math
 \Pr\left(g(x,\xi)\le 0\right)
 \ge
 1-\alpha.
-$$
+```
 
 Resources:
 
@@ -1271,7 +1271,7 @@ Robust optimization seeks decisions that remain feasible or effective for every 
 
 A robust model is:
 
-$$
+```math
 \begin{aligned}
 \min_{x} \quad & f(x) \\
 \text{subject to} \quad
@@ -1279,7 +1279,7 @@ $$
 \qquad
 \forall u \in \mathcal{U}.
 \end{aligned}
-$$
+```
 
 Topics:
 
@@ -1308,14 +1308,14 @@ Distributionally robust optimization protects against uncertainty in the probabi
 
 A generic model is:
 
-$$
+```math
 \min_{x \in \mathcal{X}}
 \sup_{\mathbb{P}\in\mathcal{P}}
 \mathbb{E}_{\mathbb{P}}
 \left[
 f(x,\xi)
 \right].
-$$
+```
 
 Topics:
 
@@ -1333,7 +1333,7 @@ Expected loss alone may not represent tail risk.
 
 Conditional value at risk can be written as:
 
-$$
+```math
 \mathrm{CVaR}_{\alpha}(L)
 =
 \min_{\eta}
@@ -1346,7 +1346,7 @@ $$
 (L-\eta)_+
 \right]
 \right\}.
-$$
+```
 
 Topics:
 
@@ -1411,12 +1411,12 @@ Monte Carlo methods estimate quantities using random sampling.
 
 An expectation can be estimated by:
 
-$$
+```math
 \widehat{\mu}_n
 =
 \frac{1}{n}
 \sum_{i=1}^{n}g(X_i).
-$$
+```
 
 Topics:
 
@@ -1460,13 +1460,13 @@ System dynamics models aggregate stocks, flows, delays, and feedback loops.
 
 A stock evolves according to:
 
-$$
+```math
 \frac{dS(t)}{dt}
 =
 \mathrm{inflow}(t)
 -
 \mathrm{outflow}(t).
-$$
+```
 
 Topics:
 
@@ -1489,13 +1489,13 @@ Simulation optimization searches for good decisions when performance is evaluate
 
 A generic problem is:
 
-$$
+```math
 \min_{x \in \mathcal{X}}
 \mathbb{E}
 \left[
 Y(x,\omega)
 \right],
-$$
+```
 
 where the expectation is estimated through simulation.
 
@@ -1531,7 +1531,7 @@ Dynamic programming studies multistage decisions in which current actions affect
 
 For a finite-horizon problem:
 
-$$
+```math
 V_t(s)
 =
 \min_{a \in \mathcal{A}(s)}
@@ -1546,7 +1546,7 @@ S_t=s,
 A_t=a
 \right]
 \right\}.
-$$
+```
 
 Core concepts:
 
@@ -1583,7 +1583,7 @@ An MDP is described by:
 
 For a discounted MDP:
 
-$$
+```math
 V(s)
 =
 \min_{a \in \mathcal{A}(s)}
@@ -1595,7 +1595,7 @@ c(s,a)
 P(s' \mid s,a)
 V(s')
 \right\}.
-$$
+```
 
 Methods:
 
@@ -1619,14 +1619,14 @@ A POMDP uses a belief state when the true system state cannot be directly observ
 
 Belief-state updating follows Bayes' rule:
 
-$$
+```math
 b'(s')
 =
 \eta
 O(o \mid s',a)
 \sum_s
 P(s' \mid s,a)b(s),
-$$
+```
 
 where `eta` is a normalizing constant.
 
@@ -1665,15 +1665,15 @@ Topics:
 
 A discrete-time linear system is:
 
-$$
+```math
 x_{t+1}
 =
 Ax_t + Bu_t + w_t.
-$$
+```
 
 A quadratic objective may be:
 
-$$
+```math
 \mathbb{E}
 \left[
 \sum_{t=0}^{T-1}
@@ -1685,7 +1685,7 @@ u_t^\mathsf{T}Ru_t
 +
 x_T^\mathsf{T}Q_Tx_T
 \right].
-$$
+```
 
 ---
 
@@ -1708,20 +1708,20 @@ Core concepts:
 
 Expected utility is:
 
-$$
+```math
 \mathbb{E}
 \left[
 u(X)
 \right]
 =
 \sum_x u(x)\Pr(X=x)
-$$
+```
 
 for a discrete random outcome.
 
 The expected value of perfect information is:
 
-$$
+```math
 \mathrm{EVPI}
 =
 \mathbb{E}
@@ -1734,7 +1734,7 @@ $$
 \left[
 U(a,\xi)
 \right].
-$$
+```
 
 Applications:
 
@@ -1793,7 +1793,7 @@ Topics:
 
 For a two-player zero-sum game with payoff matrix `A`, the row player's problem can be written as:
 
-$$
+```math
 \begin{aligned}
 \max_{p,v} \quad & v \\
 \text{subject to} \quad
@@ -1801,7 +1801,7 @@ $$
 & \mathbf{1}^\mathsf{T}p = 1, \\
 & p \ge 0.
 \end{aligned}
-$$
+```
 
 Applications:
 
@@ -1888,7 +1888,7 @@ Heuristics seek good solutions when exact optimization is too slow, unnecessary,
 
 A simulated-annealing acceptance probability is often:
 
-$$
+```math
 \Pr(\text{accept})
 =
 \min
@@ -1898,7 +1898,7 @@ $$
 -\frac{\Delta}{T}
 \right)
 \right\}.
-$$
+```
 
 ## 10.4 Matheuristics and Hybrid Methods
 
@@ -1959,7 +1959,7 @@ Prescriptive analytics combines prediction, uncertainty, and optimization to rec
 
 A contextual decision problem can be written as:
 
-$$
+```math
 \min_{x \in \mathcal{X}}
 \mathbb{E}
 \left[
@@ -1967,7 +1967,7 @@ c(x,\xi)
 \mid
 Z=z
 \right],
-$$
+```
 
 where `Z` contains observed context.
 
@@ -1996,16 +1996,16 @@ Inverse optimization infers objective coefficients, constraints, or preferences 
 
 A generic inverse problem is:
 
-$$
+```math
 \mathrm{find} \quad \theta
-$$
+```
 
 such that observed decisions are approximately optimal for:
 
-$$
+```math
 \min_{x \in \mathcal{X}(\theta)}
 f(x;\theta).
-$$
+```
 
 Applications:
 
@@ -2130,7 +2130,7 @@ Resources:
 
 A mean-variance portfolio model is:
 
-$$
+```math
 \begin{aligned}
 \min_{x} \quad
 & x^\mathsf{T}\Sigma x \\
@@ -2139,7 +2139,7 @@ $$
 & \mathbf{1}^\mathsf{T}x = 1, \\
 & x \in \mathcal{X}.
 \end{aligned}
-$$
+```
 
 ## 12.6 Telecommunications and Computing
 
@@ -2737,7 +2737,7 @@ Before submitting:
 - Use stable links where possible.
 - Identify unofficial or community-maintained repositories.
 - Verify licensing before copying code or data.
-- Confirm that mathematical notation uses display LaTeX blocks with `$$` delimiters.
+- Confirm that mathematical notation uses GitHub fenced `math` blocks.
 - Run a link checker.
 
 Suggested link-checking tools:
@@ -2754,4 +2754,4 @@ Suggested link-checking tools:
 - Duplicate entries from the previous resource list were consolidated.
 - YouTube tracking parameters were removed.
 - Official repositories are identified where practical.
-- Mathematical formalisms use display LaTeX with `$$` delimiters.
+- Mathematical formalisms use GitHub fenced `math` blocks.
