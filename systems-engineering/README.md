@@ -1,5 +1,7 @@
 # [Systems engineering](https://en.wikipedia.org/wiki/Category:Systems_engineering)
 
+- [Engineering Fundamentals Playbook](https://microsoft.github.io/code-with-engineering-playbook/)
+
 ## Foundational Overviews
 - [Systems Engineering Overview](https://sebokwiki.org/wiki/Systems_Engineering_Overview)
 - [A Journey Through the Systems Landscape](https://sebokwiki.org/wiki/A_Journey_Through_the_Systems_Landscape)
@@ -159,6 +161,8 @@
 - [Trade Study](https://en.wikipedia.org/wiki/Trade_study)
 - [Interoperability](https://en.wikipedia.org/wiki/Interoperability)
 - [Mission Engineering](https://sebokwiki.org/wiki/Mission_Engineering)
+- [Decision Management](https://sebokwiki.org/wiki/Decision_Management)
+- [Analysis and Selection between Alternative Solutions](https://sebokwiki.org/wiki/Analysis_and_Selection_between_Alternative_Solutions)
 
 ---
 
