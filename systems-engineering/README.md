@@ -74,7 +74,6 @@
 - [Life Cycle Assessment](https://en.wikipedia.org/wiki/Life-cycle_assessment)
 - [Service Life Management](https://sebokwiki.org/wiki/Service_Life_Management)
 - [Quality Function Deployment](https://en.wikipedia.org/wiki/Quality_function_deployment)
-- [Multiple Criterion Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
 
 ---
 
@@ -90,6 +89,7 @@
   - [List of System Quality Attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes)
   - [Quality Function Deployment](https://en.wikipedia.org/wiki/Quality_function_deployment)
 - [Interface Control Document](https://en.wikipedia.org/wiki/Interface_control_document)
+- [Interoperability](https://en.wikipedia.org/wiki/Interoperability)
 
 ---
 
@@ -152,17 +152,16 @@
     - [Process Modeling](https://en.wikipedia.org/wiki/Process_modeling)
     - [Flowchart](https://en.wikipedia.org/wiki/Flowchart)
 
-
 ---
 
 ## Missions, Decisions, Trade Studies, and Interoperability
 - [Decision Analysis](https://en.wikipedia.org/wiki/Category:Decision_analysis)
   - [Decision Matrix Method (Pugh Method)](https://en.wikipedia.org/wiki/Decision-matrix_method)
 - [Trade Study](https://en.wikipedia.org/wiki/Trade_study)
-- [Interoperability](https://en.wikipedia.org/wiki/Interoperability)
 - [Mission Engineering](https://sebokwiki.org/wiki/Mission_Engineering)
 - [Decision Management](https://sebokwiki.org/wiki/Decision_Management)
 - [Analysis and Selection between Alternative Solutions](https://sebokwiki.org/wiki/Analysis_and_Selection_between_Alternative_Solutions)
+- [Multiple Criterion Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
 
 ---
 

@@ -1,930 +1,2847 @@
-# Complex Adaptive Systems from the Systems Engineering Perspective
+# Complex Adaptive Systems from a Systems Engineering Perspective
 
-## Purpose of this document
+**Learning guide — current through September 2026**
 
-This document consolidates and structures content into a single learning outline and curriculum. It is designed for a technically experienced reader with a background in data engineering, software systems, analytics, and some prior exposure to systems architecture, who wants to understand:
+<a id="purpose"></a>
+## Purpose of this guide
 
-1. how **systems engineering** approaches **complex adaptive systems (CAS)**,
-2. what major questions systems engineers are trying to answer,
-3. what methods and research traditions they use,
-4. who the major researchers and schools are,
-5. what resources to study, and
-6. how to pursue a learning path that could support a transition toward **systems engineering research directed at CAS**.
+This guide is a structured curriculum for a technically experienced reader with a background in software, data, analytics, engineering, or systems architecture who wants to understand **complex adaptive systems (CAS) from a systems engineering perspective** and develop toward research-level competence.
 
----
+It is organized around a central systems-engineering question:
 
-# Part I. Background: Complex Adaptive Systems from the Systems Engineering Perspective
+> **How do we design, architect, govern, operate, assure, and improve systems whose behavior cannot be completely predicted or centrally controlled?**
 
-## 1. The central framing
+The guide treats CAS-in-systems-engineering not as one tidy discipline, but as an interdisciplinary zone spanning systems science, complex systems, engineering systems, system-of-systems engineering, sociotechnical systems, cybernetics, network science, simulation, resilience engineering, safety science, governance, decision making under deep uncertainty, model-based systems engineering, and systems practice.
 
-From a **systems engineering** perspective, research on complex adaptive systems is less a single tidy subfield and more a **cluster of overlapping research programs and practice communities**. It appears through:
+The objective is not merely to accumulate readings. By the end of the curriculum, you should be able to:
 
-- complex systems work in **INCOSE**,
-- **engineering systems** research, especially associated with MIT,
-- **system-of-systems engineering**,
-- **enterprise and sociotechnical systems**,
-- **resilience and adaptation research**,
-- and efforts to understand or engineer **self-organizing systems**.
+1. distinguish major forms and mechanisms of complexity;
+2. explain how systems engineering changes when systems are open, adaptive, multi-actor, and only partly controllable;
+3. select modeling and intervention methods based on the structure of a problem rather than methodological preference;
+4. build and critique system dynamics, agent-based, network, architecture, uncertainty, and safety models;
+5. reason about architecture, governance, resilience, adaptation, and lifecycle value under deep uncertainty;
+6. distinguish what conventional systems engineering can represent well from what requires complexity-oriented extensions;
+7. evaluate claims made from computational models and mixed-method systems research;
+8. design a defensible research study on a complex engineered or sociotechnical system; and
+9. produce a capstone analysis that compares multiple lenses on the same real system.
 
-Across these streams, the common concern is that many important systems are:
-
-- open rather than closed,
-- nonlinear rather than proportionate,
-- multi-actor rather than centrally owned,
-- adaptive rather than fixed,
-- and dynamically co-evolving with their environment.
-
-The practical consequence is that traditional forms of systems engineering, especially when interpreted as strongly reductionist, centrally controlled, and heavily front-loaded in requirements/specification, can become inadequate.
-
-A systems engineer looking at CAS is not only trying to explain why emergent behavior occurs. They are trying to answer a harder question:
-
-> **How do we design, govern, operate, and improve systems whose behavior cannot be completely predicted or centrally controlled?**
-
-This is one of the major differences from economics. In economics, CAS is often studied to understand market behavior, institutional evolution, or macro-level regularities. In systems engineering, CAS is studied because engineers must **intervene in real systems** that have technical, social, organizational, and governance dimensions.
-
-The core systems engineering challenge is therefore not just explanation, but **intervention under irreducible complexity**.
+The current-practice snapshot is updated through **September 2026**. It incorporates ISO/IEC/IEEE 15288:2023, the INCOSE Systems Engineering Handbook Fifth Edition, SEBoK v2.14, and the final adoption of SysML v2.
 
 ---
 
-## 2. Why CAS matters to systems engineering
+<a id="toc"></a>
+# Table of Contents
 
-Systems engineering increasingly deals with systems that are not just large technical artifacts, but **sociotechnical ecosystems**. These include:
-
-- infrastructures,
-- defense and security systems,
-- transportation networks,
-- healthcare delivery systems,
-- software platforms and digital ecosystems,
-- enterprises and supply networks,
-- distributed cyber-physical systems,
-- and inter-organizational systems of systems.
-
-These systems often have the following traits:
-
-- multiple stakeholders with partially conflicting goals,
-- distributed ownership and authority,
-- changing environments,
-- feedback loops across technical and social layers,
-- interactions across scale,
-- emergent and sometimes surprising behavior,
-- and adaptation after deployment rather than only before deployment.
-
-This means systems engineering research on CAS is often less about “find the optimal design once” and more about:
-
-- **architecting under uncertainty**,
-- **designing for adaptability**,
-- **governing distributed autonomy**,
-- **building resilience**,
-- and **making interventions without assuming full control**.
-
----
-
-## 3. The main questions systems engineers are trying to answer
-
-A useful way to understand CAS research in systems engineering is to organize it around the questions researchers are trying to answer.
-
-### 3.1 How should complexity in engineered systems be characterized?
-
-Researchers ask:
-
-- What makes a system truly **complex** rather than merely complicated?
-- Which forms of complexity matter most: structural, dynamic, behavioral, organizational, institutional, or goal-related?
-- Which forms of complexity are intrinsic to the system and which arise from its environment?
-- How can engineers classify complexity in a way that informs design and management?
-
-This is important because systems engineers do not want “complexity” to remain a vague label. They want it decomposed into forms that affect architecture, governance, risk, coordination, and lifecycle behavior.
-
-### 3.2 How does emergence arise, and how should engineers deal with it?
-
-Researchers ask:
-
-- How do local interactions produce global system behavior?
-- Which emergent behaviors are beneficial, neutral, or dangerous?
-- Why do large engineered or sociotechnical systems produce surprises?
-- How can engineers detect, anticipate, contain, or exploit emergence?
-
-In systems engineering, emergence is not just a theoretical curiosity. It often appears as:
-
-- unintended coordination patterns,
-- cascading failure,
-- brittleness,
-- safety problems,
-- surprising user or operator behavior,
-- or system-level functionality that no individual component owner explicitly designed.
-
-### 3.3 How should systems be designed when the future cannot be fully forecast?
-
-Researchers ask:
-
-- How should systems be designed under deep uncertainty?
-- When is fixed optimization inappropriate?
-- How can flexibility, modularity, optionality, and staged commitment be embedded into architectures?
-- How can engineers preserve value when operating conditions, missions, or constraints evolve?
-
-This leads to approaches such as flexibility in engineering design, real options logic, modular architectures, and adaptive planning.
-
-### 3.4 How can distributed autonomy be governed?
-
-Researchers ask:
-
-- How can systems be coordinated when no single actor has full authority?
-- How should governance work in a **system of systems**?
-- How can interoperability and coherence be achieved without assuming centralized control?
-- What kinds of architecture, incentives, and coordination mechanisms support aligned behavior across semi-autonomous subsystems?
-
-This is especially important in modern systems that are joint products of many organizations, teams, platforms, or agencies.
-
-### 3.5 How should resilience be understood and engineered?
-
-Researchers ask:
-
-- How can systems absorb shocks and continue functioning?
-- What is the difference between reliability, robustness, and resilience?
-- How should systems degrade gracefully rather than catastrophically?
-- How can recovery, reconfiguration, and adaptation be made part of design?
-
-This shifts attention away from purely nominal performance toward sustained capability under disruption and surprise.
-
-### 3.6 How should sociotechnical and enterprise systems be studied?
-
-Researchers ask:
-
-- How should technical systems be analyzed when they are inseparable from organizational, institutional, and political structures?
-- How do incentives, governance, culture, and human decisions shape system behavior?
-- What does it mean to engineer an enterprise or ecosystem rather than just a technical artifact?
-
-This stream is especially relevant for anyone interested in digital platforms, data ecosystems, organizations, healthcare systems, and critical infrastructure.
+1. [Part I — The Central Framing](#part-i)
+   1. [What systems engineering is doing with CAS](#central-framing)
+   2. [A vocabulary that prevents conceptual slippage](#taxonomy)
+   3. [Forms of complexity](#forms-of-complexity)
+   4. [Core engineering questions](#core-questions)
+   5. [Key tensions to carry throughout the curriculum](#tensions)
+2. [Part II — Systems Science and Complexity Foundations](#part-ii)
+   1. [Systems thinking, cybernetics, and design](#systems-foundations)
+   2. [Core CAS mechanisms](#cas-mechanisms)
+   3. [Multiscale organization and near-decomposability](#multiscale)
+   4. [Networks and interdependence](#network-foundations)
+   5. [Adaptation, learning, evolution, and co-evolution](#adaptation)
+3. [Part III — Systems Engineering Perspectives on Complexity](#part-iii)
+   1. [Baseline professional systems engineering](#baseline-se)
+   2. [Engineering systems and sociotechnical systems](#engineering-systems)
+   3. [System-of-systems engineering](#sose)
+   4. [Systems practice, soft systems, and critical systems thinking](#systems-practice)
+   5. [Governance and institutions](#governance)
+   6. [Safety, resilience, and high reliability](#safety-resilience)
+   7. [Mission engineering and human systems integration](#mission-hsi)
+   8. [MBSE and digital engineering](#mbse)
+4. [Part IV — The Methods Toolkit](#part-iv)
+   1. [Method selection as a first-class skill](#method-selection)
+   2. [System dynamics](#system-dynamics)
+   3. [Agent-based modeling](#abm)
+   4. [Network science](#network-science)
+   5. [Nonlinear dynamics and tipping behavior](#nonlinear-dynamics)
+   6. [DSM and structural architecture analysis](#dsm)
+   7. [Uncertainty quantification and sensitivity analysis](#uq)
+   8. [Decision making under deep uncertainty](#dmdu)
+   9. [Safety and resilience analysis](#safety-methods)
+   10. [MBSE as an integration environment](#mbse-method)
+   11. [Multimethod and mixed-method inquiry](#multimethod)
+5. [Part V — Research Methodology for Complex Engineered Systems](#part-v)
+   1. [From interesting model to defensible research claim](#research-claims)
+   2. [Verification, validation, calibration, and evaluation](#vv)
+   3. [Experimental design for simulation](#simulation-experiments)
+   4. [Evidence, causality, and triangulation](#evidence)
+   5. [Reproducibility and model documentation](#reproducibility)
+   6. [Ethics and intervention](#ethics)
+6. [Part VI — The Phased Curriculum](#part-vi)
+   1. [Module 0 — Establish the baseline systems-engineering frame](#module-0)
+   2. [Module 1 — Learn systems science, cybernetics, and the science of design](#module-1)
+   3. [Module 2 — Learn the mechanisms of complex adaptive systems](#module-2)
+   4. [Module 3 — Connect complexity science to systems engineering](#module-3)
+   5. [Module 4 — Learn sociotechnical problem framing and systems practice](#module-4)
+   6. [Module 5 — Learn systems of systems, governance, and mission thinking](#module-5)
+   7. [Module 6 — Build the computational modeling toolkit](#module-6)
+   8. [Module 7 — Architect under uncertainty and deep uncertainty](#module-7)
+   9. [Module 8 — Study safety, resilience, and operational adaptation](#module-8)
+   10. [Module 9 — Integrate with MBSE and digital engineering](#module-9)
+   11. [Module 10 — Learn research design, validation, and reproducibility](#module-10)
+   12. [Module 11 — Synthesis and capstone](#module-11)
+7. [Part VII — Recurring Reference Systems](#part-vii)
+8. [Part VIII — Questions to Carry While Reading and Modeling](#part-viii)
+9. [Part IX — Branches by Research Interest](#part-ix)
+10. [Part X — Capstone Structure](#part-x)
+11. [Part XI — Maintaining a Living View of the Field](#part-xi)
+12. [Part XII — References](#references)
 
 ---
 
-## 4. Distinctive approaches systems engineers use to study CAS
+<a id="part-i"></a>
+# Part I — The Central Framing
 
-Systems engineering does not usually approach CAS through a single grand theory. Instead, it uses a portfolio of conceptual and methodological approaches.
+<a id="central-framing"></a>
+## 1. What systems engineering is doing with CAS
 
-### 4.1 Systems thinking and systems practice
+From a systems engineering perspective, complex adaptive systems are important because engineers increasingly work with systems that are:
 
-This stream emphasizes:
+- open rather than cleanly bounded;
+- nonlinear rather than proportionate;
+- multi-actor rather than centrally owned;
+- adaptive rather than behaviorally fixed;
+- coupled across technical, human, organizational, and institutional layers;
+- distributed across multiple scales;
+- evolving after deployment;
+- embedded in environments that themselves change in response to the system; and
+- capable of producing system-level behavior that no individual component owner fully intended.
 
-- wholes rather than isolated parts,
-- interactions rather than only components,
-- multiple perspectives,
-- feedback loops,
-- dynamic structure,
-- and problem framing before formal solution.
+Examples include critical infrastructure, digital platforms, healthcare delivery, transportation networks, military and emergency-response missions, global supply systems, autonomous and cyber-physical ecosystems, financial infrastructure, large software/data platforms, and inter-organizational systems of systems.
 
-Key figures such as **Derek Hitchins** and **Jamshid Gharajedaghi** are important here. They are not always framed as “CAS scientists,” but they are highly relevant because they provide ways to reason about hard-to-bound, nonlinear, pluralistic systems.
+Traditional systems engineering remains necessary for these systems, but it is often insufficient when interpreted as strongly reductionist, centrally controlled, requirements-complete, and optimized around a stable future. The challenge shifts from finding a single final design to maintaining useful capability over time under changing conditions and partial control.
 
-This stream is especially useful for:
+The systems-engineering problem is therefore not only:
 
-- problem framing,
-- conceptual modeling,
-- stakeholder interpretation,
-- and interventions in systems that cannot be fully specified from the start.
+> **Why did this emergent behavior occur?**
 
-### 4.2 Engineering systems / sociotechnical systems
+It is also:
 
-This stream treats modern engineered systems as combinations of:
+> **What can we responsibly design, constrain, enable, monitor, adapt, govern, or learn so that system-level outcomes remain acceptable despite irreducible uncertainty and distributed agency?**
 
-- technical components,
-- human operators,
-- organizational structures,
-- regulators,
-- firms,
-- users,
-- incentive structures,
-- and institutional constraints.
+That is the core intellectual identity of this guide: **intervention under irreducible complexity**.
 
-The key move is to reject the idea that major engineered systems can be understood as purely technical artifacts.
+A useful consequence follows. Complexity is not an excuse for vagueness. The job is to identify *which mechanisms of complexity matter for the decision at hand*, choose representations that preserve those mechanisms, and design interventions that are robust to what cannot be predicted.
 
-Researchers in this stream ask:
+<a id="taxonomy"></a>
+## 2. A vocabulary that prevents conceptual slippage
 
-- how technical and social layers co-evolve,
-- how system performance depends on institutions and organizations,
-- and how systems should be designed when stakeholders and governance structures are part of the system itself.
+These categories overlap but should not be treated as synonyms.
 
-This stream is strongly associated with **MIT Engineering Systems** and with researchers such as **William B. Rouse**.
+| Term | Working definition for this guide | Primary engineering implication |
+|---|---|---|
+| **Complicated system** | Many parts or intricate structure, but decomposition and prediction remain sufficiently effective | Decomposition, interface management, verification, optimization |
+| **Complex system** | Interactions produce system-level behavior that is difficult to infer from parts alone | Interaction structure, feedback, nonlinearities, emergence |
+| **Complex adaptive system (CAS)** | A complex system in which agents or subsystems modify behavior through adaptation, learning, selection, or evolution | Behavior can change in response to the intervention itself |
+| **Complex engineered system** | An engineered system with meaningful complex-system behavior | Design must address interaction-driven behavior, not only component correctness |
+| **Sociotechnical system** | Technical and human/social/organizational elements jointly constitute the system | Human behavior, incentives, institutions, and technology must be modeled together |
+| **System of systems (SoS)** | Constituent systems retain meaningful operational and/or managerial independence while collaborating to create higher-level capability | Authority, architecture, interoperability, incentives, governance, evolution |
+| **Enterprise system** | Organization, processes, technology, incentives, governance, and environment considered systemically | Transformation and design cannot be reduced to the technical architecture |
+| **Mission system** | A mission or capability is treated as the system of interest, often spanning multiple systems and organizations | Architecture is organized around outcomes/capabilities rather than product boundaries |
+| **Platform/ecosystem** | Multiple autonomous participants interact through shared technical and institutional structures | Rules, APIs, standards, incentives, network effects, governance |
 
-### 4.3 System-of-systems engineering (SoSE)
+Two cautions follow.
 
-This is one of the most important systems engineering homes for CAS thinking.
+**First**, not every SoS is meaningfully adaptive, and not every CAS is a SoS. A swarm of simple adaptive agents may be a CAS without managerial independence; a federation of independently managed systems may be an SoS even if constituent behavior changes slowly.
 
-A system of systems is typically characterized by:
+**Second**, “complexity” can describe the system, the environment, the stakeholder situation, the modeling problem, or the observer’s epistemic limitations. Good research states which meaning is intended.
 
-- operational independence of constituent systems,
-- managerial independence,
-- geographic distribution,
-- emergent behavior,
-- and evolutionary development.
+<a id="forms-of-complexity"></a>
+## 3. Forms of complexity
 
-SoSE addresses systems where the engineer does not control a single monolithic system, but instead must work across partially autonomous systems and organizations.
+Instead of treating complexity as one scalar quantity, classify what makes the engineering task difficult.
 
-This makes it highly relevant for CAS because it foregrounds:
+### 3.1 Structural complexity
 
-- distributed autonomy,
-- governance,
-- emergence,
-- coordination,
-- interoperability,
-- and the limits of centralized authority.
+Many elements, dense coupling, dependency cycles, multilayer architecture, or highly heterogeneous components.
 
-### 4.4 Network science for engineering systems
+Typical methods:
+- architecture models;
+- DSM;
+- graph/network analysis;
+- modularity analysis;
+- interface analysis.
 
-This stream studies engineering systems as networks of:
+### 3.2 Dynamic complexity
 
-- tasks,
-- people,
-- decisions,
-- products,
-- information flows,
-- or interdependent subsystems.
+Behavior arises from feedback, delays, accumulations, nonlinearity, oscillation, instability, or path dependence.
 
-Researchers such as **Dan Braha** ask how network structure affects:
+Typical methods:
+- system dynamics;
+- nonlinear dynamics;
+- time-series analysis;
+- simulation.
 
-- robustness,
-- fragility,
-- bottlenecks,
-- problem-solving dynamics,
-- collaboration,
-- and design process behavior.
+### 3.3 Adaptive complexity
 
-This approach is especially attractive for someone with experience in data systems, software systems, and modeling because it provides formal tools for representing interdependence and topology.
+Agents change strategies, rules, connections, goals, or internal models as experience accumulates.
 
-### 4.5 Multiscale complexity and self-organization
+Typical methods:
+- agent-based modeling;
+- learning/evolutionary models;
+- repeated-game models;
+- adaptive control and online experimentation.
 
-This stream is strongly associated with **Yaneer Bar-Yam**.
+### 3.4 Network/interdependence complexity
 
-Its central ideas include:
+Failure, information, influence, or resources propagate through dependency networks or interacting layers.
 
-- systems operate across multiple scales,
-- control and coordination must be matched to the scale of the problem,
-- centralized control fails in environments with high contextual complexity,
-- and self-organizing or evolutionary approaches may outperform tightly specified top-down control in certain conditions.
+Typical methods:
+- network science;
+- cascading-failure models;
+- multilayer/interdependent network models;
+- percolation and diffusion models.
 
-This is one of the clearest bridges between general complexity science and engineering.
+### 3.5 Organizational and governance complexity
 
-It pushes systems engineers to ask:
+Authority, incentives, ownership, standards, incentives, and decision rights are distributed.
 
-- when should behavior be tightly specified,
-- when should only interaction rules be specified,
-- and when should architectures support adaptation rather than prescribe final behavior?
+Typical methods:
+- institutional analysis;
+- stakeholder analysis;
+- SoS governance models;
+- mechanism/incentive analysis;
+- organizational network analysis.
 
-### 4.6 Model-based and simulation-heavy analysis
+### 3.6 Goal and value complexity
 
-CAS research in systems engineering often relies on modeling and simulation rather than closed-form prediction.
+Stakeholders disagree about objectives, tradeoffs, legitimate boundaries, or definitions of success.
 
-Common methods include:
+Typical methods:
+- soft systems methodology;
+- critical systems practice;
+- participatory modeling;
+- multi-criteria decision analysis;
+- value-focused thinking.
 
-- **system dynamics**,
-- **agent-based modeling**,
-- **network models**,
-- **tradespace exploration**,
-- **Monte Carlo methods**,
-- **design structure matrices (DSM)**,
-- and **model-based systems engineering (MBSE)**.
+### 3.7 Uncertainty complexity
 
-These methods support:
+Uncertainty may be probabilistic, epistemic, structural, scenario-based, or deep enough that actors disagree about models, probabilities, or values.
 
-- scenario exploration,
-- stress-testing,
-- architecture evaluation,
-- sensitivity analysis,
-- and understanding interactions that cannot be studied effectively through static decomposition alone.
+Typical methods:
+- uncertainty quantification;
+- global sensitivity analysis;
+- scenario discovery;
+- Robust Decision Making;
+- Dynamic Adaptive Policy Pathways;
+- real options/flexibility.
 
-### 4.7 Resilience engineering and adaptive capacity
+### 3.8 Lifecycle and evolutionary complexity
 
-This stream focuses not just on preventing failure, but on sustaining capability under disturbance.
+The system changes as technology, users, organizations, adversaries, regulations, and neighboring systems evolve.
 
-It asks how systems can:
+Typical methods:
+- evolutionary architecture;
+- staged commitment;
+- modularity;
+- upgrade pathways;
+- technical-debt analysis;
+- adaptive roadmaps.
 
-- absorb shocks,
-- reconfigure,
-- recover,
-- degrade gracefully,
-- and continue delivering mission value when assumptions fail.
+The practical lesson is simple: **different complexity mechanisms imply different useful abstractions**. A network model cannot substitute for a governance model merely because both are “complexity methods.”
 
-This is highly compatible with CAS thinking because it accepts that surprise is unavoidable and places emphasis on adaptation rather than perfect prediction.
+<a id="core-questions"></a>
+## 4. Core engineering questions
+
+The rest of the guide can be read as attempts to answer a recurring set of questions.
+
+### 4.1 Characterization
+
+- What makes this system complex rather than merely complicated?
+- Which complexity mechanisms dominate the decision?
+- At what spatial, organizational, temporal, or abstraction scales do they occur?
+- Is the complexity in the system, the environment, the stakeholder situation, or the modeler’s knowledge?
+
+### 4.2 Emergence
+
+- Which system-level outcomes arise from local interactions?
+- Which emergent behaviors are functional, neutral, hazardous, or value-conflicted?
+- What local rules, interfaces, feedbacks, incentives, or constraints shape those outcomes?
+- Can emergence be anticipated, bounded, detected, exploited, or contained?
+
+### 4.3 Architecture
+
+- Which dependencies should be tight and which should be loose?
+- Where do modularity and interface standards create optionality?
+- When does efficiency create hidden fragility?
+- Which architectural decisions should remain reversible?
+
+### 4.4 Adaptation
+
+- What adapts: components, users, organizations, policies, algorithms, adversaries, or the whole ecosystem?
+- What information drives adaptation?
+- How quickly can the system adapt relative to environmental change?
+- Does local adaptation improve or degrade system-level outcomes?
+
+### 4.5 Control and governance
+
+- Who has decision rights?
+- Which behaviors can be controlled directly and which can only be influenced?
+- What information is locally available versus centrally available?
+- Are standards, incentives, protocols, contracts, or shared models more appropriate than command-and-control?
+
+### 4.6 Uncertainty
+
+- Which uncertainties can be represented probabilistically?
+- Which assumptions are disputed or structurally uncertain?
+- Where would a point forecast create false precision?
+- What strategy performs acceptably across many plausible futures?
+- What should be monitored so the strategy can change later?
+
+### 4.7 Safety and resilience
+
+- What must never happen?
+- What control constraints are required for safety?
+- How do pressures and adaptations migrate operations toward unsafe boundaries?
+- What capacity is available to absorb, recover, stretch, reconfigure, and learn?
+
+### 4.8 Evidence and learning
+
+- What observations would falsify the model?
+- Which results are explanatory, predictive, exploratory, or normative?
+- How do we learn after deployment without creating unacceptable risk?
+- How should the model change as the real system changes?
+
+<a id="tensions"></a>
+## 5. Key tensions to carry throughout the curriculum
+
+A mature understanding of complex systems engineering comes from learning to reason across tensions rather than adopting one slogan.
+
+| Tension | Question to ask |
+|---|---|
+| Prediction vs. exploration | Do we need a forecast, or do we need to understand the consequences of assumptions? |
+| Optimization vs. robustness | Is peak performance in one future more valuable than acceptable performance across many futures? |
+| Control vs. influence | Does the engineer actually possess authority over the relevant actors? |
+| Requirements vs. evolving intent | Which needs can be stabilized and which will evolve? |
+| Top-down architecture vs. bottom-up emergence | Which structures must be imposed and which behaviors should be allowed to self-organize? |
+| Efficiency vs. resilience | What slack, diversity, redundancy, or spare capacity is worth preserving? |
+| Modularity vs. tightly coupled performance | Where does decoupling reduce propagation risk, and where does integration enable essential capability? |
+| Standardization vs. diversity | Does standardization reduce coordination burden or create correlated failure modes? |
+| Stability vs. adaptability | How much change can be tolerated without loss of identity or safety? |
+| Model fidelity vs. decision usefulness | Is a more detailed model actually better for the decision? |
+| Quantitative model vs. stakeholder interpretation | Is the limiting problem computational or fundamentally about contested meaning and values? |
+| Technical boundary vs. sociotechnical boundary | What important behavior disappears if humans, organizations, or institutions are treated as “external”? |
+
+---
+<a id="part-ii"></a>
+# Part II — Systems Science and Complexity Foundations
+
+<a id="systems-foundations"></a>
+## 6. Systems thinking, cybernetics, and the science of design
+
+A systems engineer working on CAS should understand the intellectual lineages that predate modern complexity science. These traditions give you concepts for purpose, feedback, control, hierarchy, boundary choice, observer dependence, and intervention.
+
+### 6.1 General systems and hierarchy
+
+Herbert Simon is particularly important because he connects **complexity, hierarchy, near-decomposability, bounded rationality, and design**. His essay *The Architecture of Complexity* [R09](#r09) and *The Sciences of the Artificial* [R10](#r10) provide a bridge between complex-systems reasoning and engineering design.
+
+Key ideas to learn:
+- hierarchical and nearly decomposable organization;
+- interfaces as mechanisms that reduce coordination burden;
+- bounded rationality and satisficing;
+- artificial systems as objects of scientific study;
+- design as transformation from existing situations to preferred ones.
+
+### 6.2 Cybernetics
+
+W. Ross Ashby's *An Introduction to Cybernetics* [R11](#r11) introduces ideas that remain surprisingly current for complex engineered systems:
+
+- feedback;
+- regulation;
+- state and transformation;
+- requisite variety;
+- homeostasis;
+- constraints on control.
+
+A key engineering lesson from requisite variety is that **a regulator must possess enough behavioral variety to cope with the variety of disturbances that matter**. This provides a principled reason why overly centralized control can fail in rich environments: information and response variety may not exist at the center at the right time or resolution.
+
+### 6.3 Problem framing traditions
+
+Not all complexity is dynamic or computational. In many real systems, the first challenge is that stakeholders do not agree on the problem definition, boundary, purpose, or success criteria.
+
+Peter Checkland's Soft Systems Methodology (SSM) [R12](#r12) is useful when the problem situation itself is contested. Michael C. Jackson's Critical Systems Practice [R13](#r13) adds an explicit multimethodological intervention framework and asks the practitioner to match methods to the problem situation rather than treating one methodology as universally sufficient.
+
+These traditions should be learned alongside—not after—formal modeling, because a mathematically elegant model of the wrong boundary can be less useful than a simpler model built from better problem structuring.
+
+<a id="cas-mechanisms"></a>
+## 7. Core CAS mechanisms
+
+The term CAS becomes useful only when it refers to mechanisms rather than atmosphere. The following mechanisms should become part of your working vocabulary.
+
+### 7.1 Nonlinearity
+
+Output is not proportionate to input. Small changes can have negligible effects in one regime and large effects in another. Superposition fails.
+
+Engineering relevance:
+- margins can disappear suddenly;
+- local optimizations interact;
+- risk cannot always be extrapolated linearly from nominal operation.
+
+### 7.2 Feedback
+
+**Reinforcing feedback** amplifies change; **balancing feedback** counteracts it. When multiple loops operate with delays, the resulting behavior can include overshoot, oscillation, lock-in, instability, and counterintuitive policy response.
+
+System dynamics is the primary methodology in this guide for learning feedback-dominant explanations [R19](#r19).
+
+### 7.3 Emergence
+
+Macro-level patterns arise from interactions among lower-level elements. A useful engineering treatment distinguishes:
+- emergence that is surprising only because the observer lacks a convenient aggregate model;
+- emergence that requires simulation to derive from local rules;
+- system-level properties whose meaning exists only at the macro level, such as congestion, market liquidity, mission effectiveness, organizational culture, or resilience.
+
+The important engineering question is not whether emergence is mysterious. It is **which local structures and rules generate the macro behavior, and which of those are legitimate intervention points**.
+
+### 7.4 Self-organization
+
+Order can arise without a central designer specifying the final global configuration. Self-organization may be desirable—such as load balancing or distributed coordination—or hazardous—such as herding, unsafe workarounds, or correlated failure.
+
+Do not equate self-organization with optimality. A self-organized state can be stable and still be undesirable.
+
+### 7.5 Adaptation and learning
+
+Agents update behavior based on feedback, experience, incentives, imitation, learning algorithms, or selection. Adaptation matters because the system may respond to your intervention in ways that invalidate the assumptions behind the intervention.
+
+Examples:
+- users route around controls;
+- attackers change tactics;
+- organizations create workarounds;
+- software services change load-shaping behavior;
+- markets alter strategies;
+- machine-learning policies update online.
+
+### 7.6 Path dependence and lock-in
+
+Current options depend on historical sequence. Positive feedback, switching costs, network effects, sunk investments, standards, institutional routines, and learning curves can make an initially contingent choice difficult to reverse.
+
+Engineering implication: architecture decisions can create **option value or option foreclosure** long before consequences become visible.
+
+### 7.7 Thresholds and tipping behavior
+
+Systems can change regime when control parameters cross thresholds. Near critical transitions, local linear intuition may be unreliable. The relevant methods include nonlinear dynamics, bifurcation analysis, network percolation, and simulation.
+
+### 7.8 Heterogeneity
+
+Different actors have different goals, capabilities, beliefs, constraints, network positions, and adaptation rates. Aggregating heterogeneous agents into a representative average can erase the mechanism producing the behavior of interest.
+
+### 7.9 Co-evolution
+
+The system changes the environment while the environment changes the system. Platform operators affect participant strategies; participants affect platform rules. Infrastructure investment reshapes demand; demand reshapes infrastructure planning. Security defenses alter attacker behavior, which then changes defensive priorities.
+
+### 7.10 Robust-yet-fragile behavior
+
+Designed systems may become highly robust to anticipated disturbances while becoming vulnerable to unanticipated conditions. Carlson and Doyle's Highly Optimized Tolerance work [R36](#r36) is a useful counterweight to the simplistic idea that more optimization always means better engineering.
+
+<a id="multiscale"></a>
+## 8. Multiscale organization and near-decomposability
+
+Complex systems operate at multiple scales simultaneously:
+- component;
+- subsystem;
+- organization;
+- enterprise;
+- ecosystem;
+- geographic region;
+- seconds, days, years, and decades.
+
+A behavior that appears random at one scale may be structured at another. A local intervention can improve one subsystem while degrading another. Likewise, a governance structure that works for low-frequency strategic coordination may fail for millisecond operational control.
+
+Questions to learn to ask:
+- At what scale does the disturbance occur?
+- At what scale is information available?
+- At what scale can action be taken?
+- At what scale is performance evaluated?
+- Are these scales aligned?
+
+Bar-Yam's multiscale complexity work is useful here, as is Simon's near-decomposability. Together they motivate an important design heuristic:
+
+> **Match coordination and control to the scale at which relevant information and action exist.**
+
+This is not a universal argument for decentralization. It is an argument against assuming that one control scale is sufficient.
+
+<a id="network-foundations"></a>
+## 9. Networks and interdependence
+
+Many engineered systems are simultaneously several networks:
+
+- physical connectivity;
+- information flow;
+- dependency;
+- organizational communication;
+- ownership;
+- control authority;
+- software calls;
+- supply relationships;
+- financial relationships.
+
+A learner should become comfortable with:
+- degree and degree distributions;
+- path length;
+- clustering;
+- centrality;
+- communities;
+- assortativity;
+- motifs;
+- small-world structure;
+- scale-free claims and their limitations;
+- diffusion and contagion;
+- percolation;
+- synchronization;
+- cascading failure;
+- multilayer and interdependent networks.
+
+Newman's *Networks* [R22](#r22) is the main technical reference. Barabási's freely available *Network Science* [R23](#r23) is a good companion. Buldyrev et al. [R24](#r24) is important because engineered infrastructures are often not one network but **interdependent networks**, where a failure in one layer can recursively disable another.
+
+Network models are powerful but easy to misuse. A graph captures relationships; it does not automatically capture the causal mechanism operating over those relationships. Always ask what edges mean and what dynamics run on the graph.
+
+<a id="adaptation"></a>
+## 10. Adaptation, learning, evolution, and co-evolution
+
+John Holland's CAS work [R08A](#r08a) is valuable for understanding adaptation through rules, selection, aggregation, tags, and building blocks. Miller and Page [R08](#r08) provide a computationally oriented introduction to adaptive social systems.
+
+Distinguish at least four mechanisms:
+
+### 10.1 Behavioral adaptation
+
+An agent changes an action based on observations or rewards.
+
+### 10.2 Learning
+
+The agent changes an internal representation, policy, belief, or model that influences future behavior.
+
+### 10.3 Selection
+
+Population composition changes because some strategies, designs, organizations, or components persist more successfully than others.
+
+### 10.4 Structural evolution
+
+The topology or architecture itself changes: links form or disappear, modules are replaced, standards evolve, firms enter/exit, teams reorganize.
+
+A serious CAS analysis should state **what adapts, through what mechanism, on what timescale, using what information, and according to what objective or selection pressure**.
 
 ---
 
-## 5. Major researchers and schools to know
+<a id="part-iii"></a>
+# Part III — Systems Engineering Perspectives on Complexity
 
-The following researchers and communities are especially important.
+<a id="baseline-se"></a>
+## 11. Baseline professional systems engineering
 
-### 5.1 Yaneer Bar-Yam / NECSI
+Before learning how complexity changes systems engineering, establish a clear comparator for conventional practice.
 
-Bar-Yam is indispensable for:
+### 11.1 ISO/IEC/IEEE 15288:2023
 
-- multiscale complexity,
-- matching system complexity to environmental complexity,
-- understanding limits of centralized control,
-- and conceptualizing self-organizing engineering approaches.
+ISO/IEC/IEEE 15288:2023 [R01](#r01) defines a common framework for system life-cycle processes. It explicitly applies to systems of interest, system elements, and systems of systems and allows iterative, concurrent, and recursive application.
 
-He is slightly outside narrow professional systems engineering, but very important for the conceptual bridge from complexity science into engineering.
+Study it to understand:
+- stakeholder needs and requirements;
+- system requirements;
+- architecture and design definition;
+- implementation, integration, verification, transition, validation, operation, maintenance, and disposal;
+- technical management processes;
+- lifecycle thinking.
 
-### 5.2 Dan Braha
+Do **not** study it as if it were a predictive theory of complex systems. Use it as the baseline process framework against which complexity-oriented methods can be positioned.
 
-Braha is central for:
+### 11.2 INCOSE Systems Engineering Handbook Fifth Edition
 
-- network representations of engineering systems,
-- problem-solving networks,
-- product development dynamics,
-- robustness and fragility,
-- and the structural causes of emergent coordination behavior.
+The INCOSE Handbook Fifth Edition [R02](#r02) is a state-of-good-practice professional reference aligned with ISO/IEC/IEEE 15288:2023. Use it to understand the vocabulary and process assumptions of mainstream systems engineering.
 
-His work often feels especially relevant to software systems, engineering organizations, and knowledge-intensive design environments.
+Carry one question throughout the guide:
 
-### 5.3 William B. Rouse
+> Which SE processes remain valid as written, which require iteration or reinterpretation, and which need complementary methods when the system is adaptive, distributed, deeply uncertain, or sociotechnical?
 
-Rouse is central to:
+### 11.3 SEBoK as a living reference
 
-- enterprises as complex sociotechnical systems,
-- organizational transformation,
-- decision support,
-- healthcare as a complex adaptive system,
-- and intervention in large-scale operational systems.
+SEBoK should be treated as a recurring reference rather than a one-time reading. Version 2.14, released in May 2026, refreshed the Systems Science knowledge area and strengthened coverage of complexity and structure [R03](#r03).
 
-He is especially useful if your interests lie in enterprise systems, digital ecosystems, or organizations as adaptive systems.
+Use SEBoK to maintain vocabulary, trace concepts to primary references, and stay connected to professional systems-engineering practice.
 
-### 5.4 Richard de Neufville and the MIT flexibility/design-under-uncertainty stream
+<a id="engineering-systems"></a>
+## 12. Engineering systems and sociotechnical systems
 
-This stream is not always labeled CAS directly, but it is highly relevant because it offers one of the most practical engineering responses to complexity:
+The engineering-systems tradition treats large engineered systems as inseparable combinations of:
 
-- design for flexibility,
-- preserve options,
-- stage commitments,
-- and avoid over-optimization for a single forecast.
+- technical artifacts;
+- people;
+- organizations;
+- institutions;
+- regulation;
+- markets;
+- incentives;
+- operating procedures;
+- users;
+- infrastructure;
+- lifecycle evolution.
 
-This work matters for architecture, infrastructure, and long-lifecycle systems under uncertainty.
+De Weck, Roos, and Magee's *Engineering Systems* [R16](#r16) is a strong foundational text. This perspective is especially useful for transportation, energy, healthcare, communications, digital infrastructure, enterprise systems, and platform ecosystems.
 
-### 5.5 John Boardman, Brian Sauser, Alex Gorod, and the SoSE community
+The key move is a boundary move:
 
-These researchers are central to system-of-systems engineering, especially around:
+> **Do not treat the social or institutional layer as merely an external disturbance if it helps produce the system's behavior.**
 
-- autonomy,
-- governance,
-- paradox,
-- architecture in distributed settings,
-- and context-setting methods such as systemigrams.
+This does not mean every model must contain everything. It means the analyst must justify exclusions.
 
-This community is one of the clearest systems engineering homes for CAS-style problems.
+<a id="sose"></a>
+## 13. System-of-systems engineering
 
-### 5.6 Derek Hitchins
+SoSE is one of the clearest professional homes for complexity-oriented systems engineering because it starts from limited central authority.
 
-Hitchins is important for:
+Maier's classic paper [R17](#r17) emphasizes characteristics such as operational and managerial independence and makes architecture and communication standards central to SoS design. The Jamshidi edited volume [R18](#r18) contains important work from the SoSE community, including Boardman, Sauser, Gorod, Dahmann, and others.
 
-- advanced systems thinking,
-- engineering and management of highly interconnected systems,
-- and systems practice methods that help frame and intervene in complexity.
+Core SoSE concerns:
+- constituent autonomy;
+- evolutionary development;
+- managerial independence;
+- capability emergence;
+- interoperability;
+- negotiated architecture;
+- governance;
+- federated decision making;
+- asynchronous lifecycles;
+- changing constituent membership.
 
-### 5.7 Jamshid Gharajedaghi
+A useful contrast is:
 
-Gharajedaghi is especially valuable for:
+**Traditional system:** engineer has substantial authority over decomposition and interfaces.
 
-- organizations and social systems as purposeful, dynamic systems,
-- systems thinking applied to pluralistic and evolving contexts,
-- and making sense of sociotechnical complexity.
+**System of systems:** engineer may influence interfaces, incentives, standards, information, and coordination while constituent owners retain their own missions and roadmaps.
 
-### 5.8 Defense / operational CAS-of-systems researchers
+This makes SoSE directly relevant to cloud ecosystems, data-sharing federations, government programs, supply networks, autonomous fleets, and cross-organizational mission systems.
 
-Researchers associated with places like the **Naval Postgraduate School** are important for studying:
+<a id="systems-practice"></a>
+## 14. Systems practice, soft systems, and critical systems thinking
 
-- engineered CAS in operational environments,
-- uncertainty,
-- emergence,
-- distributed systems of systems,
-- and management under conditions where “unknown unknowns” matter.
+Hitchins and Gharajedaghi provide an important starting point for a broader **problem-framing and intervention** track.
+
+### 14.1 Soft Systems Methodology
+
+Use SSM [R12](#r12) when:
+- the problem is not agreed upon;
+- stakeholders hold incompatible worldviews;
+- system boundaries are contested;
+- measures of success differ;
+- intervention itself changes perceptions and relationships.
+
+### 14.2 Critical Systems Practice
+
+Jackson's Critical Systems Practice [R13](#r13) argues for multimethodology and an intervention cycle summarized as **EPIC**:
+- Explore;
+- Produce an intervention strategy;
+- Intervene;
+- Check.
+
+This is extremely compatible with CAS-oriented engineering because it does not assume that one representation or one methodology is sufficient.
+
+### 14.3 Gharajedaghi and interactive design
+
+Gharajedaghi [R14](#r14) is especially useful for purposeful organizational systems, pluralism, interactive design, and business/enterprise architecture.
+
+### 14.4 Hitchins
+
+Hitchins remains valuable for advanced systems thinking and practical framing of large interconnected problems. Read him after gaining enough formal modeling experience to connect qualitative systems practice with technical architecture and simulation.
+
+<a id="governance"></a>
+## 15. Governance and institutions
+
+Complex systems engineering often fails if governance is treated as an afterthought. In distributed systems, **the governance architecture may be as important as the technical architecture**.
+
+Study:
+- decision rights;
+- incentives;
+- standards;
+- protocols;
+- contracts;
+- information disclosure;
+- accountability;
+- conflict resolution;
+- subsidiarity;
+- polycentric governance;
+- commons problems;
+- platform rules;
+- entry/exit conditions;
+- compliance and enforcement;
+- institutional adaptation.
+
+Ostrom's *Governing the Commons* [R35](#r35) is useful because it provides an empirical alternative to assuming that coordination requires either a single central authority or purely market mechanisms.
+
+For software/data/platform systems, translate these ideas into:
+- API governance;
+- schema and protocol standards;
+- access rights;
+- data stewardship;
+- shared-service ownership;
+- service-level commitments;
+- ecosystem participation rules;
+- platform moderation and incentive structures.
+
+Governance should be modeled as a design variable rather than a contextual footnote.
+
+<a id="safety-resilience"></a>
+## 16. Safety, resilience, and high reliability
+
+These traditions answer different questions and should not be collapsed.
+
+### 16.1 Reliability
+
+How consistently does a system perform a specified function under stated conditions?
+
+### 16.2 Robustness
+
+How insensitive is performance to a specified class of perturbations or parameter variation?
+
+### 16.3 Safety
+
+How are unacceptable losses prevented, including losses arising from interaction and inadequate control rather than simple component failure?
+
+### 16.4 Resilience
+
+How does the system sustain or recover valued capability under disturbance and surprise? Woods [R34](#r34) distinguishes several meanings, including rebound, robustness, graceful extensibility, and sustained adaptability.
+
+### 16.5 High reliability
+
+How do organizations operating hazardous systems maintain reliable performance despite uncertainty and operational pressure? Weick and Sutcliffe [R33](#r33) provide an organizational perspective through high-reliability organizing.
+
+### 16.6 Systems-theoretic safety
+
+Leveson's STAMP/STPA framework [R31](#r31) models safety as a control problem in complex sociotechnical systems. Instead of assuming accidents are adequately explained as linear chains of component failures, it asks whether safety constraints are enforced across a control structure.
+
+### 16.7 Rasmussen's dynamic risk model
+
+Rasmussen [R32](#r32) is essential for understanding how organizational, regulatory, managerial, and operational pressures interact. This work makes adaptation itself part of safety analysis: actors locally optimize under pressure and can collectively migrate toward unsafe boundaries.
+
+### 16.8 Resilience engineering
+
+Hollnagel, Woods, and Leveson [R33A](#r33a) shift attention toward how systems adapt successfully as well as how they fail.
+
+A mature curriculum should compare these perspectives rather than pick one vocabulary.
+
+<a id="mission-hsi"></a>
+## 17. Mission engineering and human systems integration
+
+Two contemporary practices extend the sociotechnical perspective.
+
+### 17.1 Mission engineering
+
+Mission engineering treats mission outcomes/capabilities as the system of interest, frequently crossing organizational and system boundaries. It is useful when no single platform or product can be optimized independently to produce the desired outcome.
+
+Questions:
+- What mission threads create capability?
+- Which systems and organizations participate?
+- Which dependencies are critical?
+- Which mission effects are emergent from coordination?
+- Where are alternatives, substitutions, and graceful degradation possible?
+
+### 17.2 Human Systems Integration (HSI)
+
+HSI treats human, organizational, and technical elements as an integrated design problem across the lifecycle [R39](#r39). This is important because “the human” should not be modeled only as operator error or a requirement source.
+
+Relevant topics:
+- human factors and ergonomics;
+- staffing and workforce;
+- training;
+- workload;
+- human-machine teaming;
+- organizational design;
+- usability;
+- safety;
+- automation and function allocation;
+- cognitive work.
+
+<a id="mbse"></a>
+## 18. MBSE and digital engineering
+
+MBSE is important, but it should be positioned correctly.
+
+> **MBSE is primarily a modeling and information-integration paradigm for systems engineering; it is not by itself a theory of complexity.**
+
+MBSE is strong at:
+- architecture representation;
+- requirements relationships;
+- behavior and interfaces;
+- traceability;
+- configuration;
+- shared semantics;
+- analysis integration;
+- digital continuity.
+
+But a system model can be formally consistent and still fail to represent adaptation, emergence, political authority, nonlinear feedback, or deep uncertainty.
+
+The useful question is therefore:
+
+> Which aspects of the CAS can be represented directly in the system model, and which require linked simulation, data analysis, participatory models, or uncertainty methods?
+
+SysML v2 reached final adoption in 2025 and introduces improved semantics, textual and graphical syntax, and API-based interoperability [R04](#r04). For this curriculum, SysML v2 matters not because notation solves complexity, but because it makes **model integration and composability** increasingly central to digital engineering.
+
+---
+<a id="part-iv"></a>
+# Part IV — The Methods Toolkit
+
+<a id="method-selection"></a>
+## 19. Method selection as a first-class skill
+
+The objective is not to become loyal to one methodology. It is to learn how to select and combine methods based on the causal and decision structure of the problem.
+
+Use this template whenever you encounter a method:
+
+1. **Question** — What decision or explanation is the method intended to support?
+2. **Representation** — What objects, relationships, states, behaviors, and boundaries does it encode?
+3. **Mechanism** — What causal process is assumed to generate outcomes?
+4. **Assumptions** — What is held fixed or simplified?
+5. **Data** — What observations or judgments are required?
+6. **Analysis** — What operations are performed on the representation?
+7. **Output** — What kind of claim is produced: descriptive, explanatory, predictive, exploratory, prescriptive?
+8. **Validation** — What evidence supports trusting the result for the intended use?
+9. **Failure modes** — In what situations does the method systematically mislead?
+10. **Complementary methods** — What important dimensions are omitted and need another lens?
+
+A compact selection map:
+
+| Dominant issue | Good starting methods |
+|---|---|
+| Feedback, delays, accumulation | System dynamics |
+| Heterogeneous adaptive actors | Agent-based modeling |
+| Connectivity, propagation, topology | Network science |
+| Stability, regimes, thresholds | Nonlinear dynamics / bifurcation analysis |
+| Static dependency and architecture | DSM / architecture models |
+| Requirements, traceability, interfaces | MBSE / SysML |
+| Parameter and model uncertainty | UQ / sensitivity analysis |
+| Deeply uncertain futures | RDM / DAPP / exploratory modeling |
+| Safety constraints and control flaws | STPA / systems-theoretic safety |
+| Contested problem framing | SSM / critical systems practice |
+| Distributed ownership and authority | SoSE / governance / institutional analysis |
+| Organizational adaptation under pressure | Rasmussen / resilience engineering / HRO |
+
+No table can replace judgment, but it prevents the common mistake of choosing a method because it is familiar rather than because it preserves the mechanisms that matter.
+
+<a id="system-dynamics"></a>
+## 20. System dynamics
+
+System dynamics (SD) is especially useful when system behavior is dominated by **feedback, accumulation, delays, nonlinear responses, and endogenous structure**. Sterman's *Business Dynamics* [R19](#r19) is the core reference.
+
+### Learn
+
+- causal-loop diagrams;
+- reinforcing and balancing loops;
+- stocks and flows;
+- delays;
+- dimensional consistency;
+- reference modes;
+- equilibrium and transient behavior;
+- feedback dominance;
+- path dependence;
+- policy resistance;
+- calibration and sensitivity analysis.
+
+### Use SD when
+
+- aggregate behavior is more important than individual identity;
+- feedback mechanisms are central;
+- quantities accumulate over time;
+- policies have delayed or counterintuitive effects;
+- you want to explain dynamic behavior through endogenous structure.
+
+### Be cautious when
+
+- heterogeneity among agents is the mechanism of interest;
+- network topology determines who interacts with whom;
+- discrete choices and local rules dominate;
+- adaptive agents substantially change strategies.
+
+### Exercise
+
+Build a stock-and-flow model of technical debt in a software platform. Include feature pressure, development capacity, defect generation, rework, architecture degradation, and productivity. Identify at least one reinforcing and one balancing loop. Then test a policy that appears beneficial in the short term but creates a long-term side effect.
+
+### Artifact
+
+A model diagram, assumptions table, behavior-over-time plots, sensitivity analysis, and a two-page explanation of the dominant feedback structure.
+
+<a id="abm"></a>
+## 21. Agent-based modeling
+
+Agent-based modeling (ABM) is useful when macro behavior emerges from **heterogeneous agents interacting locally and adapting over time**. Wilensky and Rand [R20](#r20) provide a hands-on introduction applicable to natural, social, and engineered systems.
+
+### Learn
+
+- agents and state variables;
+- environments;
+- interaction rules;
+- scheduling;
+- local information;
+- heterogeneity;
+- learning/adaptation;
+- stochasticity;
+- networks of interaction;
+- initialization;
+- parameter sweeps;
+- emergent macro metrics;
+- verification and validation;
+- replication.
+
+### Use ABM when
+
+- individual differences matter;
+- local interactions generate macro outcomes;
+- actors adapt;
+- topology or spatial location matters;
+- representative-agent assumptions erase critical mechanisms.
+
+### Be cautious when
+
+- agent rules are selected because they “look plausible” but lack empirical basis;
+- the model contains many free parameters and weak validation;
+- emergent behavior is treated as evidence merely because it is interesting;
+- the model is too complicated to understand causally.
+
+### Documentation
+
+Use the ODD protocol [R21](#r21) to document the model's overview, design concepts, and details. Treat documentation as part of model design, not an afterthought.
+
+### Exercise
+
+Implement a simple coordination or service-selection ecosystem in which software services/teams choose dependencies based on performance, cost, and prior reliability. Observe whether concentration, lock-in, or cascades emerge as local adaptation proceeds.
+
+### Artifact
+
+Code, ODD documentation, parameter experiment plan, replication results, and a short statement distinguishing what the model demonstrates from what it does **not** demonstrate.
+
+<a id="network-science"></a>
+## 22. Network science
+
+Network science is the primary toolkit for reasoning about **relational structure**. Newman's *Networks* [R22](#r22) is the technical reference; Barabási [R23](#r23) is an accessible companion.
+
+### Learn structural concepts
+
+- nodes and edges;
+- directed/undirected and weighted networks;
+- degree;
+- centrality;
+- clustering;
+- shortest paths;
+- connected components;
+- communities;
+- assortativity;
+- motifs;
+- core-periphery structure;
+- multilayer networks.
+
+### Learn dynamics on networks
+
+- diffusion;
+- contagion;
+- epidemics;
+- threshold models;
+- synchronization;
+- percolation;
+- cascading failure;
+- load redistribution.
+
+### Engineering applications
+
+- software/service dependencies;
+- supply networks;
+- organizational communication;
+- infrastructure interdependence;
+- fault propagation;
+- design-task networks;
+- information flow;
+- collaboration networks;
+- command and control.
+
+### Critical caution
+
+Do not assume that a node with high centrality is necessarily the best intervention point. Centrality is a family of structural measures, not a causal theory. Connect topology to an explicit dynamical mechanism.
+
+### Interdependent networks
+
+Buldyrev et al. [R24](#r24) is an important reminder that robustness results from single networks may reverse when multiple networks depend on one another.
+
+### Exercise
+
+Construct two network views of the same software platform:
+1. service-call dependencies;
+2. team ownership/coordination dependencies.
+
+Compare structural bottlenecks. Identify places where the technical and organizational structures are misaligned.
+
+<a id="nonlinear-dynamics"></a>
+## 23. Nonlinear dynamics and tipping behavior
+
+A systems engineer does not need to become a dynamical-systems theorist, but should understand enough nonlinear dynamics to recognize when linear intuition is unsafe.
+
+### Learn
+
+- state space;
+- equilibrium;
+- local stability;
+- phase portraits;
+- eigenvalue intuition;
+- attractors;
+- limit cycles;
+- bifurcations;
+- hysteresis;
+- multiple stable states;
+- chaos at an introductory level;
+- sensitivity to initial conditions;
+- thresholds and regime shifts.
+
+Strogatz [R25](#r25) is an excellent foundation.
+
+### Why this matters
+
+Many engineering decisions implicitly assume that small parameter changes produce small outcome changes. Near a bifurcation or threshold, that assumption fails.
+
+### Exercise
+
+Choose a simple nonlinear model—capacity/congestion, resource depletion, epidemic spread, or feedback control. Vary a control parameter and identify qualitatively different regimes. Explain what an operator would need to monitor to detect proximity to a regime transition.
+
+<a id="dsm"></a>
+## 24. DSM and structural architecture analysis
+
+Design Structure Matrix (DSM) methods are among the most practical techniques in the guide for exposing structural coupling. Eppinger and Browning [R26](#r26) is the main reference.
+
+### Learn
+
+- component DSMs;
+- task/process DSMs;
+- team/organization DSMs;
+- clustering;
+- sequencing;
+- tearing;
+- dependency cycles;
+- propagation paths;
+- multi-domain matrices.
+
+### Use DSM when
+
+- you need a compact representation of dependencies;
+- architecture and coupling matter;
+- iteration/rework cycles matter;
+- you want to compare product, process, and organization structure.
+
+### Limitation
+
+DSM is primarily a **structural representation**. It does not automatically model adaptation, nonlinear dynamics, or stakeholder values. Use it with simulation or network dynamics when those matter.
+
+### Exercise
+
+Build a DSM for a data platform containing data products, pipelines, schemas, teams, and deployment dependencies. Cluster it and identify architecture boundaries that reduce coordination burden without destroying necessary integration.
+
+<a id="uq"></a>
+## 25. Uncertainty quantification and sensitivity analysis
+
+Complexity and uncertainty are related but not identical. A complex model can have well-characterized parameter uncertainty; a simple model can face deep structural uncertainty.
+
+### Distinguish
+
+- **aleatory uncertainty** — variability treated as stochastic;
+- **epistemic uncertainty** — incomplete knowledge;
+- **parameter uncertainty** — unknown parameter values;
+- **structural/model uncertainty** — uncertainty about equations, rules, mechanisms, or boundaries;
+- **scenario uncertainty** — alternative external conditions;
+- **deep uncertainty** — key parties do not know or agree on models, probability distributions, or valuation of outcomes.
+
+### Learn
+
+- Monte Carlo simulation;
+- local sensitivity;
+- global sensitivity;
+- screening;
+- uncertainty propagation;
+- scenario analysis;
+- ensemble analysis;
+- robustness metrics;
+- assumption testing.
+
+Saltelli et al. [R27](#r27) is a useful reference for global sensitivity analysis.
+
+### Engineering rule
+
+Do not run Monte Carlo over uncertain parameters while silently fixing uncertain model structure. The resulting numerical precision can obscure the larger uncertainty.
+
+<a id="dmdu"></a>
+## 26. Decision making under deep uncertainty
+
+When the future cannot be represented credibly by a single probability distribution, the objective changes from “optimize for the forecast” to **stress-test strategies across plausible futures and design adaptation pathways**.
+
+### 26.1 Robust Decision Making (RDM)
+
+RDM [R29](#r29) uses computation to explore many plausible futures, identify the conditions under which a strategy fails, and search for strategies that remain acceptable across a broad range of conditions.
+
+Key ideas:
+- exploratory modeling;
+- vulnerability analysis;
+- scenario discovery;
+- robustness rather than expected-value optimality;
+- adaptive strategies.
+
+### 26.2 Dynamic Adaptive Policy Pathways (DAPP)
+
+DAPP [R30](#r30) organizes decisions into pathways over time. A near-term action is selected, but alternative future actions are preserved. Monitoring reveals when an existing pathway approaches an adaptation tipping point and a change is required.
+
+Key ideas:
+- adaptation tipping points;
+- pathways;
+- signposts;
+- triggers;
+- sequencing;
+- option preservation.
+
+### 26.3 Flexibility in engineering design
+
+De Neufville and Scholtes [R28](#r28) provide a design-oriented complement: embed flexibility so systems can change configuration as uncertainty resolves.
+
+### Exercise
+
+Take a long-lived platform or infrastructure architecture. Define 4–6 deeply uncertain drivers. Compare:
+- a fixed “best estimate” design;
+- a robust design;
+- an adaptive design with monitoring triggers.
+
+Explain where option value comes from and what must be instrumented to exercise the option.
+
+<a id="safety-methods"></a>
+## 27. Safety and resilience analysis
+
+Safety and resilience require more than conventional component reliability analysis when failures emerge from interaction, software, organizational behavior, or inadequate control.
+
+### 27.1 STPA / STAMP
+
+Leveson [R31](#r31) reframes safety around control constraints.
+
+Learn:
+- losses;
+- hazards;
+- safety constraints;
+- control structure;
+- unsafe control actions;
+- causal scenarios.
+
+Use it when hazardous outcomes can occur without any single component “failing” in a conventional sense.
+
+### 27.2 Rasmussen-style system analysis
+
+Map actors across levels—regulators, executives, management, planners, operators—and examine:
+- constraints;
+- incentives;
+- information;
+- performance pressures;
+- adaptation;
+- boundary migration.
+
+### 27.3 Resilience analysis
+
+Assess capabilities to:
+- anticipate;
+- monitor;
+- respond;
+- recover;
+- stretch capacity;
+- reconfigure;
+- learn.
+
+Woods' distinctions [R34](#r34) help avoid using “resilience” as a vague synonym for reliability.
+
+### Exercise
+
+Choose a software incident, infrastructure outage, or operational accident. Analyze it twice:
+1. as a component failure chain;
+2. as a system control/adaptation problem.
+
+Compare what interventions become visible under each representation.
+
+<a id="mbse-method"></a>
+## 28. MBSE as an integration environment
+
+Treat MBSE as the environment in which system knowledge can be structured and linked—not the only model.
+
+A mature digital engineering workflow may connect:
+- requirements and stakeholder needs;
+- architecture models;
+- SysML behavior;
+- DSM/network representations;
+- executable simulations;
+- physics models;
+- agent-based models;
+- system dynamics models;
+- safety analyses;
+- test evidence;
+- operational telemetry;
+- uncertainty analyses.
+
+A useful research question is **semantic alignment**: when two models use the same term—“capacity,” “availability,” “agent,” “service,” “failure”—do they actually mean the same thing?
+
+SysML v2 [R04](#r04) makes APIs, textual notation, and formalized semantics more prominent, which should make model transformation and co-simulation increasingly important topics for complexity-oriented SE research.
+
+### Exercise
+
+Create a conceptual integration map showing how one system architecture model would exchange information with:
+- an ABM;
+- a network model;
+- a safety model;
+- an uncertainty analysis.
+
+Identify ownership of each parameter and metric.
+
+<a id="multimethod"></a>
+## 29. Multimethod and mixed-method inquiry
+
+Some complex-system questions cannot be answered credibly with one method.
+
+A multimethod study might combine:
+- interviews to identify decision rules;
+- event logs to estimate interaction patterns;
+- network analysis to identify structural dependencies;
+- ABM to explore adaptive behavior;
+- system dynamics to model strategic feedback;
+- STPA to identify hazardous control structures;
+- RDM to stress-test interventions;
+- workshops to interpret results with stakeholders.
+
+The challenge is not merely combining methods. It is maintaining clarity about what each method contributes and avoiding contradictions hidden by incompatible assumptions.
+
+Use a **method integration table**:
+
+| Method | Purpose | Boundary | Core variables | Time scale | Evidence source | Output passed to other methods |
+|---|---|---|---|---|---|---|
+| Example: network model | identify propagation structure | services | calls/dependencies | minutes–months | telemetry/config | candidate critical nodes |
+| Example: ABM | explore adaptation | teams/services | policies/choices | days–years | interviews/logs | distribution of architectures |
 
 ---
 
-## 6. Synthesis: what systems engineering is really doing with CAS
+<a id="part-v"></a>
+# Part V — Research Methodology for Complex Engineered Systems
 
-My synthesis is that systems engineering treats CAS less as a theory of spontaneous order and more as a **discipline of intervention under irreducible complexity**.
+<a id="research-claims"></a>
+## 30. From interesting model to defensible research claim
 
-Its goals are to improve:
+Complex-systems modeling makes it easy to produce interesting patterns. Research requires a stronger standard.
 
-- design,
-- governance,
-- adaptability,
-- resilience,
-- safety,
-- lifecycle value,
-- and mission performance,
+Every study should state:
 
-under conditions where the system:
+1. **Decision/research question** — What exactly is being asked?
+2. **System of interest** — What is inside/outside the boundary?
+3. **Claim type** — Description, explanation, prediction, exploration, design evaluation, or prescription?
+4. **Mechanism** — What process is hypothesized to produce the outcome?
+5. **Representation** — Why does the model preserve the necessary mechanism?
+6. **Evidence** — What observations support assumptions and outputs?
+7. **Alternatives** — What rival explanations/models exist?
+8. **Uncertainty** — Which conclusions are sensitive to uncertain assumptions?
+9. **Scope conditions** — Where should the result not be generalized?
+10. **Decision relevance** — What action changes if the conclusion is accepted?
 
-- cannot be fully specified in advance,
-- cannot be fully controlled by one actor,
-- and cannot be completely predicted.
+One of the most important habits to develop is asking:
 
-That makes systems engineering research on CAS more:
+> **What evidence would cause me to reject or substantially revise this model?**
 
-- **normative**,
-- **architectural**,
-- **operational**,
-- and **intervention-oriented**
+If the answer is “nothing,” the model is functioning as a narrative rather than an empirical research object.
 
-than much of the economics literature.
+<a id="vv"></a>
+## 31. Verification, validation, calibration, and evaluation
 
-The systems engineer wants not only to understand complex systems, but to determine:
+Use these terms carefully.
 
-- how to shape them,
-- how to steer them,
-- how to govern them,
-- how to make them resilient,
-- and how to learn with them over time.
+### Verification
+
+Did we implement the intended model correctly?
+
+Examples:
+- code tests;
+- conservation checks;
+- limiting cases;
+- dimensional checks;
+- independent reimplementation;
+- deterministic seed tests.
+
+### Validation
+
+Is the model adequate for its intended purpose relative to evidence?
+
+Potential evidence:
+- historical behavior;
+- cross-sectional patterns;
+- qualitative process evidence;
+- expert elicitation;
+- withheld data;
+- known extreme cases;
+- intervention outcomes.
+
+### Calibration
+
+What parameter values make the model sufficiently consistent with observations?
+
+Calibration is not validation. A flexible model can fit historical data and still represent the wrong mechanism.
+
+### Evaluation
+
+Does the model support the decision it was built for?
+
+A model can be scientifically imperfect but useful for robust decision exploration if its uncertainties are exposed. Conversely, a highly detailed model can be decision-useless if its output depends on unobservable assumptions.
+
+<a id="simulation-experiments"></a>
+## 32. Experimental design for simulation
+
+Treat computational simulation as experimentation.
+
+Learn to design:
+- parameter sweeps;
+- factorial experiments;
+- Latin hypercube or space-filling designs;
+- stochastic replications;
+- convergence checks;
+- variance decomposition;
+- global sensitivity;
+- response surfaces;
+- scenario ensembles;
+- adversarial stress tests.
+
+For stochastic models, report distributions and uncertainty rather than single trajectories.
+
+For high-dimensional models, do not vary one parameter at a time and infer independence unless the model structure justifies it.
+
+<a id="evidence"></a>
+## 33. Evidence, causality, and triangulation
+
+Simulation is not automatically causal evidence about the real world. It demonstrates consequences of assumptions encoded in the model.
+
+Strengthen claims using triangulation:
+- observational data;
+- natural experiments;
+- experiments or A/B tests where feasible;
+- interviews;
+- archival records;
+- incident reports;
+- comparative cases;
+- model ensembles;
+- competing causal structures.
+
+Distinguish:
+- **model causality** — X causes Y inside the specified model;
+- **empirical causality** — evidence supports X causing Y in the real system;
+- **decision robustness** — the proposed action remains acceptable even if causal uncertainty is unresolved.
+
+This distinction is especially important in CAS research because equifinality—multiple mechanisms producing similar macro patterns—is common.
+
+<a id="reproducibility"></a>
+## 34. Reproducibility and model documentation
+
+For computational research, preserve:
+- source code;
+- dependencies/environment;
+- model version;
+- input data provenance;
+- random seeds or seed-generation process;
+- experiment configuration;
+- analysis notebooks/scripts;
+- assumptions;
+- model diagrams;
+- units;
+- parameter definitions;
+- output definitions.
+
+For ABM, use ODD [R21](#r21) as a baseline documentation protocol.
+
+For cross-model research, maintain a data dictionary and semantic mapping across tools.
+
+For qualitative work, document:
+- sampling;
+- interview protocols;
+- coding approach;
+- decision trail;
+- researcher interpretation.
+
+Reproducibility does not mean another researcher must obtain an identical real-world outcome. It means they can reconstruct what you did and understand how conclusions arose.
+
+<a id="ethics"></a>
+## 35. Ethics and intervention
+
+Complex systems engineering is intervention-oriented, which means the analyst must consider second-order consequences.
+
+Ask:
+- Who benefits from the intervention?
+- Who bears risk and cost?
+- Which stakeholders are missing from the model?
+- Could optimization move risk elsewhere in the system?
+- Does monitoring required for adaptive control create privacy or autonomy concerns?
+- Could a governance mechanism create perverse incentives?
+- Could standardization produce systemic monoculture?
+- Could resilience for one actor reduce resilience for another?
+- Are there irreversible interventions that should be staged or tested first?
+
+For adaptive systems, also consider strategic response: publication or implementation of a policy can change the behavior it was based on.
+
+---
+<a id="part-vi"></a>
+# Part VI — The Phased Curriculum
+
+The modules below transform the guide from a reading list into a learning program. Each module contains:
+
+- **Learning objective** — what capability you are building;
+- **Core concepts** — what you should understand;
+- **Required readings** — the minimum serious path;
+- **Selective/deep readings** — useful extensions;
+- **Exercise** — something to do, not merely read;
+- **Artifact** — a reusable product of your learning;
+- **Mastery check** — evidence that you can move on.
+
+A reasonable part-time pace is roughly one substantial module every two to four weeks, but the sequencing matters more than calendar duration.
+
+<a id="module-0"></a>
+## Module 0 — Establish the baseline systems-engineering frame
+
+### Learning objective
+
+Build a precise understanding of mainstream systems engineering so you can later distinguish where complexity-oriented extensions genuinely add something.
+
+### Core concepts
+
+- system of interest;
+- stakeholder needs;
+- requirements;
+- architecture;
+- design definition;
+- interfaces;
+- verification vs. validation;
+- lifecycle processes;
+- technical management;
+- risk and decision management;
+- configuration and information management;
+- recursive/iterative application of SE processes.
+
+### Required readings
+
+1. **ISO/IEC/IEEE 15288:2023** — overview and life-cycle process structure [R01](#r01).
+2. **INCOSE Systems Engineering Handbook, Fifth Edition** — focus on lifecycle processes, systems thinking, architecture, risk, V&V, and technical leadership [R02](#r02).
+3. **SEBoK** — use the current systems engineering and systems science overview material [R03](#r03).
+
+### Selective/deep readings
+
+- SEBoK material on emergence, complexity, systems of systems, systems thinking, and lifecycle models.
+- ISO/IEC/IEEE architecture standards if architecture becomes a major specialization.
+
+### Exercise
+
+Choose one system you know well—a data platform, cloud service ecosystem, enterprise analytics platform, transportation service, or infrastructure system. Describe it using conventional SE language:
+
+- stakeholders;
+- system boundary;
+- operational context;
+- functions;
+- interfaces;
+- requirements;
+- architecture;
+- V&V approach;
+- lifecycle.
+
+Then write a second page titled **“Where the conventional representation becomes uncomfortable.”** Identify adaptation, contested goals, changing boundaries, distributed authority, unmodeled feedback, and uncertainties that do not fit neatly.
+
+### Artifact
+
+A 4–6 page baseline system description plus a “complexity gap” memo.
+
+### Mastery check
+
+You can explain the mainstream SE process without caricaturing it as purely waterfall or purely reductionist, and you can identify specific—not rhetorical—places where additional complexity methods are needed.
 
 ---
 
-# Part II. Curriculum Design Principles
+<a id="module-1"></a>
+## Module 1 — Learn systems science, cybernetics, and the science of design
 
-## 1. Why this curriculum is structured the way it is
+### Learning objective
 
-The curriculum should:
+Develop the conceptual foundations needed to reason about wholes, feedback, hierarchy, regulation, purpose, boundaries, and design.
 
-1. anchor you in how **systems engineering specifically frames complexity and CAS-like problems**,
-2. move quickly into the strongest SE-adjacent CAS literature,
-3. equip you with methods that map well onto your background,
-4. and develop a research identity that could support later movement into **systems engineering research directed at CAS**.
+### Core concepts
 
-For a someone with a quantitative background and enngineering experience, the most relevant emphasis is on:
+- system/environment boundary;
+- open systems;
+- hierarchy;
+- near-decomposability;
+- feedback;
+- regulation;
+- requisite variety;
+- bounded rationality;
+- purpose and goals;
+- design as transformation;
+- observer/problem framing.
 
-- architecture,
-- systems interdependence,
-- networked structure,
-- uncertainty,
-- resilience,
-- sociotechnical systems,
-- distributed governance,
-- and formal modeling.
+### Required readings
 
----
+1. Herbert Simon, **“The Architecture of Complexity”** [R09](#r09).
+2. Herbert Simon, **The Sciences of the Artificial**, especially chapters on complexity and design [R10](#r10).
+3. W. Ross Ashby, selected chapters from **An Introduction to Cybernetics** [R11](#r11).
 
-# Part III. Questions to Carry While Reading
+### Selective/deep readings
 
-## Questions to carry
+- Gharajedaghi, **Systems Thinking: Managing Chaos and Complexity** [R14](#r14).
+- Checkland and Scholes, **Soft Systems Methodology in Action** [R12](#r12).
+- Selected cybernetics/management cybernetics material if governance and organizational control become central.
 
-- When does the author assume **central control**, and when do they accept **distributed adaptation**?
-- Is complexity being treated as a property of **structure**, **behavior**, **stakeholders**, or **governance**?
-- What is the intervention model: **optimization, robustness, resilience, flexibility, modularity, incentives, simulation, or evolutionary adaptation**?
-- Does the work help you **design** a system, **operate** it, **govern** it, or **analyze** it after the fact?
-- How would the method apply to a modern **data/software/platform ecosystem**?
+### Exercise
 
-These questions are important because they prevent the reading from remaining abstract. They force you to translate each work into a research and engineering lens.
+Take your Module 0 system and identify:
+- nested levels;
+- nearly decomposable subsystems;
+- feedback loops;
+- information required for regulation;
+- sources of environmental variety;
+- where the regulator lacks requisite variety.
 
----
+Then identify one design decision that reduces effective complexity by creating a stable interface or modular boundary.
 
-# Part IV. The Phased Curriculum
+### Artifact
 
-## Phase 1. Get the Systems Engineering Framing Right
+A systems map and a 2–3 page memo connecting Simon/Ashby concepts to an engineering architecture.
 
-### What this phase is achieving
+### Mastery check
 
-This phase gives you the **discipline-specific framing** you need. It translates your prior CAS intuition into the language of systems engineering, especially around emergence, complexity types, intervention, architecture, and sociotechnical systems.
-
-### 1.1 A Complexity Primer for Systems Engineers — INCOSE Complex Systems Working Group
-
-This is the fastest way to understand how systems engineers explicitly classify and reason about complexity. It gives you the practical vocabulary around:
-
-- environment,
-- problem space,
-- solution space,
-- emergence,
-- uncertainty,
-- open boundaries,
-- and the limits of reductionist SE.
-
-It is especially useful because it helps locate CAS *inside* systems engineering rather than treating it as an external complexity-science topic.
-
-**What to extract**
-
-- distinctions among kinds of complexity,
-- implications for architecture and management,
-- why centralized control and fixed specification break down.
-
-**Reading**
-
-- INCOSE Complexity Primer for Systems Engineers:  
-  https://www.incose.org/docs/default-source/ProductsPublications/a-complexity-primer-for-systems-engineers.pdf
-
-### 1.2 Engineering Systems
-
-This book frames large engineered systems as:
-
-- sociotechnical,
-- multi-stakeholder,
-- dynamic,
-- institutionally embedded,
-- and inseparable from governance and organizational context.
-
-**What to extract**
-
-- why major engineered systems cannot be understood as purely technical artifacts,
-- how technical and social layers interact,
-- how engineering systems differ from traditional bounded technical systems.
-
-**Reading**
-
-- MIT Press — Engineering Systems:  
-  https://mitpress.mit.edu/9780262529945/engineering-systems/
+You can explain why hierarchy and modularity can make complex systems manageable without claiming they eliminate complexity, and you can use requisite variety as more than a slogan.
 
 ---
 
-## Phase 2. Learn the Core SE / CAS Schools
+<a id="module-2"></a>
+## Module 2 — Learn the mechanisms of complex adaptive systems
 
-### 2.1 Complex Engineered Systems: Science Meets Technology — Braha, Minai, Bar-Yam (eds.)
+### Learning objective
 
-This is one of the strongest bridge texts between complexity science and engineered systems. It covers emergence, nonlinear interaction, networks, multilevel behavior, and evolutionary thinking in ways that matter directly for engineered systems.
+Replace vague complexity language with a mechanism-level understanding of nonlinear, adaptive, emergent behavior.
 
-**What to extract**
+### Core concepts
 
-- the conceptual bridge from general CAS science to engineering,
-- why local interactions and network structure drive system-level behavior,
-- how multilevel interactions create both capability and fragility.
+- nonlinearity;
+- emergence;
+- self-organization;
+- feedback;
+- heterogeneity;
+- adaptation;
+- learning;
+- selection;
+- evolution;
+- co-evolution;
+- path dependence;
+- network effects;
+- tipping and regime shifts;
+- multiscale behavior;
+- robust-yet-fragile behavior.
 
-**Reading**
+### Required readings
 
-- Springer book page:  
-  https://link.springer.com/book/10.1007/3-540-32834-3
-- PDF / online access page:  
-  https://link.springer.com/content/pdf/10.1007/3-540-32834-3.pdf
+1. Melanie Mitchell, **Complexity: A Guided Tour** [R07](#r07).
+2. John H. Miller and Scott E. Page, **Complex Adaptive Systems** [R08](#r08).
+3. John Holland, **Hidden Order** — selected chapters [R08A](#r08a).
 
-### 2.2 System of Systems Engineering — Boardman & Sauser
+### Selective/deep readings
 
-This is essential for understanding how systems engineering handles CAS-like problems in practice. It is especially important because it replaces the fiction of a single designer with full authority. Instead, it focuses on systems composed of semi-autonomous constituent systems with their own owners, incentives, and operating tempos.
+- Braha, Minai, and Bar-Yam, eds., **Complex Engineered Systems** [R15](#r15).
+- Carlson and Doyle on Highly Optimized Tolerance [R36](#r36).
+- Bar-Yam's multiscale engineering work in *Complex Engineered Systems*.
 
-This is one of the clearest systems engineering homes for complexity and adaptation.
+### Exercise
 
-**What to extract**
+Build a “mechanism dictionary.” For each of 12 mechanisms, include:
+- definition;
+- minimal example;
+- engineering example;
+- observable signature;
+- modeling method;
+- plausible intervention;
+- common misconception.
 
-- what distinguishes a system of systems from a very large system,
-- how autonomy and governance change engineering practice,
-- why architecture in SoS settings is partly negotiated and contextual rather than fully specified.
+Then select one real system and identify which three mechanisms you believe dominate. State what evidence would change your mind.
 
-**Reading**
+### Artifact
 
-- Wiley book page:  
-  https://onlinelibrary.wiley.com/doi/book/10.1002/9780470403501
-- Related SoSE modeling/simulation volume:  
-  https://onlinelibrary.wiley.com/doi/book/10.1002/9781118501757
+A 10–15 page CAS mechanism notebook that can later become a research reference.
 
----
+### Mastery check
 
-## Phase 3. Build the Methods Toolkit
-
-### What this phase is achieving
-
-This phase equips you with methods that make complexity analyzable and actionable. These are especially important because they connect directly to architecture, dependency structure, simulation, interdependence, and scenario-based analysis.
-
-### 3.1 Design Structure Matrix: Methods and Applications
-
-DSM is one of the most practical and powerful methods for representing complexity in engineered systems. It helps make visible:
-
-- dependencies,
-- couplings,
-- iteration loops,
-- coordination burdens,
-- and architectural structure.
-
-It will likely map very naturally onto your experience with software systems, data dependencies, and platform architecture.
-
-**What to extract**
-
-- ways of representing dependency structure,
-- implications of coupling for architecture and coordination,
-- how complexity can be analyzed structurally rather than treated impressionistically.
-
-**Reading**
-
-- MIT Press — Design Structure Matrix: Methods and Applications:  
-  https://mitpress.mit.edu/9780262017527/design-structure-matrix-methods-and-applications/
-
-### 3.2 Modeling and Simulation Support for System of Systems Engineering Applications
-
-Systems engineering research on CAS often depends on simulation, scenario analysis, and multi-model reasoning. This resource is worth reading selectively, especially for how it handles:
-
-- contextualization,
-- systemigrams,
-- architecture exploration,
-- autonomy,
-- and emergence in SoS environments.
-
-**What to extract**
-
-- how SE researchers model systems that cannot be understood through single-point deterministic analysis,
-- how simulation supports architecture and governance questions,
-- how context-setting and scenario exploration matter in CAS research.
-
-**Reading**
-
-- Wiley book page:  
-  https://onlinelibrary.wiley.com/doi/book/10.1002/9781118501757
+You can hear the sentence “this is a complex system” and immediately ask **“complex in what way, generated by which mechanisms, at what scale?”**
 
 ---
 
-## Phase 4. Read the Most Relevant Researchers Directly
+<a id="module-3"></a>
+## Module 3 — Connect complexity science to systems engineering
 
-### What this phase is achieving
+### Learning objective
 
-This phase turns your understanding from broad familiarity into researcher-level orientation. You move from field overviews to the particular scholars and schools whose work defines the strongest bridges between CAS and systems engineering.
+Understand how systems-engineering researchers translate general complexity ideas into engineering questions about architecture, intervention, governance, and lifecycle performance.
 
-### 4.1 Dan Braha
+### Core concepts
 
-Braha’s work is one of the best examples of complexity research that still feels strongly engineering-oriented. He studies:
+- complex systems vs. complex engineered systems;
+- objective and subjective complexity;
+- emergence in engineering;
+- intervention under incomplete control;
+- complexity and architecture;
+- complexity across lifecycle stages;
+- engineering under uncertainty;
+- self-organization as an engineering choice.
 
-- engineering networks,
-- collaboration structures,
-- problem-solving dynamics,
-- product development,
-- bottlenecks,
-- and emergent coordination behavior.
+### Required readings
 
-This is especially relevant if you are interested in software systems, technical organizations, and knowledge-intensive engineering systems.
+1. **INCOSE, A Complexity Primer for Systems Engineers** [R05](#r05).
+2. Sarah Sheard and Ali Mostashari, **“Principles of Complex Systems for Systems Engineering”** [R06](#r06).
+3. Braha, Minai, and Bar-Yam, eds., **Complex Engineered Systems: Science Meets Technology** — introduction plus selected chapters [R15](#r15).
+4. De Weck, Roos, and Magee, **Engineering Systems** [R16](#r16).
 
-**Entry points**
+### Selective/deep readings
 
-- Start through the edited volume above.
-- Follow cited papers on engineering networks, product development, and problem-solving networks.
+- SEBoK, **Emergence and Complexity** [R03A](#r03a).
+- William B. Rouse on complex engineered, organizational, and natural systems.
+- Dan Braha's engineering-network work.
+- Bar-Yam on multiscale analysis and evolutionary engineering.
 
-**Reading**
+### Exercise
 
-- Springer chapter/book access starting point:  
-  https://link.springer.com/chapter/10.1007/3-540-32834-3_1
-- Book PDF access page:  
-  https://link.springer.com/content/pdf/10.1007/3-540-32834-3.pdf
+Write a comparative analysis of three systems:
+1. a complicated but relatively stable engineered product;
+2. a complex engineered system;
+3. a complex adaptive sociotechnical system.
 
-### 4.2 Yaneer Bar-Yam
+For each, compare:
+- ownership;
+- adaptivity;
+- predictability;
+- requirements stability;
+- interface stability;
+- governance;
+- useful modeling methods;
+- suitable intervention style.
 
-Bar-Yam is indispensable for understanding:
+### Artifact
 
-- multiscale structure,
-- matching system complexity to environmental complexity,
-- the limits of centralized control,
-- and when self-organizing approaches make more sense than detailed top-down specification.
+A 6–8 page field-positioning essay: **“What changes in systems engineering when the system is complex and adaptive?”**
 
-He is one of the strongest conceptual bridges from complexity science into engineering thinking.
+### Mastery check
 
-**What to focus on**
-
-- scale and multiscale effects,
-- matching control architecture to environment,
-- evolutionary and self-organizing engineering logics.
-
-**Reading**
-
-- NECSI complex engineered systems page:  
-  https://necsi.edu/complex-engineered-systems
-- Relevant Bar-Yam PDF / resource page:  
-  https://necsi.edu/s/6105872.pdf
-
-### 4.3 William B. Rouse
-
-Rouse is central for understanding enterprises and large operational settings as complex sociotechnical systems. He is especially strong on:
-
-- decision support,
-- transformation,
-- enterprise systems,
-- organizational adaptation,
-- and healthcare as a complex adaptive system.
-
-**Reading**
-
-- MIT Press — Understanding and Managing the Complexity of Healthcare:  
-  https://mitpress.mit.edu/9780262027519/understanding-and-managing-the-complexity-of-healthcare/
-- MIT Press — Engineering Systems:  
-  https://mitpress.mit.edu/9780262529945/engineering-systems/
-
-### 4.4 Richard de Neufville and the flexibility/design-under-uncertainty stream
-
-This is one of the most practical engineering responses to CAS-like uncertainty. Rather than optimizing for a single forecast, it emphasizes:
-
-- flexibility,
-- staged commitment,
-- preserving options,
-- adaptive system design,
-- and long-term value under uncertainty.
-
-This is especially relevant to architecture, infrastructure, and systems with long lifecycles.
-
-**Reading**
-
-- Flexibility in Engineering Design:  
-  https://direct.mit.edu/books/monograph/2955/Flexibility-in-Engineering-Design
-
-### 4.5 Boardman, Sauser, Gorod, and the SoSE community
-
-This community provides one of the clearest engineering homes for CAS-like research questions. They foreground:
-
-- autonomy,
-- governance,
-- paradox,
-- negotiated architecture,
-- context-setting,
-- and systemigrams.
-
-**Reading**
-
-- System of Systems Engineering:  
-  https://onlinelibrary.wiley.com/doi/book/10.1002/9780470403501
-- Modeling and Simulation Support for SoSE Applications:  
-  https://onlinelibrary.wiley.com/doi/book/10.1002/9781118501757
-
-### 4.6 Derek Hitchins
-
-Hitchins is especially useful once you already have some grounding. He strengthens your systems-practice lens around:
-
-- advanced systems thinking,
-- engineering and management of highly interconnected systems,
-- and practical ways of framing complexity.
-
-**Reading**
-
-- Advanced Systems Thinking, Engineering, and Management:  
-  https://us.artechhouse.com/Advanced-Systems-Thinking-Engineering-and-Management-P1627.aspx
-
-### 4.7 Jamshid Gharajedaghi
-
-Gharajedaghi is valuable for understanding:
-
-- organizations and enterprises as dynamic, purposeful systems,
-- pluralistic sociotechnical complexity,
-- and systems thinking applied to adaptive organizational contexts.
-
-This is especially useful if you want stronger connections between engineering systems and organizational/economic systems.
-
-**Reading**
-
-- Systems Thinking: Managing Chaos and Complexity:  
-  https://shop.elsevier.com/books/systems-thinking/gharajedaghi/978-0-12-385915-0
-
-### 4.8 Defense / operational CAS-of-systems research
-
-Defense and operational settings often force systems engineers to confront emergence, uncertainty, distributed control, and unknown unknowns directly. This literature is highly relevant if you are interested in CAS under mission pressure.
-
-**Reading**
-
-- Naval Postgraduate School faculty/research entry point:  
-  https://nps.edu/faculty-profiles/-/cv/ahernand
+You can distinguish a genuine complexity-oriented engineering problem from a merely large or complicated engineering problem and explain why that distinction changes methodology.
 
 ---
 
-## Phase 5. Add the Systems-Practice Layer
+<a id="module-4"></a>
+## Module 4 — Learn sociotechnical problem framing and systems practice
 
-This phase consolidates your understanding into a stronger intervention-oriented perspective. By this stage, you should not just understand CAS conceptually; you should be developing a view of how to frame, analyze, and intervene in complex engineered systems.
+### Learning objective
 
-### 5.1 Revisit Hitchins and Gharajedaghi after the technical/material phases
+Develop the ability to work on problems where the system boundary, objectives, and even the definition of the problem are disputed.
 
-If read too early, these works can feel abstract or overly general. But after exposure to engineering systems, SoS, networks, uncertainty, and methods, they become much more powerful.
+### Core concepts
 
-At this stage, use them to synthesize:
+- problem situation vs. formulated problem;
+- stakeholder worldview;
+- purposeful systems;
+- multiple perspectives;
+- boundary critique;
+- soft vs. hard systems approaches;
+- intervention strategy;
+- multimethodology;
+- participatory modeling;
+- organizational/institutional context.
 
-- problem framing,
-- stakeholder perspectives,
-- intervention logic,
-- and systems practice for complexity.
+### Required readings
 
-### 5.2 Revisit INCOSE and resilience-oriented papers
+1. Checkland and Scholes, **Soft Systems Methodology in Action** — selected chapters [R12](#r12).
+2. Michael C. Jackson, **Critical Systems Practice** material, beginning with the EPIC framework [R13](#r13).
+3. Gharajedaghi, **Systems Thinking** — selected chapters [R14](#r14).
 
-After the earlier phases, return to INCOSE materials and related resilience work with a more mature lens. At that point you will be able to connect complexity to:
+### Selective/deep readings
 
-- systems engineering practice,
-- lifecycle concerns,
-- resilience design,
-- and real intervention strategies.
+- Derek Hitchins on advanced systems thinking and management.
+- Critical Systems Heuristics for boundary critique.
+- Participatory systems modeling literature relevant to your domain.
 
-**Useful links**
+### Exercise
 
-- INCOSE Complex Systems Working Group:  
-  https://www.incose.org/group/complex-systems-working-group/
-- Example INCOSE resilience-related resource page:  
-  https://www.incose.org/resource/bifurcation-analysis-for-system-resilience-a-case-study-on-power-infrastructure/
+Choose a sociotechnical issue with genuine stakeholder disagreement—for example platform data governance, observability/privacy tradeoffs, AI-assisted operations, or shared infrastructure prioritization.
 
----
+Create:
+- stakeholder map;
+- alternative system boundaries;
+- competing definitions of success;
+- rich-picture or equivalent qualitative map;
+- three candidate intervention framings.
 
-# Part V. Best Ordering
+Then explain why a purely optimization-based formulation would prematurely close the problem.
 
-1. **A Complexity Primer for Systems Engineers**
-2. **Engineering Systems**
-3. **Complex Engineered Systems: Science Meets Technology**
-4. **System of Systems Engineering**
-5. **Design Structure Matrix: Methods and Applications**
-6. Then branch by interest.
+### Artifact
 
-### Branch A: Architecture / software / networks
+A problem-framing dossier and workshop-ready system map.
 
-- Dan Braha
-- DSM-related papers and applications
-- SoSE modeling/simulation work
+### Mastery check
 
-### Branch B: Enterprise / organizations / governance
-
-- William B. Rouse
-- Jamshid Gharajedaghi
-- Boardman / Sauser on SoS governance
-
-### Branch C: Uncertainty / adaptation / infrastructure
-
-- MIT engineering systems work
-- flexibility / real-options stream
-- resilience-oriented INCOSE work
+You can distinguish **uncertainty about the answer** from **disagreement about what question should be answered**.
 
 ---
 
-# Part VI. What to Read Deeply vs. What to Read Selectively
+<a id="module-5"></a>
+## Module 5 — Learn systems of systems, governance, and mission thinking
 
-## Read deeply
+### Learning objective
 
-- **A Complexity Primer for Systems Engineers**
-- **Engineering Systems**
-- **Complex Engineered Systems: Science Meets Technology**
-- **System of Systems Engineering**
+Learn how engineering changes when authority, ownership, and lifecycle decisions are distributed among semi-autonomous actors.
 
-These give you the strongest conceptual and field-level foundation.
+### Core concepts
 
-## Read selectively / strategically
+- operational independence;
+- managerial independence;
+- evolutionary development;
+- emergent capability;
+- constituent-system autonomy;
+- interoperability;
+- negotiated architecture;
+- standards;
+- protocols;
+- federation;
+- decision rights;
+- governance;
+- mission threads;
+- polycentric coordination.
 
-- **Modeling and Simulation Support for System of Systems Engineering Applications**
-- Derek Hitchins
-- resilience/application papers from INCOSE and adjacent communities
+### Required readings
 
-These are valuable, but your returns will be highest if you read them with specific questions in mind.
+1. Mark Maier, **“Architecting Principles for Systems-of-Systems”** [R17](#r17).
+2. Selected chapters from Jamshidi, ed., **System of Systems Engineering: Innovations for the 21st Century** [R18](#r18).
+3. Elinor Ostrom, **Governing the Commons** — selected chapters on self-governance and institutional design [R35](#r35).
 
-## Use as working methods references
+### Selective/deep readings
 
-- **Design Structure Matrix: Methods and Applications**
+- Boardman, Sauser, and Gorod on SoS management and systemigrams.
+- Judith Dahmann and SoSE practice literature.
+- Mission engineering guides and current INCOSE/DoD materials [R38](#r38).
+- Platform governance and standards literature for software/data ecosystems.
 
-This is the sort of resource you will likely reuse rather than read once.SSSSS
+### Exercise
+
+Model a federated data ecosystem or multi-team software platform as a system of systems.
+
+Identify:
+- constituent systems;
+- owners;
+- local objectives;
+- shared mission/capability;
+- interfaces;
+- standards;
+- incentives;
+- decision rights;
+- conflicts;
+- upgrade/lifecycle mismatch;
+- governance mechanisms.
+
+Then design two governance architectures:
+1. more centralized;
+2. more polycentric/federated.
+
+Compare likely benefits, failure modes, and information requirements.
+
+### Artifact
+
+A SoS systemigram or equivalent context model plus a governance architecture memo.
+
+### Mastery check
+
+You no longer assume “the system owner” exists. You can state precisely who controls what and which outcomes require coordination rather than command.
+
+---
+<a id="module-6"></a>
+## Module 6 — Build the computational modeling toolkit
+
+### Learning objective
+
+Become capable of choosing and constructing models that preserve the dominant mechanisms of a complex engineered system.
+
+This module is intentionally broader and more technical than the others. It should be treated as a laboratory sequence rather than a single reading block.
+
+### Core concepts
+
+- feedback and stocks/flows;
+- heterogeneous agents;
+- networks and propagation;
+- nonlinear dynamics;
+- architecture/dependency matrices;
+- stochastic simulation;
+- experimental design;
+- model comparison;
+- sensitivity analysis.
+
+### Track A — System dynamics
+
+**Required:** Sterman, *Business Dynamics* [R19](#r19).
+
+Focus on:
+- modeling process;
+- causal loops;
+- stocks/flows;
+- delays;
+- path dependence;
+- model testing.
+
+**Build:** a feedback model of technical debt, capacity, demand, resilience investment, or organizational staffing.
+
+### Track B — Agent-based modeling
+
+**Required:** Wilensky and Rand [R20](#r20); ODD protocol [R21](#r21).
+
+Focus on:
+- agent rules;
+- heterogeneity;
+- local interaction;
+- adaptation;
+- stochastic experiments;
+- validation.
+
+**Build:** an adaptive coordination, platform, market, routing, or organizational model.
+
+### Track C — Network science
+
+**Required:** Newman [R22](#r22); selected Barabási chapters [R23](#r23).
+
+Focus on:
+- structural metrics;
+- communities;
+- centrality;
+- diffusion;
+- robustness;
+- interdependent networks.
+
+**Build:** a dependency/organizational/infrastructure network and simulate one propagation process on it.
+
+### Track D — Nonlinear dynamics
+
+**Required:** selected Strogatz chapters [R25](#r25).
+
+Focus on:
+- stability;
+- equilibria;
+- bifurcations;
+- multiple regimes;
+- oscillation;
+- tipping.
+
+**Build:** a small model with at least one qualitative regime change.
+
+### Track E — Architecture / DSM
+
+**Required:** Eppinger and Browning [R26](#r26).
+
+Focus on:
+- clustering;
+- dependency cycles;
+- sequencing;
+- multidomain architecture.
+
+**Build:** DSM for your recurring reference system.
+
+### Integration exercise
+
+Represent the **same system** using at least three methods. For each representation, answer:
+
+- What becomes visible?
+- What disappears?
+- What is treated as endogenous?
+- What intervention does this method naturally suggest?
+- Which conclusions conflict with another method?
+
+### Artifact
+
+A small portfolio containing at least three executable or analyzable models plus a comparative methods memo.
+
+### Mastery check
+
+You can justify model choice from the mechanism and decision question, not from personal tool preference.
 
 ---
 
-# Part VIII. Resource List (Consolidated)
+<a id="module-7"></a>
+## Module 7 — Architect under uncertainty and deep uncertainty
 
-## Foundational framing
+### Learning objective
 
-- A Complexity Primer for Systems Engineers  
-  https://www.incose.org/docs/default-source/ProductsPublications/a-complexity-primer-for-systems-engineers.pdf
-- INCOSE Complex Systems Working Group  
-  https://www.incose.org/group/complex-systems-working-group/
-- MIT Press — Engineering Systems  
-  https://mitpress.mit.edu/9780262529945/engineering-systems/
+Learn to design systems that preserve value when forecasts are unreliable and assumptions may change.
 
-## Bridge texts and core schools
+### Core concepts
 
-- Complex Engineered Systems: Science Meets Technology  
-  https://link.springer.com/book/10.1007/3-540-32834-3
-- PDF / access page for Complex Engineered Systems  
-  https://link.springer.com/content/pdf/10.1007/3-540-32834-3.pdf
-- System of Systems Engineering  
-  https://onlinelibrary.wiley.com/doi/book/10.1002/9780470403501
-- Modeling and Simulation Support for System of Systems Engineering Applications  
-  https://onlinelibrary.wiley.com/doi/book/10.1002/9781118501757
+- uncertainty taxonomy;
+- robustness;
+- flexibility;
+- optionality;
+- staged commitment;
+- real options logic;
+- architecture evolvability;
+- scenario discovery;
+- exploratory modeling;
+- adaptive pathways;
+- signposts and triggers;
+- robust-yet-fragile design.
 
-## Methods
+### Required readings
 
-- Design Structure Matrix: Methods and Applications  
-  https://mitpress.mit.edu/9780262017527/design-structure-matrix-methods-and-applications/
+1. De Neufville and Scholtes, **Flexibility in Engineering Design** [R28](#r28).
+2. Lempert, **Robust Decision Making** overview [R29](#r29).
+3. Haasnoot et al., **Dynamic Adaptive Policy Pathways** [R30](#r30).
+4. Carlson and Doyle, **Highly Optimized Tolerance** [R36](#r36).
 
-## Researchers and specialized streams
+### Selective/deep readings
 
-- NECSI — Complex Engineered Systems / Bar-Yam  
-  https://necsi.edu/complex-engineered-systems
-- Bar-Yam resource PDF  
-  https://necsi.edu/s/6105872.pdf
-- Flexibility in Engineering Design  
-  https://direct.mit.edu/books/monograph/2955/Flexibility-in-Engineering-Design
-- Understanding and Managing the Complexity of Healthcare  
-  https://mitpress.mit.edu/9780262027519/understanding-and-managing-the-complexity-of-healthcare/
-- Advanced Systems Thinking, Engineering, and Management  
-  https://us.artechhouse.com/Advanced-Systems-Thinking-Engineering-and-Management-P1627.aspx
-- Systems Thinking: Managing Chaos and Complexity  
-  https://shop.elsevier.com/books/systems-thinking/gharajedaghi/978-0-12-385915-0
-- Naval Postgraduate School research entry point  
-  https://nps.edu/faculty-profiles/-/cv/ahernand
+- RAND material on exploratory modeling and scenario discovery.
+- Real-options literature in engineering systems.
+- Robust optimization where uncertainty can be represented mathematically with credible uncertainty sets.
+- Resilient/evolvable architecture research from MIT and INCOSE communities.
 
-## Resilience-oriented follow-up
+### Exercise
 
-- INCOSE resource example: Bifurcation Analysis for System Resilience  
-  https://www.incose.org/resource/bifurcation-analysis-for-system-resilience-a-case-study-on-power-infrastructure/
+Take a long-lived architecture decision with substantial uncertainty—for example:
+- data storage architecture;
+- cloud/vendor strategy;
+- infrastructure capacity expansion;
+- interoperability standard;
+- fleet architecture;
+- communications network.
+
+Define:
+- irreversible decisions;
+- reversible decisions;
+- uncertainties;
+- candidate options;
+- signposts;
+- trigger thresholds;
+- adaptation actions.
+
+Construct at least three pathways and identify when each becomes preferable.
+
+### Artifact
+
+An adaptive architecture roadmap containing options, signposts, triggers, and decision points.
+
+### Mastery check
+
+You can explain why “better forecasting” is sometimes the wrong response to uncertainty and can design a strategy that learns and adapts as information arrives.
 
 ---
 
-# Part X. Closing Guidance
+<a id="module-8"></a>
+## Module 8 — Study safety, resilience, and operational adaptation
 
-The most important thing to keep in mind while working through this curriculum is that systems engineering research on CAS is not one narrow canon. It is an **interdisciplinary zone** spanning:
+### Learning objective
 
-- engineering systems,
-- SoS,
-- networks,
-- resilience,
-- sociotechnical systems,
-- and systems practice.
+Understand how complex sociotechnical systems fail, succeed, adapt under pressure, and sustain capability near operational boundaries.
 
-That can make the field initially feel diffuse.
+### Core concepts
 
-The way to handle that is not to search for one perfect definition of CAS in systems engineering. Instead, work through the materials asking:
+- accidents as interaction/control problems;
+- hazards and losses;
+- safety constraints;
+- unsafe control actions;
+- organizational pressure;
+- drift and boundary migration;
+- work-as-imagined vs. work-as-done;
+- graceful extensibility;
+- adaptation;
+- high-reliability organizing;
+- robust-yet-fragile behavior.
 
-- what kinds of complexity the author is talking about,
-- what intervention model they assume,
-- what methods they use,
-- and what kinds of engineered systems they are trying to influence.
+### Required readings
 
-If you do that, the field becomes much more legible, and the curriculum above will not just teach you the literature — it will help you locate where *your own* future work might sit within it.
+1. Nancy Leveson, **Engineering a Safer World** [R31](#r31).
+2. Jens Rasmussen, **“Risk Management in a Dynamic Society”** [R32](#r32).
+3. Hollnagel, Woods, and Leveson, eds., **Resilience Engineering: Concepts and Precepts** — selected chapters [R33A](#r33a).
+4. David Woods, **“Four Concepts for Resilience…”** [R34](#r34).
+5. Weick and Sutcliffe, **Managing the Unexpected** — selected chapters [R33](#r33).
+
+### Exercise
+
+Select a documented outage, accident, security incident, or operational failure. Build four interpretations:
+
+1. component failure / fault-chain view;
+2. STPA control-structure view;
+3. Rasmussen pressure/adaptation view;
+4. resilience/HRO view.
+
+Identify interventions uniquely visible under each lens.
+
+Then distinguish interventions aimed at:
+- prevention;
+- robustness;
+- detection;
+- containment;
+- graceful degradation;
+- recovery;
+- adaptation;
+- organizational learning.
+
+### Artifact
+
+A comparative incident analysis and redesigned control/resilience architecture.
+
+### Mastery check
+
+You can distinguish reliability, robustness, safety, and resilience without treating them as synonyms, and you can explain how normal local adaptation can contribute to system-level risk.
+
+---
+
+<a id="module-9"></a>
+## Module 9 — Integrate with MBSE and digital engineering
+
+### Learning objective
+
+Learn how complexity-oriented models can participate in a coherent engineering information environment.
+
+### Core concepts
+
+- system models vs. simulation models;
+- semantics;
+- traceability;
+- architecture;
+- requirements;
+- model interfaces;
+- co-simulation;
+- executable architecture;
+- digital thread;
+- operational data feedback;
+- model lifecycle/configuration;
+- uncertainty provenance.
+
+### Required readings
+
+1. Current SysML v2 overview/specification materials [R04](#r04).
+2. Relevant INCOSE Handbook / SEBoK MBSE material [R02](#r02), [R03](#r03).
+3. Review your DSM, network, ABM, SD, and safety models from prior modules.
+
+### Selective/deep readings
+
+- model transformation and FMI/co-simulation literature;
+- digital engineering measurement frameworks;
+- architecture framework literature relevant to your domain;
+- semantic interoperability and knowledge-graph approaches.
+
+### Exercise
+
+Design a **model federation** for your recurring system.
+
+Define:
+- authoritative model for architecture;
+- authoritative source for requirements;
+- external simulations;
+- shared parameters;
+- units;
+- assumptions;
+- experiment configuration;
+- outputs returned to the system model;
+- operational data used for recalibration;
+- configuration/version strategy.
+
+### Artifact
+
+A model-integration architecture and data/semantic contract.
+
+### Mastery check
+
+You can explain what MBSE contributes to CAS engineering and what it does not replace. You can also define how multiple analytical models could remain traceable to architecture and decisions.
+
+---
+
+<a id="module-10"></a>
+## Module 10 — Learn research design, validation, and reproducibility
+
+### Learning objective
+
+Develop from “model builder” into a researcher capable of making defensible claims about complex engineered systems.
+
+### Core concepts
+
+- research question and claim type;
+- conceptual model;
+- construct validity;
+- verification;
+- validation;
+- calibration;
+- parameter identifiability;
+- sensitivity;
+- uncertainty;
+- simulation experiment design;
+- triangulation;
+- replication;
+- reproducibility;
+- case study and mixed methods;
+- scope conditions.
+
+### Required readings
+
+1. Revisit model testing/validation chapters in Sterman [R19](#r19).
+2. Revisit ABM verification, validation, and replication in Wilensky and Rand [R20](#r20).
+3. ODD protocol [R21](#r21).
+4. Selected global sensitivity material from Saltelli et al. [R27](#r27).
+
+### Selective/deep readings
+
+- literature on validation of simulation models in your chosen domain;
+- design of experiments for stochastic simulation;
+- case-study research methods;
+- causal inference methods if empirical causal claims are central;
+- uncertainty quantification and Bayesian calibration if mathematically appropriate.
+
+### Exercise
+
+Take one model from Module 6 and write a research protocol before running new experiments.
+
+Specify:
+- research question;
+- hypotheses or exploratory questions;
+- model purpose;
+- assumptions;
+- calibration data;
+- validation data;
+- experiment design;
+- sensitivity plan;
+- falsification/update criteria;
+- reporting plan;
+- reproducibility package.
+
+Then execute the study.
+
+### Artifact
+
+A mini research paper plus reproducibility package.
+
+### Mastery check
+
+You can state exactly what your model supports claiming and can identify where uncertainty, calibration, or structural assumptions weaken the conclusion.
+
+---
+
+<a id="module-11"></a>
+## Module 11 — Synthesis and capstone
+
+### Learning objective
+
+Demonstrate that you can analyze and intervene in a complex engineered sociotechnical system using multiple perspectives without collapsing them into one model.
+
+### Required task
+
+Choose one substantive system and produce a research-grade systems analysis using at least:
+
+1. one structural method — DSM, architecture model, or network analysis;
+2. one dynamic/adaptive method — system dynamics, ABM, or nonlinear dynamics;
+3. one uncertainty/adaptation method — RDM, DAPP, flexibility, or robust analysis;
+4. one sociotechnical/governance or safety lens — SSM, institutional analysis, STPA, Rasmussen, resilience engineering, or SoSE governance.
+
+### Required capstone questions
+
+- What is the system of interest, and who contests that boundary?
+- Which complexity mechanisms dominate?
+- What adapts and at what rate?
+- Where does authority reside?
+- What is predictable and what is not?
+- What system-level behavior is emergent?
+- What dependencies create propagation or fragility?
+- Which requirements or objectives are stable, and which evolve?
+- What interventions are reversible?
+- Which futures make the preferred intervention fail?
+- What should be monitored after intervention?
+- What evidence would cause you to revise the model or intervention?
+
+### Artifact
+
+A capstone package containing:
+- 25–40 page report;
+- architecture/system maps;
+- models and code;
+- uncertainty/sensitivity analysis;
+- intervention roadmap;
+- governance/safety implications;
+- limitations;
+- reproducibility appendix.
+
+### Mastery check
+
+You can defend why each method is present, explain contradictions among models, and translate the analysis into an intervention strategy that explicitly accounts for uncertainty, adaptation, governance, and learning.
+
+---
+<a id="part-vii"></a>
+# Part VII — Recurring Reference Systems
+
+The curriculum becomes more coherent if you repeatedly analyze the same one or two systems through different lenses. This lets you see what each method reveals and hides.
+
+## 36. Reference System A — Modern software/data/platform ecosystem
+
+A strong reference system for a reader with software/data experience is a large platform composed of:
+
+- user-facing products;
+- APIs;
+- data stores;
+- pipelines;
+- shared infrastructure;
+- internal platform services;
+- external vendors;
+- multiple product and platform teams;
+- security/compliance functions;
+- changing workloads;
+- organizational incentives;
+- standards and governance.
+
+### Analyze it repeatedly as
+
+**Conventional SE:** needs, interfaces, architecture, V&V.
+
+**DSM:** service/team/data dependencies and coupling.
+
+**Network science:** propagation, criticality, communities, organizational/technical congruence.
+
+**System dynamics:** technical debt, capacity, demand, staffing, rework, reliability investment.
+
+**ABM:** team/service selection, local optimization, adoption of standards, platform competition.
+
+**SoS:** autonomous teams/services/vendors with different roadmaps and owners.
+
+**Governance:** API standards, data ownership, access policy, shared-service decision rights.
+
+**STPA:** unsafe control actions in deployment, automation, access, or incident response.
+
+**DMDU:** vendor lock-in, architecture evolution, scaling, regulation, AI-driven change.
+
+**MBSE/digital engineering:** traceability among architecture, requirements, simulations, and telemetry.
+
+## 37. Reference System B — Interdependent critical infrastructure
+
+Choose a system involving at least two coupled infrastructures, such as:
+
+- electricity + telecommunications;
+- transportation + energy;
+- water + power;
+- cloud infrastructure + financial/payment services;
+- emergency services + communications + transportation.
+
+### Analyze it repeatedly as
+
+- multilayer/interdependent network;
+- SoS with distributed owners;
+- mission architecture;
+- resilience system;
+- deep-uncertainty planning problem;
+- governance/institutional problem;
+- nonlinear demand/capacity system;
+- safety/control structure.
+
+These two reference systems prevent the curriculum from becoming a sequence of disconnected theories.
+
+---
+
+<a id="part-viii"></a>
+# Part VIII — Questions to Carry While Reading and Modeling
+
+Use these questions as a standing research checklist.
+
+## 38. Ontology and boundary
+
+- What does the author/model treat as the system?
+- What is excluded as “environment”?
+- Would including organizations, incentives, or institutions change the explanation?
+- Is the chosen level of aggregation hiding the relevant mechanism?
+
+## 39. Complexity mechanism
+
+- Is complexity structural, dynamic, adaptive, organizational, goal-related, or uncertain?
+- What creates the nonlinearity?
+- What feedback loops dominate?
+- What is emergent and from what local interactions?
+- What changes endogenously?
+
+## 40. Agency and adaptation
+
+- Which actors make decisions?
+- What do they know?
+- What are they optimizing or satisficing?
+- How do they learn?
+- Can they strategically respond to the intervention?
+- Are their goals aligned?
+
+## 41. Architecture and control
+
+- Where is authority centralized?
+- Where is it distributed?
+- What is controlled directly versus influenced indirectly?
+- What information does the controller need?
+- Does the controller possess sufficient variety and response speed?
+- Which interfaces enable coordination?
+
+## 42. Uncertainty
+
+- Which variables have meaningful probability distributions?
+- Which uncertainties are structural?
+- Which future conditions are deeply uncertain?
+- Which decisions are irreversible?
+- What options can be preserved?
+- What signposts could reveal that assumptions are failing?
+
+## 43. Evidence
+
+- What empirical observations support the model?
+- Is the result calibrated, validated, or merely illustrative?
+- What would falsify the proposed mechanism?
+- Are multiple mechanisms capable of reproducing the same macro behavior?
+- Is the model being used outside its validated scope?
+
+## 44. Intervention
+
+- Is the intervention model optimization, control, constraint, incentive, modularity, flexibility, governance, redundancy, experimentation, or adaptation?
+- Who implements it?
+- Who can resist or route around it?
+- What new feedback loops will it create?
+- Does it shift risk to another actor or scale?
+- How reversible is it?
+
+## 45. Learning
+
+- What will be measured after deployment?
+- How will the model be updated?
+- What trigger causes intervention adaptation or redesign?
+- How do we distinguish temporary noise from structural change?
+
+---
+
+<a id="part-ix"></a>
+# Part IX — Branches by Research Interest
+
+After completing Modules 0–6, branch more deeply according to the problems you want to study.
+
+## 46. Branch A — Architecture, software, and digital ecosystems
+
+Prioritize:
+- DSM and architecture networks;
+- Dan Braha and engineering networks;
+- platform/ecosystem governance;
+- modularity and near-decomposability;
+- MBSE/SysML v2;
+- technical debt and architecture evolution;
+- reliability/resilience of distributed software;
+- organizational/technical network congruence;
+- real options and architecture flexibility.
+
+Suggested research questions:
+- How does dependency topology affect software-system fragility?
+- How do team boundaries and architecture boundaries co-evolve?
+- When does standardization improve ecosystem coordination versus create correlated failure?
+- Which platform interfaces preserve future option value?
+
+## 47. Branch B — Enterprise, organization, and governance
+
+Prioritize:
+- Rouse;
+- Gharajedaghi;
+- Checkland;
+- Jackson;
+- Ostrom;
+- system dynamics;
+- organizational network analysis;
+- SoS governance;
+- institutional adaptation;
+- HRO/resilience engineering.
+
+Suggested research questions:
+- How do local incentives produce undesirable system-level outcomes?
+- Which governance structures support adaptation without fragmentation?
+- How do organizations migrate toward operational risk under performance pressure?
+- How do decision rights affect learning and resilience?
+
+## 48. Branch C — Infrastructure, resilience, and deep uncertainty
+
+Prioritize:
+- network cascades;
+- nonlinear dynamics;
+- system dynamics;
+- RDM and DAPP;
+- de Neufville and Scholtes;
+- resilience engineering;
+- mission engineering;
+- SoSE;
+- scenario discovery;
+- interdependent infrastructure.
+
+Suggested research questions:
+- Which architectures remain viable across climate, demand, technology, and policy uncertainty?
+- What indicators should trigger infrastructure adaptation?
+- How do coupled infrastructures create systemic failure pathways?
+- Which investments create flexibility rather than lock-in?
+
+## 49. Branch D — Safety-critical sociotechnical systems
+
+Prioritize:
+- Leveson;
+- Rasmussen;
+- Woods/Hollnagel;
+- HSI;
+- human-machine teaming;
+- control theory/cybernetics;
+- organizational adaptation;
+- incident data and qualitative field methods.
+
+Suggested research questions:
+- How do automation and human adaptation change control-loop safety?
+- How should safety constraints evolve in adaptive systems?
+- What creates graceful extensibility at operational limits?
+- How do local workarounds become system-level hazards or resilience resources?
+
+## 50. Branch E — Autonomous, AI-enabled, and adaptive cyber-physical systems
+
+Prioritize:
+- ABM;
+- multi-agent systems;
+- control and cybernetics;
+- assurance of adaptive systems;
+- human-machine teaming;
+- STPA;
+- online monitoring;
+- runtime assurance;
+- simulation-based testing;
+- governance and accountability.
+
+Suggested research questions:
+- What should be constrained versus learned?
+- How can emergent multi-agent behavior be bounded?
+- What monitoring is required when behavior changes after deployment?
+- How can assurance cases remain valid as models/policies evolve?
+
+---
+
+<a id="part-x"></a>
+# Part X — Capstone Structure
+
+A strong capstone should look less like “apply four techniques” and more like a coherent research argument.
+
+## 51. Recommended report structure
+
+### 1. Problem statement
+
+Define the decision, system, stakeholders, and why conventional bounded analysis is insufficient.
+
+### 2. Complexity diagnosis
+
+Identify the dominant complexity mechanisms and scales. Explain why each matters.
+
+### 3. Competing system framings
+
+Show at least two plausible boundaries or stakeholder perspectives.
+
+### 4. Architecture and dependency model
+
+Represent key components, organizations, interfaces, and dependencies.
+
+### 5. Dynamic/adaptive model
+
+Build and justify the mechanism-level simulation.
+
+### 6. Evidence and validation
+
+Describe data, expert evidence, calibration, validation tests, and uncertainty.
+
+### 7. Failure/vulnerability exploration
+
+Identify where the system fails, becomes brittle, or enters unacceptable regimes.
+
+### 8. Intervention alternatives
+
+Include architectural, operational, governance, and adaptive options—not only parameter tuning.
+
+### 9. Deep-uncertainty analysis
+
+Stress-test alternatives across plausible futures and identify vulnerabilities.
+
+### 10. Adaptation strategy
+
+Define signposts, triggers, reversible actions, and future options.
+
+### 11. Safety/resilience/governance implications
+
+Assess second-order effects, control constraints, decision rights, and distribution of risk.
+
+### 12. Conclusions and scope conditions
+
+State what the evidence supports, what remains unresolved, and what would change the recommendation.
+
+## 52. Capstone quality criteria
+
+A strong capstone:
+- makes system boundaries explicit;
+- identifies mechanisms rather than merely calling the system complex;
+- uses methods because they fit the question;
+- shows how models complement or disagree;
+- exposes uncertainty rather than burying it;
+- validates important assumptions;
+- distinguishes exploratory from predictive claims;
+- treats governance and humans as part of the system when relevant;
+- proposes reversible/adaptive interventions where uncertainty is deep;
+- provides a monitoring and learning strategy.
+
+---
+
+<a id="part-xi"></a>
+# Part XI — Maintaining a Living View of the Field
+
+This field is too interdisciplinary and fast-moving for a static bibliography to remain complete. Maintain the guide as a living research map.
+
+## 53. Professional anchors to revisit annually
+
+### SEBoK
+
+SEBoK is especially useful for tracking changes in systems science, complexity, SoS, architecture, and professional systems-engineering terminology. As of September 2026, SEBoK v2.14 is the current release; it was published in May 2026 and included a substantial refresh of the Systems Science knowledge area [R03](#r03).
+
+### INCOSE technical products and working groups
+
+Monitor:
+- Complex Systems Working Group;
+- Systems of Systems Working Group;
+- Resilient Systems Working Group;
+- Human Systems Integration Working Group;
+- Systems Science Working Group;
+- Model-Based Systems Engineering / digital engineering activities;
+- Agile Systems Engineering;
+- relevant symposium proceedings.
+
+### Standards
+
+Track updates to:
+- ISO/IEC/IEEE 15288;
+- architecture description standards;
+- SoS guidance;
+- model-based systems-engineering standards;
+- SysML.
+
+### Mission engineering
+
+Mission engineering continues to evolve as a practice for linking missions, architectures, systems of systems, models, data, and operational outcomes [R38](#r38). It is a useful area to watch because it forces SE to operate above individual product boundaries.
+
+### SysML v2 ecosystem
+
+SysML v2 reached final adoption in July 2025 [R04](#r04). Over the next several years, watch tool interoperability, APIs, model libraries, simulation integration, and migration from SysML v1.x.
+
+## 54. Maintain a literature matrix
+
+Do not maintain only a bibliography. Maintain a spreadsheet or knowledge base with fields such as:
+
+- citation;
+- school/tradition;
+- system type;
+- complexity mechanism;
+- method;
+- unit of analysis;
+- scale;
+- intervention type;
+- empirical domain;
+- assumptions;
+- evidence type;
+- validation method;
+- software/tool;
+- key contribution;
+- limitations;
+- related papers;
+- your notes.
+
+This turns reading into a cumulative map rather than a pile of summaries.
+
+## 55. Recommended reading workflow
+
+For every substantial paper/book chapter:
+
+1. Write the research question in one sentence.
+2. State the assumed system boundary.
+3. Name the complexity mechanism.
+4. Identify the method and representation.
+5. Identify the intervention model.
+6. Record the empirical evidence.
+7. State the strongest claim supported.
+8. State one important limitation.
+9. Translate it to one of your reference systems.
+10. Record one research question it creates.
+
+## 56. Suggested overall ordering
+
+If you want a concise default route through this expanded guide:
+
+1. ISO/INCOSE/SEBoK baseline.
+2. Simon + Ashby.
+3. Mitchell + Miller/Page.
+4. INCOSE Complexity Primer + Sheard/Mostashari.
+5. Engineering Systems + Complex Engineered Systems.
+6. Maier/SoSE + governance.
+7. Sterman + ABM + network science + DSM.
+8. De Neufville + RDM + DAPP.
+9. Leveson + Rasmussen + resilience engineering.
+10. MBSE/SysML v2 integration.
+11. Research-methodology module.
+12. Capstone.
+
+This ordering moves from **baseline → concepts → engineering perspectives → methods → intervention under uncertainty → assurance → integration → research**.
+
+---
+
+<a id="references"></a>
+# Part XII — References
+
+The references below include foundational literature and current professional sources used throughout this guide. Links are provided where a stable publisher, standards-body, professional-society, DOI, or open-access page is available.
+
+## A. Current systems-engineering standards, bodies of knowledge, and professional references
+
+<a id="r01"></a>
+**[R01] ISO/IEC/IEEE. (2023). _ISO/IEC/IEEE 15288:2023 — Systems and software engineering — System life cycle processes._**  
+https://www.iso.org/standard/81702.html
+
+<a id="r02"></a>
+**[R02] INCOSE. (2023). _INCOSE Systems Engineering Handbook: A Guide for System Life Cycle Processes and Activities_, 5th ed.**  
+INCOSE describes the handbook as a state-of-good-practice reference aligned with ISO/IEC/IEEE 15288:2023.  
+https://www.incose.org/resource/incose-systems-engineering-handbook-a-guide-for-system-life-cycle-processes-and-activities-5th-edition/
+
+<a id="r03"></a>
+**[R03] Systems Engineering Body of Knowledge (SEBoK). (2026). _SEBoK Version 2.14._**  
+Released 18 May 2026; includes a major refresh of the Systems Science knowledge area.  
+https://sebokwiki.org/wiki/Version_2.14
+
+<a id="r03a"></a>
+**[R03A] SEBoK. (2026). _Emergence and Complexity._**  
+https://sebokwiki.org/wiki/Emergence_and_Complexity
+
+<a id="r04"></a>
+**[R04] Object Management Group. (2025). _SysML Version 2.0 — Final Adoption._**  
+OMG approved final adoption of SysML v2, KerML 1.0, and the SysML API and Services specification in July 2025.  
+https://www.omg.org/news/releases/pr2025/07-21-25.htm
+
+<a id="r05"></a>
+**[R05] INCOSE Complex Systems Working Group. (2015; revised 2021). _A Complexity Primer for Systems Engineers._**  
+https://portal.incose.org/Web/iCore/Store/StoreLayouts/Item_Detail.aspx?Category=EBOOKS&iProductCode=COMPPRIME
+
+<a id="r05a"></a>
+**[R05A] INCOSE Systems of Systems Working Group. _Systems of Systems Working Group._**  
+https://www.incose.org/group/systems-of-systems-working-group/
+
+## B. Complexity science, systems science, cybernetics, and design
+
+<a id="r06"></a>
+**[R06] Sheard, S. A., & Mostashari, A. (2009). “Principles of Complex Systems for Systems Engineering.” _Systems Engineering_, 12(4), 295–311.**  
+https://doi.org/10.1002/sys.20124
+
+<a id="r07"></a>
+**[R07] Mitchell, M. (2009). _Complexity: A Guided Tour._ Oxford University Press.**  
+https://doi.org/10.1093/oso/9780195124415.001.0001
+
+<a id="r08"></a>
+**[R08] Miller, J. H., & Page, S. E. (2007). _Complex Adaptive Systems: An Introduction to Computational Models of Social Life._ Princeton University Press.**  
+https://www.jstor.org/stable/j.ctt7s3kx
+
+<a id="r08a"></a>
+**[R08A] Holland, J. H. (1995). _Hidden Order: How Adaptation Builds Complexity._ Basic Books.**  
+https://books.google.com/books/about/Hidden_Order.html?id=jQHvAAAAMAAJ
+
+<a id="r09"></a>
+**[R09] Simon, H. A. (1962). “The Architecture of Complexity.” _Proceedings of the American Philosophical Society_, 106(6), 467–482.**  
+https://www.jstor.org/stable/985254
+
+<a id="r10"></a>
+**[R10] Simon, H. A. (1996). _The Sciences of the Artificial_, 3rd ed. MIT Press.**  
+https://mitpress.mit.edu/9780262264495/the-sciences-of-the-artificial/
+
+<a id="r11"></a>
+**[R11] Ashby, W. R. (1956). _An Introduction to Cybernetics._ Chapman & Hall / Wiley.**  
+Open scan/metadata: https://www.biodiversitylibrary.org/item/26977
+
+<a id="r12"></a>
+**[R12] Checkland, P., & Scholes, J. (1999). _Soft Systems Methodology in Action: Includes a 30-Year Retrospective._ Wiley.**  
+https://www.wiley-vch.de/en/areas-interest/finance-economics-law/soft-systems-methodology-in-action-978-0-471-98605-8
+
+<a id="r13"></a>
+**[R13] Jackson, M. C. (2020). “Critical Systems Practice 1: Explore—Starting a Multimethodological Intervention.” _Systems Research and Behavioral Science_, 37(5), 839–858.**  
+https://doi.org/10.1002/sres.2746
+
+<a id="r14"></a>
+**[R14] Gharajedaghi, J. (2011). _Systems Thinking: Managing Chaos and Complexity: A Platform for Designing Business Architecture_, 3rd ed. Elsevier.**  
+https://shop.elsevier.com/books/systems-thinking/gharajedaghi/978-0-12-385915-0
+
+## C. Complex engineered systems, engineering systems, and systems of systems
+
+<a id="r15"></a>
+**[R15] Braha, D., Minai, A. A., & Bar-Yam, Y. (Eds.). (2006). _Complex Engineered Systems: Science Meets Technology._ Springer.**  
+https://doi.org/10.1007/3-540-32834-3
+
+<a id="r16"></a>
+**[R16] de Weck, O. L., Roos, D., & Magee, C. L. (2011). _Engineering Systems: Meeting Human Needs in a Complex Technological World._ MIT Press.**  
+https://doi.org/10.7551/mitpress/8799.001.0001
+
+<a id="r17"></a>
+**[R17] Maier, M. W. (1998). “Architecting Principles for Systems-of-Systems.” _Systems Engineering_, 1(4), 267–284.**  
+https://doi.org/10.1002/(SICI)1520-6858(1998)1:4%3C267::AID-SYS3%3E3.0.CO;2-D
+
+<a id="r18"></a>
+**[R18] Jamshidi, M. (Ed.). (2009). _System of Systems Engineering: Innovations for the 21st Century._ Wiley.**  
+https://doi.org/10.1002/9780470403501
+
+> **Bibliographic note:** the Wiley volume at DOI 10.1002/9780470403501 is edited by **Mo Jamshidi**. Boardman, Sauser, Gorod, Dahmann, and other important SoSE researchers contribute within this literature; their work remains central to the curriculum.
+
+## D. Modeling and computational methods
+
+<a id="r19"></a>
+**[R19] Sterman, J. D. (2000). _Business Dynamics: Systems Thinking and Modeling for a Complex World._ McGraw-Hill.**  
+https://www.mheducation.com/highered/product/Business-Dynamics-Sterman.html
+
+<a id="r20"></a>
+**[R20] Wilensky, U., & Rand, W. (2015). _An Introduction to Agent-Based Modeling: Modeling Natural, Social, and Engineered Complex Systems with NetLogo._ MIT Press.**  
+https://mitpress.mit.edu/9780262731898/an-introduction-to-agent-based-modeling/
+
+<a id="r21"></a>
+**[R21] Grimm, V., Railsback, S. F., Vincenot, C. E., et al. (2020). “The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism.” _Journal of Artificial Societies and Social Simulation_, 23(2), 7.**  
+https://doi.org/10.18564/jasss.4259
+
+<a id="r22"></a>
+**[R22] Newman, M. (2018). _Networks_, 2nd ed. Oxford University Press.**  
+https://doi.org/10.1093/oso/9780198805090.001.0001
+
+<a id="r23"></a>
+**[R23] Barabási, A.-L. _Network Science._**  
+Open online textbook: https://networksciencebook.com/
+
+<a id="r24"></a>
+**[R24] Buldyrev, S. V., Parshani, R., Paul, G., Stanley, H. E., & Havlin, S. (2010). “Catastrophic Cascade of Failures in Interdependent Networks.” _Nature_, 464, 1025–1028.**  
+https://doi.org/10.1038/nature08932
+
+<a id="r25"></a>
+**[R25] Strogatz, S. H. (2018). _Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering_, 2nd ed. CRC Press.**  
+https://books.google.com/books/about/Nonlinear_Dynamics_and_Chaos.html?id=A0paDwAAQBAJ
+
+<a id="r26"></a>
+**[R26] Eppinger, S. D., & Browning, T. R. (2012). _Design Structure Matrix Methods and Applications._ MIT Press.**  
+https://doi.org/10.7551/mitpress/8896.001.0001
+
+<a id="r27"></a>
+**[R27] Saltelli, A., Ratto, M., Andres, T., et al. (2008). _Global Sensitivity Analysis: The Primer._ Wiley.**  
+https://uat.store.wiley.com/en-us/global-sensitivity-analysis-the-primer-p-9780470725177
+
+## E. Uncertainty, flexibility, and adaptive decision making
+
+<a id="r28"></a>
+**[R28] de Neufville, R., & Scholtes, S. (2011). _Flexibility in Engineering Design._ MIT Press.**  
+https://mitpress.mit.edu/9780262016230/flexibility-in-engineering-design/
+
+<a id="r29"></a>
+**[R29] Lempert, R. J. (2019). “Robust Decision Making (RDM).” In _Decision Making under Deep Uncertainty_. Springer.**  
+https://doi.org/10.1007/978-3-030-05252-2_2
+
+<a id="r30"></a>
+**[R30] Haasnoot, M., Kwakkel, J. H., Walker, W. E., & ter Maat, J. (2013). “Dynamic Adaptive Policy Pathways: A Method for Crafting Robust Decisions for a Deeply Uncertain World.” _Global Environmental Change_, 23(2), 485–498.**  
+https://doi.org/10.1016/j.gloenvcha.2012.12.006
+
+## F. Safety, resilience, reliability, and robust-yet-fragile systems
+
+<a id="r31"></a>
+**[R31] Leveson, N. G. (2012). _Engineering a Safer World: Systems Thinking Applied to Safety._ MIT Press.**  
+https://mitpress.mit.edu/9780262297301/engineering-a-safer-world/
+
+<a id="r32"></a>
+**[R32] Rasmussen, J. (1997). “Risk Management in a Dynamic Society: A Modelling Problem.” _Safety Science_, 27(2–3), 183–213.**  
+https://doi.org/10.1016/S0925-7535(97)00052-0
+
+<a id="r33"></a>
+**[R33] Weick, K. E., & Sutcliffe, K. M. (2015). _Managing the Unexpected: Sustained Performance in a Complex World_, 3rd ed. Wiley.**  
+https://doi.org/10.1002/9781119175834
+
+<a id="r33a"></a>
+**[R33A] Hollnagel, E., Woods, D. D., & Leveson, N. (Eds.). (2006). _Resilience Engineering: Concepts and Precepts._ Ashgate.**  
+Bibliographic overview: https://psnet.ahrq.gov/issue/resilience-engineering-concepts-and-precepts
+
+<a id="r34"></a>
+**[R34] Woods, D. D. (2015). “Four Concepts for Resilience and the Implications for the Future of Resilience Engineering.” _Reliability Engineering & System Safety_, 141, 5–9.**  
+https://doi.org/10.1016/j.ress.2015.03.018
+
+<a id="r36"></a>
+**[R36] Carlson, J. M., & Doyle, J. (2000). “Highly Optimized Tolerance: Robustness and Design in Complex Systems.” _Physical Review Letters_, 84(11), 2529–2532.**  
+https://doi.org/10.1103/PhysRevLett.84.2529
+
+## G. Governance, institutions, mission, and human systems
+
+<a id="r35"></a>
+**[R35] Ostrom, E. (1990). _Governing the Commons: The Evolution of Institutions for Collective Action._ Cambridge University Press.**  
+https://doi.org/10.1017/CBO9780511807763
+
+<a id="r38"></a>
+**[R38] Office of the Under Secretary of Defense for Research and Engineering. (2023). _Mission Engineering Guide, Version 2.0._**  
+https://ac.cto.mil/mission-engineering/
+
+<a id="r38a"></a>
+**[R38A] INCOSE. (2024). _Mission Engineering — Extending Systems of Systems Engineering to Mission._**  
+https://www.incose.org/resource/mission-engineering-extending-systems-of-systems-engineering-to-mission/
+
+<a id="r39"></a>
+**[R39] INCOSE Human Systems Integration Working Group. (2023). _Human Systems Integration: Volume 1 / HSI Primer._**  
+https://portal.incose.org/Web/iCore/Store/StoreLayouts/Item_Detail.aspx?Category=EBOOKS&iProductCode=HUMANSYSINTV1
+
+<a id="r40"></a>
+**[R40] INCOSE. (2024). _Systems Engineering Agility Primer._**  
+https://portal.incose.org/Web/iCore/Store/StoreLayouts/Item_Detail.aspx?Category=EBOOKS&iProductCode=SYSENGAGIPRIM
+
+## H. Recommended additional researchers and literature streams
+
+These are not all required for the core curriculum, but they are important expansion directions.
+
+### Dan Braha
+
+Read for engineering networks, product-development networks, problem-solving dynamics, bottlenecks, and structural sources of robustness/fragility. Start with [R15] and follow cited work.
+
+### Yaneer Bar-Yam
+
+Read for multiscale complexity, limits of centralized control, evolutionary engineering, and matching system complexity to environmental complexity. Start with his chapter in [R15].
+
+### William B. Rouse
+
+Read for enterprises, organizational transformation, decision support, healthcare systems, and complex engineered/organizational systems.
+
+### Richard de Neufville and the flexibility stream
+
+Read [R28] and related real-options literature for architecture and infrastructure under uncertainty.
+
+### Boardman, Sauser, Gorod, Dahmann, and the SoSE community
+
+Use [R18], current INCOSE SoS Working Group resources [R05A], and associated papers for autonomy, governance, systemigrams, acknowledged systems of systems, and evolutionary development.
+
+### Derek Hitchins
+
+Read for advanced systems thinking, systems practice, and engineering/management of highly interconnected systems.
+
+### Jamshid Gharajedaghi
+
+Read [R14] for purposeful systems, interactive design, enterprise architecture, and organizational complexity.
+
+### Nancy Leveson, Jens Rasmussen, David Woods, Erik Hollnagel
+
+Read [R31]–[R34] as a connected safety/resilience lineage rather than isolated texts.
+
+### John Doyle / robust-yet-fragile systems
+
+Read [R36] and related work on complexity and robustness for a control/design-oriented view of why highly optimized systems can acquire distinctive fragilities.
+
+---
+
+# Closing Guidance
+
+The most important lesson of the curriculum is not that conventional systems engineering is obsolete, nor that complex systems cannot be engineered.
+
+It is that **engineering changes when prediction, authority, stable requirements, and decomposability are limited**.
+
+In those settings, competent practice requires several simultaneous abilities:
+
+- decompose where decomposition is valid;
+- preserve interaction effects where decomposition destroys the mechanism;
+- model feedback and adaptation;
+- understand networks and propagation;
+- distinguish uncertainty from deep uncertainty;
+- design architectures with flexibility and options;
+- treat governance and institutions as part of the engineering problem;
+- design for safety and resilience rather than nominal performance alone;
+- integrate multiple models without pretending they are equivalent;
+- validate claims and expose uncertainty;
+- intervene incrementally where possible;
+- monitor and learn after deployment.
+
+The mature systems engineer is therefore not trying to eliminate all complexity. The goal is to determine **which complexity must be understood, which can be structured, which can be absorbed, which can be governed, which can be exploited, and which must remain the subject of ongoing learning**.
+
+That is the perspective from which complex adaptive systems become an engineering discipline rather than merely an interesting description of the world.
