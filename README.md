@@ -10,6 +10,8 @@
 - [Computational Neuroscience Tutorials](https://compneuro.neuromatch.io/tutorials/intro.html)
 - [Introduction to Computational Thinking and Data Science](https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/)
 - [Introduction to Computational Thinking](https://ocw.mit.edu/courses/18-s191-introduction-to-computational-thinking-fall-2020/)
+- [CBE 303338 Chemical Process Control](https://jckantor.github.io/cbe30338-2021/)
+- [Welcome to the Discrete Event Simulation Playground!](https://playground.hsma.co.uk/)
 
 1. [Intro to Numerical Methods](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)
 2. [Differential Equations](https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/)
