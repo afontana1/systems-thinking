@@ -27,8 +27,11 @@
 - [ESMD Course Material : Fundamentals of Lunar and Systems Engineering for Senior Project Teams, with Application to a Lunar Excavator](https://www.eng.auburn.edu/~dbeale/ESMDCourse/index.htm)
 - [MODAF](https://en.wikipedia.org/wiki/MODAF)
 - [NATO Architecture Framework](https://en.wikipedia.org/wiki/NATO_Architecture_Framework)
+- [Systems Engineering for ITS](https://ops.fhwa.dot.gov/seits/index.html)
 
 ### Standards
+- [Application of Systems Engineering Standards](https://sebokwiki.org/wiki/Application_of_Systems_Engineering_Standards)
+- [INCOSE Standards Initiative Group](https://www.incose.org/about-systems-engineering/standards-policies/)
 - [Systems Engineering Standards (INCOSE)](https://www.incose.org/about-systems-engineering/se-standards)
 - [ISO/IEC 15288](https://en.wikipedia.org/wiki/ISO/IEC_15288)
 - [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
@@ -88,6 +91,8 @@
   - [Software Quality](https://en.wikipedia.org/wiki/Category:Software_quality)
   - [List of System Quality Attributes](https://en.wikipedia.org/wiki/List_of_system_quality_attributes)
   - [Quality Function Deployment](https://en.wikipedia.org/wiki/Quality_function_deployment)
+  - [Acceptance Criteria](https://sebokwiki.org/wiki/Acceptance_Criteria_%28glossary%29)
+  - [Technical Performance Measure](https://sebokwiki.org/wiki/Technical_Performance_Measure_%28TPM%29_%28glossary%29)
 - [Interface Control Document](https://en.wikipedia.org/wiki/Interface_control_document)
 - [Interoperability](https://en.wikipedia.org/wiki/Interoperability)
 
