@@ -179,13 +179,6 @@
 5. [Decision theory](https://en.wikipedia.org/wiki/Category:Decision_theory)
 6. [Game Theory](https://en.wikipedia.org/wiki/Category:Game_theory)
 
-#### People
-
-1. [Christian List](https://personal.lse.ac.uk/list/)
-2. [Paul Slovic](https://en.wikipedia.org/wiki/Paul_Slovic)
-3. [Richard Gill](https://gill1109.com/?amp=1) [Statistics](https://www.math.leidenuniv.nl/~gill/)
-4. [Philip Tetlock](https://thedecisionlab.com/thinkers/political-science/philip-tetlock)
-
 #### Journals, Institutes, Research Labs
 
 1. [Decision Science Institute](https://decisionsciences.org/)
@@ -256,3 +249,5 @@
   - [Industrial Safety Engineering](https://youtube.com/playlist?list=PLbRMhDVUMngdXebaRB59KdKwstzuAovua&si=hxUJiE0HnOjhyTUD)
   - [Risk-based Engineering - NPTEL IIT Bombay](https://youtube.com/playlist?list=PLOzRYVm0a65e_EaQQvpr49Vwc2xfDPMX6&si=p6iAtzR4O8Pj5RdE)
 - [Process Engineering](https://en.wikipedia.org/wiki/Category:Process_engineering)
+
+--- 
